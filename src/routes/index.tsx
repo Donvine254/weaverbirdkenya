@@ -420,6 +420,11 @@ function Process() {
 
 /* ----------------- CTA Banner ----------------- */
 function CtaBanner() {
+/* placeholder */}
+
+function TrustedByPlaceholder() { return null; }
+
+/* eslint-disable */
   return (
     <section id="quote" className="mx-auto max-w-7xl px-6 pb-16">
       <div
