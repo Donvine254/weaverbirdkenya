@@ -35,6 +35,7 @@ function Index() {
       <Products />
       <Features />
       <Process />
+      <TrustedBy />
       <CtaBanner />
       <Footer />
     </div>
@@ -320,6 +321,14 @@ function Features() {
   return (
     <section className="bg-secondary/40 py-16">
       <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-10 text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl" style={{ fontFamily: "var(--font-display)" }}>
+            Why Choose Us
+          </h2>
+          <p className="mt-3 text-sm text-muted-foreground">
+            What makes us the trusted uniform manufacturing partner across Kenya.
+          </p>
+        </div>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {features.map(({ i: Icon, t, d }) => (
             <div key={t} className="rounded-xl bg-card p-5" style={{ boxShadow: "var(--shadow-card)" }}>
@@ -356,8 +365,6 @@ function Process() {
     { i: ShieldAlert, t: "Security", s: "Guard Services" },
     { i: Factory, t: "Manufacturing", s: "Factories & Industrial" },
   ];
-  const clients = ["KCB", "EQUITY", "KENYA AIRWAYS", "G4S", "UoN"];
-
   return (
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-6">
@@ -368,7 +375,7 @@ function Process() {
           Our Manufacturing Process
         </h2>
 
-        <div className="mt-12 grid items-start gap-12 lg:grid-cols-[3fr_2fr]">
+        <div className="mt-12">
           {/* steps */}
           <ol className="relative grid grid-cols-2 gap-y-10 sm:grid-cols-5">
             {steps.map(({ i: Icon, t, s }, idx) => (
@@ -387,32 +394,6 @@ function Process() {
               </li>
             ))}
           </ol>
-
-          {/* trusted */}
-          <div className="rounded-2xl bg-card p-6" style={{ boxShadow: "var(--shadow-card)" }}>
-            <h3 className="text-center text-sm font-semibold tracking-wide text-muted-foreground">
-              TRUSTED BY LEADING ORGANIZATIONS
-            </h3>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-              {clients.map((c) => (
-                <span key={c} className="text-base font-extrabold tracking-wide" style={{ color: "var(--primary-deep)" }}>
-                  {c}
-                </span>
-              ))}
-            </div>
-            <div className="mt-6 grid grid-cols-3 gap-3 border-t pt-6" style={{ borderColor: "var(--border)" }}>
-              {[
-                { n: "50,000+", t: "Garments Delivered For Schools" },
-                { n: "15+", t: "Corporate Clients Nationwide" },
-                { n: "98%", t: "Repeat Business" },
-              ].map((m) => (
-                <div key={m.t} className="text-center">
-                  <div className="text-xl font-extrabold" style={{ color: "var(--accent-red)", fontFamily: "var(--font-display)" }}>{m.n}</div>
-                  <div className="mt-1 text-[11px] leading-tight text-muted-foreground">{m.t}</div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         <h2
@@ -438,6 +419,47 @@ function Process() {
 }
 
 /* ----------------- CTA Banner ----------------- */
+function TrustedBy() {
+  const clients = ["KCB", "EQUITY", "KENYA AIRWAYS", "G4S", "UoN", "SAFARICOM", "NATION", "JKUAT", "KPLC", "BIDCO"];
+  const row = [...clients, ...clients];
+  return (
+    <section className="bg-secondary/40 py-16">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="rounded-2xl bg-card p-8" style={{ boxShadow: "var(--shadow-card)" }}>
+          <h3 className="text-center text-sm font-semibold tracking-[0.2em] text-muted-foreground">
+            TRUSTED BY LEADING ORGANIZATIONS
+          </h3>
+          <div className="mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div className="flex w-max animate-marquee gap-12 whitespace-nowrap">
+              {row.map((c, i) => (
+                <span
+                  key={`${c}-${i}`}
+                  className="text-lg font-extrabold tracking-wide"
+                  style={{ color: "var(--primary-deep)" }}
+                >
+                  {c}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="mt-8 grid grid-cols-3 gap-3 border-t pt-6" style={{ borderColor: "var(--border)" }}>
+            {[
+              { n: "50,000+", t: "Garments Delivered For Schools" },
+              { n: "15+", t: "Corporate Clients Nationwide" },
+              { n: "98%", t: "Repeat Business" },
+            ].map((m) => (
+              <div key={m.t} className="text-center">
+                <div className="text-2xl font-extrabold" style={{ color: "var(--accent-red)", fontFamily: "var(--font-display)" }}>{m.n}</div>
+                <div className="mt-1 text-xs leading-tight text-muted-foreground">{m.t}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function CtaBanner() {
   return (
     <section id="quote" className="mx-auto max-w-7xl px-6 pb-16">
