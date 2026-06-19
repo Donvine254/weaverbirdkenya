@@ -6,7 +6,7 @@ import {
   Building2, Heart, ShieldAlert, Factory, ArrowRight, Leaf, Menu,
 } from "lucide-react";
 import heroFactory from "@/assets/hero-factory.jpg";
-import pSchool from "@/assets/product-school.jpg";
+import pSchool from "@/assets/students_in_uniforms.png.asset.json";
 import pCorporate from "@/assets/product-corporate.jpg";
 import pSecurity from "@/assets/product-security.jpg";
 import pSports from "@/assets/product-sports.jpg";
@@ -213,7 +213,7 @@ function StatsBar() {
     { i: Award, n: "30+", t: "Years Experience" },
     { i: Users, n: "1000+", t: "Happy Clients" },
     { i: ThumbsUp, n: "97%", t: "Client Satisfaction" },
-    { i: MapPin, n: "7", t: "Branches Nationwide" },
+    { i: MapPin, n: "12", t: "Branches Nationwide" },
     { i: Truck, n: "Nationwide", t: "Delivery" },
   ];
   return (
@@ -556,7 +556,7 @@ function Footer() {
             <ul className="space-y-4">
               {[
                 { d: "Mon - Friday", h: "08.00 am to 05.00 pm" },
-                { d: "Saturday", h: "08.00 am to 01.00 pm" },
+                { d: "Saturday", h: "08.00 am to 05.00 pm" },
                 { d: "Sunday", h: "All Sunday we are Closed" },
               ].map((row) => (
                 <li key={row.d} className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
