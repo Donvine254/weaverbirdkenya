@@ -320,6 +320,14 @@ function Features() {
   return (
     <section className="bg-secondary/40 py-16">
       <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-10 text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl" style={{ fontFamily: "var(--font-display)" }}>
+            Why Choose Us
+          </h2>
+          <p className="mt-3 text-sm text-muted-foreground">
+            What makes us the trusted uniform manufacturing partner across Kenya.
+          </p>
+        </div>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {features.map(({ i: Icon, t, d }) => (
             <div key={t} className="rounded-xl bg-card p-5" style={{ boxShadow: "var(--shadow-card)" }}>
