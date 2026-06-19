@@ -35,6 +35,7 @@ function Index() {
       <Products />
       <Features />
       <Process />
+      <TrustedBy />
       <CtaBanner />
       <Footer />
     </div>
