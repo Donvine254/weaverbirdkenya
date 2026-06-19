@@ -364,8 +364,6 @@ function Process() {
     { i: ShieldAlert, t: "Security", s: "Guard Services" },
     { i: Factory, t: "Manufacturing", s: "Factories & Industrial" },
   ];
-  const clients = ["KCB", "EQUITY", "KENYA AIRWAYS", "G4S", "UoN"];
-
   return (
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-6">
@@ -376,7 +374,7 @@ function Process() {
           Our Manufacturing Process
         </h2>
 
-        <div className="mt-12 grid items-start gap-12 lg:grid-cols-[3fr_2fr]">
+        <div className="mt-12">
           {/* steps */}
           <ol className="relative grid grid-cols-2 gap-y-10 sm:grid-cols-5">
             {steps.map(({ i: Icon, t, s }, idx) => (
@@ -395,32 +393,6 @@ function Process() {
               </li>
             ))}
           </ol>
-
-          {/* trusted */}
-          <div className="rounded-2xl bg-card p-6" style={{ boxShadow: "var(--shadow-card)" }}>
-            <h3 className="text-center text-sm font-semibold tracking-wide text-muted-foreground">
-              TRUSTED BY LEADING ORGANIZATIONS
-            </h3>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-              {clients.map((c) => (
-                <span key={c} className="text-base font-extrabold tracking-wide" style={{ color: "var(--primary-deep)" }}>
-                  {c}
-                </span>
-              ))}
-            </div>
-            <div className="mt-6 grid grid-cols-3 gap-3 border-t pt-6" style={{ borderColor: "var(--border)" }}>
-              {[
-                { n: "50,000+", t: "Garments Delivered For Schools" },
-                { n: "15+", t: "Corporate Clients Nationwide" },
-                { n: "98%", t: "Repeat Business" },
-              ].map((m) => (
-                <div key={m.t} className="text-center">
-                  <div className="text-xl font-extrabold" style={{ color: "var(--accent-red)", fontFamily: "var(--font-display)" }}>{m.n}</div>
-                  <div className="mt-1 text-[11px] leading-tight text-muted-foreground">{m.t}</div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         <h2
