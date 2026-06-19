@@ -117,7 +117,7 @@ function Header() {
 /* ----------------- Hero ----------------- */
 function Hero() {
   const tiles = [
-    { label: "School Uniforms", img: pSchool, icon: GraduationCap },
+    { label: "School Uniforms", img: pSchool.url, icon: GraduationCap },
     { label: "Corporate Wear", img: pCorporate, icon: Briefcase },
     { label: "Security Uniforms", img: pSecurity, icon: ShieldAlert },
     { label: "Sports Wear", img: pSports, icon: Sparkles },
@@ -244,7 +244,7 @@ function StatsBar() {
 /* ----------------- Products ----------------- */
 function Products() {
   const items = [
-    { img: pSchool, title: "School Uniforms", desc: "Premium durable school wear.", icon: GraduationCap },
+    { img: pSchool.url, title: "School Uniforms", desc: "Premium durable school wear.", icon: GraduationCap },
     { img: pCorporate, title: "Corporate Wear", desc: "Professional branded apparel.", icon: Briefcase },
     { img: pSecurity, title: "Security Uniforms", desc: "Custom security solutions.", icon: ShieldAlert },
     { img: pSports, title: "Sportswear", desc: "Team kits and activewear.", icon: Sparkles },
