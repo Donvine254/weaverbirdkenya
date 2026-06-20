@@ -7,8 +7,8 @@ import {
 } from "lucide-react";
 import heroFactory from "@/assets/hero-factory.jpg";
 import pSchool from "@/assets/students_in_uniforms.png.asset.json";
-import pCorporate from "@/assets/product-corporate.jpg";
-import pSecurity from "@/assets/product-security.jpg";
+import pCorporate from "@/assets/corporate_wear.png.asset.json";
+import pSecurity from "@/assets/security_uniforms.png.asset.json";
 import pSports from "@/assets/product-sports.jpg";
 import pHospitality from "@/assets/product-hospitality.jpg";
 import pPpe from "@/assets/product-ppe.jpg";
@@ -119,8 +119,8 @@ function Header() {
 function Hero() {
   const tiles = [
     { label: "School Uniforms", img: pSchool.url, icon: GraduationCap },
-    { label: "Corporate Wear", img: pCorporate, icon: Briefcase },
-    { label: "Security Uniforms", img: pSecurity, icon: ShieldAlert },
+    { label: "Corporate Wear", img: pCorporate.url, icon: Briefcase },
+    { label: "Security Uniforms", img: pSecurity.url, icon: ShieldAlert },
     { label: "Sports Wear", img: pSports, icon: Sparkles },
   ];
   return (
@@ -246,8 +246,8 @@ function StatsBar() {
 function Products() {
   const items = [
     { img: pSchool.url, title: "School Uniforms", desc: "Premium durable school wear.", icon: GraduationCap },
-    { img: pCorporate, title: "Corporate Wear", desc: "Professional branded apparel.", icon: Briefcase },
-    { img: pSecurity, title: "Security Uniforms", desc: "Custom security solutions.", icon: ShieldAlert },
+    { img: pCorporate.url, title: "Corporate Wear", desc: "Professional branded apparel.", icon: Briefcase },
+    { img: pSecurity.url, title: "Security Uniforms", desc: "Custom security solutions.", icon: ShieldAlert },
     { img: pSports, title: "Sportswear", desc: "Team kits and activewear.", icon: Sparkles },
     { img: pHospitality, title: "Hospitality Uniforms", desc: "Hotels & restaurants.", icon: Heart },
     { img: pPpe, title: "PPE & Workwear", desc: "Industrial protection.", icon: ShieldCheck },
