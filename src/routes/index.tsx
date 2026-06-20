@@ -12,6 +12,7 @@ import pSecurity from "@/assets/security_uniforms.png.asset.json";
 import pSports from "@/assets/product-sports.jpg";
 import pHospitality from "@/assets/product-hospitality.jpg";
 import pPpe from "@/assets/product-ppe.jpg";
+import pSchoolProduct from "@/assets/product-school.jpg";
 import footerFabric from "@/assets/footer-fabric.jpg";
 import needAQuoteImg from "@/assets/need_a_quote_2.png.asset.json";
 
@@ -462,13 +463,19 @@ function TrustedBy() {
 }
 
 function CtaBanner() {
+  const quoteImages = [
+    { src: pSchoolProduct, alt: "School uniform – green blazer, tie and shirt" },
+    { src: pCorporate.url, alt: "Corporate t-shirt" },
+    { src: pPpe, alt: "Safety jacket" },
+  ];
+
   return (
     <section id="quote" className="mx-auto max-w-7xl px-6 pb-16">
       <div
         className="relative overflow-hidden rounded-3xl"
         style={{ background: "oklch(0.22 0.08 150)" }}
       >
-        <div className="relative grid items-center gap-6 px-8 py-10 lg:grid-cols-2 lg:px-12 lg:py-8">
+        <div className="relative grid items-center gap-8 px-8 py-10 lg:grid-cols-2 lg:px-12 lg:py-8">
           {/* Left text */}
           <div className="text-white">
             <h2
@@ -488,14 +495,25 @@ function CtaBanner() {
             </a>
           </div>
 
-          {/* Right image */}
-          <div className="relative flex justify-center lg:justify-end">
-            <img
-              src={needAQuoteImg.url}
-              alt="Uniforms showcase"
-              className="max-h-56 w-auto object-contain sm:max-h-64 lg:max-h-72"
-              loading="lazy"
-            />
+          {/* Right images */}
+          <div className="relative flex items-center justify-center gap-3 lg:justify-end">
+            {quoteImages.map((img, i) => (
+              <div
+                key={i}
+                className="relative overflow-hidden rounded-2xl border-2 border-white/20 shadow-lg"
+                style={{
+                  transform: i === 0 ? "rotate(-3deg)" : i === 2 ? "rotate(3deg)" : "none",
+                  zIndex: i === 1 ? 10 : 1,
+                }}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="h-40 w-auto object-cover sm:h-48 lg:h-56"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
