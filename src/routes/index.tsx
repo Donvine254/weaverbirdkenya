@@ -465,30 +465,39 @@ function CtaBanner() {
   return (
     <section id="quote" className="mx-auto max-w-7xl px-6 pb-16">
       <div
-        className="flex flex-wrap items-center justify-between gap-6 rounded-2xl px-8 py-6"
-        style={{ background: "var(--primary-deep)" }}
+        className="relative overflow-hidden rounded-3xl"
+        style={{ background: "oklch(0.22 0.08 150)" }}
       >
-        <div className="flex items-center gap-4 text-white">
-          <span
-            className="grid h-12 w-12 place-items-center rounded-full"
-            style={{ background: "oklch(0.78 0.18 145 / 0.15)" }}
-          >
-            <Shirt className="h-6 w-6" style={{ color: "oklch(0.78 0.18 145)" }} />
-          </span>
-          <div>
-            <div className="text-lg font-bold" style={{ fontFamily: "var(--font-display)" }}>
+        <div className="relative grid items-center gap-6 px-8 py-10 lg:grid-cols-2 lg:px-12 lg:py-8">
+          {/* Left text */}
+          <div className="text-white">
+            <h2
+              className="text-2xl font-bold leading-tight sm:text-3xl lg:text-[2rem]"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
               Need Uniforms for Your Organization?
-            </div>
-            <div className="text-sm text-white/70">Get a quick quote tailored to your needs.</div>
+            </h2>
+            <p className="mt-3 text-sm text-white/70 sm:text-base">
+              Get a quick quote tailored to your needs.
+            </p>
+            <a
+              href="#"
+              className="mt-6 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-black transition hover:bg-white/90"
+            >
+              Request a Quote <ChevronRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          {/* Right image */}
+          <div className="relative flex justify-center lg:justify-end">
+            <img
+              src={needAQuoteImg.url}
+              alt="Uniforms showcase"
+              className="max-h-56 w-auto object-contain sm:max-h-64 lg:max-h-72"
+              loading="lazy"
+            />
           </div>
         </div>
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110"
-          style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
-        >
-          Request a Quote <ChevronRight className="h-4 w-4" />
-        </a>
       </div>
     </section>
   );
