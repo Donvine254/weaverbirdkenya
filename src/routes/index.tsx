@@ -7,8 +7,8 @@ import {
 } from "lucide-react";
 import heroFactory from "@/assets/hero-factory.jpg";
 import pSchool from "@/assets/students_in_uniforms.png.asset.json";
-import pCorporate from "@/assets/product-corporate.jpg";
-import pSecurity from "@/assets/product-security.jpg";
+import pCorporate from "@/assets/corporate_wear.png.asset.json";
+import pSecurity from "@/assets/security_uniforms.png.asset.json";
 import pSports from "@/assets/product-sports.jpg";
 import pHospitality from "@/assets/product-hospitality.jpg";
 import pPpe from "@/assets/product-ppe.jpg";
