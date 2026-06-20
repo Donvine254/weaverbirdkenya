@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Weaverbird Kenya Ltd" },
+      { name: "description", content: "Weaverbird leads the garment manufacturing industry, delivering top-quality, innovative apparel solutions. From design to production, we craft clothing with.." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Weaverbird Kenya Ltd" },
+      { property: "og:description", content: "Weaverbird leads the garment manufacturing industry, delivering top-quality, innovative apparel solutions. From design to production, we craft clothing with.." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Weaverbird Kenya Ltd" },
+      { name: "twitter:description", content: "Weaverbird leads the garment manufacturing industry, delivering top-quality, innovative apparel solutions. From design to production, we craft clothing with.." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/381a9932-fd1c-4b32-af2e-4a88edf76a86/id-preview-e96b4304--24f83c8d-9f2b-4587-be61-acf624ce11a3.lovable.app-1781938223717.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/381a9932-fd1c-4b32-af2e-4a88edf76a86/id-preview-e96b4304--24f83c8d-9f2b-4587-be61-acf624ce11a3.lovable.app-1781938223717.png" },
     ],
     links: [
       {
