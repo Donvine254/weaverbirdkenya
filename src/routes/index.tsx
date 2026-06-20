@@ -620,16 +620,16 @@ function Footer() {
             </p>
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="mt-5 flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] p-1.5"
+              className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center rounded-2xl sm:rounded-full border border-white/15 bg-white/[0.05] p-1.5"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-transparent px-3 py-1.5 text-sm text-white placeholder:text-white/50 focus:outline-none"
+                className="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none"
               />
               <button
                 type="submit"
-                className="rounded-full px-5 py-2 text-sm font-semibold text-white transition hover:brightness-110"
+                className="shrink-0 whitespace-nowrap rounded-full px-5 py-2 text-sm font-semibold text-white transition hover:brightness-110"
                 style={{ background: "var(--gradient-red)" }}
               >
                 Sign Up
