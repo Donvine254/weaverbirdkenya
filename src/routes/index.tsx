@@ -13,6 +13,7 @@ import pSports from "@/assets/product-sports.jpg";
 import pHospitality from "@/assets/product-hospitality.jpg";
 import pPpe from "@/assets/product-ppe.jpg";
 import footerFabric from "@/assets/footer-fabric.jpg";
+import needAQuoteImg from "@/assets/need_a_quote_2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
