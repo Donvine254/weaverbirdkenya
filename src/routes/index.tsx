@@ -5,6 +5,7 @@ import {
   PencilRuler, Scissors, Sparkles, ShieldCheck, GraduationCap, Briefcase,
   Building2, Heart, ShieldAlert, Factory, ArrowRight, Leaf, Menu,
 } from "lucide-react";
+import { toast } from "sonner";
 import heroFactory from "@/assets/hero-factory.jpg";
 import weaverbirdLogo from "@/assets/weaverbird-logo.png.asset.json";
 import pSchool from "@/assets/students_in_uniforms.png.asset.json";
@@ -550,6 +551,17 @@ function FooterColHeader({ icon: Icon, title }: { icon: any; title: string }) {
 function Footer() {
   const services = ["School Uniforms", "Corporate & Security Uniforms", "Screen Printing", "Embroidery", "Weaving", "Other Apparel"];
   const socials = [Facebook, Twitter, Instagram, Linkedin];
+  const [email, setEmail] = useState("");
+
+  const handleSignup = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    toast.success("You're subscribed!", {
+      description: "Thank you for joining the Weaverbird newsletter.",
+    });
+    setEmail("");
+  };
+
   return (
     <footer
       className="relative mt-8 overflow-hidden text-white"
@@ -653,12 +665,14 @@ function Footer() {
               today for more!
             </p>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSignup}
               className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center rounded-2xl sm:rounded-full border border-white/15 bg-white/[0.05] p-1.5"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none"
               />
               <button
