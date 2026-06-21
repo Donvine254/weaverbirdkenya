@@ -5,6 +5,7 @@ import {
   PencilRuler, Scissors, Sparkles, ShieldCheck, GraduationCap, Briefcase,
   Building2, Heart, ShieldAlert, Factory, ArrowRight, Leaf, Menu,
 } from "lucide-react";
+import { toast } from "sonner";
 import heroFactory from "@/assets/hero-factory.jpg";
 import weaverbirdLogo from "@/assets/weaverbird-logo.png.asset.json";
 import pSchool from "@/assets/students_in_uniforms.png.asset.json";
