@@ -12,9 +12,8 @@ import pSecurity from "@/assets/security_uniforms.png.asset.json";
 import pSports from "@/assets/product-sports.jpg";
 import pHospitality from "@/assets/product-hospitality.jpg";
 import pPpe from "@/assets/product-ppe.jpg";
-import pSchoolProduct from "@/assets/product-school.jpg";
 import footerFabric from "@/assets/footer-fabric.jpg";
-import needAQuoteImg from "@/assets/need_a_quote_2.png.asset.json";
+import needUnformsCtaImg from "@/assets/need_unforms_cta.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -463,57 +462,36 @@ function TrustedBy() {
 }
 
 function CtaBanner() {
-  const quoteImages = [
-    { src: pSchoolProduct, alt: "School uniform – green blazer, tie and shirt" },
-    { src: pCorporate.url, alt: "Corporate t-shirt" },
-    { src: pPpe, alt: "Safety jacket" },
-  ];
+  const bgImg = needUnformsCtaImg.url;
 
   return (
     <section id="quote" className="mx-auto max-w-7xl px-6 pb-16">
       <div
-        className="relative overflow-hidden rounded-3xl"
-        style={{ background: "oklch(0.22 0.08 150)" }}
+        className="relative overflow-hidden rounded-3xl bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <div className="relative grid items-center gap-8 px-8 py-10 lg:grid-cols-2 lg:px-12 lg:py-8">
-          {/* Left text */}
-          <div className="text-white">
+        {/* dark overlay for text readability */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(90deg, oklch(0.12 0.06 155 / 0.85) 0%, oklch(0.12 0.06 155 / 0.55) 55%, oklch(0.12 0.06 155 / 0.20) 100%)" }}
+        />
+        <div className="relative flex items-center px-8 py-14 sm:py-20 lg:px-16 lg:py-24">
+          <div className="max-w-lg text-white">
             <h2
-              className="text-2xl font-bold leading-tight sm:text-3xl lg:text-[2rem]"
+              className="text-3xl font-bold leading-tight sm:text-4xl"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Need Uniforms for Your Organization?
             </h2>
-            <p className="mt-3 text-sm text-white/70 sm:text-base">
+            <p className="mt-4 text-base text-white/80 sm:text-lg">
               Get a quick quote tailored to your needs.
             </p>
             <a
               href="#"
-              className="mt-6 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-black transition hover:bg-white/90"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition hover:bg-white/90"
             >
               Request a Quote <ChevronRight className="h-4 w-4" />
             </a>
-          </div>
-
-          {/* Right images */}
-          <div className="relative flex items-center justify-center gap-3 lg:justify-end">
-            {quoteImages.map((img, i) => (
-              <div
-                key={i}
-                className="relative overflow-hidden rounded-2xl border-2 border-white/20 shadow-lg"
-                style={{
-                  transform: i === 0 ? "rotate(-3deg)" : i === 2 ? "rotate(3deg)" : "none",
-                  zIndex: i === 1 ? 10 : 1,
-                }}
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="h-40 w-auto object-cover sm:h-48 lg:h-56"
-                  loading="lazy"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </div>
