@@ -6,6 +6,7 @@ import {
   Building2, Heart, ShieldAlert, Factory, ArrowRight, Leaf, Menu,
 } from "lucide-react";
 import heroFactory from "@/assets/hero-factory.jpg";
+import weaverbirdLogo from "@/assets/weaverbird-logo.png.asset.json";
 import pSchool from "@/assets/students_in_uniforms.png.asset.json";
 import pCorporate from "@/assets/corporate_wear.png.asset.json";
 import pSecurity from "@/assets/security_uniforms.png.asset.json";
@@ -14,6 +15,8 @@ import pHospitality from "@/assets/product-hospitality.jpg";
 import pPpe from "@/assets/product-ppe.jpg";
 import footerFabric from "@/assets/footer-fabric.jpg";
 import needUnformsCtaImg from "@/assets/need_unforms_cta.png.asset.json";
+import { useState } from "react";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,18 +50,11 @@ function Index() {
 function Logo({ light = false }: { light?: boolean }) {
   return (
     <div className="flex items-center gap-3">
-      <div
-        className="grid h-11 w-11 grid-cols-2 grid-rows-2 gap-1 rounded-sm"
-        aria-hidden
-      >
-        {[0, 1, 2, 3].map((i) => (
-          <span
-            key={i}
-            className="block h-full w-full rotate-45"
-            style={{ background: "var(--accent-red)" }}
-          />
-        ))}
-      </div>
+      <img
+        src={weaverbirdLogo.url}
+        alt="Weaverbird Apparel Solutions logo"
+        className="h-12 w-auto object-contain"
+      />
       <div className="leading-tight">
         <div
           className={`text-lg font-extrabold tracking-wide ${light ? "text-white" : "text-foreground"}`}
@@ -77,6 +73,7 @@ function Logo({ light = false }: { light?: boolean }) {
 /* ----------------- Header ----------------- */
 function Header() {
   const links = ["Home", "Products", "Industries", "Manufacturing", "Gallery", "Branches", "About Us", "Contact"];
+  const [open, setOpen] = useState(false);
   return (
     <header
       className="sticky top-0 z-50 border-b border-white/10"
@@ -108,9 +105,40 @@ function Header() {
         >
           Get a Quote <ChevronRight className="h-4 w-4" />
         </a>
-        <button className="rounded-md p-2 text-white lg:hidden" aria-label="Menu">
-          <Menu className="h-6 w-6" />
-        </button>
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <button className="rounded-md p-2 text-white lg:hidden" aria-label="Open menu">
+              <Menu className="h-6 w-6" />
+            </button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-72 border-l-0 p-0" style={{ background: "var(--primary-darker)" }}>
+            <SheetHeader className="border-b border-white/10 p-6 text-left">
+              <SheetTitle className="text-white">
+                <Logo light />
+              </SheetTitle>
+            </SheetHeader>
+            <nav className="flex flex-col gap-1 p-4">
+              {links.map((l, i) => (
+                <a
+                  key={l}
+                  href="#"
+                  onClick={() => setOpen(false)}
+                  className={`rounded-md px-3 py-3 text-sm font-medium transition hover:bg-white/10 ${i === 0 ? "text-white" : "text-white/80"}`}
+                >
+                  {l}
+                </a>
+              ))}
+              <a
+                href="#quote"
+                onClick={() => setOpen(false)}
+                className="mt-4 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-md"
+                style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+              >
+                Get a Quote <ChevronRight className="h-4 w-4" />
+              </a>
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );
