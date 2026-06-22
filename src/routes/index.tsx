@@ -4,6 +4,7 @@ import {
   Clock, Calendar, Shirt, ChevronRight, Award, Users, ThumbsUp, Truck,
   PencilRuler, Scissors, Sparkles, ShieldCheck, GraduationCap, Briefcase,
   Building2, Heart, ShieldAlert, Factory, ArrowRight, Leaf, Menu,
+  Diamond, Flame,
 } from "lucide-react";
 import { toast } from "sonner";
 import heroFactory from "@/assets/hero-factory.jpg";
@@ -144,7 +145,7 @@ function Hero() {
     { label: "School Uniforms", img: pSchool.url, icon: GraduationCap },
     { label: "Corporate Wear", img: pCorporate.url, icon: Briefcase },
     { label: "Security Uniforms", img: pSecurity.url, icon: ShieldAlert },
-    { label: "Sports Wear", img: pSports, icon: Sparkles },
+    { label: "Sports Wear", img: pSports, icon: Flame },
   ];
   return (
     <section
@@ -271,7 +272,7 @@ function Products() {
     { img: pSchool.url, title: "School Uniforms", desc: "Premium durable school wear.", icon: GraduationCap },
     { img: pCorporate.url, title: "Corporate Wear", desc: "Professional branded apparel.", icon: Briefcase },
     { img: pSecurity.url, title: "Security Uniforms", desc: "Custom security solutions.", icon: ShieldAlert },
-    { img: pSports, title: "Sportswear", desc: "Team kits and activewear.", icon: Sparkles },
+    { img: pSports, title: "Sportswear", desc: "Team kits and activewear.", icon: Flame },
     { img: pHospitality.url, title: "Hospitality Uniforms", desc: "Hotels & restaurants.", icon: Heart },
     { img: pPpe, title: "PPE & Workwear", desc: "Industrial protection.", icon: ShieldCheck },
   ];
@@ -334,7 +335,7 @@ function Products() {
 /* ----------------- Features ----------------- */
 function Features() {
   const features = [
-    { i: Sparkles, t: "Quality Manufacturing", d: "Premium fabrics and precision stitching for long lasting wear." },
+    { i: Diamond, t: "Quality Manufacturing", d: "Premium fabrics and precision stitching for long lasting wear." },
     { i: Truck, t: "Fast Turnaround", d: "Bulk orders delivered on time without compromising quality." },
     { i: PencilRuler, t: "Custom Branding", d: "Embroidery, weaving and printing to elevate your brand." },
     { i: MapPin, t: "Nationwide Reach", d: "Multiple branches and reliable delivery across Kenya." },
