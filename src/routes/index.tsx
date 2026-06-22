@@ -50,24 +50,11 @@ function Index() {
 /* ----------------- Brand Logo ----------------- */
 function Logo({ light = false }: { light?: boolean }) {
   return (
-    <div className="flex items-center gap-3">
-      <img
-        src={weaverbirdLogo.url}
-        alt="Weaverbird Apparel Solutions logo"
-        className="h-12 w-auto object-contain"
-      />
-      <div className="leading-tight">
-        <div
-          className={`text-lg font-extrabold tracking-wide ${light ? "text-white" : "text-foreground"}`}
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          WEAVERBIRD
-        </div>
-        <div className={`text-[11px] ${light ? "text-white/70" : "text-muted-foreground"}`}>
-          Apparel Solutions
-        </div>
-      </div>
-    </div>
+    <img
+      src={weaverLogo.url}
+      alt="Weaverbird Apparel Solutions logo"
+      className="h-14 w-auto object-contain"
+    />
   );
 }
 
