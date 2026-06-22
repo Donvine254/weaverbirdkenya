@@ -12,7 +12,7 @@ import pSchool from "@/assets/students_in_uniforms.png.asset.json";
 import pCorporate from "@/assets/corporate_wear.png.asset.json";
 import pSecurity from "@/assets/security_uniforms.png.asset.json";
 import pSports from "@/assets/product-sports.jpg";
-import pHospitality from "@/assets/product-hospitality.jpg";
+import pHospitality from "@/assets/hospitality_workwear.png.asset.json";
 import pPpe from "@/assets/product-ppe.jpg";
 import footerFabric from "@/assets/footer-fabric.jpg";
 import needUnformsCtaImg from "@/assets/need_unforms_cta.png.asset.json";
@@ -272,7 +272,7 @@ function Products() {
     { img: pCorporate.url, title: "Corporate Wear", desc: "Professional branded apparel.", icon: Briefcase },
     { img: pSecurity.url, title: "Security Uniforms", desc: "Custom security solutions.", icon: ShieldAlert },
     { img: pSports, title: "Sportswear", desc: "Team kits and activewear.", icon: Sparkles },
-    { img: pHospitality, title: "Hospitality Uniforms", desc: "Hotels & restaurants.", icon: Heart },
+    { img: pHospitality.url, title: "Hospitality Uniforms", desc: "Hotels & restaurants.", icon: Heart },
     { img: pPpe, title: "PPE & Workwear", desc: "Industrial protection.", icon: ShieldCheck },
   ];
   return (
