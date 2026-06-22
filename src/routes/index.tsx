@@ -272,7 +272,7 @@ function Products() {
     { img: pCorporate.url, title: "Corporate Wear", desc: "Professional branded apparel.", icon: Briefcase },
     { img: pSecurity.url, title: "Security Uniforms", desc: "Custom security solutions.", icon: ShieldAlert },
     { img: pSports, title: "Sportswear", desc: "Team kits and activewear.", icon: Sparkles },
-    { img: pHospitality, title: "Hospitality Uniforms", desc: "Hotels & restaurants.", icon: Heart },
+    { img: pHospitality.url, title: "Hospitality Uniforms", desc: "Hotels & restaurants.", icon: Heart },
     { img: pPpe, title: "PPE & Workwear", desc: "Industrial protection.", icon: ShieldCheck },
   ];
   return (
