@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import heroFactory from "@/assets/hero-factory.jpg";
-import weaverbirdLogo from "@/assets/weaverbird-logo.png.asset.json";
+import weaverLogo from "@/assets/Weaver_Logo.png.asset.json";
 import pSchool from "@/assets/students_in_uniforms.png.asset.json";
 import pCorporate from "@/assets/corporate_wear.png.asset.json";
 import pSecurity from "@/assets/security_uniforms.png.asset.json";
