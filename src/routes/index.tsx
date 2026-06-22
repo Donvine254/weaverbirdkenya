@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import heroFactory from "@/assets/hero-factory.jpg";
-import weaverbirdLogo from "@/assets/weaverbird-logo.png.asset.json";
+import weaverLogo from "@/assets/Weaver_Logo.png.asset.json";
 import pSchool from "@/assets/students_in_uniforms.png.asset.json";
 import pCorporate from "@/assets/corporate_wear.png.asset.json";
 import pSecurity from "@/assets/security_uniforms.png.asset.json";
@@ -50,24 +50,11 @@ function Index() {
 /* ----------------- Brand Logo ----------------- */
 function Logo({ light = false }: { light?: boolean }) {
   return (
-    <div className="flex items-center gap-3">
-      <img
-        src={weaverbirdLogo.url}
-        alt="Weaverbird Apparel Solutions logo"
-        className="h-12 w-auto object-contain"
-      />
-      <div className="leading-tight">
-        <div
-          className={`text-lg font-extrabold tracking-wide ${light ? "text-white" : "text-foreground"}`}
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          WEAVERBIRD
-        </div>
-        <div className={`text-[11px] ${light ? "text-white/70" : "text-muted-foreground"}`}>
-          Apparel Solutions
-        </div>
-      </div>
-    </div>
+    <img
+      src={weaverLogo.url}
+      alt="Weaverbird Apparel Solutions logo"
+      className="h-14 w-auto object-contain"
+    />
   );
 }
 
