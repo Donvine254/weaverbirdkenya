@@ -95,10 +95,10 @@ function Header() {
         </nav>
         <a
           href="#quote"
-          className="hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:brightness-110 lg:inline-flex"
+          className="group hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 lg:inline-flex"
           style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
         >
-          Get a Quote <ChevronRight className="h-4 w-4" />
+          Get a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
@@ -194,14 +194,14 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110"
+              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
               style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
             >
-              Get a Quote <ChevronRight className="h-4 w-4" />
+              Get a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
             <a
               href="#products"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 active:scale-95"
             >
               View Products
             </a>
@@ -239,26 +239,26 @@ function StatsBar() {
     { i: Users, n: "3000+", t: "Happy Clients" },
     { i: ThumbsUp, n: "97%", t: "Client Satisfaction" },
     { i: MapPin, n: "12", t: "Branches Nationwide" },
-    { i: Truck, n: "Nationwide", t: "Delivery" },
-    { i: Factory, n: "In-house", t: "Production" },
+    { i: Truck, n: "Fast", t: "Delivery" },
+    { i: Factory, n: "Factory", t: "Production" },
   ];
   return (
     <section className="mx-auto -mt-8 max-w-7xl px-6">
       <div
-        className="relative grid grid-cols-2 gap-4 rounded-2xl px-4 py-6 text-white sm:grid-cols-3 lg:grid-cols-6"
+        className="relative grid grid-cols-2 gap-3 rounded-2xl px-3 py-5 text-white sm:grid-cols-3 sm:gap-4 sm:px-4 sm:py-6 lg:grid-cols-6"
         style={{ background: "var(--primary-deep)", boxShadow: "var(--shadow-card)" }}
       >
         {stats.map(({ i: Icon, n, t }) => (
-          <div key={t} className="flex items-center gap-3">
+          <div key={t} className="flex min-w-0 items-center gap-2 sm:gap-3">
             <span
-              className="grid aspect-square h-12 w-12 shrink-0 place-items-center rounded-full ring-1"
+              className="grid aspect-square h-10 w-10 shrink-0 place-items-center rounded-full ring-1 sm:h-12 sm:w-12"
               style={{ background: "oklch(0.20 0.07 155)", borderColor: "oklch(0.78 0.18 145 / 0.4)" }}
             >
-              <Icon className="h-5 w-5" style={{ color: "oklch(0.78 0.18 145)" }} />
+              <Icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: "oklch(0.78 0.18 145)" }} />
             </span>
-            <div className="min-w-0">
-              <div className="text-xl font-bold" style={{ fontFamily: "var(--font-display)" }}>{n}</div>
-              <div className="text-xs text-white/70">{t}</div>
+            <div className="min-w-0 leading-tight">
+              <div className="break-words text-base font-bold sm:text-lg lg:text-xl" style={{ fontFamily: "var(--font-display)" }}>{n}</div>
+              <div className="text-[10px] text-white/70 sm:text-xs">{t}</div>
             </div>
           </div>
         ))}
@@ -512,9 +512,9 @@ function CtaBanner() {
             </p>
             <a
               href="#"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition hover:bg-white/90"
+              className="group mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition-all hover:bg-white/90 hover:shadow-lg active:scale-95"
             >
-              Request a Quote <ChevronRight className="h-4 w-4" />
+              Request a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>
@@ -661,18 +661,18 @@ function Footer() {
             </p>
             <form
               onSubmit={handleSignup}
-              className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center rounded-2xl sm:rounded-full border border-white/15 bg-white/[0.05] p-1.5"
+              className="mt-5 flex flex-col gap-2 rounded-2xl border border-white/15 bg-white/[0.05] p-1.5 transition hover:border-white/25 focus-within:border-white/40 focus-within:bg-white/[0.07] focus-within:ring-2 focus-within:ring-[var(--accent-red)] sm:flex-row sm:items-center sm:rounded-full"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none"
+                className="min-w-0 flex-1 rounded-md bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus-visible:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--primary-darker)]"
               />
               <button
                 type="submit"
-                className="shrink-0 whitespace-nowrap rounded-full px-5 py-2 text-sm font-semibold text-white transition hover:brightness-110"
+                className="shrink-0 whitespace-nowrap rounded-full px-5 py-2 text-sm font-semibold text-white transition-all hover:brightness-110 hover:shadow-md active:scale-95"
                 style={{ background: "var(--gradient-red)" }}
               >
                 Sign Up
