@@ -194,10 +194,10 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110"
+              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
               style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
             >
-              Get a Quote <ChevronRight className="h-4 w-4" />
+              Get a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
             <a
               href="#products"
