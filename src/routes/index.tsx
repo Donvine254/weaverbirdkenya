@@ -661,7 +661,7 @@ function Footer() {
             </p>
             <form
               onSubmit={handleSignup}
-              className="mt-5 flex flex-col gap-2 rounded-2xl border border-white/15 bg-white/[0.05] p-1.5 transition hover:border-white/25 focus-within:border-white/40 focus-within:bg-white/[0.07] focus-within:ring-2 focus-within:ring-white/30 sm:flex-row sm:items-center sm:rounded-full"
+              className="mt-5 flex flex-col gap-2 rounded-2xl border border-white/15 bg-white/[0.05] p-1.5 transition hover:border-white/25 focus-within:border-white/40 focus-within:bg-white/[0.07] focus-within:ring-2 focus-within:ring-[var(--accent-red)] sm:flex-row sm:items-center sm:rounded-full"
             >
               <input
                 type="email"
