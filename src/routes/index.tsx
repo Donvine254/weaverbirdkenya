@@ -239,8 +239,8 @@ function StatsBar() {
     { i: Users, n: "3000+", t: "Happy Clients" },
     { i: ThumbsUp, n: "97%", t: "Client Satisfaction" },
     { i: MapPin, n: "12", t: "Branches Nationwide" },
-    { i: Truck, n: "Nationwide", t: "Delivery" },
-    { i: Factory, n: "In-house", t: "Production" },
+    { i: Truck, n: "Fast", t: "Delivery" },
+    { i: Factory, n: "Factory", t: "Production" },
   ];
   return (
     <section className="mx-auto -mt-8 max-w-7xl px-6">
