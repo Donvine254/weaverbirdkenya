@@ -181,12 +181,12 @@ function Hero() {
           <ul className="mt-6 grid max-w-md grid-cols-2 gap-3 text-sm text-white/85">
             {[
               { i: Award, t: "Established in 1996" },
-              { i: Users, t: "1000+ Clients Served" },
+              { i: Users, t: "3000+ Clients Served" },
               { i: Truck, t: "Nationwide Delivery" },
               { i: Factory, t: "In-house Production" },
             ].map(({ i: Icon, t }) => (
               <li key={t} className="flex items-center gap-2">
-                <Icon className="h-4 w-4" style={{ color: "oklch(0.78 0.18 145)" }} />
+                <Icon className="h-4 w-4 shrink-0" style={{ color: "oklch(0.78 0.18 145)" }} />
                 {t}
               </li>
             ))}
@@ -236,26 +236,27 @@ function Hero() {
 function StatsBar() {
   const stats = [
     { i: Award, n: "30+", t: "Years Experience" },
-    { i: Users, n: "1000+", t: "Happy Clients" },
+    { i: Users, n: "3000+", t: "Happy Clients" },
     { i: ThumbsUp, n: "97%", t: "Client Satisfaction" },
     { i: MapPin, n: "12", t: "Branches Nationwide" },
     { i: Truck, n: "Nationwide", t: "Delivery" },
+    { i: Factory, n: "In-house", t: "Production" },
   ];
   return (
     <section className="mx-auto -mt-8 max-w-7xl px-6">
       <div
-        className="relative grid grid-cols-2 gap-6 rounded-2xl px-6 py-6 text-white sm:grid-cols-3 lg:grid-cols-5"
+        className="relative grid grid-cols-2 gap-4 rounded-2xl px-4 py-6 text-white sm:grid-cols-3 lg:grid-cols-6"
         style={{ background: "var(--primary-deep)", boxShadow: "var(--shadow-card)" }}
       >
         {stats.map(({ i: Icon, n, t }) => (
           <div key={t} className="flex items-center gap-3">
             <span
-              className="grid h-12 w-12 place-items-center rounded-full ring-1"
+              className="grid aspect-square h-12 w-12 shrink-0 place-items-center rounded-full ring-1"
               style={{ background: "oklch(0.20 0.07 155)", borderColor: "oklch(0.78 0.18 145 / 0.4)" }}
             >
               <Icon className="h-5 w-5" style={{ color: "oklch(0.78 0.18 145)" }} />
             </span>
-            <div>
+            <div className="min-w-0">
               <div className="text-xl font-bold" style={{ fontFamily: "var(--font-display)" }}>{n}</div>
               <div className="text-xs text-white/70">{t}</div>
             </div>
