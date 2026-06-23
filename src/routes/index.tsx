@@ -668,7 +668,7 @@ function Footer() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="min-w-0 flex-1 rounded-md bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus-visible:bg-white/[0.05]"
+                className="min-w-0 flex-1 rounded-md bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus-visible:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--primary-darker)]"
               />
               <button
                 type="submit"
