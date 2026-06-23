@@ -512,9 +512,9 @@ function CtaBanner() {
             </p>
             <a
               href="#"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition hover:bg-white/90"
+              className="group mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition-all hover:bg-white/90 hover:shadow-lg active:scale-95"
             >
-              Request a Quote <ChevronRight className="h-4 w-4" />
+              Request a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>
