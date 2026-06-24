@@ -664,14 +664,14 @@ function Footer() {
             </p>
             <form
               onSubmit={handleSignup}
-              className="mt-5 flex flex-col gap-2 rounded-2xl border border-white/15 bg-white/[0.05] p-1.5 transition hover:border-white/25 focus-within:border-white/40 focus-within:bg-white/[0.07] focus-within:ring-2 focus-within:ring-[var(--accent-red)] sm:flex-row sm:items-center sm:rounded-full"
+              className="mt-5 flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] p-1.5 transition hover:border-white/25 focus-within:border-[var(--accent-red)] focus-within:bg-white/[0.07] focus-within:ring-2 focus-within:ring-[var(--accent-red)]"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="min-w-0 flex-1 rounded-md bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus-visible:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--primary-darker)]"
+                className="min-w-0 flex-1 rounded-l-full bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none"
               />
               <button
                 type="submit"
