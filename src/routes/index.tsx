@@ -402,9 +402,12 @@ function Process() {
 
         <div className="mt-12">
           {/* steps */}
-          <ol className="relative grid grid-cols-2 gap-y-10 sm:grid-cols-5">
+          <ol
+            className="relative flex snap-x gap-6 overflow-x-auto pb-4 sm:grid sm:grid-cols-5 sm:gap-y-10 sm:overflow-visible sm:pb-0"
+            style={{ scrollbarWidth: "none" }}
+          >
             {steps.map(({ i: Icon, t, s }, idx) => (
-              <li key={t} className="relative flex flex-col items-center text-center">
+              <li key={t} className="relative flex min-w-[9rem] snap-center flex-col items-center text-center sm:min-w-0">
                 {idx < steps.length - 1 && (
                   <span className="absolute right-[-30%] top-7 hidden h-px w-[60%] border-t border-dashed sm:block" style={{ borderColor: "var(--border)" }} />
                 )}
@@ -661,14 +664,14 @@ function Footer() {
             </p>
             <form
               onSubmit={handleSignup}
-              className="mt-5 flex flex-col gap-2 rounded-2xl border border-white/15 bg-white/[0.05] p-1.5 transition hover:border-white/25 focus-within:border-white/40 focus-within:bg-white/[0.07] focus-within:ring-2 focus-within:ring-[var(--accent-red)] sm:flex-row sm:items-center sm:rounded-full"
+              className="mt-5 flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] p-1.5 transition hover:border-white/25 focus-within:border-[var(--accent-red)] focus-within:bg-white/[0.07] focus-within:ring-2 focus-within:ring-[var(--accent-red)]"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="min-w-0 flex-1 rounded-md bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus-visible:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--primary-darker)]"
+                className="min-w-0 flex-1 rounded-l-full bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none"
               />
               <button
                 type="submit"
@@ -683,7 +686,7 @@ function Footer() {
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-6">
           <Logo light />
-          <p className="text-sm text-white/70">© 2024 Weaverbird Kenya. All Rights Reserved.</p>
+          <p className="text-sm text-white/70">© {new Date().getFullYear()} Weaverbird Kenya. All Rights Reserved.</p>
           <p className="flex items-center gap-2 text-sm text-white/70">
             <Leaf className="h-4 w-4" style={{ color: "oklch(0.78 0.18 145)" }} />
             Sustainable. Ethical. Responsible.
