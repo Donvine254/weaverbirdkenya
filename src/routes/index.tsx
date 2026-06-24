@@ -686,7 +686,7 @@ function Footer() {
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-6">
           <Logo light />
-          <p className="text-sm text-white/70">© 2024 Weaverbird Kenya. All Rights Reserved.</p>
+          <p className="text-sm text-white/70">© {new Date().getFullYear()} Weaverbird Kenya. All Rights Reserved.</p>
           <p className="flex items-center gap-2 text-sm text-white/70">
             <Leaf className="h-4 w-4" style={{ color: "oklch(0.78 0.18 145)" }} />
             Sustainable. Ethical. Responsible.
