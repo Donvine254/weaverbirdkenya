@@ -402,9 +402,12 @@ function Process() {
 
         <div className="mt-12">
           {/* steps */}
-          <ol className="relative grid grid-cols-2 gap-y-10 sm:grid-cols-5">
+          <ol
+            className="relative flex snap-x gap-6 overflow-x-auto pb-4 sm:grid sm:grid-cols-5 sm:gap-y-10 sm:overflow-visible sm:pb-0"
+            style={{ scrollbarWidth: "none" }}
+          >
             {steps.map(({ i: Icon, t, s }, idx) => (
-              <li key={t} className="relative flex flex-col items-center text-center">
+              <li key={t} className="relative flex min-w-[9rem] snap-center flex-col items-center text-center sm:min-w-0">
                 {idx < steps.length - 1 && (
                   <span className="absolute right-[-30%] top-7 hidden h-px w-[60%] border-t border-dashed sm:block" style={{ borderColor: "var(--border)" }} />
                 )}
