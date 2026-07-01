@@ -563,7 +563,7 @@ function FooterColHeader({ icon: Icon, title }: { icon: any; title: string }) {
   );
 }
 
-function Footer() {
+export function Footer() {
   const services = ["School Uniforms", "Corporate & Security Uniforms", "Screen Printing", "Embroidery", "Weaving", "Other Apparel"];
   const socials = [Facebook, Twitter, Instagram, Linkedin];
   const [email, setEmail] = useState("");
