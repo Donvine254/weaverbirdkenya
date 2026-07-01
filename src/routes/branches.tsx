@@ -114,7 +114,7 @@ export const branches: Branch[] = [
       sunday: '8:30AM - 6:00PM',
     },
     address: '1st Floor, Opposite Carrefour Supermarket, Thika Road Mall, Nairobi',
-    map: 'https://maps.app.goo.gl/meRQWGuR6p4Ptp7k8',
+    map: 'https://maps.app.goo.gl/GY98d1F7cJL5ESXn6',
   },
   {
     name: 'Kisumu',
