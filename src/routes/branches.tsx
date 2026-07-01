@@ -7,15 +7,6 @@ import { Header, Footer } from "./index";
 
 export interface Branch {
   name: string;
-  type: "headquarters" | "branch";
-  phone: string;
-  hours: { monday_friday: string; saturday: string; sunday: string };
-  address: string;
-  map: string;
-}
-
-const branches: Branch[] = export interface Branch {
-  name: string;
   type: 'headquarters' | 'branch';
   phone: string;
   hours: {
