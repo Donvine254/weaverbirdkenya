@@ -14,27 +14,177 @@ export interface Branch {
   map: string;
 }
 
-const branches: Branch[] = [
+const branches: Branch[] = export interface Branch {
+  name: string;
+  type: 'headquarters' | 'branch';
+  phone: string;
+  hours: {
+    monday_friday: string;
+    saturday: string;
+    sunday: string;
+  };
+  address: string;
+  map: string;
+}
+
+export const branches: Branch[] = [
   {
-    name: "Headquarters / Factory",
-    type: "headquarters",
-    phone: "+254722264464",
-    hours: { monday_friday: "8:00AM - 5:00PM", saturday: "8:00AM - 12:00PM", sunday: "Closed" },
-    address: "Off Thika-Garissa Highway, along Kianjau-Athena Road, near Broadway Secondary School, Thika",
-    map: "https://www.google.com/maps/search/?api=1&query=Weaver+Bird+Garments+Ltd+Headquarters,+Thika",
+    name: 'Headquarters / Factory',
+    type: 'headquarters',
+    phone: '+254722264464',
+    hours: {
+      monday_friday: '8:00AM - 5:00PM',
+      saturday: '8:00AM - 12:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Off Thika-Garissa Highway, along Kianjau-Athena Road, near Broadway Secondary School, Thika',
+    map: 'https://maps.app.goo.gl/ZDgsjr48u5BqzZHv6',
   },
-  { name: "Nairobi", type: "branch", phone: "+254724089655", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Delfirm Hotel Plaza, River Road, Nairobi", map: "https://www.google.com/maps/search/?api=1&query=Delfirm+Hotel+Plaza,+River+Road,+Nairobi,+Kenya" },
-  { name: "Chuka", type: "branch", phone: "+254799111222", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Captain Plaza, next to Legacy Hotel, opposite Equity Bank, Chuka", map: "https://www.google.com/maps/search/?api=1&query=Captain+Plaza,+Chuka,+Kenya" },
-  { name: "Thika Shop 1", type: "branch", phone: "0718343353", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Eco Bank Plaza, Opposite Post Bank, Thika", map: "https://www.google.com/maps/search/?api=1&query=Eco+Bank+Plaza,+Thika,+Kenya" },
-  { name: "Thika Shop 2", type: "branch", phone: "0738447700", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Twin Oak Plaza, Ground Floor, Opposite Safaricom Customer Care, Thika", map: "https://www.google.com/maps/search/?api=1&query=Twin+Oak+Plaza,+Thika,+Kenya" },
-  { name: "Ruiru", type: "branch", phone: "0745444447", hours: { monday_friday: "8:30AM - 7:00PM", saturday: "8:30AM - 7:00PM", sunday: "8:30AM - 6:00PM" }, address: "The Nord Mall, 1st Floor, Ruiru", map: "https://www.google.com/maps/search/?api=1&query=The+Nord+Mall,+Ruiru,+Kenya" },
-  { name: "Runda", type: "branch", phone: "0745444446", hours: { monday_friday: "8:30AM - 7:00PM", saturday: "8:30AM - 7:00PM", sunday: "8:30AM - 6:00PM" }, address: "Along Kiambu Road, Runda, Nairobi", map: "https://www.google.com/maps/search/?api=1&query=Runda,+Kiambu+Road,+Nairobi,+Kenya" },
-  { name: "TRM (Thika Road Mall)", type: "branch", phone: "0725666444", hours: { monday_friday: "8:30AM - 7:00PM", saturday: "8:30AM - 7:00PM", sunday: "8:30AM - 6:00PM" }, address: "1st Floor, Opposite Carrefour Supermarket, Thika Road Mall, Nairobi", map: "https://www.google.com/maps/search/?api=1&query=Thika+Road+Mall,+Nairobi,+Kenya" },
-  { name: "Kisumu", type: "branch", phone: "0754666444", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Oginga Odinga Road, Opposite Eco Bank Place, Kisumu", map: "https://www.google.com/maps/search/?api=1&query=Oginga+Odinga+Road,+Kisumu,+Kenya" },
-  { name: "Nakuru", type: "branch", phone: "0743103103", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Along Kenyatta Avenue, Nakuru", map: "https://www.google.com/maps/search/?api=1&query=Kenyatta+Avenue,+Nakuru,+Kenya" },
-  { name: "Meru", type: "branch", phone: "0727399399", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Njuri Ncheke Street, Opposite Mater Hospital, Meru", map: "https://www.google.com/maps/search/?api=1&query=Njuri+Ncheke+Street,+Meru,+Kenya" },
-  { name: "Kerugoya", type: "branch", phone: "0745444445", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Opposite Bingwa Sacco, Ground Floor, Kerugoya", map: "https://www.google.com/maps/search/?api=1&query=G72H%2B3FW,+Kerugoya,+Kenya" },
-  { name: "Murang'a", type: "branch", phone: "+254712444482", hours: { monday_friday: "8:30AM - 6:00PM", saturday: "8:30AM - 6:00PM", sunday: "Closed" }, address: "Along Biashara Avenue, next to Consolidated Bank, Murang'a", map: "https://www.google.com/maps/search/?api=1&query=Biashara+Avenue,+Murang%27a,+Kenya" },
+  {
+    name: 'Nairobi',
+    type: 'branch',
+    phone: '+254724089655',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Delfirm Hotel Plaza, River Road, Nairobi',
+    map: 'https://maps.app.goo.gl/b4UnV6819CVsjaht8',
+  },
+  {
+    name: 'Chuka',
+    type: 'branch',
+    phone: '+254799111222',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Captain Plaza, next to Legacy Hotel, opposite Equity Bank, Chuka',
+    map: 'https://maps.app.goo.gl/744nrvUeeD7LkgqWA',
+  },
+   {
+    name: 'Thika Shop 1',
+    type: 'branch',
+    phone: '0738447700',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Twin Oak Plaza, Ground Floor, Opposite Safaricom Customer Care, Thika',
+    map: 'https://maps.app.goo.gl/UvVDWr4RWnH82Hx49',
+  },
+  {
+    name: 'Thika Shop 2',
+    type: 'branch',
+    phone: '0718343353',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Eco Bank Plaza, Opposite Post Bank, Thika',
+    map: 'https://maps.app.goo.gl/joniKCQ4y5ummbsN6',
+  },
+ 
+  {
+    name: 'Ruiru',
+    type: 'branch',
+    phone: '0745444447',
+    hours: {
+      monday_friday: '8:30AM - 7:00PM',
+      saturday: '8:30AM - 7:00PM',
+      sunday: '8:30AM - 6:00PM',
+    },
+    address: 'The Nord Mall, 1st Floor, Ruiru',
+    map: 'https://maps.app.goo.gl/vt9KJGs1DdATb3hi9',
+  },
+  {
+    name: 'Runda',
+    type: 'branch',
+    phone: '0745444446',
+    hours: {
+      monday_friday: '8:30AM - 7:00PM',
+      saturday: '8:30AM - 7:00PM',
+      sunday: '8:30AM - 6:00PM',
+    },
+    address: 'Along Kiambu Road, Runda, Nairobi',
+    map: 'https://maps.app.goo.gl/meRQWGuR6p4Ptp7k8',
+  },
+  {
+    name: 'TRM (Thika Road Mall)',
+    type: 'branch',
+    phone: '0725666444',
+    hours: {
+      monday_friday: '8:30AM - 7:00PM',
+      saturday: '8:30AM - 7:00PM',
+      sunday: '8:30AM - 6:00PM',
+    },
+    address: '1st Floor, Opposite Carrefour Supermarket, Thika Road Mall, Nairobi',
+    map: 'https://maps.app.goo.gl/meRQWGuR6p4Ptp7k8',
+  },
+  {
+    name: 'Kisumu',
+    type: 'branch',
+    phone: '0754666444',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Oginga Odinga Road, Opposite Eco Bank Place, Kisumu',
+    map: 'https://maps.app.goo.gl/Xh7sYdvdje4N1mAL8',
+  },
+  {
+    name: 'Nakuru',
+    type: 'branch',
+    phone: '0743103103',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Along Kenyatta Avenue, Nakuru',
+    map: 'https://maps.app.goo.gl/Dq7BJjCha68oJSMQ7',
+  },
+  {
+    name: 'Meru',
+    type: 'branch',
+    phone: '0727399399',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Njuri Ncheke Street, Opposite Mater Hospital, Meru',
+    map: 'https://maps.app.goo.gl/iSCcxFJJV11x7H1S8',
+  },
+  {
+    name: 'Kerugoya',
+    type: 'branch',
+    phone: '0745444445',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Opposite Bingwa Sacco, Ground Floor, Kerugoya',
+    map: 'https://maps.app.goo.gl/mC1aYrKUVcbaj5Ro7',
+  },
+  {
+    name: "Murang'a",
+    type: 'branch',
+    phone: '+254712444482',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: "Along Biashara Avenue, next to Consolidated Bank, Murang'a",
+    map: "https://maps.app.goo.gl/iD1n83qor7cUGFvh8",
+  },
 ];
 
 export const Route = createFileRoute("/branches")({
