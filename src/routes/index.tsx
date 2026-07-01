@@ -23,9 +23,9 @@ import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/co
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Weaverbird Apparel Solutions — Kenya's Leading Uniform Manufacturer" },
+      { title: "Weaverbird Garments Manufacturers Ltd" },
       { name: "description", content: "Premium school, corporate, security, sports and hospitality uniforms designed and manufactured in Kenya since 1996." },
-      { property: "og:title", content: "Weaverbird Apparel Solutions" },
+      { property: "og:title", content: "Weaverbird Garments Manufacturers Ltd" },
       { property: "og:description", content: "Kenya's leading uniform & apparel manufacturer. From design to delivery, nationwide." },
     ],
   }),
@@ -59,7 +59,7 @@ function Logo({ light = false }: { light?: boolean }) {
       />
       <div className="flex flex-col leading-tight">
         <span className="text-lg font-bold tracking-wide text-white">WEAVERBIRD</span>
-        <span className="text-xs font-medium tracking-wider text-white/70">Apparel Solutions</span>
+        <span className="text-xs font-medium tracking-wider text-white/70">Garments Manufacturer</span>
       </div>
     </div>
   );
