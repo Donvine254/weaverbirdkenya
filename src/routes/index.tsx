@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   MapPin, Mail, Phone, Smartphone, Facebook, Twitter, Instagram, Linkedin,
   Clock, Calendar, Shirt, ChevronRight, Award, Users, ThumbsUp, Truck,
@@ -66,8 +66,17 @@ function Logo({ light = false }: { light?: boolean }) {
 }
 
 /* ----------------- Header ----------------- */
-function Header() {
-  const links = ["Home", "Products", "Industries", "Manufacturing", "Gallery", "Branches", "About Us", "Contact"];
+export function Header({ current = "Home" }: { current?: string }) {
+  const links: { label: string; to?: string; href?: string }[] = [
+    { label: "Home", to: "/" },
+    { label: "Products", href: "/#products" },
+    { label: "Industries", href: "/#industries" },
+    { label: "Manufacturing", href: "/#manufacturing" },
+    { label: "Gallery", href: "/#gallery" },
+    { label: "Branches", to: "/branches" },
+    { label: "About Us", href: "/#about" },
+    { label: "Contact", href: "/#contact" },
+  ];
   const [open, setOpen] = useState(false);
   return (
     <header
@@ -77,21 +86,26 @@ function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Logo light />
         <nav className="hidden items-center gap-7 text-sm font-medium text-white/85 lg:flex">
-          {links.map((l, i) => (
-            <a
-              key={l}
-              href="#"
-              className={`relative transition hover:text-white ${i === 0 ? "text-white" : ""}`}
-            >
-              {l}
-              {i === 0 && (
-                <span
-                  className="absolute -bottom-2 left-0 h-0.5 w-6"
-                  style={{ background: "var(--accent-red)" }}
-                />
-              )}
-            </a>
-          ))}
+          {links.map((l) => {
+            const isActive = l.label === current;
+            const cls = `relative transition hover:text-white ${isActive ? "text-white" : ""}`;
+            const inner = (
+              <>
+                {l.label}
+                {isActive && (
+                  <span
+                    className="absolute -bottom-2 left-0 h-0.5 w-6"
+                    style={{ background: "var(--accent-red)" }}
+                  />
+                )}
+              </>
+            );
+            return l.to ? (
+              <Link key={l.label} to={l.to} className={cls}>{inner}</Link>
+            ) : (
+              <a key={l.label} href={l.href} className={cls}>{inner}</a>
+            );
+          })}
         </nav>
         <a
           href="#quote"
@@ -113,16 +127,19 @@ function Header() {
               </SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col gap-1 p-4">
-              {links.map((l, i) => (
-                <a
-                  key={l}
-                  href="#"
-                  onClick={() => setOpen(false)}
-                  className={`rounded-md px-3 py-3 text-sm font-medium transition hover:bg-white/10 ${i === 0 ? "text-white" : "text-white/80"}`}
-                >
-                  {l}
-                </a>
-              ))}
+              {links.map((l) => {
+                const isActive = l.label === current;
+                const cls = `rounded-md px-3 py-3 text-sm font-medium transition hover:bg-white/10 ${isActive ? "text-white" : "text-white/80"}`;
+                return l.to ? (
+                  <Link key={l.label} to={l.to} onClick={() => setOpen(false)} className={cls}>
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a key={l.label} href={l.href} onClick={() => setOpen(false)} className={cls}>
+                    {l.label}
+                  </a>
+                );
+              })}
               <a
                 href="#quote"
                 onClick={() => setOpen(false)}
@@ -546,7 +563,7 @@ function FooterColHeader({ icon: Icon, title }: { icon: any; title: string }) {
   );
 }
 
-function Footer() {
+export function Footer() {
   const services = ["School Uniforms", "Corporate & Security Uniforms", "Screen Printing", "Embroidery", "Weaving", "Other Apparel"];
   const socials = [Facebook, Twitter, Instagram, Linkedin];
   const [email, setEmail] = useState("");
