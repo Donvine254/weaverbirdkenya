@@ -257,6 +257,10 @@ function Locator() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
       <div className="grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr]">
+        {/* Full map showing all branches */}
+        <div className="order-first overflow-hidden rounded-2xl border border-border bg-muted shadow-sm lg:order-none lg:col-span-2">
+          <BranchesMap selected={selected} onSelect={setSelected} />
+        </div>
         {/* List panel */}
         <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
           <div className="border-b border-border p-4">
