@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   MapPin, Phone, Clock, Search, Navigation, Factory, Building2, X,
 } from "lucide-react";
 import { Header, Footer } from "./index";
+import "leaflet/dist/leaflet.css";
 
 export interface Branch {
   name: string;
@@ -16,6 +17,7 @@ export interface Branch {
   };
   address: string;
   map: string;
+  coords: [number, number];
 }
 
 export const branches: Branch[] = [
