@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import { Header, Footer } from "./index";
 import "leaflet/dist/leaflet.css";
+import factoryHero from "@/assets/our_factory.jpg.asset.json";
 
 export interface Branch {
   name: string;
