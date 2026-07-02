@@ -219,21 +219,30 @@ function BranchesPage() {
 
 function PageHero() {
   return (
-    <section className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
-      <div className="relative mx-auto max-w-7xl px-6 py-16 text-white lg:py-20">
-        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/70">
+    <section
+      className="relative overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: `url(${factoryHero.url})` }}
+    >
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
+        }}
+      />
+      <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
+        <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
           <MapPin className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
-          Store Locator
+          Nationwide Network
         </div>
         <h1
-          className="mt-3 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
+          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Find a <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span> Near You
+          Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Branches</span>
         </h1>
-        <p className="mt-4 max-w-2xl text-white/75">
-          {branches.length} locations across Kenya — including our Thika factory & headquarters.
-          Search by town, mall or landmark to find the shop closest to you.
+        <p className="mx-auto mt-5 max-w-2xl text-white/80">
+          Find a Weaverbird shop near you. We have 12 retail locations across Kenya plus our factory headquarters in Thika.
         </p>
       </div>
     </section>
@@ -530,7 +539,7 @@ function BranchesMap({
     <div className="h-[420px] w-full sm:h-[520px]">
       <MapContainer
         center={selected.coords}
-        zoom={7}
+        zoom={2}
         scrollWheelZoom={false}
         style={{ height: "100%", width: "100%" }}
       >
