@@ -353,24 +353,8 @@ function Locator() {
 
 function BranchDetail({ branch }: { branch: Branch }) {
   const isHQ = branch.type === "headquarters";
-  const osmQuery = encodeURIComponent(branch.address);
-  // OpenStreetMap search-embed doesn't require an API key.
-  const mapSrc = `https://www.google.com/maps?q=${osmQuery}&output=embed`;
-
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-      <div className="relative aspect-[16/10] w-full bg-muted sm:aspect-[16/9]">
-        <iframe
-          key={branch.name}
-          title={`Map of ${branch.name}`}
-          src={mapSrc}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="absolute inset-0 h-full w-full border-0"
-          allowFullScreen
-        />
-      </div>
-
       <div className="flex-1 p-6 lg:p-8">
         <div className="flex flex-wrap items-center gap-3">
           <span
