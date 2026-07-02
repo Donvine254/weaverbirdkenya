@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   MapPin, Phone, Clock, Search, Navigation, Factory, Building2, X,
 } from "lucide-react";
 import { Header, Footer } from "./index";
+import "leaflet/dist/leaflet.css";
 
 export interface Branch {
   name: string;
@@ -16,6 +17,7 @@ export interface Branch {
   };
   address: string;
   map: string;
+  coords: [number, number];
 }
 
 export const branches: Branch[] = [
@@ -30,6 +32,7 @@ export const branches: Branch[] = [
     },
     address: 'Off Thika-Garissa Highway, along Kianjau-Athena Road, near Broadway Secondary School, Thika',
     map: 'https://maps.app.goo.gl/ZDgsjr48u5BqzZHv6',
+    coords: [-1.0316, 37.1000],
   },
   {
     name: 'Nairobi',
@@ -42,6 +45,7 @@ export const branches: Branch[] = [
     },
     address: 'Delfirm Hotel Plaza, River Road, Nairobi',
     map: 'https://maps.app.goo.gl/b4UnV6819CVsjaht8',
+    coords: [-1.2841, 36.8290],
   },
   {
     name: 'Chuka',
@@ -54,6 +58,7 @@ export const branches: Branch[] = [
     },
     address: 'Captain Plaza, next to Legacy Hotel, opposite Equity Bank, Chuka',
     map: 'https://maps.app.goo.gl/744nrvUeeD7LkgqWA',
+    coords: [-0.3323, 37.6489],
   },
    {
     name: 'Thika Shop 1',
@@ -66,6 +71,7 @@ export const branches: Branch[] = [
     },
     address: 'Twin Oak Plaza, Ground Floor, Opposite Safaricom Customer Care, Thika',
     map: 'https://maps.app.goo.gl/UvVDWr4RWnH82Hx49',
+    coords: [-1.0396, 37.0700],
   },
   {
     name: 'Thika Shop 2',
@@ -78,6 +84,7 @@ export const branches: Branch[] = [
     },
     address: 'Eco Bank Plaza, Opposite Post Bank, Thika',
     map: 'https://maps.app.goo.gl/joniKCQ4y5ummbsN6',
+    coords: [-1.0389, 37.0692],
   },
  
   {
@@ -91,6 +98,7 @@ export const branches: Branch[] = [
     },
     address: 'The Nord Mall, 1st Floor, Ruiru',
     map: 'https://maps.app.goo.gl/vt9KJGs1DdATb3hi9',
+    coords: [-1.1479, 36.9598],
   },
   {
     name: 'Runda',
@@ -103,6 +111,7 @@ export const branches: Branch[] = [
     },
     address: 'Along Kiambu Road, Runda, Nairobi',
     map: 'https://maps.app.goo.gl/meRQWGuR6p4Ptp7k8',
+    coords: [-1.2145, 36.8300],
   },
   {
     name: 'TRM (Thika Road Mall)',
@@ -115,6 +124,7 @@ export const branches: Branch[] = [
     },
     address: '1st Floor, Opposite Carrefour Supermarket, Thika Road Mall, Nairobi',
     map: 'https://maps.app.goo.gl/GY98d1F7cJL5ESXn6',
+    coords: [-1.2192, 36.8880],
   },
   {
     name: 'Kisumu',
@@ -127,6 +137,7 @@ export const branches: Branch[] = [
     },
     address: 'Oginga Odinga Road, Opposite Eco Bank Place, Kisumu',
     map: 'https://maps.app.goo.gl/Xh7sYdvdje4N1mAL8',
+    coords: [-0.0917, 34.7680],
   },
   {
     name: 'Nakuru',
@@ -139,6 +150,7 @@ export const branches: Branch[] = [
     },
     address: 'Along Kenyatta Avenue, Nakuru',
     map: 'https://maps.app.goo.gl/Dq7BJjCha68oJSMQ7',
+    coords: [-0.2833, 36.0667],
   },
   {
     name: 'Meru',
@@ -151,6 +163,7 @@ export const branches: Branch[] = [
     },
     address: 'Njuri Ncheke Street, Opposite Mater Hospital, Meru',
     map: 'https://maps.app.goo.gl/iSCcxFJJV11x7H1S8',
+    coords: [0.0470, 37.6497],
   },
   {
     name: 'Kerugoya',
@@ -163,6 +176,7 @@ export const branches: Branch[] = [
     },
     address: 'Opposite Bingwa Sacco, Ground Floor, Kerugoya',
     map: 'https://maps.app.goo.gl/mC1aYrKUVcbaj5Ro7',
+    coords: [-0.4986, 37.2836],
   },
   {
     name: "Murang'a",
@@ -175,6 +189,7 @@ export const branches: Branch[] = [
     },
     address: "Along Biashara Avenue, next to Consolidated Bank, Murang'a",
     map: "https://maps.app.goo.gl/iD1n83qor7cUGFvh8",
+    coords: [-0.7211, 37.1526],
   },
 ];
 
@@ -242,6 +257,10 @@ function Locator() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
       <div className="grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr]">
+        {/* Full map showing all branches */}
+        <div className="order-first overflow-hidden rounded-2xl border border-border bg-muted shadow-sm lg:order-none lg:col-span-2">
+          <BranchesMap selected={selected} onSelect={setSelected} />
+        </div>
         {/* List panel */}
         <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
           <div className="border-b border-border p-4">
@@ -334,24 +353,8 @@ function Locator() {
 
 function BranchDetail({ branch }: { branch: Branch }) {
   const isHQ = branch.type === "headquarters";
-  const osmQuery = encodeURIComponent(branch.address);
-  // OpenStreetMap search-embed doesn't require an API key.
-  const mapSrc = `https://www.google.com/maps?q=${osmQuery}&output=embed`;
-
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-      <div className="relative aspect-[16/10] w-full bg-muted sm:aspect-[16/9]">
-        <iframe
-          key={branch.name}
-          title={`Map of ${branch.name}`}
-          src={mapSrc}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="absolute inset-0 h-full w-full border-0"
-          allowFullScreen
-        />
-      </div>
-
       <div className="flex-1 p-6 lg:p-8">
         <div className="flex flex-wrap items-center gap-3">
           <span
@@ -451,6 +454,116 @@ function InfoRow({
         </div>
         <div className="mt-1 text-sm text-foreground">{children}</div>
       </div>
+    </div>
+  );
+}
+
+function BranchesMap({
+  selected,
+  onSelect,
+}: {
+  selected: Branch;
+  onSelect: (b: Branch) => void;
+}) {
+  const [mounted, setMounted] = useState(false);
+  const [mod, setMod] = useState<{
+    RL: typeof import("react-leaflet");
+    L: typeof import("leaflet");
+  } | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all([import("react-leaflet"), import("leaflet")]).then(([RL, L]) => {
+      if (cancelled) return;
+      // Fix default marker icons under bundlers
+      // @ts-expect-error internal
+      delete L.Icon.Default.prototype._getIconUrl;
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+      });
+      setMod({ RL, L });
+      setMounted(true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  if (!mounted || !mod) {
+    return (
+      <div className="grid h-[420px] w-full place-items-center bg-muted text-sm text-muted-foreground">
+        Loading map…
+      </div>
+    );
+  }
+
+  const { MapContainer, TileLayer, Marker, Popup, useMap } = mod.RL;
+  const L = mod.L;
+
+  const hqIcon = L.divIcon({
+    className: "",
+    html: `<div style="background:linear-gradient(135deg,oklch(0.66 0.22 25),oklch(0.55 0.20 20));width:34px;height:34px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid white;box-shadow:0 4px 12px rgba(0,0,0,.3);display:grid;place-items:center;"><span style="transform:rotate(45deg);color:white;font-weight:800;font-size:14px;">★</span></div>`,
+    iconSize: [34, 34],
+    iconAnchor: [17, 34],
+    popupAnchor: [0, -30],
+  });
+  const branchIcon = L.divIcon({
+    className: "",
+    html: `<div style="background:oklch(0.20 0.07 155);width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid white;box-shadow:0 3px 8px rgba(0,0,0,.25);"></div>`,
+    iconSize: [28, 28],
+    iconAnchor: [14, 28],
+    popupAnchor: [0, -24],
+  });
+
+  function Recenter({ coords }: { coords: [number, number] }) {
+    const map = useMap();
+    useEffect(() => {
+      map.flyTo(coords, 12, { duration: 0.8 });
+    }, [coords, map]);
+    return null;
+  }
+
+  return (
+    <div className="h-[420px] w-full sm:h-[520px]">
+      <MapContainer
+        center={selected.coords}
+        zoom={7}
+        scrollWheelZoom={false}
+        style={{ height: "100%", width: "100%" }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Recenter coords={selected.coords} />
+        {branches.map((b) => (
+          <Marker
+            key={b.name}
+            position={b.coords}
+            icon={b.type === "headquarters" ? hqIcon : branchIcon}
+            eventHandlers={{ click: () => onSelect(b) }}
+          >
+            <Popup>
+              <div style={{ minWidth: 180 }}>
+                <div style={{ fontWeight: 700, marginBottom: 4 }}>{b.name}</div>
+                <div style={{ fontSize: 12, color: "#555", marginBottom: 6 }}>
+                  {b.address}
+                </div>
+                <a
+                  href={b.map}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={{ color: "oklch(0.55 0.20 20)", fontWeight: 600, fontSize: 12 }}
+                >
+                  Get directions →
+                </a>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
+      </MapContainer>
     </div>
   );
 }
