@@ -7,7 +7,8 @@ import {
   Diamond, Flame,
 } from "lucide-react";
 import { toast } from "sonner";
-import heroFactory from "@/assets/hero-factory.jpg";
+import heroFactoryAsset from "@/assets/our_factory.jpg.asset.json";
+const heroFactory = heroFactoryAsset.url;
 import weaverLogo from "@/assets/Weaver_Logo.png.asset.json";
 import pSchool from "@/assets/students_in_uniforms.png.asset.json";
 import pCorporate from "@/assets/corporate_wear.png.asset.json";
