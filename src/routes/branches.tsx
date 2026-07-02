@@ -32,6 +32,7 @@ export const branches: Branch[] = [
     },
     address: 'Off Thika-Garissa Highway, along Kianjau-Athena Road, near Broadway Secondary School, Thika',
     map: 'https://maps.app.goo.gl/ZDgsjr48u5BqzZHv6',
+    coords: [-1.0316, 37.1000],
   },
   {
     name: 'Nairobi',
@@ -44,6 +45,7 @@ export const branches: Branch[] = [
     },
     address: 'Delfirm Hotel Plaza, River Road, Nairobi',
     map: 'https://maps.app.goo.gl/b4UnV6819CVsjaht8',
+    coords: [-1.2841, 36.8290],
   },
   {
     name: 'Chuka',
@@ -56,6 +58,7 @@ export const branches: Branch[] = [
     },
     address: 'Captain Plaza, next to Legacy Hotel, opposite Equity Bank, Chuka',
     map: 'https://maps.app.goo.gl/744nrvUeeD7LkgqWA',
+    coords: [-0.3323, 37.6489],
   },
    {
     name: 'Thika Shop 1',
@@ -68,6 +71,7 @@ export const branches: Branch[] = [
     },
     address: 'Twin Oak Plaza, Ground Floor, Opposite Safaricom Customer Care, Thika',
     map: 'https://maps.app.goo.gl/UvVDWr4RWnH82Hx49',
+    coords: [-1.0396, 37.0700],
   },
   {
     name: 'Thika Shop 2',
@@ -80,6 +84,7 @@ export const branches: Branch[] = [
     },
     address: 'Eco Bank Plaza, Opposite Post Bank, Thika',
     map: 'https://maps.app.goo.gl/joniKCQ4y5ummbsN6',
+    coords: [-1.0389, 37.0692],
   },
  
   {
@@ -93,6 +98,7 @@ export const branches: Branch[] = [
     },
     address: 'The Nord Mall, 1st Floor, Ruiru',
     map: 'https://maps.app.goo.gl/vt9KJGs1DdATb3hi9',
+    coords: [-1.1479, 36.9598],
   },
   {
     name: 'Runda',
@@ -105,6 +111,7 @@ export const branches: Branch[] = [
     },
     address: 'Along Kiambu Road, Runda, Nairobi',
     map: 'https://maps.app.goo.gl/meRQWGuR6p4Ptp7k8',
+    coords: [-1.2145, 36.8300],
   },
   {
     name: 'TRM (Thika Road Mall)',
@@ -117,6 +124,7 @@ export const branches: Branch[] = [
     },
     address: '1st Floor, Opposite Carrefour Supermarket, Thika Road Mall, Nairobi',
     map: 'https://maps.app.goo.gl/GY98d1F7cJL5ESXn6',
+    coords: [-1.2192, 36.8880],
   },
   {
     name: 'Kisumu',
@@ -129,6 +137,7 @@ export const branches: Branch[] = [
     },
     address: 'Oginga Odinga Road, Opposite Eco Bank Place, Kisumu',
     map: 'https://maps.app.goo.gl/Xh7sYdvdje4N1mAL8',
+    coords: [-0.0917, 34.7680],
   },
   {
     name: 'Nakuru',
@@ -141,6 +150,7 @@ export const branches: Branch[] = [
     },
     address: 'Along Kenyatta Avenue, Nakuru',
     map: 'https://maps.app.goo.gl/Dq7BJjCha68oJSMQ7',
+    coords: [-0.2833, 36.0667],
   },
   {
     name: 'Meru',
@@ -153,6 +163,7 @@ export const branches: Branch[] = [
     },
     address: 'Njuri Ncheke Street, Opposite Mater Hospital, Meru',
     map: 'https://maps.app.goo.gl/iSCcxFJJV11x7H1S8',
+    coords: [0.0470, 37.6497],
   },
   {
     name: 'Kerugoya',
@@ -165,6 +176,7 @@ export const branches: Branch[] = [
     },
     address: 'Opposite Bingwa Sacco, Ground Floor, Kerugoya',
     map: 'https://maps.app.goo.gl/mC1aYrKUVcbaj5Ro7',
+    coords: [-0.4986, 37.2836],
   },
   {
     name: "Murang'a",
@@ -177,6 +189,7 @@ export const branches: Branch[] = [
     },
     address: "Along Biashara Avenue, next to Consolidated Bank, Murang'a",
     map: "https://maps.app.goo.gl/iD1n83qor7cUGFvh8",
+    coords: [-0.7211, 37.1526],
   },
 ];
 
