@@ -108,13 +108,13 @@ export function Header({ current = "Home" }: { current?: string }) {
             );
           })}
         </nav>
-        <a
-          href="#quote"
+        <Link
+          to="/quote"
           className="group hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 lg:inline-flex"
           style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
         >
           Get a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </a>
+        </Link>
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <button className="rounded-md p-2 text-white lg:hidden" aria-label="Open menu">
@@ -141,14 +141,14 @@ export function Header({ current = "Home" }: { current?: string }) {
                   </a>
                 );
               })}
-              <a
-                href="#quote"
+              <Link
+                to="/quote"
                 onClick={() => setOpen(false)}
                 className="mt-4 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-md"
                 style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
               >
                 Get a Quote <ChevronRight className="h-4 w-4" />
-              </a>
+              </Link>
             </nav>
           </SheetContent>
         </Sheet>
@@ -210,13 +210,13 @@ function Hero() {
             ))}
           </ul>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#quote"
+            <Link
+              to="/quote"
               className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
               style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
             >
               Get a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
+            </Link>
             <a
               href="#products"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 active:scale-95"
@@ -531,12 +531,12 @@ function CtaBanner() {
             <p className="mt-4 text-base text-white/80 sm:text-lg">
               Get a quick quote tailored to your needs.
             </p>
-            <a
-              href="#"
+            <Link
+              to="/quote"
               className="group mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition-all hover:bg-white/90 hover:shadow-lg active:scale-95"
             >
               Request a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
