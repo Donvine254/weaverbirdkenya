@@ -56,6 +56,7 @@ function QuotePage() {
 }
 
 function QuoteForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   const quoteRef = useMemo(() => makeRef(), []);
   const [orgType, setOrgType] = useState<string>("");
   const [branding, setBranding] = useState<string[]>([]);
@@ -63,6 +64,14 @@ function QuoteForm() {
     { id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" },
   ]);
   const [submitted, setSubmitted] = useState<{ mailto: string } | null>(null);
+
+  const handleReset = () => {
+    formRef.current?.reset();
+    setOrgType("");
+    setBranding([]);
+    setRows([{ id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" }]);
+    setSubmitted(null);
+  };
 
   const toggleBranding = (b: string) => {
     setBranding((prev) => prev.includes(b) ? prev.filter((x) => x !== b) : [...prev, b]);
