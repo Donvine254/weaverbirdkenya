@@ -321,7 +321,7 @@ function QuoteForm() {
         {/* Footer */}
         <div className="mt-8 border-t border-dashed pt-6">
           <div className="flex flex-col gap-3">
-            <div className="flex flex-col gap-2 sm:flex-row sm:gap-3">
+            <div className="flex flex-col gap-2">
               <button
                 type="submit"
                 className="group inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
@@ -339,7 +339,7 @@ function QuoteForm() {
                 <RotateCcw className="h-4 w-4" />
               </button>
             </div>
-            <p className="text-center text-xs text-muted-foreground sm:text-left">
+            <p className="text-center text-xs text-muted-foreground">
               We'll review your request and send a costed quotation, inclusive of 16% VAT.
             </p>
           </div>
