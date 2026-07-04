@@ -142,6 +142,7 @@ function QuoteForm() {
       </div>
 
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
         className="rounded-2xl border bg-card p-6 shadow-sm sm:p-10"
       >
