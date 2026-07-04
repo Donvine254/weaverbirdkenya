@@ -321,25 +321,25 @@ function QuoteForm() {
         {/* Footer */}
         <div className="mt-8 border-t border-dashed pt-6">
           <div className="flex flex-col gap-3">
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="submit"
-              className="group inline-flex flex-1 min-w-[120px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-xs font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:px-4 sm:text-sm"
-              style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
-            >
-              <span className="sm:hidden">Submit</span>
-              <span className="hidden sm:inline">Send quote request</span>
-              <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
-            <button
-              type="button"
-              onClick={handleReset}
-              className="inline-flex flex-1 min-w-[100px] items-center justify-center gap-2 rounded-full border border-input bg-background px-3 py-2.5 text-xs font-semibold text-foreground shadow-sm transition-all hover:bg-accent hover:text-accent-foreground active:scale-95 sm:px-4 sm:text-sm"
-            >
-              Reset
-              <RotateCcw className="h-4 w-4" />
-            </button>
-          </div>
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="submit"
+                className="group inline-flex flex-1 min-w-[120px] items-center justify-center gap-2 rounded-full px-3 py-2.5 text-xs font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:px-4 sm:text-sm"
+                style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+              >
+                <span className="sm:hidden">Submit</span>
+                <span className="hidden sm:inline">Send quote request</span>
+                <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </button>
+              <button
+                type="button"
+                onClick={handleReset}
+                className="inline-flex flex-1 min-w-[100px] items-center justify-center gap-2 rounded-full border border-input bg-background px-3 py-2.5 text-xs font-semibold text-foreground shadow-sm transition-all hover:bg-accent hover:text-accent-foreground active:scale-95 sm:px-4 sm:text-sm"
+              >
+                Reset
+                <RotateCcw className="h-4 w-4" />
+              </button>
+            </div>
             <p className="text-center text-xs text-muted-foreground">
               We'll review your request and send a costed quotation, inclusive of 16% VAT.
             </p>
