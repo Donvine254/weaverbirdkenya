@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
-import { Plus, X, Send, CheckCircle2, Mail } from "lucide-react";
+import { useMemo, useRef, useState } from "react";
+import { Plus, X, Send, CheckCircle2, Mail, RotateCcw } from "lucide-react";
 import { Header, Footer } from "./index";
 
 const BUSINESS_EMAIL = "info@weaverbirdkenya.com";
@@ -56,6 +56,7 @@ function QuotePage() {
 }
 
 function QuoteForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   const quoteRef = useMemo(() => makeRef(), []);
   const [orgType, setOrgType] = useState<string>("");
   const [branding, setBranding] = useState<string[]>([]);
@@ -63,6 +64,14 @@ function QuoteForm() {
     { id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" },
   ]);
   const [submitted, setSubmitted] = useState<{ mailto: string } | null>(null);
+
+  const handleReset = () => {
+    formRef.current?.reset();
+    setOrgType("");
+    setBranding([]);
+    setRows([{ id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" }]);
+    setSubmitted(null);
+  };
 
   const toggleBranding = (b: string) => {
     setBranding((prev) => prev.includes(b) ? prev.filter((x) => x !== b) : [...prev, b]);
@@ -133,6 +142,7 @@ function QuoteForm() {
       </div>
 
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
         className="rounded-2xl border bg-card p-6 shadow-sm sm:p-10"
       >
@@ -310,18 +320,28 @@ function QuoteForm() {
 
         {/* Footer */}
         <div className="mt-8 border-t border-dashed pt-6">
-          <div className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-            <p className="text-sm text-muted-foreground">
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2">
+              <button
+                type="submit"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+                style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+              >
+                Send quote request
+                <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </button>
+              <button
+                type="button"
+                onClick={handleReset}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-input bg-background px-4 py-2.5 text-sm font-semibold text-foreground shadow-sm transition-all hover:bg-accent hover:text-accent-foreground active:scale-95"
+              >
+                Reset
+                <RotateCcw className="h-4 w-4" />
+              </button>
+            </div>
+            <p className="text-center text-xs text-muted-foreground">
               We'll review your request and send a costed quotation, inclusive of 16% VAT.
             </p>
-            <button
-              type="submit"
-              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-              style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
-            >
-              Send quote request
-              <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
           </div>
         </div>
       </form>
