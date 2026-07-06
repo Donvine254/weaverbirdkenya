@@ -644,9 +644,9 @@ export function Footer() {
             </ul>
             <div className="mt-6 flex items-center gap-3">
               <span className="text-sm text-white/70">Follow us</span>
-              {socials.map((Icon, i) => (
-                <a key={i} href="#" aria-label="social" className="grid h-9 w-9 place-items-center rounded-full transition hover:brightness-110" style={{ background: "var(--gradient-red)" }}>
-                  <Icon className="h-4 w-4 text-white" />
+              {socials.map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noreferrer noopener" aria-label={s.label} className="grid h-9 w-9 place-items-center rounded-full transition hover:brightness-110" style={{ background: "var(--gradient-red)" }}>
+                  <s.icon className="h-4 w-4 text-white" />
                 </a>
               ))}
             </div>
