@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  MapPin, Mail, Phone, Smartphone, Facebook, Twitter, Instagram, Linkedin,
+  MapPin, Mail, Phone, Smartphone, Facebook, Twitter, Instagram,
   Clock, Calendar, Shirt, ChevronRight, Award, Users, ThumbsUp, Truck,
   PencilRuler, Scissors, Sparkles, ShieldCheck, GraduationCap, Briefcase,
   Building2, Heart, ShieldAlert, Factory, ArrowRight, Leaf, Menu,
   Diamond, Flame,
 } from "lucide-react";
+import { TikTokIcon } from "@/components/tiktok-icon";
 import { toast } from "sonner";
 import heroFactoryAsset from "@/assets/our_factory.jpg.asset.json";
 const heroFactory = heroFactoryAsset.url;
