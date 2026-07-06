@@ -147,10 +147,10 @@ function ContactMethods() {
 
 function SocialSection() {
   const socials = [
-    { icon: Facebook, label: "Facebook", handle: "@WeaverbirdKenya", href: "https://facebook.com/" },
+    { icon: Facebook, label: "Facebook", handle: "@WeaverbirdKenya", href: "https://facebook.com/weaverbirdgarmentsltd" },
     { icon: Instagram, label: "Instagram", handle: "@weaverbird.ke", href: "https://instagram.com/" },
     { icon: Twitter, label: "Twitter / X", handle: "@WeaverbirdKE", href: "https://twitter.com/" },
-    { icon: Linkedin, label: "LinkedIn", handle: "Weaverbird Garments", href: "https://linkedin.com/" },
+    { icon: TikTokIcon, label: "TikTok", handle: "@weaver.bird.garme5", href: "https://www.tiktok.com/@weaver.bird.garme5" },
   ];
   return (
     <section>
