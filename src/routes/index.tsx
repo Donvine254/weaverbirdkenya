@@ -18,7 +18,7 @@ import pHospitality from "@/assets/hospitality_workwear.png.asset.json";
 import pPpe from "@/assets/product-ppe.jpg";
 import footerFabric from "@/assets/footer-fabric.jpg";
 import needUnformsCtaImg from "@/assets/need_unforms_cta.png.asset.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
 export const Route = createFileRoute("/")({
@@ -56,9 +56,9 @@ function Logo({ light = false }: { light?: boolean }) {
       <img
         src={weaverLogo.url}
         alt="Weaverbird Apparel Solutions logo"
-        className="h-20 w-auto object-contain"
+        className="h-12 w-auto object-contain sm:h-20"
       />
-      <div className="flex flex-col leading-tight">
+      <div className="hidden flex-col leading-tight sm:flex">
         <span className="text-lg font-bold tracking-wide text-white">WEAVERBIRD</span>
         <span className="text-xs font-medium tracking-wider text-white/70">Garments Manufacturer</span>
       </div>
@@ -76,12 +76,24 @@ export function Header({ current = "Home" }: { current?: string }) {
     { label: "Gallery", href: "/#gallery" },
     { label: "Branches", to: "/branches" },
     { label: "About Us", href: "/#about" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", to: "/contact" },
   ];
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > lastY && y > 80) setHidden(true);
+      else if (y < lastY) setHidden(false);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
     <header
-      className="sticky top-0 z-50 border-b border-white/10"
+      className={`sticky top-0 z-50 border-b border-white/10 transition-transform duration-300 ${hidden ? "-translate-y-full" : "translate-y-0"}`}
       style={{ background: "var(--primary-darker)" }}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
