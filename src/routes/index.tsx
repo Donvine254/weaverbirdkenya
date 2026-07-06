@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  MapPin, Mail, Phone, Smartphone, Facebook, Twitter, Instagram, Linkedin,
+  MapPin, Mail, Phone, Smartphone, Facebook, Twitter, Instagram,
   Clock, Calendar, Shirt, ChevronRight, Award, Users, ThumbsUp, Truck,
   PencilRuler, Scissors, Sparkles, ShieldCheck, GraduationCap, Briefcase,
   Building2, Heart, ShieldAlert, Factory, ArrowRight, Leaf, Menu,
   Diamond, Flame,
 } from "lucide-react";
+import { TikTokIcon } from "@/components/tiktok-icon";
 import { toast } from "sonner";
 import heroFactoryAsset from "@/assets/our_factory.jpg.asset.json";
 const heroFactory = heroFactoryAsset.url;
@@ -578,7 +579,12 @@ function FooterColHeader({ icon: Icon, title }: { icon: any; title: string }) {
 
 export function Footer() {
   const services = ["School Uniforms", "Corporate & Security Uniforms", "Screen Printing", "Embroidery", "Weaving", "Other Apparel"];
-  const socials = [Facebook, Twitter, Instagram, Linkedin];
+  const socials = [
+    { icon: Facebook, label: "Facebook", href: "https://facebook.com/weaverbirdgarmentsltd" },
+    { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
+    { icon: Instagram, label: "Instagram", href: "https://instagram.com/" },
+    { icon: TikTokIcon, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
+  ];
   const [email, setEmail] = useState("");
 
   const handleSignup = (e: React.FormEvent) => {
@@ -638,9 +644,9 @@ export function Footer() {
             </ul>
             <div className="mt-6 flex items-center gap-3">
               <span className="text-sm text-white/70">Follow us</span>
-              {socials.map((Icon, i) => (
-                <a key={i} href="#" aria-label="social" className="grid h-9 w-9 place-items-center rounded-full transition hover:brightness-110" style={{ background: "var(--gradient-red)" }}>
-                  <Icon className="h-4 w-4 text-white" />
+              {socials.map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noreferrer noopener" aria-label={s.label} className="grid h-9 w-9 place-items-center rounded-full transition hover:brightness-110" style={{ background: "var(--gradient-red)" }}>
+                  <s.icon className="h-4 w-4 text-white" />
                 </a>
               ))}
             </div>
