@@ -579,7 +579,12 @@ function FooterColHeader({ icon: Icon, title }: { icon: any; title: string }) {
 
 export function Footer() {
   const services = ["School Uniforms", "Corporate & Security Uniforms", "Screen Printing", "Embroidery", "Weaving", "Other Apparel"];
-  const socials = [Facebook, Twitter, Instagram, Linkedin];
+  const socials = [
+    { icon: Facebook, label: "Facebook", href: "https://facebook.com/weaverbirdgarmentsltd" },
+    { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
+    { icon: Instagram, label: "Instagram", href: "https://instagram.com/" },
+    { icon: TikTokIcon, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
+  ];
   const [email, setEmail] = useState("");
 
   const handleSignup = (e: React.FormEvent) => {
