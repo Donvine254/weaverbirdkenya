@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Mail, Phone, Smartphone, MapPin, Clock, MessageCircle, Navigation,
-  Facebook, Twitter, Instagram, Linkedin, Factory, Store, ArrowRight,
+  Facebook, Twitter, Instagram, Factory, Store, ArrowRight,
 } from "lucide-react";
+import { TikTokIcon } from "@/components/tiktok-icon";
 import { Header, Footer } from "./index";
 import factoryHero from "@/assets/our_factory.jpg.asset.json";
 
