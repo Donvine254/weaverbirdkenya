@@ -76,7 +76,7 @@ export function Header({ current = "Home" }: { current?: string }) {
     { label: "Manufacturing", href: "/#manufacturing" },
     { label: "Gallery", href: "/#gallery" },
     { label: "Branches", to: "/branches" },
-    { label: "About Us", href: "/#about" },
+    { label: "About Us", to: "/about" },
     { label: "Contact", to: "/contact" },
   ];
   const [open, setOpen] = useState(false);
