@@ -42,7 +42,8 @@ function Index() {
       <StatsBar />
       <Products />
       <Features />
-      <Process />
+      <Manufacturing />
+      <Industries />
       <TrustedBy />
       <CtaBanner />
       <Footer />
@@ -404,8 +405,8 @@ function Features() {
   );
 }
 
-/* ----------------- Process / Industries ----------------- */
-function Process() {
+/* ----------------- Manufacturing ----------------- */
+function Manufacturing() {
   const steps = [
     { i: PencilRuler, t: "Design", s: "Concept & Mockups" },
     { i: Scissors, t: "Production", s: "Cutting & Stitching" },
@@ -413,16 +414,8 @@ function Process() {
     { i: ShieldCheck, t: "Quality Control", s: "Inspection" },
     { i: Truck, t: "Delivery", s: "Nationwide Delivery" },
   ];
-  const industries = [
-    { i: GraduationCap, t: "Education", s: "Schools & Colleges" },
-    { i: Briefcase, t: "Corporate", s: "Offices & Institutions" },
-    { i: Heart, t: "Hospitality", s: "Hotels & Restaurants" },
-    { i: Building2, t: "Healthcare", s: "Hospitals & Clinics" },
-    { i: ShieldAlert, t: "Security", s: "Guard Services" },
-    { i: Factory, t: "Manufacturing", s: "Factories & Industrial" },
-  ];
   return (
-    <section className="py-20">
+    <section id="manufacturing" className="py-20">
       <div className="mx-auto max-w-7xl px-6">
         <h2
           className="text-center text-3xl font-bold sm:text-4xl"
@@ -432,7 +425,6 @@ function Process() {
         </h2>
 
         <div className="mt-12">
-          {/* steps */}
           <ol
             className="relative flex snap-x gap-6 overflow-x-auto pb-4 sm:grid sm:grid-cols-5 sm:gap-y-10 sm:overflow-visible sm:pb-0"
             style={{ scrollbarWidth: "none" }}
@@ -454,9 +446,26 @@ function Process() {
             ))}
           </ol>
         </div>
+      </div>
+    </section>
+  );
+}
 
+/* ----------------- Industries ----------------- */
+function Industries() {
+  const industries = [
+    { i: GraduationCap, t: "Education", s: "Schools & Colleges" },
+    { i: Briefcase, t: "Corporate", s: "Offices & Institutions" },
+    { i: Heart, t: "Hospitality", s: "Hotels & Restaurants" },
+    { i: Building2, t: "Healthcare", s: "Hospitals & Clinics" },
+    { i: ShieldAlert, t: "Security", s: "Guard Services" },
+    { i: Factory, t: "Manufacturing", s: "Factories & Industrial" },
+  ];
+  return (
+    <section id="industries" className="py-20">
+      <div className="mx-auto max-w-7xl px-6">
         <h2
-          className="mt-20 text-center text-3xl font-bold sm:text-4xl"
+          className="text-center text-3xl font-bold sm:text-4xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
           Industries We Serve
