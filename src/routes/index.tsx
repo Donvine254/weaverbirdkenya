@@ -42,7 +42,8 @@ function Index() {
       <StatsBar />
       <Products />
       <Features />
-      <Process />
+      <Manufacturing />
+      <Industries />
       <TrustedBy />
       <CtaBanner />
       <Footer />
