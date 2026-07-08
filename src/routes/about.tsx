@@ -314,7 +314,7 @@ function LeadershipSection() {
 function CtaSection() {
   return (
     <section
-      className="overflow-hidden rounded-2xl bg-cover bg-center p-8 text-center text-white lg:p-12"
+      className="relative overflow-hidden rounded-2xl bg-cover bg-center p-8 text-center text-white lg:p-12"
       style={{ backgroundImage: `url(${factoryHero.url})` }}
     >
       <div
