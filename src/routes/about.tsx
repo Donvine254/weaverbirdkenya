@@ -72,7 +72,7 @@ function PageHero() {
 function StorySection() {
   return (
     <section className="grid gap-8 lg:grid-cols-2 lg:items-center">
-      <div className="relative overflow-hidden rounded-2xl border border-border shadow-sm">
+      <div className="relative aspect-[4/3] min-h-[280px] overflow-hidden rounded-2xl border border-border shadow-sm">
         <img
           src={factoryHero.url}
           alt="Weaverbird factory and headquarters in Thika"
