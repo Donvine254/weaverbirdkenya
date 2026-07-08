@@ -77,7 +77,8 @@ function StorySection() {
           src={factoryHero.url}
           alt="Weaverbird factory and headquarters in Thika"
           className="h-full w-full object-cover"
-          loading="lazy"
+          loading="eager"
+          decoding="async"
         />
       </div>
       <div className="space-y-5">
