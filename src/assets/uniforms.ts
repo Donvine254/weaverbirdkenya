@@ -1,11 +1,20 @@
-import { GraduationCap, Briefcase, ShieldAlert, Flame, Heart, ShieldCheck } from "lucide-react";
+import {
+  GraduationCap,
+  Briefcase,
+  ShieldAlert,
+  Flame,
+  ShieldCheck,
+  UtensilsCrossed,
+  Hospital,
+} from "lucide-react";
 
 const iconMap = {
   school: GraduationCap,
   corporate: Briefcase,
   security: ShieldAlert,
   sports: Flame,
-  hospitality: Heart,
+  hospitality: UtensilsCrossed,
+  healthcare: Hospital,
   ppe: ShieldCheck,
 };
 
@@ -48,7 +57,7 @@ export const uniforms = [
     slug: "healthcare-uniforms",
     description: "Uniforms for nurses, doctors, and hospital staff.",
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/t_hiring-banner/v1783870311/weaverbird/paqyqnfov19xnq6odhdw.png",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1783871865/weaverbird/z3dxahqmj6cob09fkctc.jpg",
   },
   {
     id: "ppe",

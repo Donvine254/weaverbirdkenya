@@ -1,29 +1,51 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Mail, Phone, Smartphone, MapPin, Clock, MessageCircle, Navigation,
-  Facebook, Twitter, Instagram, Factory, Store, ArrowRight,
+  Mail,
+  Phone,
+  Smartphone,
+  MapPin,
+  Clock,
+  MessageCircle,
+  Navigation,
+  Facebook,
+  Twitter,
+  Instagram,
+  Factory,
+  Store,
+  ArrowRight,
 } from "lucide-react";
 import { TikTokIcon } from "@/components/tiktok-icon";
 import { Header, Footer } from "./index";
-import factoryHero from "@/assets/our_factory.jpg.asset.json";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — Weaverbird Apparel Solutions" },
-      { name: "description", content: "Get in touch with Weaverbird Kenya. Call, email or visit our factory in Thika. Find a store near you across our 12 nationwide branches." },
+      {
+        name: "description",
+        content:
+          "Get in touch with Weaverbird Kenya. Call, email or visit our factory in Thika. Find a store near you across our 12 nationwide branches.",
+      },
       { property: "og:title", content: "Contact Weaverbird Kenya" },
-      { property: "og:description", content: "Reach our team by phone, email or WhatsApp. Visit our Thika factory or find your nearest branch." },
+      {
+        property: "og:description",
+        content:
+          "Reach our team by phone, email or WhatsApp. Visit our Thika factory or find your nearest branch.",
+      },
     ],
   }),
   component: ContactPage,
 });
 
-const FACTORY_MAP = "https://www.google.com/maps/search/?api=1&query=Weaverbird+Garments+Thika+Kenya";
+const FACTORY_MAP =
+  "https://www.google.com/maps/search/?api=1&query=Weaverbird+Garments+Thika+Kenya";
 
 function ContactPage() {
   return (
-    <div className="min-h-screen bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
+    <div
+      className="min-h-screen bg-background font-sans"
+      style={{ fontFamily: "var(--font-sans)" }}
+    >
       <Header current="Contact" />
       <PageHero />
       <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
@@ -41,7 +63,9 @@ function PageHero() {
   return (
     <section
       className="relative overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${factoryHero.url})` }}
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
+      }}
     >
       <div
         className="absolute inset-0"
@@ -62,7 +86,8 @@ function PageHero() {
           Contact <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-white/80">
-          Reach our team by phone, email or WhatsApp — or drop by our Thika factory. We reply within one working day.
+          Reach our team by phone, email or WhatsApp — or drop by our Thika factory. We reply within
+          one working day.
         </p>
       </div>
     </section>
@@ -127,7 +152,10 @@ function ContactMethods() {
             >
               <m.icon className="h-5 w-5 text-white" />
             </span>
-            <h3 className="mt-5 text-lg font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>
+            <h3
+              className="mt-5 text-lg font-bold text-foreground"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
               {m.title}
             </h3>
             <p className="mt-1 text-sm font-semibold text-foreground">{m.value}</p>
@@ -147,10 +175,25 @@ function ContactMethods() {
 
 function SocialSection() {
   const socials = [
-    { icon: Facebook, label: "Facebook", handle: "@WeaverbirdKenya", href: "https://facebook.com/weaverbirdgarmentsltd" },
-    { icon: Instagram, label: "Instagram", handle: "@weaverbird.ke", href: "https://instagram.com/" },
+    {
+      icon: Facebook,
+      label: "Facebook",
+      handle: "@WeaverbirdKenya",
+      href: "https://facebook.com/weaverbirdgarmentsltd",
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      handle: "@weaverbird.ke",
+      href: "https://instagram.com/",
+    },
     { icon: Twitter, label: "Twitter / X", handle: "@WeaverbirdKE", href: "https://twitter.com/" },
-    { icon: TikTokIcon, label: "TikTok", handle: "@weaver.bird.garme5", href: "https://www.tiktok.com/@weaver.bird.garme5" },
+    {
+      icon: TikTokIcon,
+      label: "TikTok",
+      handle: "@weaver.bird.garme5",
+      href: "https://www.tiktok.com/@weaver.bird.garme5",
+    },
   ];
   return (
     <section>
@@ -197,7 +240,7 @@ function FactorySection() {
         <div className="grid gap-0 md:grid-cols-2">
           <div className="relative aspect-[4/3] md:aspect-auto">
             <img
-              src={factoryHero.url}
+              src="https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg"
               alt="Weaverbird factory in Thika"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
@@ -212,7 +255,10 @@ function FactorySection() {
                 <Factory className="h-5 w-5 text-white" />
               </span>
               <div>
-                <h3 className="text-xl font-bold text-foreground" style={{ fontFamily: "var(--font-display)" }}>
+                <h3
+                  className="text-xl font-bold text-foreground"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
                   Weaverbird Thika Factory
                 </h3>
                 <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -224,19 +270,19 @@ function FactorySection() {
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
                 <span>
-                  Off Thika-Garissa Highway, along Kianjau – Athena Rd,
-                  near Broadway Sec. School, Thika, Kenya.
+                  Off Thika-Garissa Highway, along Kianjau – Athena Rd, near Broadway Sec. School,
+                  Thika, Kenya.
                 </span>
               </li>
               <li className="flex gap-3">
                 <Clock className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
-                <span>
-                  Mon – Fri: 8:00am – 5:00pm · Sat: 8:00am – 5:00pm · Sun: Closed
-                </span>
+                <span>Mon – Fri: 8:00am – 5:00pm · Sat: 8:00am – 5:00pm · Sun: Closed</span>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
-                <a href="tel:+2022051487" className="hover:underline">+020-2051487</a>
+                <a href="tel:+2022051487" className="hover:underline">
+                  +020-2051487
+                </a>
               </li>
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -270,7 +316,10 @@ function FindStoreCta() {
       >
         <Store className="h-6 w-6 text-white" />
       </span>
-      <h3 className="mt-5 text-2xl font-bold sm:text-3xl" style={{ fontFamily: "var(--font-display)" }}>
+      <h3
+        className="mt-5 text-2xl font-bold sm:text-3xl"
+        style={{ fontFamily: "var(--font-display)" }}
+      >
         Prefer to visit in person?
       </h3>
       <p className="mx-auto mt-3 max-w-xl text-sm text-white/80">
@@ -289,14 +338,26 @@ function FindStoreCta() {
 }
 
 function SectionHeader({
-  eyebrow, title, subtitle,
-}: { eyebrow: string; title: string; subtitle?: string }) {
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+}) {
   return (
     <div className="max-w-2xl">
-      <div className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--accent-red)" }}>
+      <div
+        className="text-xs font-semibold uppercase tracking-widest"
+        style={{ color: "var(--accent-red)" }}
+      >
         {eyebrow}
       </div>
-      <h2 className="mt-2 text-3xl font-bold text-foreground sm:text-4xl" style={{ fontFamily: "var(--font-display)" }}>
+      <h2
+        className="mt-2 text-3xl font-bold text-foreground sm:text-4xl"
+        style={{ fontFamily: "var(--font-display)" }}
+      >
         {title}
       </h2>
       {subtitle && <p className="mt-3 text-sm text-muted-foreground">{subtitle}</p>}

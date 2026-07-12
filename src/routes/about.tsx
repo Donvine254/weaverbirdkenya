@@ -1,19 +1,36 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Award, Users, MapPin, Factory, CheckCircle2, Target, Eye, Heart,
-  ShieldCheck, Shirt, ChevronRight, Leaf, Sparkles,
+  Award,
+  Users,
+  MapPin,
+  Factory,
+  CheckCircle2,
+  Target,
+  Eye,
+  Heart,
+  ShieldCheck,
+  Shirt,
+  ChevronRight,
+  Leaf,
+  Sparkles,
 } from "lucide-react";
 import { Header, Footer } from "./index";
-import factoryHero from "@/assets/our_factory.jpg.asset.json";
-import weaverLogo from "@/assets/Weaver_Logo.png.asset.json";
-
+import weaverLogo from "@/assets/logo.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — Weaverbird Apparel Solutions" },
-      { name: "description", content: "Weaverbird Garments Manufacturers Ltd was founded in 1996. Two directors, 12 shops, a Thika factory, 400+ employees and 50+ product categories. Made in Kenya with 98% quality standards." },
+      {
+        name: "description",
+        content:
+          "Weaverbird Garments Manufacturers Ltd was founded in 1996. Two directors, 12 shops, a Thika factory, 400+ employees and 50+ product categories. Made in Kenya with 98% quality standards.",
+      },
       { property: "og:title", content: "About Weaverbird Kenya" },
-      { property: "og:description", content: "Premium uniforms and apparel made in Kenya since 1996. 30 years of experience, 12 branches and a factory in Thika." },
+      {
+        property: "og:description",
+        content:
+          "Premium uniforms and apparel made in Kenya since 1996. 30 years of experience, 12 branches and a factory in Thika.",
+      },
     ],
   }),
   component: AboutPage,
@@ -21,7 +38,10 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <div className="min-h-screen bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
+    <div
+      className="min-h-screen bg-background font-sans"
+      style={{ fontFamily: "var(--font-sans)" }}
+    >
       <Header current="About Us" />
       <PageHero />
       <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
@@ -41,7 +61,9 @@ function PageHero() {
   return (
     <section
       className="relative overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${factoryHero.url})` }}
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
+      }}
     >
       <div
         className="absolute inset-0"
@@ -62,7 +84,8 @@ function PageHero() {
           About <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-white/80">
-          Kenya’s trusted uniform and apparel manufacturer. Designed, cut, stitched and branded locally for institutions, businesses and security teams.
+          Kenya’s trusted uniform and apparel manufacturer. Designed, cut, stitched and branded
+          locally for institutions, businesses and security teams.
         </p>
       </div>
     </section>
@@ -74,7 +97,7 @@ function StorySection() {
     <section className="grid gap-8 lg:grid-cols-2 lg:items-center">
       <div className="relative aspect-[4/3] min-h-[280px] overflow-hidden rounded-2xl border border-border shadow-sm">
         <img
-          src={factoryHero.url}
+          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg"
           alt="Weaverbird factory and headquarters in Thika"
           className="h-full w-full object-cover"
           loading="eager"
@@ -90,14 +113,14 @@ function StorySection() {
         <p className="text-sm leading-relaxed text-muted-foreground">
           Weaverbird Garments Manufacturers Ltd was founded in 1996 with one clear purpose: to make
           high-quality, durable uniforms and workwear right here in Kenya. What started as a small
-          garment operation has grown into a trusted manufacturer with 12 retail shops, a factory and
-          headquarters in Thika, and a team of over 400 people.
+          garment operation has grown into a trusted manufacturer with 12 retail shops, a factory
+          and headquarters in Thika, and a team of over 400 people.
         </p>
         <p className="text-sm leading-relaxed text-muted-foreground">
           For nearly 30 years we have supplied schools, corporate teams, security firms, hospitals,
-          hotels and sports clubs with apparel that looks professional and lasts longer. Every
-          piece is designed, cut, stitched and finished locally — because we believe Kenyan
-          workmanship is world-class.
+          hotels and sports clubs with apparel that looks professional and lasts longer. Every piece
+          is designed, cut, stitched and finished locally — because we believe Kenyan workmanship is
+          world-class.
         </p>
         <ul className="grid gap-3 sm:grid-cols-2">
           {[
@@ -141,7 +164,10 @@ function StatsSection() {
           <div key={t} className="text-center">
             <span
               className="mx-auto grid h-12 w-12 place-items-center rounded-full"
-              style={{ background: "oklch(0.20 0.07 155)", border: "1px solid oklch(0.78 0.18 145 / 0.4)" }}
+              style={{
+                background: "oklch(0.20 0.07 155)",
+                border: "1px solid oklch(0.78 0.18 145 / 0.4)",
+              }}
             >
               <Icon className="h-5 w-5" style={{ color: "oklch(0.78 0.18 145)" }} />
             </span>
@@ -291,7 +317,10 @@ function LeadershipSection() {
               className="grid h-14 w-14 shrink-0 place-items-center rounded-full text-lg font-bold text-white"
               style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
             >
-              {d.name.split(" ").map((p) => p[0]).join("")}
+              {d.name
+                .split(" ")
+                .map((p) => p[0])
+                .join("")}
             </span>
             <div>
               <h3
@@ -315,22 +344,19 @@ function LeadershipSection() {
 function CtaSection() {
   return (
     <section
-      className="relative overflow-hidden rounded-2xl bg-cover bg-center p-8 text-center text-white lg:p-12"
-      style={{ backgroundImage: `url(${factoryHero.url})` }}
+      className="relative overflow-hidden rounded-2xl bg-cover bg-center px-8 py-16 text-center text-white lg:px-12 lg:py-24"
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
+      }}
     >
       <div
         className="absolute inset-0 rounded-2xl"
         style={{
-          background: "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.92), oklch(0.10 0.06 155 / 0.75))",
+          background:
+            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.92), oklch(0.10 0.06 155 / 0.75))",
         }}
       />
-      <div className="relative">
-        <img
-          src={weaverLogo.url}
-          alt=""
-          className="mx-auto h-16 w-auto object-contain opacity-90"
-          loading="lazy"
-        />
+      <div className="relative py-8">
         <h3
           className="mt-5 text-2xl font-bold sm:text-3xl"
           style={{ fontFamily: "var(--font-display)" }}
@@ -338,7 +364,8 @@ function CtaSection() {
           Ready to work with us?
         </h3>
         <p className="mx-auto mt-3 max-w-xl text-sm text-white/80">
-          Whether you need a quote, a factory visit or a nationwide supply partner, we are here to help.
+          Whether you need a quote, a factory visit or a nationwide supply partner, we are here to
+          help.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link
@@ -346,7 +373,8 @@ function CtaSection() {
             className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
             style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
           >
-            Get a Quote <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            Get a Quote{" "}
+            <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
           <Link
             to="/contact"
@@ -371,7 +399,10 @@ function SectionHeader({
 }) {
   return (
     <div className="max-w-2xl">
-      <div className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--accent-red)" }}>
+      <div
+        className="text-xs font-semibold uppercase tracking-widest"
+        style={{ color: "var(--accent-red)" }}
+      >
         {eyebrow}
       </div>
       <h2

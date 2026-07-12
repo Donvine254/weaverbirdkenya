@@ -1,10 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import {
-  MapPin, Phone, Clock, Search, Navigation, Factory, Building2, X,
-} from "lucide-react";
+import { MapPin, Phone, Clock, Search, Navigation, Factory, Building2, X } from "lucide-react";
 import { Header, Footer } from "./index";
-import factoryHero from "@/assets/our_factory.jpg.asset.json";
 import { branches, type Branch } from "@/data/branches";
 import { BranchesMap } from "@/components/branches-map";
 
@@ -15,9 +12,17 @@ export const Route = createFileRoute("/branches")({
   head: () => ({
     meta: [
       { title: "Branches & Store Locator — Weaverbird Apparel Solutions" },
-      { name: "description", content: "Find a Weaverbird shop near you. 12 branches across Kenya plus our Thika factory & headquarters. Addresses, phone numbers, opening hours & directions." },
+      {
+        name: "description",
+        content:
+          "Find a Weaverbird shop near you. 12 branches across Kenya plus our Thika factory & headquarters. Addresses, phone numbers, opening hours & directions.",
+      },
       { property: "og:title", content: "Weaverbird Branches — Store Locator" },
-      { property: "og:description", content: "Find your nearest Weaverbird shop across Kenya. Get directions, phone numbers and opening hours." },
+      {
+        property: "og:description",
+        content:
+          "Find your nearest Weaverbird shop across Kenya. Get directions, phone numbers and opening hours.",
+      },
     ],
   }),
   component: BranchesPage,
@@ -25,7 +30,10 @@ export const Route = createFileRoute("/branches")({
 
 function BranchesPage() {
   return (
-    <div className="min-h-screen bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
+    <div
+      className="min-h-screen bg-background font-sans"
+      style={{ fontFamily: "var(--font-sans)" }}
+    >
       <Header current="Branches" />
       <PageHero />
       <Locator />
@@ -38,7 +46,9 @@ function PageHero() {
   return (
     <section
       className="relative overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${factoryHero.url})` }}
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
+      }}
     >
       <div
         className="absolute inset-0"
@@ -59,7 +69,8 @@ function PageHero() {
           Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Branches</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-white/80">
-          Find a Weaverbird shop near you. We have 12 retail locations across Kenya plus our factory headquarters in Thika.
+          Find a Weaverbird shop near you. We have 12 retail locations across Kenya plus our factory
+          headquarters in Thika.
         </p>
       </div>
     </section>
@@ -284,4 +295,3 @@ function InfoRow({
     </div>
   );
 }
-

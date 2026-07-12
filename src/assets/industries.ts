@@ -1,7 +1,16 @@
-import { Briefcase, Building2, Factory, GraduationCap, Heart, ShieldAlert } from "lucide-react";
+import {
+  Briefcase,
+  Building2,
+  Factory,
+  GraduationCap,
+  Heart,
+  Hospital,
+  ShieldAlert,
+  Utensils,
+} from "lucide-react";
 import { products } from "./uniforms";
 
-export const industries = [
+export const categories = [
   {
     title: "Education",
     subtitle: "Schools & Colleges",
@@ -18,13 +27,13 @@ export const industries = [
     title: "Hospitality",
     subtitle: "Hotels & Restaurants",
     image: products.find((p) => p.id === "hospitality")!.img,
-    icon: Heart,
+    icon: Utensils,
   },
   {
     title: "Healthcare",
     subtitle: "Hospitals & Clinics",
     image: products.find((p) => p.id === "healthcare")!.img,
-    icon: Building2,
+    icon: Hospital,
   },
   {
     title: "Security",
