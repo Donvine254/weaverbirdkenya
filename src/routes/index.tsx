@@ -657,7 +657,7 @@ function CtaBanner() {
         />
         <div className="relative flex items-center px-8 py-14 sm:py-20 lg:px-16 lg:py-24">
           <div className="max-w-lg text-white">
-            <div>
+            <div className="flex items-center gap-2 py-6">
               <div className="w-12 h-12 rounded-full bg-[#22c55e]/20 border border-[#22c55e]/40 flex items-center justify-center flex-shrink-0">
                 <svg
                   width="24"
