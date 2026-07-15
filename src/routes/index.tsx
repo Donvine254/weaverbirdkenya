@@ -83,7 +83,7 @@ function Logo({ light = false }: { light?: boolean }) {
       <img
         src={weaverLogo}
         alt="Weaverbird Apparel Solutions logo"
-        className="h-12 w-auto object-contain sm:h-20"
+        className="h-12 w-auto object-contain sm:h-16"
       />
       <div className="hidden flex-col leading-tight sm:flex">
         <span className="text-lg font-bold tracking-wide text-white">WEAVERBIRD</span>
@@ -250,9 +250,9 @@ function Hero() {
           <ul className="mt-6 grid max-w-md grid-cols-2 gap-3 text-sm text-white/85">
             {[
               { i: Award, t: "Established in 1996" },
-              { i: Users, t: "3000+ Clients Served" },
+              { i: Users, t: "900,000+ Happy Customers" },
               { i: Truck, t: "Nationwide Delivery" },
-              { i: Factory, t: "In-house Production" },
+              { i: Factory, t: "Unbeatable Quality" },
             ].map(({ i: Icon, t }) => (
               <li key={t} className="flex items-center gap-2">
                 <Icon className="h-4 w-4 shrink-0" style={{ color: "oklch(0.78 0.18 145)" }} />
@@ -313,10 +313,10 @@ function Hero() {
 function StatsBar() {
   const stats = [
     { i: Award, n: "30+", t: "Years Experience" },
-    { i: Users, n: "3000+", t: "Happy Clients" },
-    { i: ThumbsUp, n: "97%", t: "Client Satisfaction" },
+    { i: Users, n: "1000+", t: "Garment Designs" },
+    { i: ThumbsUp, n: "98%", t: "Client Satisfaction" },
     { i: MapPin, n: "12", t: "Branches Nationwide" },
-    { i: Truck, n: "Fast", t: "Delivery" },
+    { i: Truck, n: "Fast", t: "Delivery Nationwide" },
     { i: Factory, n: "Factory", t: "Production" },
   ];
   return (
@@ -584,12 +584,14 @@ function TrustedBy() {
     "EQUITY",
     "KENYA AIRWAYS",
     "G4S",
-    "UoN",
-    "SAFARICOM",
-    "NATION",
     "JKUAT",
     "KPLC",
     "BIDCO",
+    "JKF",
+    "ABSA KENYA",
+    "HFCB",
+    "KEBS",
+    "KPA",
   ];
   const row = [...clients, ...clients];
   return (
@@ -617,8 +619,8 @@ function TrustedBy() {
             style={{ borderColor: "var(--border)" }}
           >
             {[
-              { n: "50,000+", t: "Garments Delivered For Schools" },
-              { n: "15+", t: "Corporate Clients Nationwide" },
+              { n: "10M+", t: "Garments Delivered For Schools" },
+              { n: "200+", t: "Corporate Clients Nationwide" },
               { n: "98%", t: "Repeat Business" },
             ].map((m) => (
               <div key={m.t} className="text-center">
@@ -790,23 +792,23 @@ export function Footer() {
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
                   <Mail className="h-4 w-4 text-white/80" />
                 </span>
-                info@weaverbirdkenya.com
+                <a href="mailto:info@weaverbirdkenya.com"> info@weaverbirdkenya.com</a>
               </li>
               <li className="flex items-center gap-3 border-b border-white/10 pb-4">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
                   <Phone className="h-4 w-4 text-white/80" />
                 </span>
-                +020-2051487
+                <a href="tel:0202051487">020-2051487 (Toll Free)</a>
+                +020-2051487 (Toll Free)
               </li>
               <li className="flex items-center gap-3">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
                   <Smartphone className="h-4 w-4 text-white/80" />
                 </span>
-                +254 722 264464
+                <a href="tel:+254722264464">+254 722 264464</a>
               </li>
             </ul>
             <div className="mt-6 flex items-center gap-3">
-              <span className="text-sm text-white/70">Follow us</span>
               {socials.map((s) => (
                 <a
                   key={s.label}
@@ -830,7 +832,7 @@ export function Footer() {
               {[
                 { d: "Mon - Friday", h: "08.00 am to 05.00 pm" },
                 { d: "Saturday", h: "08.00 am to 05.00 pm" },
-                { d: "Sunday", h: "All Sunday we are Closed" },
+                { d: "Sunday", h: "Closed" },
               ].map((row) => (
                 <li
                   key={row.d}
@@ -900,9 +902,8 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-6">
-          <Logo light />
           <p className="text-sm text-white/70">
-            © {new Date().getFullYear()} Weaverbird Kenya. All Rights Reserved.
+            © {new Date().getFullYear()} Weaverbird Garments Manufacturers Ltd.
           </p>
           <p className="flex items-center gap-2 text-sm text-white/70">
             <Leaf className="h-4 w-4" style={{ color: "oklch(0.78 0.18 145)" }} />
