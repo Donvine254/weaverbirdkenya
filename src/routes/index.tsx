@@ -87,7 +87,7 @@ function Logo({ light = false }: { light?: boolean }) {
       />
       <div className="hidden flex-col leading-tight sm:flex">
         <span className="text-lg font-bold tracking-wide text-white">WEAVERBIRD</span>
-        <span className="text-xs font-medium tracking-wider text-white/70">
+        <span className="text-xs font-cursive font-medium  text-white/70">
           Garments Manufacturer
         </span>
       </div>
@@ -101,8 +101,8 @@ export function Header({ current = "Home" }: { current?: string }) {
     { label: "Home", to: "/" },
     { label: "Products", href: "/#products" },
     { label: "Industries", href: "/#industries" },
-    { label: "Manufacturing", href: "/#manufacturing" },
-    { label: "Gallery", href: "/#gallery" },
+    // { label: "Manufacturing", href: "/#manufacturing" },
+    // { label: "Gallery", href: "/#gallery" },
     { label: "Branches", to: "/branches" },
     { label: "About Us", to: "/about" },
     { label: "Contact", to: "/contact" },
