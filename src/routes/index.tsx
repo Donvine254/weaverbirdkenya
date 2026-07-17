@@ -799,7 +799,6 @@ export function Footer() {
                   <Phone className="h-4 w-4 text-white/80" />
                 </span>
                 <a href="tel:0202051487">020-2051487 (Toll Free)</a>
-                +020-2051487 (Toll Free)
               </li>
               <li className="flex items-center gap-3">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
