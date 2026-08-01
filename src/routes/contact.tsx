@@ -32,7 +32,11 @@ export const Route = createFileRoute("/contact")({
         content:
           "Reach our team by phone, email or WhatsApp. Visit our Thika factory or find your nearest branch.",
       },
+      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/contact" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/contact" }],
   }),
   component: ContactPage,
 });
