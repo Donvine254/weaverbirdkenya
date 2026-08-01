@@ -174,7 +174,7 @@ export function Header({ current = "Home" }: { current?: string }) {
           <SheetContent
             side="right"
             className="w-72 border-l-0 p-0"
-            style={{ background: "var(--primary-darker)" }}
+            style={{ background: "var(--primary-darker)", color: "var(--primary-foreground)" }}
           >
             <SheetHeader className="border-b border-white/10 p-6 text-left">
               <SheetTitle className="text-white">
