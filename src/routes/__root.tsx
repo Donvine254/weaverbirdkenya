@@ -114,6 +114,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "icon",
         href: "/favicon/favicon.ico",
       },
+      { rel: "apple-touch-icon", href: "/favicon/apple-touch-icon.png" },
+      { rel: "manifest", href: "/favicon/site.webmanifest" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap",
@@ -121,6 +123,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Italianno&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Weaverbird Garments Manufacturers Ltd",
+          url: "https://weaverbirdkenya.lovable.app",
+          foundingDate: "1996",
+          description:
+            "Kenyan manufacturer of school, corporate, security, sports, hospitality and industrial uniforms.",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Thika",
+            addressCountry: "KE",
+          },
+          sameAs: [
+            "https://facebook.com/weaverbirdgarmentsltd",
+            "https://www.tiktok.com/@weaver.bird.garme5",
+          ],
+        }),
       },
     ],
   }),

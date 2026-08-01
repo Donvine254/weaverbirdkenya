@@ -23,7 +23,11 @@ export const Route = createFileRoute("/branches")({
         content:
           "Find your nearest Weaverbird shop across Kenya. Get directions, phone numbers and opening hours.",
       },
+      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/branches" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/branches" }],
   }),
   component: BranchesPage,
 });

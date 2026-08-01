@@ -40,7 +40,11 @@ export const Route = createFileRoute("/quote")({
       { name: "description", content: "Request a costed quotation for your organisation's uniforms and apparel. School, corporate, security, hospitality, healthcare & industrial." },
       { property: "og:title", content: "Request a Quote — Weaverbird" },
       { property: "og:description", content: "Tell us what you're outfitting and we'll send back a costed quotation." },
+      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/quote" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/quote" }],
   }),
   component: QuotePage,
 });

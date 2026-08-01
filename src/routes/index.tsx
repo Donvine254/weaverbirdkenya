@@ -51,7 +51,11 @@ export const Route = createFileRoute("/")({
         content:
           "Kenya's leading uniform & apparel manufacturer. From design to delivery, nationwide.",
       },
+      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/" }],
   }),
   component: Index,
 });
