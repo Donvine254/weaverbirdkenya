@@ -615,7 +615,7 @@ function Manufacturing() {
                 style={{ background: "var(--gradient-red)" }}
               />
               <span
-                className="pointer-events-none absolute -right-3 -top-4 text-6xl font-extrabold leading-none text-foreground/[0.06] transition-colors duration-300 group-hover:text-foreground/[0.10]"
+                className="pointer-events-none absolute right-3 top-3 text-5xl font-extrabold leading-none text-foreground/[0.08] transition-colors duration-300 group-hover:text-foreground/[0.12]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {String(idx + 1).padStart(2, "0")}
