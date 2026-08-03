@@ -170,3 +170,55 @@
 .animate-marquee {
   animation: marquee 25s linear infinite;
 }
+/* ─── Accessibility widget feature classes ─── */
+@layer utilities {
+  .animate-in {
+    animation: a11y-slide-up 0.25s ease-out;
+  }
+  @keyframes a11y-slide-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Larger text */
+.a11y-largerText {
+  font-size: 118% !important;
+}
+
+/* Highlight links */
+.a11y-highlightLinks a {
+  text-decoration: underline !important;
+  outline: 2px solid #22c55e !important;
+  outline-offset: 2px !important;
+}
+
+/* Text spacing */
+.a11y-textSpacing * {
+  letter-spacing: 0.08em !important;
+  word-spacing: 0.16em !important;
+  line-height: 1.8 !important;
+}
+
+/* High contrast */
+.a11y-highContrast {
+  filter: contrast(1.5) !important;
+}
+.a11y-highContrast * {
+  text-shadow: none !important;
+}
+
+/* Desaturate */
+.a11y-desaturate {
+  filter: grayscale(100%) !important;
+}
+
+/* Pause animations */
+.a11y-pauseAnimations *,
+.a11y-pauseAnimations *::before,
+.a11y-pauseAnimations *::after {
+  animation-duration: 0.001s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0.001s !important;
+  scroll-behavior: auto !important;
+}
