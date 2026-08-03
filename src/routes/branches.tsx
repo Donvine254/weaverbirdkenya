@@ -75,7 +75,7 @@ function PageHero() {
           Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Branches</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-white/80">
-          Find a Weaverbird shop near you. We have 12 retail locations across Kenya plus our factory
+          Find a Weaverbird shop near you. We have 13 retail locations across Kenya plus our factory
           headquarters in Thika.
         </p>
       </div>
