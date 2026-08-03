@@ -129,7 +129,7 @@ function StorySection() {
         <ul className="grid gap-3 sm:grid-cols-2">
           {[
             { i: Factory, t: "Factory & HQ in Thika" },
-            { i: MapPin, t: "12 shops across Kenya" },
+            { i: MapPin, t: "13 shops across Kenya" },
             { i: Award, t: "30 years of experience" },
             { i: Leaf, t: "Proudly made in Kenya" },
           ].map(({ i: Icon, t }) => (
