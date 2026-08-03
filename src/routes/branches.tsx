@@ -4,6 +4,7 @@ import { MapPin, Phone, Clock, Search, Navigation, Factory, Building2, X } from 
 import { Header, Footer } from "./index";
 import { branches, type Branch } from "@/data/branches";
 import { BranchesMap } from "@/components/branches-map";
+import { NewsletterSection } from "@/components/newsletter-section";
 
 export type { Branch };
 export { branches };
@@ -41,6 +42,7 @@ function BranchesPage() {
       <Header current="Branches" />
       <PageHero />
       <Locator />
+      <NewsletterSection />
       <Footer />
     </div>
   );
