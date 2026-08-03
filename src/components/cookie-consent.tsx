@@ -42,8 +42,7 @@ export function CookieConsent() {
           <Cookie className="h-5 w-5" style={{ color: "oklch(0.78 0.18 145)" }} />
         </span>
         <p className="flex-1 text-sm leading-relaxed text-white/80">
-          We use cookies to keep the site running smoothly and understand how visitors use it. By
-          continuing, you agree to our use of cookies.
+          By continuing you agree to our cookie policy.
         </p>
         <div className="flex shrink-0 items-center gap-2">
           <button
