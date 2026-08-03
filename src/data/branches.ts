@@ -144,6 +144,20 @@ export const branches: Branch[] = [
     coords: [-0.2833, 36.0667],
   },
   {
+    name: 'Nanyuki',
+    type: 'branch',
+    phone: '0745444222',
+    hours: {
+      monday_friday: '8:30AM - 6:00PM',
+      saturday: '8:30AM - 6:00PM',
+      sunday: 'Closed',
+    },
+    address: 'Along Lumumba Road, Horizon House, Nanyuki',
+    map: 'https://maps.app.goo.gl/vCJkGENjwj7da8ek8',
+    coords: [0.01465507206258696, 37.07647772379612],
+  },  
+  },
+  {
     name: 'Meru',
     type: 'branch',
     phone: '0727399399',
