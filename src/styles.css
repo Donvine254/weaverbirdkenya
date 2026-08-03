@@ -168,7 +168,7 @@
   }
 }
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 45s linear infinite;
 }
 /* ─── Accessibility widget feature classes ─── */
 @layer utilities {
@@ -217,8 +217,13 @@
 .a11y-pauseAnimations *,
 .a11y-pauseAnimations *::before,
 .a11y-pauseAnimations *::after {
-  animation-duration: 0.001s !important;
-  animation-delay: 0s !important;
-  transition-duration: 0.001s !important;
+  animation-play-state: paused !important;
+  transition: none !important;
   scroll-behavior: auto !important;
+}
+
+/* Stop Tailwind hover scales when animations are paused */
+.a11y-pauseAnimations [class*="hover:scale"]:hover {
+  --tw-scale-x: 1 !important;
+  --tw-scale-y: 1 !important;
 }
