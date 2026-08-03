@@ -155,8 +155,7 @@ export const branches: Branch[] = [
     address: 'Along Lumumba Road, Horizon House, Nanyuki',
     map: 'https://maps.app.goo.gl/vCJkGENjwj7da8ek8',
     coords: [0.01465507206258696, 37.07647772379612],
-  },  
-  },
+  }, 
   {
     name: 'Meru',
     type: 'branch',

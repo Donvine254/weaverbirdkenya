@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import {
-  Accessibility, X, Type, Eye, Contrast, Droplets,
+  PersonStanding, X, Type, Eye, Contrast, Droplets,
   Pause, Volume2, MousePointerClick, RotateCcw, Check,
 } from 'lucide-react';
 
@@ -149,10 +149,10 @@ export function AccessibilityWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label="Accessibility options"
         aria-expanded={open}
-        title="Accessibility"
-        className="fixed bottom-5 left-5 z-[9999] w-14 h-14 rounded-full bg-[#000c01] hover:bg-[#0d2b1e] text-white shadow-2xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-400/40"
+        title="Accessibility Widget"
+        className="fixed bottom-5 right-5 z-[9999] cursor-pointer w-12 h-12 rounded-full bg-red-500 hover:bg-[#0d2b1e] text-white shadow-2xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-400/40"
       >
-        <Accessibility size={26} />
+        <PersonStanding size={26} className="size-10" />
         {active.size > 0 && (
           <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-green-500 text-white text-[10px] font-bold flex items-center justify-center">
             {active.size}
@@ -166,12 +166,12 @@ export function AccessibilityWidget() {
           ref={panelRef}
           role="dialog"
           aria-label="Accessibility settings"
-          className="fixed bottom-24 left-5 z-[9999] w-[340px] max-w-[calc(100vw-2.5rem)] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-in"
+          className="fixed bottom-32 right-5 z-[9999] w-[340px] max-w-[calc(100vw-2.5rem)] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-in"
         >
           {/* Header */}
           <div className="bg-[#000c01] px-5 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <Accessibility size={20} className="text-green-400" />
+              <PersonStanding size={20} className="text-green-400" />
               <div>
                 <div className="text-white font-bold text-sm">Accessibility</div>
                 <div className="text-white/50 text-[10px]">ADA · EAA · WCAG Ready</div>
@@ -181,7 +181,7 @@ export function AccessibilityWidget() {
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close accessibility menu"
-              className="text-white/60 hover:text-white transition-colors"
+              className="text-white/60 hover:text-white transition-colors cursor-pointer"
             >
               <X size={18} />
             </button>
