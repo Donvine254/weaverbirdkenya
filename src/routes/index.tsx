@@ -319,7 +319,7 @@ function StatsBar() {
     { i: Award, n: "30+", t: "Years Experience" },
     { i: Users, n: "1000+", t: "Garment Designs" },
     { i: ThumbsUp, n: "98%", t: "Client Satisfaction" },
-    { i: MapPin, n: "12", t: "Branches Nationwide" },
+    { i: MapPin, n: "13", t: "Branches Nationwide" },
     { i: Truck, n: "Fast", t: "Delivery Nationwide" },
     { i: Factory, n: "Factory", t: "Production" },
   ];
