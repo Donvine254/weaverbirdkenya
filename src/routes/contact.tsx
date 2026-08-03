@@ -327,7 +327,7 @@ function FindStoreCta() {
         Prefer to visit in person?
       </h3>
       <p className="mx-auto mt-3 max-w-xl text-sm text-white/80">
-        We have 12 retail branches across Kenya. Find the shop closest to you and drop by anytime.
+        We have 13 retail branches across Kenya. Find the shop closest to you and drop by anytime.
       </p>
       <Link
         to="/branches"
