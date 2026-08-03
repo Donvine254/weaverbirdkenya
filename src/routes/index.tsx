@@ -659,11 +659,11 @@ function Industries() {
           Trusted by organizations across Kenya in every major sector.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 py-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-6">
           {categories.map(({ icon: Icon, title, subtitle, image }) => (
             <div
               key={title}
-              className="group relative h-48 cursor-pointer overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group relative h-48 lg:h-64 cursor-pointer overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <img
                 src={image}
@@ -674,8 +674,8 @@ function Industries() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d2b1e]/90 via-[#0d2b1e]/40 to-[#0d2b1e]/10" />
 
               <div className="absolute inset-0 flex flex-col items-center justify-end p-4 pb-5">
-                <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full border border-[#22c55e]/40 bg-[#22c55e]/20">
-                  <Icon size={18} className="text-[#4ade80]" />
+                <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full border border-red-300 backdrop-blur-md">
+                  <Icon size={18} className="text-red-500" />
                 </div>
 
                 <div className="text-center text-sm font-bold text-white">{title}</div>
@@ -705,6 +705,19 @@ function TrustedBy() {
     "HFCB",
     "KEBS",
     "KPA",
+    "THIKA SPORTS CLUB",
+    "KMTC",
+    "IMPERIAL COLLEGE",
+    "TAI SACCO",
+    "THIKA CLOTH MILLS",
+    "DELFIRM HOTEL",
+    "ZIWA FARM",
+    "THIKA COFFEE MILL",
+    "MPESA FOUNDATION",
+    "JOMO KENYATTA FOUNDATION",
+    "COMMONWEALTH COLLEGE",
+    "MOUNT KENYA UNIVERSITY",
+    "KONG SECURITY"
   ];
   const row = [...clients, ...clients];
   return (

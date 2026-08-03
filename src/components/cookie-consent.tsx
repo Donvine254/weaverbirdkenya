@@ -21,7 +21,7 @@ export function CookieConsent() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (!saved) {
-        const t = setTimeout(() => setVisible(true), 1200);
+        const t = setTimeout(() => setVisible(true), 12000);
         return () => clearTimeout(t);
       }
     } catch {
@@ -57,7 +57,7 @@ export function CookieConsent() {
       aria-label="Cookie consent"
       className="fixed bottom-0 left-0 right-0 z-[9997] flex justify-center p-3 sm:p-4 pointer-events-none"
     >
-      <div className="pointer-events-auto w-full max-w-3xl bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border border-white/40 overflow-hidden">
+      <div className="pointer-events-auto w-full max-w-3xl bg-background/80 backdrop-blur-md rounded-2xl shadow-2xl border border-white/40 overflow-hidden">
         {/* Top bar */}
         <div className="flex items-start gap-3 p-4 sm:p-5">
           <div className="w-10 h-10 rounded-xl bg-[#000c01] flex items-center justify-center flex-shrink-0">
