@@ -15,7 +15,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { TikTokIcon } from "@/components/tiktok-icon";
-import { Header, Footer } from "./index";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

@@ -14,7 +14,8 @@ import {
   Leaf,
   Sparkles,
 } from "lucide-react";
-import { Header, Footer } from "./index";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 import weaverLogo from "@/assets/logo.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
