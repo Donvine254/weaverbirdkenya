@@ -10,34 +10,6 @@ import { Industries } from "@/components/home/industries";
 import { TrustedBy } from "@/components/home/trusted-by";
 import { CtaBanner } from "@/components/home/cta-banner";
 
-MapPin,
-  Mail,
-  Phone,
-  Smartphone,
-  Facebook,
-  Twitter,
-  Instagram,
-  Clock,
-  Calendar,
-  Shirt,
-  ChevronRight,
-  Award,
-  Users,
-  ThumbsUp,
-  Truck,
-  PencilRuler,
-  Scissors,
-  Sparkles,
-  ShieldCheck,
-  Factory,
-  ArrowRight,
-  Leaf,
-  Menu,
-  Diamond,
-} from "lucide-react";
-
-
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
