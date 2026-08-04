@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useRef, useState } from "react";
-import { Plus, X, Send, CheckCircle2, Mail, RotateCcw } from "lucide-react";
+import { Plus, X, Send, CheckCircle2, Mail, RotateCcw, ClipboardList } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
