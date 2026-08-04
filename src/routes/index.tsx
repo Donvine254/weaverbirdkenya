@@ -34,6 +34,7 @@ import footerFabric from "@/assets/footer-fabric.jpg";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { products } from "@/assets/uniforms";
+import { ProductCategories } from "@/data/products"
 import { categories } from "@/assets/industries";
 
 export const Route = createFileRoute("/")({
@@ -379,9 +380,8 @@ function Products() {
           View All Products <ArrowRight className="h-4 w-4" />
         </a>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-        {products
-          .filter((product) => product.id !== "healthcare")
+      {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        {ProductCategories
           .map(({ img, title, desc, icon: Icon }) => (
             <article
               key={title}
@@ -413,6 +413,50 @@ function Products() {
               </div>
             </article>
           ))}
+      </div> */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        {ProductCategories.map(
+          ({ id, image, name, description, icon: Icon }) => (
+            <article
+              key={id}
+              className="group overflow-hidden rounded-2xl bg-card text-card-foreground transition hover:-translate-y-1"
+              style={{ boxShadow: "var(--shadow-card)" }}
+            >
+              <div className="relative aspect-[5/4] overflow-hidden">
+                <img
+                  src={image}
+                  alt={name}
+                  loading="lazy"
+                  width={1402}
+                  height={1122}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+
+                <span className="absolute bottom-3 left-3 grid h-9 w-9 place-items-center rounded-full bg-white shadow">
+                  <Icon
+                    className="h-4 w-4"
+                    style={{ color: "var(--primary)" }}
+                  />
+                </span>
+              </div>
+
+              <div className="relative p-4">
+                <h3 className="text-sm font-bold">{name}</h3>
+
+                <p className="mt-1 text-xs text-muted-foreground">
+                  {description}
+                </p>
+
+                <span
+                  className="absolute -top-4 right-4 grid h-8 w-8 place-items-center rounded-full text-white shadow-md"
+                  style={{ background: "var(--gradient-red)" }}
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </span>
+              </div>
+            </article>
+          )
+        )}
       </div>
     </section>
   );

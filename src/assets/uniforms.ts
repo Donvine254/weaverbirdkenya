@@ -1,9 +1,9 @@
 import {
   GraduationCap,
   Briefcase,
-  ShieldAlert,
-  Flame,
-  ShieldCheck,
+  ShieldUser,
+  Volleyball,
+  HardHat,
   UtensilsCrossed,
   Hospital,
 } from "lucide-react";
@@ -11,11 +11,11 @@ import {
 const iconMap = {
   school: GraduationCap,
   corporate: Briefcase,
-  security: ShieldAlert,
-  sports: Flame,
+  security: ShieldUser,
+  sports: Volleyball,
   hospitality: UtensilsCrossed,
   healthcare: Hospital,
-  ppe: ShieldCheck,
+  ppe: HardHat,
 };
 
 export const uniforms = [
