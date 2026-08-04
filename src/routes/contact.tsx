@@ -242,11 +242,11 @@ function FactorySection() {
       />
       <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
         <div className="grid gap-0 md:grid-cols-2">
-          <div className="relative aspect-[4/3] md:aspect-auto">
+          <div className="relative aspect-[4/3] md:aspect-auto min-h-[280px]">
             <img
-              src="https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg"
+              src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
               alt="Weaverbird factory in Thika"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full"
               loading="lazy"
             />
           </div>

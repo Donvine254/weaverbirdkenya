@@ -15,7 +15,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Header, Footer } from "./index";
-import weaverLogo from "@/assets/logo.jpg";
+
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
@@ -101,7 +101,7 @@ function StorySection() {
     <section className="grid gap-8 lg:grid-cols-2 lg:items-center">
       <div className="relative aspect-[4/3] min-h-[280px] overflow-hidden rounded-2xl border border-border shadow-sm">
         <img
-          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg"
+          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
           alt="Weaverbird factory and headquarters in Thika"
           className="h-full w-full object-cover"
           loading="eager"
