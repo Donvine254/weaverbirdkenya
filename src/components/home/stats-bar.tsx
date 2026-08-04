@@ -1,10 +1,10 @@
-import { MapPin, Award, Users, ThumbsUp, Truck, Factory } from "lucide-react";
+import { MapPin, Award, ThumbsUp, Truck, Factory, Shirt } from "lucide-react";
 
 /* ----------------- Stats ----------------- */
 export function StatsBar() {
   const stats = [
     { i: Award, n: "30+", t: "Years Experience" },
-    { i: Users, n: "1000+", t: "Garment Designs" },
+    { i: Shirt, n: "1000+", t: "Garment Designs" },
     { i: ThumbsUp, n: "98%", t: "Client Satisfaction" },
     { i: MapPin, n: "13", t: "Branches Nationwide" },
     { i: Truck, n: "Fast", t: "Delivery Nationwide" },
@@ -13,7 +13,7 @@ export function StatsBar() {
   return (
     <section className="mx-auto -mt-8 max-w-7xl px-6">
       <div
-        className="relative grid grid-cols-2 gap-3 rounded-2xl px-3 py-5 text-white sm:grid-cols-3 sm:gap-4 sm:px-4 sm:py-6 lg:grid-cols-6"
+        className="relative grid grid-cols-2 gap-3 rounded-2xl px-3 py-5 text-white sm:grid-cols-3 sm:gap-4 sm:px-4 sm:py-6 lg:grid-cols-6 border border-green-950"
         style={{ background: "var(--primary-deep)", boxShadow: "var(--shadow-card)" }}
       >
         {stats.map(({ i: Icon, n, t }) => (

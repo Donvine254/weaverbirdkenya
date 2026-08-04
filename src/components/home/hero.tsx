@@ -1,4 +1,4 @@
-import { ChevronRight, Award, Users, Truck, Factory } from "lucide-react";
+import { ChevronRight, Award, Truck, Smile, CircleStar } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { products } from "@/assets/uniforms";
 
@@ -42,12 +42,12 @@ export function Hero() {
             From school uniforms to corporate branding, we design, manufacture and deliver premium
             apparel solutions across Kenya.
           </p>
-          <ul className="mt-6 grid max-w-md grid-cols-2 gap-3 text-sm text-white/85">
+          <ul className="mt-6 grid max-w-md grid-cols-2 gap-3 text-xs sm:text-sm text-white/85">
             {[
               { i: Award, t: "Established in 1996" },
-              { i: Users, t: "900,000+ Happy Customers" },
+              { i: Smile, t: "1M+ Happy Clients" },
               { i: Truck, t: "Nationwide Delivery" },
-              { i: Factory, t: "Unbeatable Quality" },
+              { i: CircleStar, t: "Unbeatable Quality" },
             ].map(({ i: Icon, t }) => (
               <li key={t} className="flex items-center gap-2">
                 <Icon className="h-4 w-4 shrink-0" style={{ color: "oklch(0.78 0.18 145)" }} />
