@@ -54,9 +54,44 @@ function QuotePage() {
   return (
     <div className="min-h-screen bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Quote" />
+      <PageHero />
       <QuoteForm />
       <Footer />
     </div>
+  );
+}
+
+function PageHero() {
+  return (
+    <section
+      className="relative overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
+      }}
+    >
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
+        }}
+      />
+      <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
+        <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
+          <ClipboardList className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
+          Custom Apparel Quote
+        </div>
+        <h1
+          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          Request a <span style={{ color: "oklch(0.78 0.18 145)" }}>Quote</span>
+        </h1>
+        <p className="mx-auto mt-5 max-w-2xl text-white/80">
+          Tell us what you're outfitting and we'll send back a detailed, costed quotation tailored to your organisation.
+        </p>
+      </div>
+    </section>
   );
 }
 
