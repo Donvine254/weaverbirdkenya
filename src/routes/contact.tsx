@@ -243,13 +243,14 @@ function FactorySection() {
       />
       <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
         <div className="grid gap-0 md:grid-cols-2">
-          <div className="relative aspect-[4/3] md:aspect-auto min-h-[280px]">
-            <img
-              src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
-              alt="Weaverbird factory in Thika"
-              className="absolute inset-0 h-full w-full"
-              loading="lazy"
-            />
+          <div className="relative aspect-[4/3] overflow-hidden min-h-[280px]">
+             <img
+          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
+          alt="Weaverbird factory and headquarters in Thika"
+          className="h-full w-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
           </div>
           <div className="p-6 lg:p-8">
             <div className="flex items-center gap-3">
