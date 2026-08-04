@@ -14,7 +14,8 @@ import {
   Leaf,
   Sparkles,
 } from "lucide-react";
-import { Header, Footer } from "./index";
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
