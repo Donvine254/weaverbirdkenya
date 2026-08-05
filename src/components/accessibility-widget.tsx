@@ -205,7 +205,7 @@ export function AccessibilityWidget() {
               <PersonStanding size={20} className="text-green-400" />
               <div>
                 <div className="text-white font-bold text-sm">Accessibility</div>
-                <div className="text-white/50 text-[10px]">ADA · EAA · WCAG Ready</div>
+                <div className="text-white/70 text-[10px]">ADA · EAA · WCAG Ready</div>
               </div>
             </div>
             <button
@@ -226,7 +226,7 @@ export function AccessibilityWidget() {
           <div className="px-5 py-4 border-b border-gray-100">
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Text Size</span>
-              <span className="text-xs font-semibold text-gray-400">
+              <span className="text-xs font-semibold text-gray-600">
                 {fontSize === 0 ? 'Default' : `+${fontSize * 8}%`}
               </span>
             </div>
@@ -284,7 +284,7 @@ export function AccessibilityWidget() {
                     <div className={`text-sm font-semibold ${isOn ? 'text-green-800' : 'text-gray-800'}`}>
                       {f.label}
                     </div>
-                    <div className="text-[11px] text-gray-400 truncate">{f.desc}</div>
+                    <div className="text-[11px] text-gray-600 truncate">{f.desc}</div>
                   </div>
                   <span
                     className={`w-9 h-5 rounded-full flex-shrink-0 relative transition-colors ${
@@ -311,7 +311,7 @@ export function AccessibilityWidget() {
             >
               <RotateCcw size={13} /> Reset All
             </button>
-            <div className="flex items-center gap-1.5 text-[10px] text-gray-400">
+            <div className="flex items-center gap-1.5 text-[10px] text-gray-600">
               <Check size={11} className="text-green-500" />
               Preferences saved
             </div>
