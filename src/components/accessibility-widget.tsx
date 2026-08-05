@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import {
   PersonStanding, X, Type, Eye, Contrast, Droplets,
-  Pause, Volume2, MousePointerClick, RotateCcw, Check,
+  Pause, BookOpen, MousePointerClick, RotateCcw, Check,
 } from 'lucide-react';
 
 type FeatureKey =
@@ -27,7 +27,7 @@ const FEATURES: Feature[] = [
   { key: 'highContrast', label: 'High Contrast', icon: Contrast, desc: 'Boost color contrast' },
   { key: 'desaturate', label: 'Desaturate', icon: Droplets, desc: 'Reduce colors to grayscale' },
   { key: 'pauseAnimations', label: 'Pause Animations', icon: Pause, desc: 'Stop motion and transitions' },
-  { key: 'readGuide', label: 'Reading Guide', icon: Volume2, desc: 'Focus bar follows cursor' },
+  { key: 'readGuide', label: 'Reading Guide', icon: BookOpen, desc: 'Focus bar follows cursor' },
 ];
 
 const STORAGE_KEY = 'wbd-a11y-prefs';
@@ -38,6 +38,8 @@ export function AccessibilityWidget() {
   const [fontSize, setFontSize] = useState(0);
   const panelRef = useRef<HTMLDivElement>(null);
   const guideRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
 
   // Load saved preferences
   useEffect(() => {
@@ -97,10 +99,33 @@ export function AccessibilityWidget() {
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false);
+      if (e.key === 'Escape') {
+        setOpen(false);
+        triggerRef.current?.focus();
+        return;
+      }
+      if (e.key !== 'Tab' || !panelRef.current) return;
+      const nodes = panelRef.current.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      );
+      if (nodes.length === 0) return;
+      const first = nodes[0];
+      const last = nodes[nodes.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
+
+  // Move focus into the panel when it opens
+  useEffect(() => {
+    if (open) closeRef.current?.focus();
   }, [open]);
 
   // Click outside to close
@@ -134,6 +159,7 @@ export function AccessibilityWidget() {
       {/* Reading guide bar */}
       <div
         ref={guideRef}
+        aria-hidden="true"
         className="fixed left-0 right-0 h-12 z-[9998] pointer-events-none hidden"
         style={{
           background: 'rgba(34,197,94,0.18)',
@@ -146,15 +172,19 @@ export function AccessibilityWidget() {
       {/* Floating button */}
       <button
         type="button"
+        ref={triggerRef}
         onClick={() => setOpen((o) => !o)}
         aria-label="Accessibility options"
         aria-expanded={open}
         title="Accessibility Widget"
         className="fixed bottom-5 right-5 z-[9999] cursor-pointer w-12 h-12 rounded-full bg-red-500 hover:bg-[#0d2b1e] text-white shadow-2xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-400/40"
       >
-        <PersonStanding size={26} className="size-10" />
+        <PersonStanding size={26} className="size-10" aria-hidden="true" />
         {active.size > 0 && (
-          <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-green-500 text-white text-[10px] font-bold flex items-center justify-center">
+          <span
+            aria-label={`${active.size} accessibility settings active`}
+            className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-green-500 text-white text-[10px] font-bold flex items-center justify-center"
+          >
             {active.size}
           </span>
         )}
@@ -165,6 +195,7 @@ export function AccessibilityWidget() {
         <div
           ref={panelRef}
           role="dialog"
+          aria-modal="true"
           aria-label="Accessibility settings"
           className="fixed bottom-32 right-5 z-[9999] w-[340px] max-w-[calc(100vw-2.5rem)] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-in"
         >
@@ -179,11 +210,15 @@ export function AccessibilityWidget() {
             </div>
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              ref={closeRef}
+              onClick={() => {
+                setOpen(false);
+                triggerRef.current?.focus();
+              }}
               aria-label="Close accessibility menu"
-              className="text-white/60 hover:text-white transition-colors cursor-pointer"
+              className="text-white/80 hover:text-white transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-400 rounded"
             >
-              <X size={18} />
+              <X size={18} aria-hidden="true" />
             </button>
           </div>
 
