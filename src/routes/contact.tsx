@@ -282,12 +282,21 @@ function FactorySection() {
               </li>
               <li className="flex gap-3">
                 <Clock className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
-                <span>Mon – Fri: 8:00am – 5:00pm · Sat: 8:00am – 5:00pm · Sun: Closed</span>
+                <div className="flex flex-col">
+                  <span>Mon – Fri: 8:00 am – 5:00 pm</span>
+                  <span>Sat: 8:00 am – 4:00 pm</span>
+                  <span>Sun: Closed</span>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <Mail className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
+                <a href="mailto:sales@weaverbirdkenya.com" className="hover:underline">
+                  sales@weaverbirdkenya.com
+                </a>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
-                <a href="tel:+2022051487" className="hover:underline">
-                  +020-2051487
+                <a href="tel:+2022051487" className="hover:underline">020-2051487 (Toll Free)
                 </a>
               </li>
             </ul>
@@ -301,6 +310,16 @@ function FactorySection() {
               >
                 <Navigation className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                 Get Directions
+              </a>
+              <a
+                href="tel:+2022051487"
+                title="Book a visit appointment at the Weaverbird factory in Thika"
+                className="hidden lg:inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+                style={{ background: "var(--primary)", boxShadow: "var(--shadow-green)" }}
+                aria-label="book a visit appointment at the Weaverbird factory in Thika"
+              >
+                <Phone className="h-4 w-4" />
+                Book a Visit Appointment
               </a>
             </div>
           </div>

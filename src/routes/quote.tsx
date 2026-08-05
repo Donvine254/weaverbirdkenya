@@ -4,7 +4,7 @@ import { Plus, X, Send, CheckCircle2, Mail, RotateCcw, ClipboardList } from "luc
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
-const BUSINESS_EMAIL = "info@weaverbirdkenya.com";
+const BUSINESS_EMAIL = "sales@weaverbirdkenya.com";
 
 const GARMENT_TYPES = [
   "Dress", "Shirt", "Shorts", "Trouser", "Skirt", "Blazer / Jacket",
