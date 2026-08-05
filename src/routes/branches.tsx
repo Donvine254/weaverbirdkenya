@@ -37,13 +37,15 @@ export const Route = createFileRoute("/branches")({
 function BranchesPage() {
   return (
     <div
-      className="min-h-screen bg-background font-sans"
+      className="min-h-dvh bg-background font-sans"
       style={{ fontFamily: "var(--font-sans)" }}
     >
       <Header current="Branches" />
-      <PageHero />
-      <Locator />
-      <NewsletterSection />
+      <main id="main-content">
+        <PageHero />
+        <Locator />
+        <NewsletterSection />
+      </main>
       <Footer />
     </div>
   );
@@ -113,6 +115,7 @@ function Locator() {
               <Search className="h-4 w-4 text-muted-foreground" />
               <input
                 type="search"
+                aria-label="Search branches by town, mall or landmark"
                 placeholder="Search town, mall or landmark…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
