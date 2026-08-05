@@ -37,18 +37,20 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div
-      className="min-h-screen bg-background font-sans"
+      className="min-h-dvh bg-background font-sans"
       style={{ fontFamily: "var(--font-sans)" }}
     >
       <Header />
-      <Hero />
-      <StatsBar />
-      <Products />
-      <Features />
-      <Manufacturing />
-      <Industries />
-      <TrustedBy />
-      <CtaBanner />
+      <main id="main-content">
+        <Hero />
+        <StatsBar />
+        <Products />
+        <Features />
+        <Manufacturing />
+        <Industries />
+        <TrustedBy />
+        <CtaBanner />
+      </main>
       <Footer />
     </div>
   );

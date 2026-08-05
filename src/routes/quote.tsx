@@ -52,10 +52,12 @@ export const Route = createFileRoute("/quote")({
 
 function QuotePage() {
   return (
-    <div className="min-h-screen bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
+    <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Quote" />
-      <PageHero />
-      <QuoteForm />
+      <main id="main-content">
+        <PageHero />
+        <QuoteForm />
+      </main>
       <Footer />
     </div>
   );
@@ -239,8 +241,9 @@ function QuoteForm() {
               <div key={r.id} className="rounded-xl border bg-background p-4">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_120px_1.2fr_auto]">
                   <div>
-                    <label className={labelCls}>Garment type</label>
+                    <label className={labelCls} htmlFor={`garment-type-${idx}`}>Garment type</label>
                     <select
+                      id={`garment-type-${idx}`}
                       required
                       value={r.type}
                       onChange={(e) => updateRow(r.id, { type: e.target.value })}
@@ -251,6 +254,7 @@ function QuoteForm() {
                     </select>
                     {r.type === "Other" && (
                       <input
+                        aria-label={`Describe garment ${idx + 1}`}
                         required
                         value={r.otherDesc}
                         onChange={(e) => updateRow(r.id, { otherDesc: e.target.value })}
@@ -260,8 +264,9 @@ function QuoteForm() {
                     )}
                   </div>
                   <div>
-                    <label className={labelCls}>Quantity</label>
+                    <label className={labelCls} htmlFor={`garment-qty-${idx}`}>Quantity</label>
                     <input
+                      id={`garment-qty-${idx}`}
                       required
                       type="number"
                       min={1}
@@ -272,8 +277,9 @@ function QuoteForm() {
                     />
                   </div>
                   <div>
-                    <label className={labelCls}>Size / notes</label>
+                    <label className={labelCls} htmlFor={`garment-notes-${idx}`}>Size / notes</label>
                     <input
+                      id={`garment-notes-${idx}`}
                       value={r.notes}
                       onChange={(e) => updateRow(r.id, { notes: e.target.value })}
                       placeholder="e.g. mixed sizes 4-14"
@@ -328,8 +334,9 @@ function QuoteForm() {
             })}
           </div>
           <div className="mt-4">
-            <label className={labelCls}>Logo / colours / placement details</label>
+            <label className={labelCls} htmlFor="brandingDetails">Logo / colours / placement details</label>
             <textarea
+              id="brandingDetails"
               name="brandingDetails"
               rows={3}
               placeholder="e.g. school crest on chest, navy and gold thread"
@@ -340,8 +347,9 @@ function QuoteForm() {
 
         {/* 05 Remarks */}
         <Fieldset num="05" title="Anything else?" last>
-          <label className={labelCls}>Remarks</label>
+          <label className={labelCls} htmlFor="remarks">Remarks</label>
           <textarea
+            id="remarks"
             name="remarks"
             rows={3}
             placeholder="e.g. sample required before bulk order, fabric preference, existing supplier reference"
@@ -437,10 +445,12 @@ function Fieldset({ num, title, children, last }: { num: string; title: string; 
 function Field({ label, required, className, children }: { label: string; required?: boolean; className?: string; children: React.ReactNode }) {
   return (
     <div className={className}>
-      <label className={labelCls}>
-        {label} {required && <span style={{ color: "var(--accent-red)" }}>*</span>}
+      <label className="block">
+        <span className={labelCls}>
+          {label} {required && <span style={{ color: "var(--accent-red)" }} aria-hidden>*</span>}
+        </span>
+        {children}
       </label>
-      {children}
     </div>
   );
 }

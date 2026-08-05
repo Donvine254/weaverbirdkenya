@@ -48,17 +48,19 @@ const FACTORY_MAP =
 function ContactPage() {
   return (
     <div
-      className="min-h-screen bg-background font-sans"
+      className="min-h-dvh bg-background font-sans"
       style={{ fontFamily: "var(--font-sans)" }}
     >
       <Header current="Contact" />
-      <PageHero />
-      <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
-        <ContactMethods />
-        <SocialSection />
-        <FactorySection />
-        <FindStoreCta />
-      </div>
+      <main id="main-content">
+        <PageHero />
+        <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
+          <ContactMethods />
+          <SocialSection />
+          <FactorySection />
+          <FindStoreCta />
+        </div>
+      </main>
       <Footer />
     </div>
   );
@@ -322,12 +324,12 @@ function FindStoreCta() {
       >
         <Store className="h-6 w-6 text-white" />
       </span>
-      <h3
+      <h2
         className="mt-5 text-2xl font-bold sm:text-3xl"
         style={{ fontFamily: "var(--font-display)" }}
       >
         Prefer to visit in person?
-      </h3>
+      </h2>
       <p className="mx-auto mt-3 max-w-xl text-sm text-white/80">
         We have 13 retail branches across Kenya. Find the shop closest to you and drop by anytime.
       </p>
