@@ -54,6 +54,12 @@ export function Header({ current = "Home" }: { current?: string }) {
       className={`sticky top-0 z-50 border-b border-white/10 transition-transform duration-300 ${hidden ? "-translate-y-full" : "translate-y-0"}`}
       style={{ background: "var(--primary-darker)" }}
     >
+      <a
+        href="#main-content"
+        className="sr-only rounded-md bg-white px-4 py-2 text-sm font-semibold text-black focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50"
+      >
+        Skip to main content
+      </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Logo light />
         <nav className="hidden items-center gap-7 text-sm font-medium text-white/85 lg:flex">

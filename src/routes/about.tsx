@@ -44,19 +44,21 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <div
-      className="min-h-screen bg-background font-sans"
+      className="min-h-dvh bg-background font-sans"
       style={{ fontFamily: "var(--font-sans)" }}
     >
       <Header current="About Us" />
-      <PageHero />
-      <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
-        <StorySection />
-        <StatsSection />
-        <MissionVisionSection />
-        <ValuesSection />
-        <LeadershipSection />
-        <CtaSection />
-      </div>
+      <main id="main-content">
+        <PageHero />
+        <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
+          <StorySection />
+          <StatsSection />
+          <MissionVisionSection />
+          <ValuesSection />
+          <LeadershipSection />
+          <CtaSection />
+        </div>
+      </main>
       <Footer />
     </div>
   );
@@ -362,12 +364,12 @@ function CtaSection() {
         }}
       />
       <div className="relative py-8">
-        <h3
+        <h2
           className="mt-5 text-2xl font-bold sm:text-3xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
           Ready to work with us?
-        </h3>
+        </h2>
         <p className="mx-auto mt-3 max-w-xl text-sm text-white/80">
           Whether you need a quote, a factory visit or a nationwide supply partner, we are here to
           help.

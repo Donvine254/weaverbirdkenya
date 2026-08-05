@@ -50,6 +50,7 @@ export function NewsletterSection() {
           >
             <input
               type="email"
+              aria-label="Email address"
               required
               placeholder="Enter your email"
               value={email}
