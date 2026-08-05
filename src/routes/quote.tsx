@@ -241,9 +241,9 @@ function QuoteForm() {
               <div key={r.id} className="rounded-xl border bg-background p-4">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_120px_1.2fr_auto]">
                   <div>
-                    <label className={labelCls} htmlFor={`garment-type-${r.id}`}>Garment type</label>
+                    <label className={labelCls} htmlFor={`garment-type-${idx}`}>Garment type</label>
                     <select
-                      id={`garment-type-${r.id}`}
+                      id={`garment-type-${idx}`}
                       required
                       value={r.type}
                       onChange={(e) => updateRow(r.id, { type: e.target.value })}
@@ -264,9 +264,9 @@ function QuoteForm() {
                     )}
                   </div>
                   <div>
-                    <label className={labelCls} htmlFor={`garment-qty-${r.id}`}>Quantity</label>
+                    <label className={labelCls} htmlFor={`garment-qty-${idx}`}>Quantity</label>
                     <input
-                      id={`garment-qty-${r.id}`}
+                      id={`garment-qty-${idx}`}
                       required
                       type="number"
                       min={1}
@@ -277,9 +277,9 @@ function QuoteForm() {
                     />
                   </div>
                   <div>
-                    <label className={labelCls} htmlFor={`garment-notes-${r.id}`}>Size / notes</label>
+                    <label className={labelCls} htmlFor={`garment-notes-${idx}`}>Size / notes</label>
                     <input
-                      id={`garment-notes-${r.id}`}
+                      id={`garment-notes-${idx}`}
                       value={r.notes}
                       onChange={(e) => updateRow(r.id, { notes: e.target.value })}
                       placeholder="e.g. mixed sizes 4-14"
