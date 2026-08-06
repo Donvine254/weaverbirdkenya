@@ -34,7 +34,6 @@ function ServicesPage() {
       <Header current="Services" />
       <main id="main-content">
         <ServicesHero />
-        <Breadcrumb />
         <section className="mx-auto max-w-7xl space-y-10 px-6 py-14 lg:py-20">
           {services.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
@@ -77,23 +76,6 @@ function ServicesHero() {
   );
 }
 
-function Breadcrumb() {
-  return (
-    <nav aria-label="Breadcrumb" className="border-b border-black/5 bg-white">
-      <ol className="mx-auto flex max-w-7xl items-center gap-1.5 px-6 py-3 text-sm text-muted-foreground">
-        <li>
-          <Link to="/" className="transition hover:text-foreground">
-            Home
-          </Link>
-        </li>
-        <ChevronRight className="h-4 w-4 opacity-50" aria-hidden="true" />
-        <li aria-current="page" className="font-semibold" style={{ color: "var(--primary-darker)" }}>
-          Services
-        </li>
-      </ol>
-    </nav>
-  );
-}
 
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {
   const Icon = service.icon;
@@ -126,8 +108,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
               aria-hidden="true"
             />
             <span
-              className="absolute left-4 top-4 rounded-xl px-3 py-1.5 text-sm font-bold text-white"
-              style={{ background: "var(--primary-darker)" }}
+              className="absolute left-4 top-4 rounded-xl px-3 py-1.5 text-sm font-bold text-white bg-red-500"
             >
               {number}
             </span>
@@ -161,8 +142,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
         {/* Text */}
         <div>
           <span
-            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl"
-            style={{ background: "var(--primary-darker)" }}
+            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500"
             aria-hidden="true"
           >
             <Icon className="h-6 w-6 text-white" />
@@ -170,7 +150,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
             {service.title}
           </h2>
-          <p className="mt-1.5 text-sm font-semibold" style={{ color: "oklch(0.55 0.16 150)" }}>
+          <p className="mt-1.5 text-sm font-semibold text-red-500" >
             {service.tagline}
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">

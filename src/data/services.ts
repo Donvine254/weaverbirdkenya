@@ -10,15 +10,6 @@ import {
   PenTool,
 } from "lucide-react";
 
-import embroideryImg from "@/assets/service-embroidery.jpg";
-import screenPrintingImg from "@/assets/service-screen-printing.jpg";
-import weavingImg from "@/assets/service-weaving.jpg";
-import cuttingImg from "@/assets/service-cutting.jpg";
-import designImg from "@/assets/service-design.jpg";
-import tailoringImg from "@/assets/service-tailoring.jpg";
-import bulkImg from "@/assets/service-bulk.jpg";
-import packagingImg from "@/assets/service-packaging.jpg";
-
 
 export interface ServiceItem {
   id: string;
@@ -51,7 +42,7 @@ export const services: ServiceItem[] = [
       "Cap hoops & frames",
     ],
     icon: BadgeCheck,
-    image: embroideryImg,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1786006711/frhp7g09amev7u3yp6al.jpg",
     imageAlt: "Industrial embroidery machines stitching a logo onto fabric",
   },
   {
@@ -72,12 +63,12 @@ export const services: ServiceItem[] = [
       "UV exposure unit",
     ],
     icon: Printer,
-    image: screenPrintingImg,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1786007048/yc4swn2bcouzmhaumzae.jpg",
     imageAlt: "Screen printing press applying ink to textiles",
   },
   {
     id: "weaving",
-    title: "In-House Weaving",
+    title: "Weaving and Knitting",
     tagline: "Fabric made on our own looms",
     description:
       "Very few uniform manufacturers in Kenya weave their own cloth. We do. That means we control the weight, the weave and the exact shade of your fabric, and we can reproduce it identically years later when you re-order.",
@@ -89,7 +80,7 @@ export const services: ServiceItem[] = [
     ],
     equipment: ["Rapier looms", "Yarn dyeing plant", "Fabric inspection tables"],
     icon: Layers,
-    image: weavingImg,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1786007463/g0nilgqgsu45turolq19.jpg",
     imageAlt: "Textile weaving machinery loaded with yarn spools",
   },
   {
@@ -111,7 +102,7 @@ export const services: ServiceItem[] = [
       "Brother overlock machines",
     ],
     icon: Scissors,
-    image: cuttingImg,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1786007963/w42kqkk56botlsspnqzd.jpg",
     imageAlt: "Tailor cutting fabric on a large cutting table",
   },
   {
@@ -127,7 +118,7 @@ export const services: ServiceItem[] = [
       "Pantone colour matching",
     ],
     icon: PenTool,
-    image: designImg,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1786008122/pl89ttuoo0muwx1iolx6.jpg",
     imageAlt: "Fashion designer sketching a garment design",
   },
   {
@@ -143,7 +134,7 @@ export const services: ServiceItem[] = [
       "Replacement pieces for existing sets",
     ],
     icon: Ruler,
-    image: tailoringImg,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1786008363/k72mepwez3luchom9hah.jpg",
     imageAlt: "Tailor measuring a client for a made-to-measure garment",
   },
   {
@@ -160,7 +151,7 @@ export const services: ServiceItem[] = [
     ],
     equipment: ["400+ trained machinists", "Multiple production lines", "In-line QC stations"],
     icon: Factory,
-    image: bulkImg,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg",
     imageAlt: "Rows of industrial sewing machines in a garment factory",
   },
   {
@@ -177,7 +168,7 @@ export const services: ServiceItem[] = [
     ],
     equipment: ["Poly-bagging station", "Labelling & sorting bay", "Delivery fleet"],
     icon: PackageCheck,
-    image: packagingImg,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1786008461/ytnhvjet8ecmxed2avdk.jpg",
     imageAlt: "Packed cardboard boxes ready for shipping in a warehouse",
   },
 ];
