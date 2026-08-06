@@ -10,6 +10,16 @@ import {
   PenTool,
 } from "lucide-react";
 
+import embroideryImg from "@/assets/service-embroidery.jpg";
+import screenPrintingImg from "@/assets/service-screen-printing.jpg";
+import weavingImg from "@/assets/service-weaving.jpg";
+import cuttingImg from "@/assets/service-cutting.jpg";
+import designImg from "@/assets/service-design.jpg";
+import tailoringImg from "@/assets/service-tailoring.jpg";
+import bulkImg from "@/assets/service-bulk.jpg";
+import packagingImg from "@/assets/service-packaging.jpg";
+
+
 export interface ServiceItem {
   id: string;
   title: string;
@@ -41,8 +51,7 @@ export const services: ServiceItem[] = [
       "Cap hoops & frames",
     ],
     icon: BadgeCheck,
-    image:
-      "https://images.pexels.com/photos/4614221/pexels-photo-4614221.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: embroideryImg,
     imageAlt: "Industrial embroidery machines stitching a logo onto fabric",
   },
   {
@@ -63,8 +72,7 @@ export const services: ServiceItem[] = [
       "UV exposure unit",
     ],
     icon: Printer,
-    image:
-      "https://images.pexels.com/photos/6069110/pexels-photo-6069110.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: screenPrintingImg,
     imageAlt: "Screen printing press applying ink to textiles",
   },
   {
@@ -81,8 +89,7 @@ export const services: ServiceItem[] = [
     ],
     equipment: ["Rapier looms", "Yarn dyeing plant", "Fabric inspection tables"],
     icon: Layers,
-    image:
-      "https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: weavingImg,
     imageAlt: "Textile weaving machinery loaded with yarn spools",
   },
   {
@@ -104,8 +111,7 @@ export const services: ServiceItem[] = [
       "Brother overlock machines",
     ],
     icon: Scissors,
-    image:
-      "https://images.pexels.com/photos/4622417/pexels-photo-4622417.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: cuttingImg,
     imageAlt: "Tailor cutting fabric on a large cutting table",
   },
   {
@@ -121,8 +127,7 @@ export const services: ServiceItem[] = [
       "Pantone colour matching",
     ],
     icon: PenTool,
-    image:
-      "https://images.pexels.com/photos/6069552/pexels-photo-6069552.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: designImg,
     imageAlt: "Fashion designer sketching a garment design",
   },
   {
@@ -138,8 +143,7 @@ export const services: ServiceItem[] = [
       "Replacement pieces for existing sets",
     ],
     icon: Ruler,
-    image:
-      "https://images.pexels.com/photos/4620621/pexels-photo-4620621.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: tailoringImg,
     imageAlt: "Tailor measuring a client for a made-to-measure garment",
   },
   {
@@ -156,8 +160,7 @@ export const services: ServiceItem[] = [
     ],
     equipment: ["400+ trained machinists", "Multiple production lines", "In-line QC stations"],
     icon: Factory,
-    image:
-      "https://images.pexels.com/photos/3738673/pexels-photo-3738673.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: bulkImg,
     imageAlt: "Rows of industrial sewing machines in a garment factory",
   },
   {
@@ -174,8 +177,7 @@ export const services: ServiceItem[] = [
     ],
     equipment: ["Poly-bagging station", "Labelling & sorting bay", "Delivery fleet"],
     icon: PackageCheck,
-    image:
-      "https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: packagingImg,
     imageAlt: "Packed cardboard boxes ready for shipping in a warehouse",
   },
 ];
