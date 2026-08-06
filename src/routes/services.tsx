@@ -48,28 +48,35 @@ function ServicesPage() {
 
 function ServicesHero() {
   return (
-    <section className="relative overflow-hidden" style={{ background: "var(--primary-darker)" }}>
+    <section
+      className="relative overflow-hidden"
+      style={{ background: "var(--primary-darker)" }}
+    >
       <div
-        className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full blur-3xl"
-        style={{ background: "oklch(0.72 0.19 150 / 0.25)" }}
-        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
+        }}
       />
-      <div
-        className="pointer-events-none absolute -bottom-28 right-0 h-80 w-80 rounded-full blur-3xl"
-        style={{ background: "oklch(0.60 0.22 25 / 0.22)" }}
-        aria-hidden="true"
-      />
-      <div className="relative mx-auto max-w-4xl px-6 py-20 text-center lg:py-28">
+
+      <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">
-          <Sparkles className="h-3.5 w-3.5" style={{ color: "oklch(0.80 0.18 150)" }} />
+          <Sparkles
+            className="h-3.5 w-3.5"
+            style={{ color: "oklch(0.80 0.18 150)" }}
+          />
           What We Do
         </span>
+
         <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
           Our <span style={{ color: "oklch(0.80 0.18 150)" }}>Services</span>
         </h1>
+
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">
-          Everything from the first sketch to the final stitch happens under one roof at our Thika
-          factory — weaving, cutting, embroidery, printing, tailoring, quality control and delivery.
+          Everything from the first sketch to the final stitch happens under one
+          roof at our Thika factory: weaving, cutting, embroidery, printing,
+          tailoring, quality control and delivery.
         </p>
       </div>
     </section>
