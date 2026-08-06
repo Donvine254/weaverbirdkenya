@@ -29,6 +29,7 @@ export function Header({ current = "Home" }: { current?: string }) {
   const links: { label: string; to?: string; href?: string }[] = [
     { label: "Home", to: "/" },
     { label: "Products", href: "/#products" },
+    { label: "Services", to: "/services" },
     { label: "Industries", href: "/#industries" },
     // { label: "Manufacturing", href: "/#manufacturing" },
     // { label: "Gallery", href: "/#gallery" },
