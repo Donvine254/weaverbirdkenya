@@ -49,8 +49,10 @@ function ServicesPage() {
 function ServicesHero() {
   return (
     <section
-      className="relative overflow-hidden"
-      style={{ background: "var(--primary-darker)" }}
+      className="relative overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
+      }}
     >
       <div
         className="absolute inset-0"
@@ -61,19 +63,19 @@ function ServicesHero() {
       />
 
       <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">
-          <Sparkles
-            className="h-3.5 w-3.5"
-            style={{ color: "oklch(0.80 0.18 150)" }}
-          />
+        <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
+          <Sparkles className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
           What We Do
-        </span>
+        </div>
 
-        <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-          Our <span style={{ color: "oklch(0.80 0.18 150)" }}>Services</span>
+        <h1
+          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Services</span>
         </h1>
 
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">
+        <p className="mx-auto mt-5 max-w-2xl text-white/80">
           Everything from the first sketch to the final stitch happens under one
           roof at our Thika factory: weaving, cutting, embroidery, printing,
           tailoring, quality control and delivery.
