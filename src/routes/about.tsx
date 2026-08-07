@@ -12,10 +12,10 @@ import {
   Shirt,
   ChevronRight,
   Leaf,
-  Sparkles,
 } from "lucide-react";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { PageHero } from "@/components/page-hero";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
