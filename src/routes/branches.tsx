@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { MapPin, Phone, Clock, Search, Navigation, Factory, Building2, X } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { PageHero } from "@/components/page-hero";
 import { branches, type Branch } from "@/data/branches";
 import { BranchesMap } from "@/components/branches-map";
 import { NewsletterSection } from "@/components/newsletter-section";
