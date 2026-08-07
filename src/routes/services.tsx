@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, ChevronRight, Sparkles } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { PageHero } from "@/components/page-hero";
 import { services, type ServiceItem } from "@/data/services";
 
 export const Route = createFileRoute("/services")({
@@ -33,7 +34,16 @@ function ServicesPage() {
     <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Services" />
       <main id="main-content">
-        <ServicesHero />
+        <PageHero
+          eyebrow="What We Do"
+          icon={Sparkles}
+          title={
+            <>
+              Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Services</span>
+            </>
+          }
+          subtitle="Everything from the first sketch to the final stitch happens under one roof at our Thika factory: weaving, cutting, embroidery, printing, tailoring, quality control and delivery."
+        />
         <section className="mx-auto max-w-7xl space-y-10 px-6 py-14 lg:py-20">
           {services.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
@@ -46,44 +56,6 @@ function ServicesPage() {
   );
 }
 
-function ServicesHero() {
-  return (
-    <section
-      className="relative overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
-      }}
-    >
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
-        <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
-          <Sparkles className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
-          What We Do
-        </div>
-
-        <h1
-          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Services</span>
-        </h1>
-
-        <p className="mx-auto mt-5 max-w-2xl text-white/80">
-          Everything from the first sketch to the final stitch happens under one
-          roof at our Thika factory: weaving, cutting, embroidery, printing,
-          tailoring, quality control and delivery.
-        </p>
-      </div>
-    </section>
-  );
-}
 
 
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {

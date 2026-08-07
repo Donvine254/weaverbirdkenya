@@ -17,6 +17,7 @@ import {
 import { TikTokIcon } from "@/components/tiktok-icon";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { PageHero } from "@/components/page-hero";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -53,7 +54,16 @@ function ContactPage() {
     >
       <Header current="Contact" />
       <main id="main-content">
-        <PageHero />
+        <PageHero
+          eyebrow="Get in Touch"
+          icon={MessageCircle}
+          title={
+            <>
+              Contact <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
+            </>
+          }
+          subtitle="Reach our team by phone, email or WhatsApp — or drop by our Thika factory. We reply within one working day."
+        />
         <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
           <ContactMethods />
           <SocialSection />
@@ -66,40 +76,6 @@ function ContactPage() {
   );
 }
 
-function PageHero() {
-  return (
-    <section
-      className="relative overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
-      }}
-    >
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
-        }}
-      />
-      <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
-        <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
-          <MessageCircle className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
-          Get in Touch
-        </div>
-        <h1
-          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          Contact <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
-        </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-white/80">
-          Reach our team by phone, email or WhatsApp — or drop by our Thika factory. We reply within
-          one working day.
-        </p>
-      </div>
-    </section>
-  );
-}
 
 type Method = {
   icon: React.ComponentType<{ className?: string }>;
