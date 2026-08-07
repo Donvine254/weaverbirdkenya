@@ -12,6 +12,7 @@ import {
   Shirt,
   ChevronRight,
   Leaf,
+  Sparkles,
 } from "lucide-react";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
