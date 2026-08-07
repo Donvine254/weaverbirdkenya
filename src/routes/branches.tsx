@@ -43,7 +43,16 @@ function BranchesPage() {
     >
       <Header current="Branches" />
       <main id="main-content">
-        <PageHero />
+        <PageHero
+          eyebrow="Nationwide Network"
+          icon={MapPin}
+          title={
+            <>
+              Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Branches</span>
+            </>
+          }
+          subtitle="Find a Weaverbird shop near you. We have 13 retail locations across Kenya plus our factory headquarters in Thika."
+        />
         <Locator />
         <NewsletterSection />
       </main>

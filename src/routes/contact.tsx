@@ -54,7 +54,16 @@ function ContactPage() {
     >
       <Header current="Contact" />
       <main id="main-content">
-        <PageHero />
+        <PageHero
+          eyebrow="Get in Touch"
+          icon={MessageCircle}
+          title={
+            <>
+              Contact <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
+            </>
+          }
+          subtitle="Reach our team by phone, email or WhatsApp — or drop by our Thika factory. We reply within one working day."
+        />
         <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
           <ContactMethods />
           <SocialSection />

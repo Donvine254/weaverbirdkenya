@@ -34,7 +34,16 @@ function ServicesPage() {
     <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Services" />
       <main id="main-content">
-        <ServicesHero />
+        <PageHero
+          eyebrow="What We Do"
+          icon={Sparkles}
+          title={
+            <>
+              Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Services</span>
+            </>
+          }
+          subtitle="Everything from the first sketch to the final stitch happens under one roof at our Thika factory: weaving, cutting, embroidery, printing, tailoring, quality control and delivery."
+        />
         <section className="mx-auto max-w-7xl space-y-10 px-6 py-14 lg:py-20">
           {services.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
