@@ -2,14 +2,31 @@ import { useState, useEffect } from 'react';
 import { Cookie, X, Check, ChevronDown, ChevronUp } from 'lucide-react';
 
 const STORAGE_KEY = 'wbd-cookie-consent';
+const POLICY_VERSION = 1;
+// Best practice (GDPR/ePrivacy guidance): re-ask at most every 6-12 months.
+const MAX_AGE_DAYS = 180;
 
 type ConsentChoice = 'accepted' | 'rejected' | 'partial';
 interface ConsentRecord {
+  version?: number;
   choice: ConsentChoice;
   necessary: true;
   analytics: boolean;
   functional: boolean;
   date: string;
+}
+
+function isConsentValid(raw: string | null): boolean {
+  if (!raw) return false;
+  try {
+    const rec = JSON.parse(raw) as ConsentRecord;
+    if (!rec || !rec.choice || !rec.date) return false;
+    if (rec.version !== POLICY_VERSION) return false;
+    const ageDays = (Date.now() - new Date(rec.date).getTime()) / 86_400_000;
+    return Number.isFinite(ageDays) && ageDays < MAX_AGE_DAYS;
+  } catch {
+    return false;
+  }
 }
 
 export function CookieConsent() {
@@ -20,17 +37,22 @@ export function CookieConsent() {
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (!saved) {
+      if (!isConsentValid(saved)) {
         const t = setTimeout(() => setVisible(true), 12000);
         return () => clearTimeout(t);
       }
     } catch {
-      /* ignore */
+      const t = setTimeout(() => setVisible(true), 12000);
+      return () => clearTimeout(t);
     }
   }, []);
 
   const save = (record: ConsentRecord) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...record, version: POLICY_VERSION }));
+    } catch {
+      /* storage unavailable — just dismiss */
+    }
     setVisible(false);
   };
 

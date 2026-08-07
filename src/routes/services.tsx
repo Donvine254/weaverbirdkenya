@@ -92,8 +92,11 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
   return (
     <article
       id={service.id}
-      className="scroll-mt-24 rounded-3xl border border-black/5 p-5 sm:p-8 lg:p-10"
-      style={{ background: "oklch(0.97 0.02 155)" }}
+      className="scroll-mt-24 rounded-3xl border border-black/5 p-5 shadow-[0_1px_2px_rgba(13,43,30,0.04),0_12px_32px_-12px_rgba(13,43,30,0.15)] transition-shadow hover:shadow-[0_1px_2px_rgba(13,43,30,0.05),0_20px_48px_-16px_rgba(13,43,30,0.22)] sm:p-8 lg:p-10"
+      style={{
+        background:
+          "linear-gradient(135deg, oklch(1 0 0) 0%, oklch(0.995 0.004 155) 55%, oklch(0.975 0.022 155) 100%)",
+      }}
     >
       <div
         className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-12 ${reversed ? "lg:[&>*:first-child]:order-2" : ""}`}
