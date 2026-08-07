@@ -50,7 +50,16 @@ function AboutPage() {
     >
       <Header current="About Us" />
       <main id="main-content">
-        <PageHero />
+        <PageHero
+          eyebrow="Since 1996"
+          icon={Award}
+          title={
+            <>
+              About <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
+            </>
+          }
+          subtitle="Kenya's trusted uniform and apparel manufacturer. Designed, cut, stitched and branded locally for institutions, businesses and security teams."
+        />
         <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
           <StorySection />
           <StatsSection />
