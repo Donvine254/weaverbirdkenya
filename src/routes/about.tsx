@@ -132,8 +132,8 @@ function StatsSection() {
   const stats = [
     { i: Award, n: "1996", t: "Year Founded" },
     { i: Users, n: "400+", t: "Employees" },
-    { i: MapPin, n: "12", t: "Retail Shops" },
-    { i: Shirt, n: "50+", t: "Product Categories" },
+    { i: MapPin, n: "13", t: "Retail Shops" },
+    { i: Shirt, n: "500+", t: "Product Categories" },
     { i: ShieldCheck, n: "98%", t: "Quality Standards" },
     { i: CheckCircle2, n: "30+", t: "Years of Experience" },
   ];
