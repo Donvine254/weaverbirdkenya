@@ -44,7 +44,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const FACTORY_MAP =
-  "https://www.google.com/maps/search/?api=1&query=Weaverbird+Garments+Thika+Kenya";
+  "https://maps.app.goo.gl/ZDgsjr48u5BqzZHv6";
 
 function ContactPage() {
   return (
