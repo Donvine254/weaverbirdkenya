@@ -104,8 +104,8 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
         className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-12 ${reversed ? "lg:[&>*:first-child]:order-2" : ""}`}
       >
         {/* Media */}
-        <div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+        <div className="border border-[#bf9b3f] bg-white p-4">
+          <div className="relative aspect-[4/3] overflow-hidden">
             <img
               src={service.image}
               alt={service.imageAlt}
