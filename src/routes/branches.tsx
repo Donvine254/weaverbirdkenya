@@ -260,7 +260,7 @@ function BranchDetail({ branch }: { branch: Branch }) {
             href={branch.map}
             target="_blank"
             rel="noreferrer noopener"
-            className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+            className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
             style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
           >
             <Navigation className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -268,7 +268,7 @@ function BranchDetail({ branch }: { branch: Branch }) {
           </a>
           <a
             href={`tel:${branch.phone.replace(/\s+/g, "")}`}
-            className="inline-flex items-center gap-2 rounded-full border border-input bg-background px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted active:scale-95"
+            className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted active:scale-95"
           >
             <Phone className="h-4 w-4" />
             Call Shop
