@@ -41,7 +41,7 @@ export function Footer() {
   ];
   const socials = [
     { icon: Facebook, label: "Facebook", href: "https://facebook.com/weaverbirdgarmentsltd" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
+    // { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
     { icon: Instagram, label: "Instagram", href: "https://instagram.com/" },
     { icon: TikTokIcon, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
   ];

@@ -91,7 +91,7 @@ export function Header({ current = "Home" }: { current?: string }) {
         </nav>
         <Link
           to="/quote"
-          className="group hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 lg:inline-flex"
+          className="group hidden items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 lg:inline-flex"
           style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
         >
           Get a Quote{" "}
@@ -130,7 +130,7 @@ export function Header({ current = "Home" }: { current?: string }) {
               <Link
                 to="/quote"
                 onClick={() => setOpen(false)}
-                className="mt-4 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-md"
+                className="mt-4 inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold text-white shadow-md"
                 style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
               >
                 Get a Quote <ChevronRight className="h-4 w-4" />

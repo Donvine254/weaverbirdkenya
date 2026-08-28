@@ -1,4 +1,4 @@
-import { ChevronRight, Award, Truck, Smile, CircleStar } from "lucide-react";
+import { ChevronRight, Award, Truck, Smile, CircleStar,ArrowDownToLine } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { products } from "@/assets/uniforms";
 
@@ -58,17 +58,21 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               to="/quote"
-              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+              className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
               style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
             >
-              Get a Quote{" "}
+              Get a Bulk Quote{" "}
               <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <a
-              href="#products"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 active:scale-95"
+              href="/public/catalogue.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="inline-flex items-center gap-2 rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 active:scale-95"
             >
-              View Products
+              <ArrowDownToLine/>
+              Download Product Catalogue{" "}
             </a>
           </div>
         </div>
