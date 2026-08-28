@@ -5,7 +5,7 @@ import { ProductCategories } from "@/data/products";
 /* ----------------- Products ----------------- */
 export function Products() {
   return (
-    <section id="products" className="mx-auto max-w-7xl px-6 py-20">
+    <section id="products" className="mx-auto max-w-7xl px-6 py-14">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2

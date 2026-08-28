@@ -9,6 +9,7 @@ import { Manufacturing } from "@/components/home/manufacturing";
 import { Industries } from "@/components/home/industries";
 import { TrustedBy } from "@/components/home/trusted-by";
 import { CtaBanner } from "@/components/home/cta-banner";
+import Maasai from "@/components/home/maasai";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,6 +46,7 @@ function Index() {
         <Hero />
         <StatsBar />
         <Products />
+        <Maasai/>
         <Features />
         <Manufacturing />
         <Industries />

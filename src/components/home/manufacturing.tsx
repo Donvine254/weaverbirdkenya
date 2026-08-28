@@ -44,7 +44,7 @@ export function Manufacturing() {
         }}
       />
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
+        <div>
           <span
             className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground"
           >
