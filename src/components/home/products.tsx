@@ -1,5 +1,4 @@
 import { ChevronRight, ArrowRight } from "lucide-react";
-import { products } from "@/assets/uniforms";
 import { ProductCategories } from "@/data/products";
 
 /* ----------------- Products ----------------- */

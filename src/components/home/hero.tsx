@@ -1,4 +1,4 @@
-import { ChevronRight, Award, Truck, Smile, CircleStar,ArrowDownToLine } from "lucide-react";
+import { ChevronRight, Award, Truck, Smile, CircleStar, ArrowDownToLine } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { products } from "@/assets/uniforms";
 
@@ -55,24 +55,28 @@ export function Hero() {
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               to="/quote"
-              className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-              style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:w-auto"
+              style={{
+                background: "var(--gradient-red)",
+                boxShadow: "var(--shadow-red)",
+              }}
             >
-              Get a Bulk Quote{" "}
+              Get a Bulk Quote
               <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
+
             <a
               href="/public/catalogue.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
-              className="inline-flex items-center gap-2 rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 active:scale-95"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 active:scale-95 sm:w-auto sm:px-6"
             >
-              <ArrowDownToLine/>
-              Download Product Catalogue{" "}
+              <ArrowDownToLine />
+              Download Product Catalogue
             </a>
           </div>
         </div>
@@ -80,7 +84,7 @@ export function Hero() {
           {tiles.map(({ label, img, icon: Icon }) => (
             <div
               key={label}
-              className="group relative aspect-[5/4] overflow-hidden rounded-2xl ring-1 ring-white/20"
+              className="group relative aspect-[5/4] overflow-hidden border border-[#bf9b3f] bg-white p-4"
             >
               <img
                 src={img}
