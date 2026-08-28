@@ -21,7 +21,7 @@ export function CtaBanner() {
         <div className="relative flex items-center px-8 py-14 sm:py-20 lg:px-16 lg:py-24">
           <div className="max-w-lg text-white">
             <div className="flex items-center gap-2 py-6">
-              <div className="w-12 h-12 rounded-full bg-[#22c55e]/20 border border-[#22c55e]/40 flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-md bg-[#22c55e]/20 border border-[#22c55e]/40 flex items-center justify-center flex-shrink-0">
                 <svg
                   width="24"
                   height="24"
@@ -50,9 +50,9 @@ export function CtaBanner() {
             </p>
             <Link
               to="/quote"
-              className="group mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition-all hover:bg-white/90 hover:shadow-lg active:scale-95"
+              className="group mt-8 inline-flex items-center gap-3 rounded-md bg-white px-8 py-4 text-sm font-bold text-black transition-all hover:bg-white/90 hover:shadow-lg active:scale-95"
             >
-              Request a Quote{" "}
+              Request a Bulk Quote{" "}
               <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
