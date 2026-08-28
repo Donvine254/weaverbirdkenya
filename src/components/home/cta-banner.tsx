@@ -3,9 +3,9 @@ import { Link } from "@tanstack/react-router";
 
 export function CtaBanner() {
   return (
-    <section id="quote" className="mx-auto max-w-7xl px-6 pb-16">
+    <section id="quote" className="w-full pb-16">
       <div
-        className="relative overflow-hidden rounded-3xl bg-cover bg-center bg-no-repeat"
+        className="relative overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783868775/weaverbird/u4iqolm38vfhoqkj47ne.webp")`,
         }}

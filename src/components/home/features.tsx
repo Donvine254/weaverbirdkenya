@@ -46,8 +46,8 @@ export function Features() {
         className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full blur-3xl"
         style={{ background: "oklch(0.66 0.22 25 / 0.28)" }}
       />
-      <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mb-14 text-center">
+      <div className="relative max-w-7xl px-6">
+        <div className="mb-14">
           <span
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em]"
             style={{
@@ -67,7 +67,7 @@ export function Features() {
             <span style={{ color: "var(--accent-red)" }}> that don&apos;t compromise</span>
           </h2>
           <p
-            className="mx-auto mt-4 max-w-2xl text-sm sm:text-base"
+            className="mt-4 text-sm sm:text-base"
             style={{ color: "oklch(0.88 0.02 145)" }}
           >
             What makes us the trusted uniform manufacturing partner across Kenya.
