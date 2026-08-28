@@ -31,7 +31,7 @@ export const Route = createFileRoute("/services")({
 function ServicesPage() {
   return (
     <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
-      <Header current="Services" image="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/nabth0lum2fljecqgqfw.jpg" />
+      <Header current="Services" />
       <main id="main-content">
         <ServicesHero />
         <section className="mx-auto max-w-7xl space-y-10 px-6 py-14 lg:py-20">
@@ -52,20 +52,25 @@ function ServicesHero() {
       className="relative overflow-hidden"
       style={{ background: "var(--primary-darker)" }}
     >
-      <div
+   <div className="absolute inset-0">
+  {/* The Image */}
+  <img
+    src="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/nabth0lum2fljecqgqfw.jpg"
+    alt="Background"
+    className="w-full h-full object-cover object-center"
+  />
+</div>
+<div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
+            "linear-gradient(90deg, oklch(0.13 0.05 155 / 0.92) 0%, oklch(0.13 0.05 155 / 0.5) 100%)",
         }}
       />
 
       <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">
-          <Sparkles
-            className="h-3.5 w-3.5"
-            style={{ color: "oklch(0.80 0.18 150)" }}
-          />
+
           What We Do
         </span>
 
