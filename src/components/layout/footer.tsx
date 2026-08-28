@@ -101,29 +101,31 @@ export function Footer() {
                 <span>
                   Off Thika-Garissa Highway
                   <br />
-                  Along Kianjau - Athena rd Near
-                  <br />
-                  Broadway sec. school.
+                  Along Kianjau - Athena rd
                 </span>
               </li>
               <li className="flex items-center gap-3 border-b border-white/10 pb-4">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
                   <Mail className="h-4 w-4 text-white/80" />
                 </span>
-                <a href="mailto:info@weaverbirdkenya.com"> info@weaverbirdkenya.com</a>
+                <a href="mailto:sales@weaverbirdkenya.com"> sales@weaverbirdkenya.com</a>
               </li>
               <li className="flex items-center gap-3 border-b border-white/10 pb-4">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
                   <Phone className="h-4 w-4 text-white/80" />
                 </span>
-                <a href="tel:0202051487">020-2051487 (Toll Free)</a>
+                <span>
+                  {" "}
+                  <a href="tel:0202051487">020-2051487 (Toll Free)</a>/ <br />
+                  <a href="tel:+254722264464">+254 722 264464</a>
+                </span>
               </li>
-              <li className="flex items-center gap-3">
+              {/* <li className="flex items-center gap-3">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
                   <Smartphone className="h-4 w-4 text-white/80" />
                 </span>
                 <a href="tel:+254722264464">+254 722 264464</a>
-              </li>
+              </li> */}
             </ul>
             {/* socials */}
             <div className="mt-6 flex items-center gap-4">
@@ -148,7 +150,7 @@ export function Footer() {
             <ul className="space-y-4">
               {[
                 { d: "Mon - Friday", h: "08.00 am to 05.00 pm" },
-                { d: "Saturday", h: "08.00 am to 05.00 pm" },
+                { d: "Saturday", h: "08.00 am to 04.00 pm" },
                 { d: "Sunday", h: "Closed" },
               ].map((row) => (
                 <li

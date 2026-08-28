@@ -25,7 +25,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Weaverbird Garments Manufacturers Ltd was founded in 1996. Two directors, 12 shops, a Thika factory, 400+ employees and 50+ product categories. Made in Kenya with 98% quality standards.",
+          "Weaverbird Garments Manufacturers Ltd was founded in 1996. Two directors, 13 shops, a Thika factory, 400+ employees and 50+ product categories. Made in Kenya with 98% quality standards.",
       },
       { property: "og:title", content: "About Weaverbird Kenya" },
       {
@@ -44,10 +44,7 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <div
-      className="min-h-dvh bg-background font-sans"
-      style={{ fontFamily: "var(--font-sans)" }}
-    >
+    <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="About Us" />
       <main id="main-content">
         <PageHero
@@ -73,7 +70,6 @@ function AboutPage() {
     </div>
   );
 }
-
 
 function StorySection() {
   return (
@@ -353,8 +349,8 @@ function CtaSection() {
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link
             to="/quote"
-            className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-            style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+            className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 bg-maroon"
+            style={{ boxShadow: "var(--shadow-red)" }}
           >
             Get a Bulk Quote{" "}
             <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

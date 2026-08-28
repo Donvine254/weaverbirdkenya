@@ -14,10 +14,10 @@ import {
   Store,
   ArrowRight,
 } from "lucide-react";
-import { TikTokIcon } from "@/components/tiktok-icon";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
+import { FacebookCircleLogo, InstagramIcon, TiktokColorLogo, WhatsappLogo } from "@/assets/icons";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -43,15 +43,11 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const FACTORY_MAP =
-  "https://maps.app.goo.gl/ZDgsjr48u5BqzZHv6";
+const FACTORY_MAP = "https://maps.app.goo.gl/ZDgsjr48u5BqzZHv6";
 
 function ContactPage() {
   return (
-    <div
-      className="min-h-dvh bg-background font-sans"
-      style={{ fontFamily: "var(--font-sans)" }}
-    >
+    <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Contact" />
       <main id="main-content">
         <PageHero
@@ -76,7 +72,6 @@ function ContactPage() {
   );
 }
 
-
 type Method = {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
@@ -97,7 +92,7 @@ function ContactMethods() {
       cta: "Call now",
     },
     {
-      icon: Smartphone,
+      icon: WhatsappLogo,
       title: "WhatsApp / Mobile",
       value: "+254 722 264 464",
       detail: "Fastest for quotes and order updates",
@@ -130,10 +125,10 @@ function ContactMethods() {
             className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
             <span
-              className="grid h-12 w-12 place-items-center rounded-full"
-              style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+              className="grid h-10 w-10 place-items-center rounded-full bg-maroon/80 text-white"
+              style={{ boxShadow: "var(--shadow-red)" }}
             >
-              <m.icon className="h-5 w-5 text-white" />
+              <m.icon className="h-6 w-6" />
             </span>
             <h3
               className="mt-5 text-lg font-bold text-foreground"
@@ -159,20 +154,20 @@ function ContactMethods() {
 function SocialSection() {
   const socials = [
     {
-      icon: Facebook,
+      icon: FacebookCircleLogo,
       label: "Facebook",
       handle: "@WeaverbirdKenya",
       href: "https://facebook.com/weaverbirdgarmentsltd",
     },
     {
-      icon: Instagram,
+      icon: InstagramIcon,
       label: "Instagram",
       handle: "@weaverbird.ke",
       href: "https://instagram.com/",
     },
-    { icon: Twitter, label: "Twitter / X", handle: "@WeaverbirdKE", href: "https://twitter.com/" },
+
     {
-      icon: TikTokIcon,
+      icon: TiktokColorLogo,
       label: "TikTok",
       handle: "@weaver.bird.garme5",
       href: "https://www.tiktok.com/@weaver.bird.garme5",
@@ -194,11 +189,8 @@ function SocialSection() {
             rel="noreferrer noopener"
             className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
-            <span
-              className="grid h-11 w-11 shrink-0 place-items-center rounded-full"
-              style={{ background: "var(--gradient-red)" }}
-            >
-              <s.icon className="h-5 w-5 text-white" />
+            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full">
+              <s.icon />
             </span>
             <div className="min-w-0">
               <div className="text-sm font-bold text-foreground">{s.label}</div>
@@ -222,13 +214,13 @@ function FactorySection() {
       <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
         <div className="grid gap-0 md:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden min-h-[280px]">
-             <img
-          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
-          alt="Weaverbird factory and headquarters in Thika"
-          className="h-full w-full object-cover"
-          loading="eager"
-          decoding="async"
-        />
+            <img
+              src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
+              alt="Weaverbird factory and headquarters in Thika"
+              className="h-full w-full object-cover"
+              loading="eager"
+              decoding="async"
+            />
           </div>
           <div className="p-6 lg:p-8">
             <div className="flex items-center gap-3">
@@ -274,7 +266,8 @@ function FactorySection() {
               </li>
               <li className="flex gap-3">
                 <Phone className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
-                <a href="tel:+2022051487" className="hover:underline">020-2051487 (Toll Free)
+                <a href="tel:+2022051487" className="hover:underline">
+                  020-2051487 (Toll Free)
                 </a>
               </li>
             </ul>
@@ -283,8 +276,8 @@ function FactorySection() {
                 href={FACTORY_MAP}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-                style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+                className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 bg-maroon"
+                style={{ boxShadow: "var(--shadow-red)" }}
               >
                 <Navigation className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                 Get Directions
@@ -314,10 +307,10 @@ function FindStoreCta() {
       style={{ background: "var(--gradient-hero, var(--primary-darker))" }}
     >
       <span
-        className="mx-auto grid h-14 w-14 place-items-center rounded-full"
-        style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+        className="mx-auto grid h-12 w-12 bg-maroon place-items-center rounded-full"
+        style={{ boxShadow: "var(--shadow-red)" }}
       >
-        <Store className="h-6 w-6 text-white" />
+        <Store className="h-8 w-8 text-white" />
       </span>
       <h2
         className="mt-5 text-2xl font-bold sm:text-3xl"
@@ -330,8 +323,8 @@ function FindStoreCta() {
       </p>
       <Link
         to="/branches"
-        className="group mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-        style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+        className="group mt-6 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 bg-maroon"
+        style={{ boxShadow: "var(--shadow-red)" }}
       >
         Find a store near you
         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
