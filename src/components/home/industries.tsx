@@ -12,15 +12,14 @@ export function Industries() {
           Industries We Serve
         </h2>
         <p className="text-gray-500 my-2">
-          Trusted by organizations across Kenya in every major sector. One partner for every uniform, every brand.
+          Trusted by organizations across Kenya in every major sector. One partner for every
+          uniform, every brand.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-6">
           {categories.map(({ icon: Icon, title, subtitle, image }) => (
-            <div key={title} className="border border-[#bf9b3f] bg-white p-4">
-              <div
-                className="group relative h-48 lg:h-64 cursor-pointer overflow-hidden  shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
+            <div key={title} className="border border-[#bf9b3f] bg-maroon p-2 md:p-3">
+              <div className="group relative h-48 lg:h-64 cursor-pointer overflow-hidden  shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 <img
                   src={image}
                   alt={title}
@@ -46,4 +45,3 @@ export function Industries() {
     </section>
   );
 }
-

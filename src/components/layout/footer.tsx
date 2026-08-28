@@ -1,8 +1,18 @@
-import { MapPin, Mail, Phone, Smartphone, Facebook, Twitter, Instagram, Clock, Calendar, Shirt, ChevronRight, Leaf } from "lucide-react";
+import {
+  MapPin,
+  Mail,
+  Phone,
+  Smartphone,
+  Clock,
+  Calendar,
+  Shirt,
+  ChevronRight,
+  Leaf,
+} from "lucide-react";
 import { useState } from "react";
-import { TikTokIcon } from "@/components/tiktok-icon";
 import { toast } from "sonner";
 import footerFabric from "@/assets/footer-fabric.jpg";
+import { InstagramIcon, FacebookCircleLogo, TiktokColorLogo, WhatsappLogo } from "@/assets/icons";
 
 /* ----------------- Footer ----------------- */
 export function FooterColHeader({ icon: Icon, title }: { icon: any; title: string }) {
@@ -40,10 +50,15 @@ export function Footer() {
     "Other Apparel",
   ];
   const socials = [
-    { icon: Facebook, label: "Facebook", href: "https://facebook.com/weaverbirdgarmentsltd" },
+    {
+      icon: FacebookCircleLogo,
+      label: "Facebook",
+      href: "https://facebook.com/weaverbirdgarmentsltd",
+    },
     // { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
-    { icon: Instagram, label: "Instagram", href: "https://instagram.com/" },
-    { icon: TikTokIcon, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
+    { icon: InstagramIcon, label: "Instagram", href: "https://instagram.com/" },
+    { icon: TiktokColorLogo, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
+    { icon: WhatsappLogo, label: "Whatsapp", href: "https://wa.me/254722264464" },
   ];
   const [email, setEmail] = useState("");
 
@@ -110,18 +125,18 @@ export function Footer() {
                 <a href="tel:+254722264464">+254 722 264464</a>
               </li>
             </ul>
-            <div className="mt-6 flex items-center gap-3">
-              {socials.map((s) => (
+            {/* socials */}
+            <div className="mt-6 flex items-center gap-4">
+              {socials.map(({ icon: Icon, label, href }) => (
                 <a
-                  key={s.label}
-                  href={s.href}
+                  key={label}
+                  href={href}
                   target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label={s.label}
-                  className="grid h-9 w-9 place-items-center rounded-full transition hover:brightness-110"
-                  style={{ background: "var(--gradient-red)" }}
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="inline-flex transition-opacity hover:opacity-75 text-white"
                 >
-                  <s.icon className="h-4 w-4 text-white" />
+                  <Icon />
                 </a>
               ))}
             </div>
@@ -217,4 +232,3 @@ export function Footer() {
     </footer>
   );
 }
-

@@ -54,6 +54,8 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
   --color-sidebar: var(--sidebar);
+  --color-maroon: oklch(0.293 0.137 19.5);
+  --color-maroon-dark: oklch(0.2 0.1 19.5);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
@@ -176,8 +178,14 @@
     animation: a11y-slide-up 0.25s ease-out;
   }
   @keyframes a11y-slide-up {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 

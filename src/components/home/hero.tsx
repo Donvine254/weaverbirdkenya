@@ -58,9 +58,8 @@ export function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               to="/quote"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:w-auto"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:w-auto bg-maroon"
               style={{
-                background: "var(--gradient-red)",
                 boxShadow: "var(--shadow-red)",
               }}
             >
@@ -82,10 +81,7 @@ export function Hero() {
         </div>
         <div className="grid grid-cols-2 gap-4">
           {tiles.map(({ label, img, icon: Icon }) => (
-            <div
-              key={label}
-              className="group relative aspect-[5/4] overflow-hidden border border-[#bf9b3f] bg-white p-4"
-            >
+            <div key={label} className="group relative aspect-[5/4] overflow-hidden rounded-md">
               <img
                 src={img}
                 alt={label}
@@ -96,13 +92,10 @@ export function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                <span
-                  className="grid h-9 w-9 place-items-center rounded-full"
-                  style={{ background: "var(--gradient-red)" }}
-                >
+                <div className="grid h-6 w-6  place-items-center rounded-full bg-green-950 ring ring-white/80">
                   <Icon className="h-4 w-4 text-white" />
-                </span>
-                <span className="text-sm font-semibold text-white">{label}</span>
+                </div>
+                <span className="text-xs sm:text-sm font-semibold text-white">{label}</span>
               </div>
             </div>
           ))}
@@ -111,4 +104,3 @@ export function Hero() {
     </section>
   );
 }
-
