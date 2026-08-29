@@ -72,7 +72,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               download
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 active:scale-95 sm:w-auto sm:px-6"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-maroon active:scale-95 sm:w-auto sm:px-6"
             >
               <ArrowDownToLine />
               Download Product Catalogue

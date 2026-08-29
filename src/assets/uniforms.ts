@@ -2,17 +2,17 @@ import {
   GraduationCap,
   Briefcase,
   ShieldUser,
-  Volleyball,
   HardHat,
   UtensilsCrossed,
   Hospital,
+  FlameIcon,
 } from "lucide-react";
 
 const iconMap = {
   school: GraduationCap,
   corporate: Briefcase,
   security: ShieldUser,
-  sports: Volleyball,
+  sports: FlameIcon,
   hospitality: UtensilsCrossed,
   healthcare: Hospital,
   ppe: HardHat,
@@ -74,7 +74,7 @@ export const uniforms = [
     description:
       "High-performance sportswear and team uniforms designed for schools, clubs, and professional organizations.",
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1783868893/weaverbird/ndyzmjap20pvlk2w1wpa.jpg",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788027178/weaverbird/products/s4ampgp59k0rjdf16cat.jpg",
   },
 ];
 

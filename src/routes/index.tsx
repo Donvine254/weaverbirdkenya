@@ -10,6 +10,7 @@ import { Industries } from "@/components/home/industries";
 import { TrustedBy } from "@/components/home/trusted-by";
 import { CtaBanner } from "@/components/home/cta-banner";
 import Maasai from "@/components/home/maasai";
+import OrderingProcess from "@/components/home/ordering";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,20 +38,19 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div
-      className="min-h-dvh bg-background font-sans"
-      style={{ fontFamily: "var(--font-sans)" }}
-    >
+    <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header />
       <main id="main-content">
         <Hero />
         <StatsBar />
         <Products />
-        <Maasai/>
+        <Maasai />
         <Features />
-        <Manufacturing />
+        {/* <Manufacturing /> */}
+
         <Industries />
         <TrustedBy />
+        <OrderingProcess />
         <CtaBanner />
       </main>
       <Footer />

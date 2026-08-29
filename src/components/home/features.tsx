@@ -1,15 +1,23 @@
-import { MapPin, Award, Users, Truck, PencilRuler, Factory, Diamond } from "lucide-react";
+import {
+  PencilRuler,
+  Diamond,
+  BadgePercentIcon,
+  GaugeIcon,
+  HeadsetIcon,
+  MedalIcon,
+  StoreIcon,
+} from "lucide-react";
 
 /* ----------------- Features ----------------- */
 export function Features() {
   const features = [
     {
-      i: Diamond,
+      i: MedalIcon,
       t: "Quality Manufacturing",
       d: "Premium fabrics and precision stitching for long lasting wear.",
     },
     {
-      i: Truck,
+      i: GaugeIcon,
       t: "Fast Turnaround",
       d: "Bulk orders delivered on time without compromising quality.",
     },
@@ -19,12 +27,16 @@ export function Features() {
       d: "Embroidery, weaving and printing to elevate your brand.",
     },
     {
-      i: MapPin,
+      i: StoreIcon,
       t: "Nationwide Reach",
       d: "Multiple branches and reliable delivery across Kenya.",
     },
-    { i: Award, t: "Competitive Pricing", d: "Factory-direct manufacturing for the best value." },
-    { i: Users, t: "Dedicated Support", d: "Expert consultation from design to delivery." },
+    {
+      i: BadgePercentIcon,
+      t: "Competitive Pricing",
+      d: "Factory-direct manufacturing for the best value.",
+    },
+    { i: HeadsetIcon, t: "Dedicated Support", d: "Expert consultation from design to delivery." },
   ];
   return (
     <section
@@ -66,14 +78,12 @@ export function Features() {
             Built for organisations
             <span style={{ color: "var(--accent-red)" }}> that don&apos;t compromise</span>
           </h2>
-          <p
-            className="mt-4 text-sm sm:text-base"
-            style={{ color: "oklch(0.88 0.02 145)" }}
-          >
+          <p className="mt-4 text-sm sm:text-base" style={{ color: "oklch(0.88 0.02 145)" }}>
             What makes us the trusted uniform manufacturing partner across Kenya.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl sm:grid-cols-2 lg:grid-cols-3"
+        <div
+          className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl sm:grid-cols-2 lg:grid-cols-3"
           style={{ background: "oklch(1 0 0 / 0.12)", boxShadow: "var(--shadow-red)" }}
         >
           {features.map(({ i: Icon, t, d }, idx) => (
@@ -119,4 +129,3 @@ export function Features() {
     </section>
   );
 }
-

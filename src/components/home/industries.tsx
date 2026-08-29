@@ -5,15 +5,17 @@ export function Industries() {
   return (
     <section id="industries" className="py-8">
       <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-3.5 flex items-center gap-2.5 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-maroon">
+          &mdash; One Partner. Every Brand
+        </div>
         <h2
-          className="text-3xl font-bold sm:text-4xl"
+          className="text-3xl font-bold sm:text-4xl tracking-tight"
           style={{ fontFamily: "var(--font-display)" }}
         >
           Industries We Serve
         </h2>
-        <p className="text-gray-500 my-2">
-          Trusted by organizations across Kenya in every major sector. One partner for every
-          uniform, every brand.
+        <p className="text-gray-500 my-2 leading-snug">
+          Trusted by organizations across Kenya in every major sector.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-6">

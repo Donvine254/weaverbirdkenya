@@ -40,7 +40,7 @@ export function CtaBanner() {
               </span>
             </div>
             <h2
-              className="text-2xl md:text-3xl font-bold leading-tight sm:text-4xl"
+              className="text-2xl md:text-3xl font-bold leading-normal sm:text-4xl"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Need Uniforms for Your Organization?
@@ -61,4 +61,3 @@ export function CtaBanner() {
     </section>
   );
 }
-
