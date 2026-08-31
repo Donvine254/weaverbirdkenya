@@ -8,11 +8,19 @@ interface PageHeroProps {
   className?: string;
   image?: string;
 }
-const defaultImage = "https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg";
-export function PageHero({ eyebrow, icon: Icon, title, subtitle, image = defaultImage, className = "" }: PageHeroProps) {
+const defaultImage =
+  "https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg";
+export function PageHero({
+  eyebrow,
+  icon: Icon,
+  title,
+  subtitle,
+  image = defaultImage,
+  className = "",
+}: PageHeroProps) {
   return (
     <section
-      className={`relative overflow-hidden bg-cover bg-center ${className}`}
+      className={`relative lg:min-h-[500px] overflow-hidden bg-cover bg-center ${className}`}
       style={{
         backgroundImage: `url("${image}")`,
       }}
@@ -24,7 +32,7 @@ export function PageHero({ eyebrow, icon: Icon, title, subtitle, image = default
             "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.65), oklch(0.10 0.06 155 / 0.40))",
         }}
       />
-      <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
+      <div className="relative mx-auto max-w-4xl px-6 py-20 md:pt-32 md:pb-12 text-center text-white lg:pt-48 lg:pb-16 animate-fade-in-up">
         <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
           <Icon className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
           {eyebrow}

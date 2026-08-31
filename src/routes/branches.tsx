@@ -1,12 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { MapPin, Store, Phone, Clock, Search, Navigation, Factory, Building2, X } from "lucide-react";
+import {
+  MapPin,
+  Store,
+  Phone,
+  Clock,
+  Search,
+  Navigation,
+  Factory,
+  Building2,
+  X,
+} from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
 import { branches, type Branch } from "@/data/branches";
 import { BranchesMap } from "@/components/branches-map";
-
 
 export type { Branch };
 export { branches };
@@ -37,17 +46,14 @@ export const Route = createFileRoute("/branches")({
 
 function BranchesPage() {
   return (
-    <div
-      className="min-h-dvh bg-background font-sans"
-      style={{ fontFamily: "var(--font-sans)" }}
-    >
+    <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Branches" />
       <main id="main-content">
         <PageHero
           eyebrow="Nationwide Network"
           icon={Store}
           className="bg-left-top"
-          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788180782/weaverbird/products/ytni2vjokh8p4ikdjxsz.jpg"
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788180166/weaverbird/products/ean7xbwdprg8mnxnxdyq.jpg"
           title={
             <>
               Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Branches</span>
@@ -127,8 +133,9 @@ function Locator() {
                   <button
                     type="button"
                     onClick={() => setSelected(b)}
-                    className={`flex w-full items-start gap-3 p-4 text-left transition hover:bg-muted/50 ${isActive ? "bg-muted/70" : ""
-                      }`}
+                    className={`flex w-full items-start gap-3 p-4 text-left transition hover:bg-muted/50 ${
+                      isActive ? "bg-muted/70" : ""
+                    }`}
                   >
                     <span
                       className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full"

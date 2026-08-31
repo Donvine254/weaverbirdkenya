@@ -15,7 +15,7 @@ import {
   Store,
   CalendarCheck,
   ThumbsUp,
-} from "lucide-react";;
+} from "lucide-react";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { PageHero } from "@/components/page-hero";
@@ -52,7 +52,7 @@ function AboutPage() {
         <PageHero
           eyebrow="Since 1996"
           icon={CalendarCheck}
-          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788180166/weaverbird/products/ean7xbwdprg8mnxnxdyq.png"
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788173962/weaverbird/sehy7igsn3mm3wzeiovc.png"
           title={
             <>
               About <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
@@ -215,7 +215,6 @@ function MissionVisionSection() {
 }
 
 function ValuesSection() {
- 
   const values = [
     {
       icon: Heart,
@@ -383,10 +382,8 @@ function SectionHeader({
 }) {
   return (
     <div className="max-w-2xl">
-      <div
-        className="pt-6 lg:py-0 text-xs font-semibold uppercase tracking-widest text-maroon"
-      >
-        &mdash;  {eyebrow}
+      <div className="pt-6 lg:py-0 text-xs font-semibold uppercase tracking-widest text-maroon">
+        &mdash; {eyebrow}
       </div>
       <h2
         className="mt-2 text-3xl font-bold text-foreground sm:text-4xl"
