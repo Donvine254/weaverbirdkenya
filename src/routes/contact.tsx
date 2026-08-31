@@ -5,7 +5,7 @@ import {
   Smartphone,
   MapPin,
   Clock,
-  MessageCircle,
+  Headset,
   Navigation,
   Facebook,
   Twitter,
@@ -52,7 +52,9 @@ function ContactPage() {
       <main id="main-content">
         <PageHero
           eyebrow="Get in Touch"
-          icon={MessageCircle}
+          icon={Headset}
+          className="bg-left-top"
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/osw2cqofzjsu3r9qrzff.jpg"
           title={
             <>
               Contact <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
@@ -125,7 +127,7 @@ function ContactMethods() {
             className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
             <span
-              className="grid h-10 w-10 place-items-center rounded-full bg-maroon/80 text-white"
+              className="grid h-10 w-10 place-items-center rounded-full bg-black text-white"
               style={{ boxShadow: "var(--shadow-red)" }}
             >
               <m.icon className="h-6 w-6" />

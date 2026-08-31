@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Award,
+  Medal,
   Users,
-  MapPin,
   Factory,
   CheckCircle2,
   Target,
@@ -12,8 +11,11 @@ import {
   Shirt,
   ChevronRight,
   Leaf,
-  Sparkles,
-} from "lucide-react";
+  Calendar,
+  Store,
+  CalendarCheck,
+  ThumbsUp,
+} from "lucide-react";;
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { PageHero } from "@/components/page-hero";
@@ -49,7 +51,8 @@ function AboutPage() {
       <main id="main-content">
         <PageHero
           eyebrow="Since 1996"
-          icon={Award}
+          icon={CalendarCheck}
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788180166/weaverbird/products/ean7xbwdprg8mnxnxdyq.png"
           title={
             <>
               About <span style={{ color: "oklch(0.78 0.18 145)" }}>Weaverbird</span>
@@ -59,7 +62,9 @@ function AboutPage() {
         />
         <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
           <StorySection />
-          <StatsSection />
+        </div>
+        <StatsSection />
+        <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
           <MissionVisionSection />
           <ValuesSection />
           <LeadershipSection />
@@ -73,12 +78,12 @@ function AboutPage() {
 
 function StorySection() {
   return (
-    <section className="grid gap-8 lg:grid-cols-2 lg:items-center">
-      <div className="relative aspect-[4/3] min-h-[280px] overflow-hidden rounded-2xl border border-border shadow-sm">
+    <section className="lg:grid gap-8 lg:grid-cols-2 lg:items-center">
+      <div className="relative sm:min-h-[250px] overflow-hidden rounded-2xl border border-border shadow-sm md:aspect-[4/3] md:min-h-0 md:border-gold md:p-2">
         <img
           src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
           alt="Weaverbird factory and headquarters in Thika"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover md:rounded-2xl"
           loading="eager"
           decoding="async"
         />
@@ -98,22 +103,21 @@ function StorySection() {
         <p className="text-sm leading-relaxed text-muted-foreground">
           For nearly 30 years we have supplied schools, corporate teams, security firms, hospitals,
           hotels and sports clubs with apparel that looks professional and lasts longer. Every piece
-          is designed, cut, stitched and finished locally — because we believe Kenyan workmanship is
-          world-class.
+          is designed, cut, stitched and finished locally.
         </p>
         <ul className="grid gap-3 sm:grid-cols-2">
           {[
             { i: Factory, t: "Factory & HQ in Thika" },
-            { i: MapPin, t: "13 shops across Kenya" },
-            { i: Award, t: "30 years of experience" },
-            { i: Leaf, t: "Proudly made in Kenya" },
+            { i: Store, t: "13 shops across Kenya" },
+            { i: Medal, t: "30 years of excellence" },
+            { i: Leaf, t: "Proudly made in Africa" },
           ].map(({ i: Icon, t }) => (
             <li key={t} className="flex items-center gap-2 text-sm font-medium text-foreground">
               <span
                 className="grid h-8 w-8 shrink-0 place-items-center rounded-full"
                 style={{ background: "oklch(0.66 0.22 25 / 0.12)" }}
               >
-                <Icon className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
+                <Icon className="h-4 w-4 text-maroon" />
               </span>
               {t}
             </li>
@@ -126,16 +130,16 @@ function StorySection() {
 
 function StatsSection() {
   const stats = [
-    { i: Award, n: "1996", t: "Year Founded" },
+    { i: Calendar, n: "1996", t: "Year Founded" },
     { i: Users, n: "400+", t: "Employees" },
-    { i: MapPin, n: "13", t: "Retail Shops" },
+    { i: Store, n: "13", t: "Retail Shops" },
     { i: Shirt, n: "500+", t: "Product Categories" },
     { i: ShieldCheck, n: "98%", t: "Quality Standards" },
     { i: CheckCircle2, n: "30+", t: "Years of Experience" },
   ];
   return (
     <section
-      className="rounded-2xl px-4 py-8 text-white sm:px-6 sm:py-10"
+      className=" w-full py-8 text-white sm:px-6 sm:py-10"
       style={{ background: "var(--primary-deep)" }}
     >
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
@@ -174,7 +178,7 @@ function MissionVisionSection() {
     {
       icon: Eye,
       title: "Vision",
-      body: "To be Kenya’s most trusted apparel partner — known for consistent quality, ethical manufacturing and nationwide service that reaches every county and community.",
+      body: "To be Kenya’s most trusted apparel partner known for consistent quality, ethical manufacturing and nationwide service that reaches every county and community.",
     },
   ];
   return (
@@ -211,6 +215,7 @@ function MissionVisionSection() {
 }
 
 function ValuesSection() {
+ 
   const values = [
     {
       icon: Heart,
@@ -223,7 +228,7 @@ function ValuesSection() {
       body: "We do business honestly, keep our promises and deliver with professionalism from first quote to final delivery.",
     },
     {
-      icon: Sparkles,
+      icon: ThumbsUp,
       title: "Quality & Satisfaction",
       body: "98% quality standards and customer satisfaction are more than numbers — they are the benchmark for every order we ship.",
     },
@@ -250,7 +255,7 @@ function ValuesSection() {
               className="grid h-11 w-11 place-items-center rounded-full"
               style={{ background: "oklch(0.66 0.22 25 / 0.12)" }}
             >
-              <v.icon className="h-5 w-5" style={{ color: "var(--accent-red)" }} />
+              <v.icon className="h-5 w-5 text-maroon" />
             </span>
             <h3
               className="mt-4 text-lg font-bold text-foreground"
@@ -379,10 +384,9 @@ function SectionHeader({
   return (
     <div className="max-w-2xl">
       <div
-        className="text-xs font-semibold uppercase tracking-widest"
-        style={{ color: "var(--accent-red)" }}
+        className="pt-6 lg:py-0 text-xs font-semibold uppercase tracking-widest text-maroon"
       >
-        {eyebrow}
+        &mdash;  {eyebrow}
       </div>
       <h2
         className="mt-2 text-3xl font-bold text-foreground sm:text-4xl"

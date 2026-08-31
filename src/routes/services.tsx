@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, ChevronRight, Sparkles } from "lucide-react";
+import { ArrowRight, Check, ChevronRight, Layers2 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
@@ -36,7 +36,9 @@ function ServicesPage() {
       <main id="main-content">
         <PageHero
           eyebrow="What We Do"
-          icon={Sparkles}
+          icon={Layers2}
+          className="bg-left-top"
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/nabth0lum2fljecqgqfw.jpg"
           title={
             <>
               Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Services</span>

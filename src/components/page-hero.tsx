@@ -6,21 +6,22 @@ interface PageHeroProps {
   title: ReactNode;
   subtitle: string;
   className?: string;
+  image?: string;
 }
-
-export function PageHero({ eyebrow, icon: Icon, title, subtitle, className = "" }: PageHeroProps) {
+const defaultImage = "https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg";
+export function PageHero({ eyebrow, icon: Icon, title, subtitle, image = defaultImage, className = "" }: PageHeroProps) {
   return (
     <section
       className={`relative overflow-hidden bg-cover bg-center ${className}`}
       style={{
-        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
+        backgroundImage: `url("${image}")`,
       }}
     >
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
+            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.65), oklch(0.10 0.06 155 / 0.40))",
         }}
       />
       <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">

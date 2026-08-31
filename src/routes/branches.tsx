@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { MapPin, Phone, Clock, Search, Navigation, Factory, Building2, X } from "lucide-react";
+import { MapPin, Store, Phone, Clock, Search, Navigation, Factory, Building2, X } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
 import { branches, type Branch } from "@/data/branches";
 import { BranchesMap } from "@/components/branches-map";
-import { NewsletterSection } from "@/components/newsletter-section";
+
 
 export type { Branch };
 export { branches };
@@ -45,7 +45,9 @@ function BranchesPage() {
       <main id="main-content">
         <PageHero
           eyebrow="Nationwide Network"
-          icon={MapPin}
+          icon={Store}
+          className="bg-left-top"
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788180782/weaverbird/products/ytni2vjokh8p4ikdjxsz.jpg"
           title={
             <>
               Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Branches</span>
@@ -54,13 +56,11 @@ function BranchesPage() {
           subtitle="Find a Weaverbird shop near you. We have 13 retail locations across Kenya plus our factory headquarters in Thika."
         />
         <Locator />
-        <NewsletterSection />
       </main>
       <Footer />
     </div>
   );
 }
-
 
 function Locator() {
   const [query, setQuery] = useState("");
@@ -127,14 +127,13 @@ function Locator() {
                   <button
                     type="button"
                     onClick={() => setSelected(b)}
-                    className={`flex w-full items-start gap-3 p-4 text-left transition hover:bg-muted/50 ${
-                      isActive ? "bg-muted/70" : ""
-                    }`}
+                    className={`flex w-full items-start gap-3 p-4 text-left transition hover:bg-muted/50 ${isActive ? "bg-muted/70" : ""
+                      }`}
                   >
                     <span
                       className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full"
                       style={{
-                        background: isHQ ? "var(--gradient-red)" : "oklch(0.20 0.07 155)",
+                        background: isHQ ? "var(--color-maroon)" : "oklch(0.20 0.07 155)",
                       }}
                     >
                       {isHQ ? (
@@ -149,7 +148,7 @@ function Locator() {
                         {isHQ && (
                           <span
                             className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white"
-                            style={{ background: "var(--gradient-red)" }}
+                            style={{ background: "var(--color-maroon)" }}
                           >
                             HQ · Factory
                           </span>
@@ -167,7 +166,6 @@ function Locator() {
             })}
           </ul>
         </div>
-
         {/* Details panel */}
         <BranchDetail branch={selected} />
       </div>
@@ -183,7 +181,7 @@ function BranchDetail({ branch }: { branch: Branch }) {
         <div className="flex flex-wrap items-center gap-3">
           <span
             className="grid h-11 w-11 place-items-center rounded-full"
-            style={{ background: isHQ ? "var(--gradient-red)" : "var(--primary-deep)" }}
+            style={{ background: isHQ ? "var(--color-maroon)" : "var(--primary-deep)" }}
           >
             {isHQ ? (
               <Factory className="h-5 w-5 text-white" />
@@ -237,14 +235,14 @@ function BranchDetail({ branch }: { branch: Branch }) {
             target="_blank"
             rel="noreferrer noopener"
             className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-            style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+            style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
           >
             <Navigation className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             Get Directions
           </a>
           <a
             href={`tel:${branch.phone.replace(/\s+/g, "")}`}
-            className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted active:scale-95"
+            className="inline-flex items-center gap-2 rounded-md border border-input bg-primary-deep text-white px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted active:scale-95"
           >
             <Phone className="h-4 w-4" />
             Call Shop
@@ -270,7 +268,7 @@ function InfoRow({
         className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg"
         style={{ background: "oklch(0.66 0.22 25 / 0.12)" }}
       >
-        <Icon className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
+        <Icon className="h-4 w-4" style={{ color: "var(--color-maroon)" }} />
       </span>
       <div className="min-w-0">
         <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
