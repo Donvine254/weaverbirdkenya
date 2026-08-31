@@ -29,7 +29,7 @@ export function TrustedBy() {
   ];
   const row = [...clients, ...clients];
   return (
-    <section className="bg-primary-deep pb-12">
+    <section className="bg-primary-deep py-12">
       <div className="bg-card p-8" style={{ boxShadow: "var(--shadow-card)" }}>
         <h3 className="text-sm font-semibold tracking-wide text-maroon">
           TRUSTED BY LEADING ORGANIZATIONS

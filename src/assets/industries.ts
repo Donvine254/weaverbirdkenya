@@ -32,14 +32,14 @@ export const industries = [
     subtitle: "Guard Services",
     icon: ShieldAlert,
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1787919590/weaverbird/products/sgiuvowtwaj0olmg5tnu.jpg",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/f_auto,q_auto/v1787919590/weaverbird/products/sgiuvowtwaj0olmg5tnu.jpg",
   },
   {
     title: "Sports & Clubs",
     subtitle: "Teams & Sporting Organizations",
     icon: Volleyball,
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788176456/weaverbird/products/jc7irabijipenlgvgvav.jpg",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/f_auto,q_auto/v1788176456/weaverbird/products/jc7irabijipenlgvgvav.jpg",
   },
   {
     title: "Manufacturing",
