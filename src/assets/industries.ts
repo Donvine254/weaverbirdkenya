@@ -1,50 +1,79 @@
 import {
   Briefcase,
-  Building2,
   Factory,
   GraduationCap,
   Heart,
   Hospital,
-  ShieldAlert,
   Utensils,
+  ShoppingBag,
+  Megaphone,
+  ShieldAlert,
+  Volleyball
 } from "lucide-react";
-import { products } from "./uniforms";
 
-export const categories = [
+
+export const industries = [
   {
     title: "Education",
     subtitle: "Schools & Colleges",
-    image: products.find((p) => p.id === "school")!.img,
     icon: GraduationCap,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1787920184/weaverbird/products/q1y64ybehztnzg8gs46e.jpg",
   },
   {
     title: "Corporate",
     subtitle: "Offices & Institutions",
-    image: products.find((p) => p.id === "corporate")!.img,
     icon: Briefcase,
-  },
-  {
-    title: "Hospitality",
-    subtitle: "Hotels & Restaurants",
-    image: products.find((p) => p.id === "hospitality")!.img,
-    icon: Utensils,
-  },
-  {
-    title: "Healthcare",
-    subtitle: "Hospitals & Clinics",
-    image: products.find((p) => p.id === "healthcare")!.img,
-    icon: Hospital,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788163761/weaverbird/products/uyki7qzgicpplaclxasb.jpg",
   },
   {
     title: "Security",
     subtitle: "Guard Services",
-    image: products.find((p) => p.id === "security")!.img,
     icon: ShieldAlert,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1787919590/weaverbird/products/sgiuvowtwaj0olmg5tnu.jpg",
+  },
+  {
+    title: "Sports & Clubs",
+    subtitle: "Teams & Sporting Organizations",
+    icon: Volleyball,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788176456/weaverbird/products/jc7irabijipenlgvgvav.jpg",
   },
   {
     title: "Manufacturing",
     subtitle: "Factories & Industrial",
-    image: products.find((p) => p.id === "ppe")!.img,
     icon: Factory,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1787918649/weaverbird/products/or90p38zcy6uisx0xlgr.jpg",
+  },
+  {
+    title: "Hospitality",
+    subtitle: "Hotels & Restaurants",
+    icon: Utensils,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1787920412/weaverbird/products/d8cgm1zjbhxg3dmb2sd8.jpg",
+  },
+  {
+    title: "Healthcare",
+    subtitle: "Hospitals & Clinics",
+    icon: Hospital,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899977/weaverbird/products/oowc2jma8oz3fiidtchf.jpg",
+  },
+  {
+    title: "Retail & Fashion",
+    subtitle: "Retailers & Fashion Brands",
+    icon: ShoppingBag,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788173962/weaverbird/sehy7igsn3mm3wzeiovc.jpg",
+  },
+  {
+    title: "Events & Promotions",
+    subtitle: "Events & Promotional Teams",
+    icon: Megaphone,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/a82gzu0pemfgxwpt35h8.jpg",
   },
 ];
