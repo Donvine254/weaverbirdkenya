@@ -29,7 +29,7 @@ export const uniforms = [
   },
   {
     id: "corporate",
-    name: "Corporate Uniforms",
+    name: "Corporate Wear",
     slug: "corporate-uniforms",
     description: "Professional uniforms for offices and businesses.",
     image:
