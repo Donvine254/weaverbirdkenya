@@ -81,7 +81,7 @@ export function Hero() {
         </div>
         <div className="grid grid-cols-2 gap-4">
           {tiles.map(({ label, img, icon: Icon }) => (
-            <div key={label} className="group relative aspect-[5/4] overflow-hidden rounded-md">
+            <div key={label} className="group relative aspect-[5/4] overflow-hidden rounded-md animate-scale-in">
               <img
                 src={img}
                 alt={label}

@@ -20,6 +20,7 @@
 @theme {
   --font-cursive: "Italiano", cursive;
 }
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -166,23 +167,28 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
 }
+
 .animate-marquee {
   animation: marquee 45s linear infinite;
 }
+
 /* ─── Accessibility widget feature classes ─── */
 @layer utilities {
   .animate-in {
     animation: a11y-slide-up 0.25s ease-out;
   }
+
   @keyframes a11y-slide-up {
     from {
       opacity: 0;
       transform: translateY(12px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -213,6 +219,7 @@
 .a11y-highContrast {
   filter: contrast(1.5) !important;
 }
+
 .a11y-highContrast * {
   text-shadow: none !important;
 }
@@ -242,6 +249,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -250,4 +258,20 @@
 
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
