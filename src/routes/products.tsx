@@ -66,75 +66,75 @@ function CategorySection({ category, index }: { category: Category; index: numbe
       aria-labelledby={`${category.id}-heading`}
       className={`scroll-mt-24 ${muted ? "bg-secondary/60" : "bg-background"}`}
     >
-      <div className="mx-auto max-w-7xl px-6 py-14 lg:py-20">
-        {/* Banner as flex row on large devices: text left, image right */}
-        <div className="relative overflow-hidden rounded-3xl border border-black/5 bg-card shadow-[var(--shadow-card)] lg:flex lg:min-h-[24rem]">
-          {/* Text column */}
-          <div className="flex flex-col justify-center p-6 sm:p-8 lg:w-1/2 lg:p-10">
-            <span
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "var(--accent-red)" }}
-            >
-              <span className="h-px w-8" style={{ background: "var(--accent-red)" }} />
-              {String(index + 1).padStart(2, "0")} — Category
+      {/* Full-width banner: text left, image right on large screens */}
+      <div className="border-b border-black/5 bg-card lg:flex lg:min-h-[28rem]">
+        {/* Text column */}
+        <div className="flex flex-col justify-center px-6 py-10 sm:px-8 lg:w-1/2 lg:px-12 lg:py-0 xl:px-16">
+          <span
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest"
+            style={{ color: "var(--accent-red)" }}
+          >
+            <span className="h-px w-8" style={{ background: "var(--accent-red)" }} />
+            {String(index + 1).padStart(2, "0")} — Category
+          </span>
+          <h2
+            id={`${category.id}-heading`}
+            className="mt-3 text-3xl font-extrabold sm:text-4xl"
+            style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
+          >
+            {category.name}
+          </h2>
+          <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">
+            {category.pitch}
+          </p>
+
+          <div className="mt-5 flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
+              <Tag className="h-3.5 w-3.5" />
+              {category.tagsLabel}
             </span>
-            <h2
-              id={`${category.id}-heading`}
-              className="mt-3 text-3xl font-extrabold sm:text-4xl"
-              style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
-            >
-              {category.name}
-            </h2>
-            <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">
-              {category.pitch}
-            </p>
-
-            <div className="mt-5 flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
-                <Tag className="h-3.5 w-3.5" />
-                {category.tagsLabel}
+            {category.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-foreground shadow-sm"
+              >
+                {tag}
               </span>
-              {category.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-foreground shadow-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <Link
-              to="/quote"
-              className="group mt-6 inline-flex w-fit items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-              style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
-            >
-              Get a Quote
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+            ))}
           </div>
 
-          {/* Image column */}
-          <div className="relative lg:w-1/2">
-            <img
-              src={category.banner}
-              alt={`${category.name} by Weaverbird Apparel Solutions`}
-              loading="lazy"
-              className="h-64 w-full object-cover sm:h-80 lg:h-full lg:min-h-[24rem]"
-            />
-            <div
-              className="absolute inset-0 hidden lg:block"
-              style={{
-                background:
-                  "linear-gradient(90deg, oklch(1 0 0 / 1) 0%, oklch(1 0 0 / 0.4) 25%, transparent 60%)",
-              }}
-              aria-hidden="true"
-            />
-          </div>
+          <Link
+            to="/quote"
+            className="group mt-6 inline-flex w-fit items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+            style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
+          >
+            Get a Quote
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
         </div>
 
-        {/* Product grid */}
-        <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Image column */}
+        <div className="relative lg:w-1/2">
+          <img
+            src={category.banner}
+            alt={`${category.name} by Weaverbird Apparel Solutions`}
+            loading="lazy"
+            className="h-72 w-full object-cover sm:h-96 lg:h-full lg:min-h-[28rem]"
+          />
+          <div
+            className="absolute inset-0 hidden lg:block"
+            style={{
+              background:
+                "linear-gradient(90deg, oklch(1 0 0 / 1) 0%, oklch(1 0 0 / 0.5) 30%, transparent 70%)",
+            }}
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+
+      {/* Product grid */}
+      <div className="mx-auto max-w-7xl px-6 py-14 lg:py-20">
+        <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {category.products.map((item) => (
             <ProductCard key={item.name} item={item} />
           ))}
