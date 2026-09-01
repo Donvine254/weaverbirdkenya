@@ -67,9 +67,10 @@ function CategorySection({ category, index }: { category: Category; index: numbe
       className={`scroll-mt-24 ${muted ? "bg-secondary/60" : "bg-background"}`}
     >
       <div className="mx-auto max-w-7xl px-6 py-14 lg:py-20">
-        {/* Category header */}
-        <div className="grid items-end gap-6 lg:grid-cols-[1fr_auto]">
-          <div>
+        {/* Banner as flex row on large devices: text left, image right */}
+        <div className="relative overflow-hidden rounded-3xl border border-black/5 bg-card shadow-[var(--shadow-card)] lg:flex lg:min-h-[24rem]">
+          {/* Text column */}
+          <div className="flex flex-col justify-center p-6 sm:p-8 lg:w-1/2 lg:p-10">
             <span
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest"
               style={{ color: "var(--accent-red)" }}
@@ -84,49 +85,51 @@ function CategorySection({ category, index }: { category: Category; index: numbe
             >
               {category.name}
             </h2>
-            <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">
+            <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">
               {category.pitch}
             </p>
-          </div>
-          <Link
-            to="/quote"
-            className="group inline-flex items-center gap-2 self-start rounded-md px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 lg:self-end"
-            style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
-          >
-            Get a Quote
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
-        </div>
 
-        {/* Banner */}
-        <div className="relative mt-8 overflow-hidden rounded-3xl border border-black/5 shadow-[var(--shadow-card)]">
-          <img
-            src={category.banner}
-            alt={`${category.name} by Weaverbird Apparel Solutions`}
-            loading="lazy"
-            className="h-52 w-full object-cover sm:h-64 lg:h-72"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(90deg, oklch(0.13 0.05 155 / 0.65) 0%, transparent 60%)",
-            }}
-            aria-hidden="true"
-          />
-          <div className="absolute inset-x-5 bottom-5 flex flex-wrap items-center gap-2 sm:inset-x-7 sm:bottom-7">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
-              <Tag className="h-3.5 w-3.5" />
-              {category.tagsLabel}
-            </span>
-            {category.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-foreground shadow-sm"
-              >
-                {tag}
+            <div className="mt-5 flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
+                <Tag className="h-3.5 w-3.5" />
+                {category.tagsLabel}
               </span>
-            ))}
+              {category.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-foreground shadow-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <Link
+              to="/quote"
+              className="group mt-6 inline-flex w-fit items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+              style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
+            >
+              Get a Quote
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
+
+          {/* Image column */}
+          <div className="relative lg:w-1/2">
+            <img
+              src={category.banner}
+              alt={`${category.name} by Weaverbird Apparel Solutions`}
+              loading="lazy"
+              className="h-64 w-full object-cover sm:h-80 lg:h-full lg:min-h-[24rem]"
+            />
+            <div
+              className="absolute inset-0 hidden lg:block"
+              style={{
+                background:
+                  "linear-gradient(90deg, oklch(1 0 0 / 1) 0%, oklch(1 0 0 / 0.4) 25%, transparent 60%)",
+              }}
+              aria-hidden="true"
+            />
           </div>
         </div>
 
