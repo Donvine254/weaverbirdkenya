@@ -59,7 +59,7 @@ export const ProductCategories = [
 ]
 
 
-export const products = {
+export const AllProductCategories = {
   "categories": [
     {
       "id": "school-uniforms",
