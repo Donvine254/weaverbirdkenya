@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as QuoteRouteImport } from './routes/quote'
+import { Route as ProductsRouteImport } from './routes/products'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BranchesRouteImport } from './routes/branches'
 import { Route as AboutRouteImport } from './routes/about'
@@ -30,6 +31,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const QuoteRoute = QuoteRouteImport.update({
   id: '/quote',
   path: '/quote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BranchesRoute: typeof BranchesRoute
   ContactRoute: typeof ContactRoute
+  ProductsRoute: typeof ProductsRoute
   QuoteRoute: typeof QuoteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/quote'
       fullPath: '/quote'
       preLoaderRoute: typeof QuoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BranchesRoute: BranchesRoute,
   ContactRoute: ContactRoute,
+  ProductsRoute: ProductsRoute,
   QuoteRoute: QuoteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
