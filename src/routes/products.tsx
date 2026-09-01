@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Package, Shirt, ArrowRight, Tag } from "lucide-react";
+import { Package, Shirt, ArrowRight, Tag, Store } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
-import { products } from "@/data/products";
+import { AllProductCategories } from "@/data/products";
 
-type Category = (typeof products.categories)[number];
+type Category = (typeof AllProductCategories.categories)[number];
 type ProductItem = Category["products"][number];
 
 export const Route = createFileRoute("/products")({
@@ -48,7 +48,7 @@ function ProductsPage() {
           }
           subtitle="From school uniforms to corporate wear, medical scrubs to Maasai shukas — every garment is designed, cut and stitched under one roof at our Thika factory."
         />
-        {products.categories.map((category, i) => (
+        {AllProductCategories.categories.map((category, i) => (
           <CategorySection key={category.id} category={category} index={i} />
         ))}
         <ProductsCta />
@@ -199,14 +199,22 @@ function ProductsCta() {
           We manufacture to your exact specification — fabric, colour, fit and branding. Tell us
           what you need and we'll send a tailored quote.
         </p>
-        <Link
-          to="/quote"
-          className="group mt-8 inline-flex items-center gap-2 rounded-md px-7 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-          style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
-        >
-          Request a Quote
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </Link>
+        <div className="mx-auto w-full justify-center flex items-center gap-3">
+          <Link
+            to="/quote"
+            className="group mt-8 inline-flex items-center gap-2 rounded-md px-7 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+            style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
+          >
+            Request a Quote
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+          <Link
+            to="/branches"
+            className="group text-primary-deep bg-white mt-8 hidden sm:inline-flex items-center gap-2 rounded-md px-7 py-3 text-sm font-semibold  shadow-md transition-all hover:shadow-lg active:scale-95">
+            <Store className="h-4 w-4" />
+            Find A Shop Near You
+          </Link>
+        </div>
       </div>
     </section>
   );
