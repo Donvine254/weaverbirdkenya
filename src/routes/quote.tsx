@@ -548,11 +548,11 @@ function QuoteForm() {
               Call or visit any of our branches — we'll quote you on the spot.
             </p>
             <a
-              href="tel:+254722000000"
+              href="tel:+254722264464"
               className="mt-4 flex items-center gap-3 rounded-md bg-white/10 px-4 py-3 text-sm font-semibold transition hover:bg-white/20"
             >
               <Phone className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
-              +254 722 000 000
+              +254 722 264 464
             </a>
             <Link
               to="/branches"
