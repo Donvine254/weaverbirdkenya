@@ -93,21 +93,29 @@ function PageHero() {
             "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
         }}
       />
+      {/* faint gradient glow */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-40"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 30%, oklch(0.78 0.18 145 / 0.25), transparent 60%)",
+        }}
+      />
       <div className="relative mx-auto max-w-4xl px-6 py-16 text-center text-white lg:py-20">
-        <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
+        <div className="animate-fade-in flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
           <ClipboardList className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
           Custom Apparel Quote
         </div>
         <h1
-          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
+          className="animate-fade-in mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
           Request a <span style={{ color: "oklch(0.78 0.18 145)" }}>Quote</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-white/80">
+        <p className="animate-fade-in mx-auto mt-5 max-w-2xl text-white/80">
           Tell us what you're outfitting and we'll send back a detailed, costed quotation tailored to your organisation — usually within one business day.
         </p>
-        <div className="mx-auto mt-8 flex max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium text-white/75">
+        <div className="animate-fade-in mx-auto mt-8 hidden max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium text-white/75 md:flex">
           <span className="inline-flex items-center gap-2">
             <Clock className="h-4 w-4" style={{ color: "var(--accent-red)" }} /> Response within 24 hours
           </span>
