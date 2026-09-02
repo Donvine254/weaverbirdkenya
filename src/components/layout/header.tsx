@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import weaverLogo from "@/assets/logo.jpg";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { products } from "@/assets/uniforms";
+
 
 /* ----------------- Brand Logo ----------------- */
 export function Logo({ light = false }: { light?: boolean }) {
@@ -15,9 +15,9 @@ export function Logo({ light = false }: { light?: boolean }) {
         className="h-12 w-auto object-contain sm:h-16"
       />
       <div className="hidden flex-col leading-tight sm:flex">
-        <span className="text-lg font-bold tracking-wide text-white">WEAVERBIRD</span>
+        <span className="text-lg font-bold tracking-wide text-white">WEAVER BIRD</span>
         <span className="text-xs font-cursive font-medium  text-white/70">
-          Garments Manufacturer
+          Garments Manufacturers Ltd
         </span>
       </div>
     </div>
@@ -28,9 +28,9 @@ export function Logo({ light = false }: { light?: boolean }) {
 export function Header({ current = "Home" }: { current?: string }) {
   const links: { label: string; to?: string; href?: string }[] = [
     { label: "Home", to: "/" },
+    { label: "Industries", href: "/#industries" },
     { label: "Products", to: "/products" },
     { label: "Services", to: "/services" },
-    { label: "Industries", href: "/#industries" },
     // { label: "Manufacturing", href: "/#manufacturing" },
     // { label: "Gallery", href: "/#gallery" },
     { label: "Branches", to: "/branches" },

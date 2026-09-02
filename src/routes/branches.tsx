@@ -133,9 +133,8 @@ function Locator() {
                   <button
                     type="button"
                     onClick={() => setSelected(b)}
-                    className={`flex w-full items-start gap-3 p-4 text-left transition hover:bg-muted/50 ${
-                      isActive ? "bg-muted/70" : ""
-                    }`}
+                    className={`flex w-full items-start gap-3 p-4 text-left transition hover:bg-muted/50 ${isActive ? "bg-muted/70" : ""
+                      }`}
                   >
                     <span
                       className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full"
@@ -175,6 +174,10 @@ function Locator() {
         </div>
         {/* Details panel */}
         <BranchDetail branch={selected} />
+      </div>
+      {/* Add footer section */}
+      <div className="mt-16">
+        <FindStoreCta />
       </div>
     </section>
   );
@@ -240,6 +243,7 @@ function BranchDetail({ branch }: { branch: Branch }) {
           <a
             href={branch.map}
             target="_blank"
+            title="get directions"
             rel="noreferrer noopener"
             className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
             style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
@@ -249,7 +253,8 @@ function BranchDetail({ branch }: { branch: Branch }) {
           </a>
           <a
             href={`tel:${branch.phone.replace(/\s+/g, "")}`}
-            className="inline-flex items-center gap-2 rounded-md border border-input bg-primary-deep text-white px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted active:scale-95"
+            title="call branch"
+            className="inline-flex items-center gap-2 rounded-md border border-input bg-primary-deep text-white px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-gold hover:text-primary-deep active:scale-95"
           >
             <Phone className="h-4 w-4" />
             Call Shop
@@ -286,3 +291,56 @@ function InfoRow({
     </div>
   );
 }
+
+function FindStoreCta() {
+  return (
+    <section
+      className="relative overflow-hidden rounded-2xl p-8 text-center text-white lg:p-12"
+      style={{
+        backgroundImage: `
+          linear-gradient(
+            135deg,
+            oklch(0.13 0.05 155 / 0.85),
+            oklch(0.10 0.06 155 / 0.70)
+          ),
+          url('https://res.cloudinary.com/dipkbpinx/image/upload/v1788344567/edqz76gblvoq3uksx78n.jpg')
+        `,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <span
+        className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-white"
+        style={{ boxShadow: "var(--shadow-red)" }}
+      >
+        <img
+          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1788343621/yun3uzpwlc7d5xmfjmjr.png"
+          alt="Confused person"
+          className="h-12 w-12 object-contain"
+        />
+      </span>
+
+      <h2
+        className="mt-5 text-2xl font-bold sm:text-3xl"
+        style={{ fontFamily: "var(--font-display)" }}
+      >
+        Not sure which branch is right for you?
+      </h2>
+
+      <p className="mx-auto mt-3 max-w-xl text-sm text-white/80">
+        Can't find a branch near you or need help choosing where to visit?
+        Give us a call and our team will be happy to guide you.
+      </p>
+
+      <a
+        href="tel:+2022051487"
+        className="group mt-6 inline-flex items-center gap-2 rounded-md bg-maroon px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+        style={{ boxShadow: "var(--shadow-red)" }}
+      >
+        <Phone className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
+        Call us for help
+      </a>
+    </section>
+  );
+}
+

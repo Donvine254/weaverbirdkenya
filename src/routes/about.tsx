@@ -81,7 +81,7 @@ function StorySection() {
     <section className="lg:grid gap-8 lg:grid-cols-2 lg:items-center">
       <div className="relative sm:min-h-[250px] overflow-hidden rounded-2xl border border-border shadow-sm md:aspect-[4/3] md:min-h-0 md:border-gold md:p-2">
         <img
-          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
+          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1788342376/weaverbird/oxt8bi13anjhlumag5gl.jpg"
           alt="Weaverbird factory and headquarters in Thika"
           className="h-full w-full object-cover md:rounded-2xl"
           loading="eager"

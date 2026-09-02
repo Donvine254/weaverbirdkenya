@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Layers2 } from "lucide-react";
+import { ArrowRight, Check, Layers2, ReceiptText } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
@@ -134,7 +134,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
               aria-hidden="true"
             />
             <span
-              className="absolute left-4 top-4 rounded-xl px-3 py-1.5 text-sm font-bold text-white bg-red-500"
+              className="absolute left-4 top-4 rounded-xl px-3 py-1.5 text-sm font-bold text-white bg-maroon"
             >
               {number}
             </span>
@@ -168,7 +168,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
         {/* Text */}
         <div>
           <span
-            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-maroon"
             aria-hidden="true"
           >
             <Icon className="h-6 w-6 text-white" />
@@ -176,7 +176,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
             {service.title}
           </h2>
-          <p className="mt-1.5 text-sm font-semibold text-red-500" >
+          <p className="mt-1.5 text-sm font-semibold text-maroon" >
             {service.tagline}
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -217,9 +217,10 @@ function ServicesCta() {
         </p>
         <Link
           to="/quote"
-          className="group mt-7 inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-          style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+          className="group mt-7 inline-flex bg-maroon items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+          style={{ boxShadow: "var(--shadow-red)" }}
         >
+           <ReceiptText className="h-4 w-4" />
           Get a Bulk Quote
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
