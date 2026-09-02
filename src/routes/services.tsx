@@ -38,7 +38,7 @@ function ServicesPage() {
           eyebrow="What We Do"
           icon={Layers2}
           className="bg-left-top"
-          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/nabth0lum2fljecqgqfw.jpg"
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788328706/weaverbird/products/ub4oimqxtr0pab3h7rg7.jpg"
           title={
             <>
               Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Services</span>

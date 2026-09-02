@@ -53,7 +53,7 @@ function BranchesPage() {
           eyebrow="Nationwide Network"
           icon={Store}
           className="bg-left-top"
-          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788180166/weaverbird/products/ean7xbwdprg8mnxnxdyq.jpg"
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/osw2cqofzjsu3r9qrzff.jpg"
           title={
             <>
               Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Branches</span>

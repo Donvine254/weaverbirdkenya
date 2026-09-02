@@ -83,14 +83,14 @@ function PageHero() {
     <section
       className="relative overflow-hidden bg-cover bg-center"
       style={{
-        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg")`,
+        backgroundImage: `url("https://res.cloudinary.com/dipkbpinx/image/upload/v1788328063/weaverbird/products/jysa5b1esbvuy5bfykvi.jpg")`,
       }}
     >
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.88), oklch(0.10 0.06 155 / 0.75))",
+            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.44), oklch(0.10 0.06 155 / 0.75))",
         }}
       />
       {/* faint gradient glow */}
@@ -101,13 +101,13 @@ function PageHero() {
             "radial-gradient(circle at 50% 30%, oklch(0.78 0.18 145 / 0.25), transparent 60%)",
         }}
       />
-      <div className="relative mx-auto max-w-4xl px-6 py-16 text-center text-white lg:py-20">
-        <div className="animate-fade-in flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
+      <div className="relative mx-auto max-w-4xl px-6 py-16 text-center text-white lg:py-20 animate-fade-in-up ">
+        <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
           <ClipboardList className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
           Custom Apparel Quote
         </div>
         <h1
-          className="animate-fade-in mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
+          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
           Request a <span style={{ color: "oklch(0.78 0.18 145)" }}>Quote</span>
@@ -266,11 +266,10 @@ function QuoteForm() {
                         type="button"
                         key={o}
                         onClick={() => setOrgType(o)}
-                        className={`rounded-md border px-3 py-2.5 text-sm font-medium transition-all active:scale-95 ${
-                          active
+                        className={`rounded-md cursor-pointer border px-3 py-2.5 text-sm font-medium transition-all active:scale-95 ${active
                             ? "border-transparent text-white shadow-md"
                             : "border-input bg-background hover:border-[var(--color-maroon)]/50 hover:bg-accent"
-                        }`}
+                          }`}
                         style={active ? { background: "var(--color-maroon)", boxShadow: "0 8px 20px -8px oklch(0.293 0.137 19.5 / 0.5)" } : {}}
                         aria-pressed={active}
                       >
@@ -346,7 +345,7 @@ function QuoteForm() {
                             onClick={() => removeRow(r.id)}
                             disabled={rows.length === 1}
                             aria-label={`Remove garment ${idx + 1}`}
-                            className="grid h-10 w-10 place-items-center rounded-md border border-input text-muted-foreground transition hover:border-destructive hover:text-destructive disabled:cursor-not-allowed disabled:opacity-40"
+                            className="grid cursor-pointer h-10 w-10 place-items-center rounded-md border border-input text-muted-foreground transition hover:border-destructive hover:text-destructive disabled:cursor-not-allowed disabled:opacity-40"
                           >
                             <X className="h-4 w-4" />
                           </button>
@@ -357,7 +356,7 @@ function QuoteForm() {
                   <button
                     type="button"
                     onClick={addRow}
-                    className="inline-flex items-center gap-2 rounded-md border border-dashed border-input px-4 py-2.5 text-sm font-medium text-muted-foreground transition hover:border-[var(--color-maroon)]/60 hover:bg-accent hover:text-foreground active:scale-95"
+                    className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-dashed border-input px-4 py-2.5 text-sm font-medium text-muted-foreground transition hover:border-[var(--color-maroon)]/60 hover:bg-accent hover:text-foreground active:scale-95"
                   >
                     <Plus className="h-4 w-4" /> Add another garment
                   </button>
@@ -374,11 +373,10 @@ function QuoteForm() {
                         type="button"
                         key={b}
                         onClick={() => toggleBranding(b)}
-                        className={`rounded-md border px-3 py-2.5 text-sm font-medium transition-all active:scale-95 ${
-                          active
+                        className={`rounded-md cursor-pointer border px-3 py-2.5 text-sm font-medium transition-all active:scale-95 ${active
                             ? "border-transparent text-white shadow-md"
                             : "border-input bg-background hover:border-[var(--color-maroon)]/50 hover:bg-accent"
-                        }`}
+                          }`}
                         style={active ? { background: "var(--color-maroon)", boxShadow: "0 8px 20px -8px oklch(0.293 0.137 19.5 / 0.5)" } : {}}
                         aria-pressed={active}
                       >
@@ -416,16 +414,16 @@ function QuoteForm() {
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <button
                     type="submit"
-                    className="group inline-flex flex-1 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg hover:brightness-110 active:scale-95"
+                    className="group cursor-pointer inline-flex flex-1 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg hover:brightness-110 active:scale-95"
                     style={{ background: "var(--color-maroon)", boxShadow: "0 10px 25px -10px oklch(0.293 0.137 19.5 / 0.55)" }}
                   >
                     Send quote request
                     <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                   <button
-                    type="button"
+                    type="reset"
                     onClick={handleReset}
-                    className="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-5 py-3 text-sm font-semibold text-foreground shadow-sm transition-all hover:bg-accent hover:text-accent-foreground active:scale-95 sm:flex-none"
+                    className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-md border border-input bg-background px-5 py-3 text-sm font-semibold text-foreground shadow-sm transition-all hover:bg-accent hover:text-accent-foreground active:scale-95 sm:flex-none"
                   >
                     <RotateCcw className="h-4 w-4" />
                     Reset
