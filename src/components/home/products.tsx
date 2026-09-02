@@ -1,5 +1,6 @@
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { ProductCategories } from "@/data/products";
+import { Link } from "@tanstack/react-router";
 
 /* ----------------- Products ----------------- */
 export function Products() {
@@ -16,13 +17,13 @@ export function Products() {
           </h2>
           <p className="mt-3 text-muted-foreground">High quality. Custom made. Built to last.</p>
         </div>
-        <a
-          href="#"
+        <Link
+          to="/products"
           className="inline-flex items-center gap-1 text-sm font-semibold"
           style={{ color: "var(--accent-red)" }}
         >
           View All Products <ArrowRight className="h-4 w-4" />
-        </a>
+        </Link>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {ProductCategories.map(

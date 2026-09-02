@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, ChevronRight, Layers2 } from "lucide-react";
+import { ArrowRight, Check, Layers2 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
@@ -62,17 +62,16 @@ function ServicesHero() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "var(--primary-darker)" }}
-    >
-   <div className="absolute inset-0">
-  {/* The Image */}
-  <img
-    src="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/nabth0lum2fljecqgqfw.jpg"
-    alt="Background"
-    className="w-full h-full object-cover object-center"
-  />
-</div>
-<div
+      style={{ background: "var(--primary-darker)" }}>
+      <div className="absolute inset-0">
+        {/* The Image */}
+        <img
+          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/nabth0lum2fljecqgqfw.jpg"
+          alt="Background"
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+      <div
         className="absolute inset-0"
         style={{
           background:
