@@ -79,17 +79,17 @@ export const AllProductCategories = {
         {
           "name": "Shirts",
           "text": "Short and long sleeve options in breathable, easy-iron fabrics.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/t_hiring-hero/v1788330515/weaverbird/products/misgq8hfdr729js8howu.png"
         },
         {
           "name": "Sweaters",
           "text": "Warm & comfortable knitted layers for classrooms and cooler days.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/t_hiring-hero/v1788331519/weaverbird/products/w6s1mtuknpfsdi3elktv.png"
         },
         {
           "name": "Trousers",
           "text": "Boys and girls cuts in hard-wearing, stain-resistant twill.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/t_hiring-hero/v1788331519/weaverbird/products/w6s1mtuknpfsdi3elktv.png"
         },
         {
           "name": "Dresses",

@@ -144,41 +144,120 @@ function CategorySection({ category, index }: { category: Category; index: numbe
   );
 }
 
+// function ProductCard({ item }: { item: ProductItem }) {
+//   return (
+//     <li className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+//       <div
+//         className="relative flex aspect-[4/3] items-center justify-center overflow-hidden"
+//         style={{
+//           background:
+//             "linear-gradient(135deg, oklch(0.22 0.07 155) 0%, oklch(0.13 0.05 155) 100%)",
+//         }}
+//       >
+//         {item.image ? (
+//           <img
+//             src={item.image}
+//             alt={item.name}
+//             loading="lazy"
+//             className="h-full w-full object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+//           />
+//         ) : (
+//           <>
+//             <Shirt
+//               className="h-14 w-14 text-white/25 transition-transform duration-500 group-hover:scale-110"
+//               aria-hidden="true"
+//             />
+
+//             <span
+//               className="absolute bottom-3 right-3 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-white/70 backdrop-blur-sm"
+//               aria-hidden="true"
+//             >
+//               Photo coming soon
+//             </span>
+//           </>
+//         )}
+
+//         <span
+//           className="absolute left-3 top-3 h-1 w-8 rounded-full"
+//           style={{ background: "var(--accent-red)" }}
+//           aria-hidden="true"
+//         />
+//       </div>
+
+//       <div className="flex flex-1 flex-col p-5">
+//         <h3
+//           className="font-bold"
+//           style={{ color: "var(--primary-darker)" }}
+//         >
+//           {item.name}
+//         </h3>
+
+//         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+//           {item.text}
+//         </p>
+//       </div>
+//     </li>
+//   );
+// }
+
 function ProductCard({ item }: { item: ProductItem }) {
   return (
     <li className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div
-        className="relative flex aspect-[4/3] items-center justify-center overflow-hidden"
+        className="relative aspect-[4/3] overflow-hidden bg-cover bg-center transition-transform duration-500"
         style={{
-          background:
-            "linear-gradient(135deg, oklch(0.22 0.07 155) 0%, oklch(0.13 0.05 155) 100%)",
+          backgroundImage: item.image
+            ? `url("${item.image}")`
+            : "linear-gradient(135deg, oklch(0.22 0.07 155) 0%, oklch(0.13 0.05 155) 100%)",
+          backgroundSize: item.image ? "cover" : "auto",
         }}
       >
-        <Shirt
-          className="h-14 w-14 text-white/25 transition-transform duration-500 group-hover:scale-110"
-          aria-hidden="true"
-        />
-        <span
-          className="absolute bottom-3 right-3 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-white/70 backdrop-blur-sm"
-          aria-hidden="true"
-        >
-          Photo coming soon
-        </span>
+        {!item.image && (
+          <>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Shirt
+                className="h-14 w-14 text-white/25 transition-transform duration-500 group-hover:scale-110"
+                aria-hidden="true"
+              />
+            </div>
+
+            <span
+              className="absolute bottom-3 right-3 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-white/70 backdrop-blur-sm"
+              aria-hidden="true"
+            >
+              Photo coming soon
+            </span>
+          </>
+        )}
+
         <span
           className="absolute left-3 top-3 h-1 w-8 rounded-full"
           style={{ background: "var(--accent-red)" }}
           aria-hidden="true"
         />
+
+        {/* Optional dark overlay on hover */}
+        {item.image && (
+          <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
+        )}
       </div>
+
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="font-bold" style={{ color: "var(--primary-darker)" }}>
+        <h3
+          className="font-bold"
+          style={{ color: "var(--primary-darker)" }}
+        >
           {item.name}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          {item.text}
+        </p>
       </div>
     </li>
   );
 }
+
 
 function ProductsCta() {
   return (
