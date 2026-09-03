@@ -5,7 +5,7 @@ export function SectionBand() {
       className="relative h-16 w-full bg-cover bg-center bg-no-repeat sm:h-20 lg:h-24"
       style={{
         backgroundImage:
-          "url('https://res.cloudinary.com/dipkbpinx/image/upload/v1788414929/ocyk67ekrwjeejffrqvj.png')",
+          "url('https://res.cloudinary.com/dipkbpinx/image/upload/v1788414929/ocyk67ekrwjeejffrqvj.jpg')",
       }}
     >
       {/* fade overlays so the band blends softly into surrounding sections */}
