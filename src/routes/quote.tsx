@@ -163,6 +163,8 @@ function QuoteForm() {
     setOrgType("");
     setBranding([]);
     setRows([{ id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" }]);
+    setOrgDone(false);
+    setRemarksDone(false);
     setSubmitted(null);
   };
 
