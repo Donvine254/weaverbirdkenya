@@ -11,6 +11,7 @@ import { TrustedBy } from "@/components/home/trusted-by";
 import { CtaBanner } from "@/components/home/cta-banner";
 import Maasai from "@/components/home/maasai";
 import OrderingProcess from "@/components/home/ordering";
+import { SectionBand } from "@/components/section-band";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,6 +53,7 @@ function Index() {
         <TrustedBy />
         <OrderingProcess />
         <CtaBanner />
+        <SectionBand />
       </main>
       <Footer />
     </div>

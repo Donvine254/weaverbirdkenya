@@ -63,6 +63,7 @@ function BranchesPage() {
           subtitle="Find a Weaverbird shop near you. We have 13 retail locations across Kenya plus our factory headquarters in Thika."
         />
         <Locator />
+        <FindStoreCta />
         <SectionBand />
       </main>
       <Footer />
