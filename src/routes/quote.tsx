@@ -226,6 +226,7 @@ function QuoteForm() {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
+            onInput={syncFieldProgress}
             className="overflow-hidden rounded-2xl border bg-card shadow-md"
           >
             {/* Accent top bar */}
