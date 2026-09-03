@@ -141,11 +141,22 @@ function QuoteForm() {
   ]);
   const [submitted, setSubmitted] = useState<{ mailto: string } | null>(null);
 
+  const [orgDone, setOrgDone] = useState(false);
+  const [remarksDone, setRemarksDone] = useState(false);
+
+  const syncFieldProgress = () => {
+    const fd = formRef.current ? new FormData(formRef.current) : null;
+    const v = (k: string) => ((fd?.get(k) as string | null) ?? "").trim() !== "";
+    setOrgDone(!!fd && ["orgName", "contact", "phone", "email", "town"].every(v));
+    setRemarksDone(!!fd && v("remarks"));
+  };
+
   const completedSteps =
-    1 + // org details always count as a step block
+    (orgDone ? 1 : 0) +
     (orgType ? 1 : 0) +
     (rows.some((r) => r.type && r.qty) ? 1 : 0) +
-    (branding.length ? 1 : 0);
+    (branding.length ? 1 : 0) +
+    (remarksDone ? 1 : 0);
 
   const handleReset = () => {
     formRef.current?.reset();
