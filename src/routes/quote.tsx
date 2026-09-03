@@ -506,25 +506,25 @@ function QuoteForm() {
               </div>
               <ul className="mt-5 space-y-3 text-sm">
                 {[
-                  "Organisation details",
-                  "Organisation type",
-                  "Garments & quantities",
-                  "Branding options",
-                  "Final remarks",
+                  { label: "Organisation details", done: orgDone },
+                  { label: "Organisation type", done: !!orgType },
+                  { label: "Garments & quantities", done: rows.some((r) => r.type && r.qty) },
+                  { label: "Branding options", done: branding.length > 0 },
+                  { label: "Final remarks (optional)", done: remarksDone },
                 ].map((s, i) => (
-                  <li key={s} className="flex items-center gap-3">
+                  <li key={s.label} className="flex items-center gap-3">
                     <span
                       className="grid h-6 w-6 shrink-0 place-items-center rounded-full text-[10px] font-bold"
                       style={
-                        i < completedSteps
+                        s.done
                           ? { background: "var(--color-maroon)", color: "white" }
                           : { background: "var(--muted)", color: "var(--muted-foreground)" }
                       }
                     >
-                      {i + 1}
+                      {s.done ? <CheckCircle2 className="h-3.5 w-3.5" /> : i + 1}
                     </span>
-                    <span className={i < completedSteps ? "font-medium text-foreground" : "text-muted-foreground"}>
-                      {s}
+                    <span className={s.done ? "font-medium text-foreground" : "text-muted-foreground"}>
+                      {s.label}
                     </span>
                   </li>
                 ))}
