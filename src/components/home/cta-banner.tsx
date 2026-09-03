@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 
 export function CtaBanner() {
   return (
-    <section id="quote" className="w-full pb-16">
+    <section id="quote" className="w-full">
       <div
         className="relative overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{

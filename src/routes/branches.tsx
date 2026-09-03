@@ -16,6 +16,7 @@ import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
 import { branches, type Branch } from "@/data/branches";
 import { BranchesMap } from "@/components/branches-map";
+import { SectionBand } from "@/components/section-band";
 
 export type { Branch };
 export { branches };
@@ -62,6 +63,8 @@ function BranchesPage() {
           subtitle="Find a Weaverbird shop near you. We have 13 retail locations across Kenya plus our factory headquarters in Thika."
         />
         <Locator />
+        <FindStoreCta />
+        <SectionBand />
       </main>
       <Footer />
     </div>
@@ -174,10 +177,6 @@ function Locator() {
         </div>
         {/* Details panel */}
         <BranchDetail branch={selected} />
-      </div>
-      {/* Add footer section */}
-      <div className="mt-16">
-        <FindStoreCta />
       </div>
     </section>
   );
@@ -295,7 +294,7 @@ function InfoRow({
 function FindStoreCta() {
   return (
     <section
-      className="relative overflow-hidden rounded-2xl p-8 text-center text-white lg:p-12"
+      className="relative w-full overflow-hidden p-8 text-center text-white lg:p-12"
       style={{
         backgroundImage: `
           linear-gradient(

@@ -73,7 +73,7 @@ export function Footer() {
 
   return (
     <footer
-      className="relative mt-8 overflow-hidden text-white"
+      className="relative overflow-hidden text-white"
       style={{ background: "var(--primary-darker)" }}
     >
       <img
