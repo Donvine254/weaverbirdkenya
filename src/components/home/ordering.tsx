@@ -62,12 +62,7 @@ export default function OrderingProcess() {
   return (
     <section id="process" className="bg-white py-12">
       <div
-        className="mx-auto max-w-6xl"
-        // style={{
-        //   backgroundImage:
-        //     "repeating-linear-gradient(135deg, rgba(218, 180, 80, 0.10) 0 2px, transparent 2px 22px)",
-        // }}
-      >
+        className="mx-auto max-w-6xl">
         <div className="mb-14">
           <div className="mb-3.5 flex items-center gap-2.5 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-maroon">
             &mdash; Ordering Process

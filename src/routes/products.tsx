@@ -263,7 +263,15 @@ function ProductsCta() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "var(--gradient-hero)" }}
+      style={{
+        backgroundColor: "var(--color-maroon)",
+        backgroundImage: `repeating-radial-gradient(
+      ellipse at 50% 100%,
+      transparent 0 18px,
+      rgba(244,239,226,0.045) 19px 21px,
+      transparent 22px 42px
+    )`,
+      }}
       aria-labelledby="products-cta-heading"
     >
       <div className="mx-auto max-w-4xl px-6 py-16 text-center text-white lg:py-20">
@@ -282,7 +290,7 @@ function ProductsCta() {
           <Link
             to="/quote"
             className="group mt-8 inline-flex items-center gap-2 rounded-md px-7 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-            style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
+            style={{ background: "var(--primary-deep)", boxShadow: "var(--shadow-red)" }}
           >
             Request a Quote
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

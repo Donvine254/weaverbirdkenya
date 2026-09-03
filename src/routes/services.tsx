@@ -58,47 +58,6 @@ function ServicesPage() {
   );
 }
 
-function ServicesHero() {
-  return (
-    <section
-      className="relative overflow-hidden"
-      style={{ background: "var(--primary-darker)" }}>
-      <div className="absolute inset-0">
-        {/* The Image */}
-        <img
-          src="https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/nabth0lum2fljecqgqfw.jpg"
-          alt="Background"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(90deg, oklch(0.13 0.05 155 / 0.92) 0%, oklch(0.13 0.05 155 / 0.5) 100%)",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-4xl px-6 py-20 text-center text-white lg:py-28">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">
-
-          What We Do
-        </span>
-
-        <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-          Our <span style={{ color: "oklch(0.80 0.18 150)" }}>Services</span>
-        </h1>
-
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">
-          Everything from the first sketch to the final stitch happens under one
-          roof at our Thika factory: weaving, cutting, embroidery, printing,
-          tailoring, quality control and delivery.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {
   const Icon = service.icon;
@@ -204,11 +163,18 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
 
 function ServicesCta() {
   return (
-    <section className="px-6 pb-16">
+    <section className="py-8" style={{
+        backgroundColor: "var(--color-maroon)",
+        backgroundImage: `repeating-radial-gradient(
+      ellipse at 50% 100%,
+      transparent 0 18px,
+      rgba(244,239,226,0.045) 19px 21px,
+      transparent 22px 42px
+    )`,
+      }} >
+        <div className="bg-primary-darker w-full">
       <div
-        className="mx-auto max-w-7xl overflow-hidden rounded-3xl px-6 py-12 text-center sm:px-12"
-        style={{ background: "var(--primary-darker)" }}
-      >
+        className="mx-auto max-w-7xl overflow-hidden px-6 py-12 text-center sm:px-12">
         <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
           Ready to put our factory to work?
         </h2>
@@ -224,6 +190,7 @@ function ServicesCta() {
           Get a Bulk Quote
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
+      </div>
       </div>
     </section>
   );
