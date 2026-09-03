@@ -141,17 +141,30 @@ function QuoteForm() {
   ]);
   const [submitted, setSubmitted] = useState<{ mailto: string } | null>(null);
 
+  const [orgDone, setOrgDone] = useState(false);
+  const [remarksDone, setRemarksDone] = useState(false);
+
+  const syncFieldProgress = () => {
+    const fd = formRef.current ? new FormData(formRef.current) : null;
+    const v = (k: string) => ((fd?.get(k) as string | null) ?? "").trim() !== "";
+    setOrgDone(!!fd && ["orgName", "contact", "phone", "email", "town"].every(v));
+    setRemarksDone(!!fd && v("remarks"));
+  };
+
   const completedSteps =
-    1 + // org details always count as a step block
+    (orgDone ? 1 : 0) +
     (orgType ? 1 : 0) +
     (rows.some((r) => r.type && r.qty) ? 1 : 0) +
-    (branding.length ? 1 : 0);
+    (branding.length ? 1 : 0) +
+    (remarksDone ? 1 : 0);
 
   const handleReset = () => {
     formRef.current?.reset();
     setOrgType("");
     setBranding([]);
     setRows([{ id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" }]);
+    setOrgDone(false);
+    setRemarksDone(false);
     setSubmitted(null);
   };
 
@@ -213,6 +226,7 @@ function QuoteForm() {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
+            onInput={syncFieldProgress}
             className="overflow-hidden rounded-2xl border bg-card shadow-md"
           >
             {/* Accent top bar */}
@@ -492,25 +506,25 @@ function QuoteForm() {
               </div>
               <ul className="mt-5 space-y-3 text-sm">
                 {[
-                  "Organisation details",
-                  "Organisation type",
-                  "Garments & quantities",
-                  "Branding options",
-                  "Final remarks",
+                  { label: "Organisation details", done: orgDone },
+                  { label: "Organisation type", done: !!orgType },
+                  { label: "Garments & quantities", done: rows.some((r) => r.type && r.qty) },
+                  { label: "Branding options", done: branding.length > 0 },
+                  { label: "Final remarks (optional)", done: remarksDone },
                 ].map((s, i) => (
-                  <li key={s} className="flex items-center gap-3">
+                  <li key={s.label} className="flex items-center gap-3">
                     <span
                       className="grid h-6 w-6 shrink-0 place-items-center rounded-full text-[10px] font-bold"
                       style={
-                        i < completedSteps
+                        s.done
                           ? { background: "var(--color-maroon)", color: "white" }
                           : { background: "var(--muted)", color: "var(--muted-foreground)" }
                       }
                     >
-                      {i + 1}
+                      {s.done ? <CheckCircle2 className="h-3.5 w-3.5" /> : i + 1}
                     </span>
-                    <span className={i < completedSteps ? "font-medium text-foreground" : "text-muted-foreground"}>
-                      {s}
+                    <span className={s.done ? "font-medium text-foreground" : "text-muted-foreground"}>
+                      {s.label}
                     </span>
                   </li>
                 ))}
