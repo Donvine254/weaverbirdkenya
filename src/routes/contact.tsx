@@ -109,7 +109,7 @@ function ContactMethods() {
   return (
     <section>
       <SectionHeader
-        eyebrow="Contact methods"
+        eyebrow="— Contact methods"
         title="How would you like to reach us?"
         subtitle="Pick the channel that suits you — our team responds during business hours."
       />
@@ -138,7 +138,7 @@ function ContactMethods() {
             <p className="mt-1 text-xs text-muted-foreground">{m.detail}</p>
             <span
               className="mt-6 inline-flex items-center gap-1 text-sm font-semibold transition group-hover:gap-2"
-              style={{ color: "var(--accent-red)" }}
+              style={{ color: "var(--color-maroon)" }}
             >
               {m.cta} <ArrowRight className="h-4 w-4" />
             </span>
@@ -205,7 +205,7 @@ function FactorySection() {
   return (
     <section>
       <SectionHeader
-        eyebrow="Visit us"
+        eyebrow="— Visit us"
         title="Factory & Headquarters"
         subtitle="Come and see how we design, cut, stitch and brand every garment."
       />
@@ -213,7 +213,7 @@ function FactorySection() {
         <div className="grid gap-0 md:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden min-h-[280px]">
             <img
-              src="https://res.cloudinary.com/dipkbpinx/image/upload/v1785838444/eocj3xfmjgnjlbytkk5o.jpg"
+              src="https://res.cloudinary.com/dipkbpinx/image/upload/v1788342376/weaverbird/oxt8bi13anjhlumag5gl.jpg"
               alt="Weaverbird factory and headquarters in Thika"
               className="h-full w-full object-cover"
               loading="eager"
@@ -223,8 +223,7 @@ function FactorySection() {
           <div className="p-6 lg:p-8">
             <div className="flex items-center gap-3">
               <span
-                className="grid h-11 w-11 place-items-center rounded-full"
-                style={{ background: "var(--gradient-red)" }}
+                className="grid h-11 w-11 place-items-center rounded-full bg-maroon"
               >
                 <Factory className="h-5 w-5 text-white" />
               </span>
@@ -242,14 +241,14 @@ function FactorySection() {
             </div>
             <ul className="mt-6 space-y-4 text-sm text-foreground">
               <li className="flex gap-3">
-                <MapPin className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
+                <MapPin className="h-5 w-5 shrink-0 text-maroon" />
                 <span>
                   Off Thika-Garissa Highway, along Kianjau – Athena Rd, near Broadway Sec. School,
                   Thika, Kenya.
                 </span>
               </li>
               <li className="flex gap-3">
-                <Clock className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
+                <Clock className="h-5 w-5 shrink-0 text-maroon" />
                 <div className="flex flex-col">
                   <span>Mon – Fri: 8:00 am – 5:00 pm</span>
                   <span>Sat: 8:00 am – 4:00 pm</span>
@@ -257,24 +256,24 @@ function FactorySection() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <Mail className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
+                <Mail className="h-5 w-5 shrink-0 text-maroon" />
                 <a href="mailto:sales@weaverbirdkenya.com" className="hover:underline">
                   sales@weaverbirdkenya.com
                 </a>
               </li>
               <li className="flex gap-3">
-                <Phone className="h-5 w-5 shrink-0" style={{ color: "var(--accent-red)" }} />
+                <Phone className="h-5 w-5 shrink-0 text-maroon"/>
                 <a href="tel:+2022051487" className="hover:underline">
                   020-2051487 (Toll Free)
                 </a>
               </li>
             </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex  gap-3">
               <a
                 href={FACTORY_MAP}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 bg-maroon"
+                className="group inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 bg-maroon"
                 style={{ boxShadow: "var(--shadow-red)" }}
               >
                 <Navigation className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -283,12 +282,18 @@ function FactorySection() {
               <a
                 href="tel:+2022051487"
                 title="Book a visit appointment at the Weaverbird factory in Thika"
-                className="hidden lg:inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-                style={{ background: "var(--primary)", boxShadow: "var(--shadow-green)" }}
+                className="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+                style={{
+                  background: "var(--primary)",
+                  boxShadow: "var(--shadow-green)",
+                }}
                 aria-label="book a visit appointment at the Weaverbird factory in Thika"
               >
-                <Phone className="h-4 w-4" />
-                Book a Visit Appointment
+                <Phone className="h-4 w-4 shrink-0" />
+                <span>
+                  Book a Visit
+                  <span className="hidden lg:inline"> Appointment</span>
+                </span>
               </a>
             </div>
           </div>
@@ -343,9 +348,7 @@ function SectionHeader({
   return (
     <div className="max-w-2xl">
       <div
-        className="text-xs font-semibold uppercase tracking-widest"
-        style={{ color: "var(--accent-red)" }}
-      >
+        className="text-xs font-semibold uppercase tracking-widest text-maroon">
         {eyebrow}
       </div>
       <h2

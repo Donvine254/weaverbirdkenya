@@ -79,62 +79,62 @@ export const AllProductCategories = {
         {
           "name": "Shirts",
           "text": "Short and long sleeve options in breathable, easy-iron fabrics.",
-          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/t_hiring-hero/v1788330515/weaverbird/products/misgq8hfdr729js8howu.png"
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788525283/weaverbird/products/qx2u62qkvdbze8xghgwe.jpg"
         },
         {
           "name": "Sweaters",
           "text": "Warm & comfortable knitted layers for classrooms and cooler days.",
-          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/t_hiring-hero/v1788331519/weaverbird/products/w6s1mtuknpfsdi3elktv.png"
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788522484/weaverbird/products/us7rwylih4z1uzpfpeaz.jpg"
         },
         {
           "name": "Trousers",
           "text": "Boys and girls cuts in hard-wearing, stain-resistant twill.",
-          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/t_hiring-hero/v1788331519/weaverbird/products/w6s1mtuknpfsdi3elktv.png"
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788522641/weaverbird/products/iac5d4wcruv58rtxenqz.jpg"
         },
         {
           "name": "Dresses",
           "text": "Various styles with classic silhouettes and durable finishes.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788522749/weaverbird/products/imwdtzbcaubssrea432r.jpg"
         },
         {
           "name": "Skirts (Pleated / A-Line)",
           "text": "Pleated and A-Line styles that hold their shape term after term.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788522890/weaverbird/products/nwuns6zjabdsetmxz4e5.jpg"
         },
         {
           "name": "Blazers",
           "text": "Sharp, tailored school blazers with reinforced seams.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788523043/weaverbird/products/owa68fjoejeq7kzo7bgr.jpg"
         },
         {
           "name": "Socks",
           "text": "Reinforced heel-and-toe socks in school colours.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788523172/weaverbird/products/e9v4pyzhvsdaqbyobxvo.jpg"
         },
         {
           "name": "Ties",
           "text": "Elasticted and standard ties with colour-matched stripes.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788523451/weaverbird/products/vyraioxk6azbz7d5umbp.jpg"
         },
         {
           "name": "Shoes",
           "text": "Smart black school shoes built for all-day comfort.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788526646/weaverbird/products/rgdvsd0xtzy7xie9b4hl.jpg"
         },
         {
           "name": "School Bags",
           "text": "Spacious, hard-wearing bags for books, sports kit and daily use.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788526918/weaverbird/products/dlwkt5bxiatzmugsyrym.jpg"
         },
         {
           "name": "Bedsheets",
           "text": "Soft, easy-care flat and fitted sheets for dormitories and hostels.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788524345/weaverbird/products/quxj4l55xgvs95lsxseu.jpg"
         },
         {
           "name": "Pillows & Pillow Cases",
           "text": "Comfortable pillows with matching cases for restful sleep.",
-          "image": ""
+          "image": "https://res.cloudinary.com/dipkbpinx/image/upload/v1788524203/weaverbird/products/xtqjckfydg1aqq2lpxmb.jpg"
         }
       ]
     },

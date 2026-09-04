@@ -196,7 +196,7 @@ function MissionVisionSection() {
           >
             <span
               className="grid h-12 w-12 place-items-center rounded-full"
-              style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+              style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
             >
               <c.icon className="h-5 w-5 text-white" />
             </span>
@@ -298,7 +298,7 @@ function LeadershipSection() {
           >
             <span
               className="grid h-14 w-14 shrink-0 place-items-center rounded-full text-lg font-bold text-white"
-              style={{ background: "var(--gradient-red)", boxShadow: "var(--shadow-red)" }}
+              style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
             >
               {d.name
                 .split(" ")
