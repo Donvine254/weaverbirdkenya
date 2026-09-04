@@ -10,6 +10,7 @@ import {
   Leaf,
 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import footerFabric from "@/assets/footer-fabric.jpg";
 import { InstagramIcon, FacebookCircleLogo, TiktokColorLogo, WhatsappLogo } from "@/assets/icons";
@@ -188,6 +189,13 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            <Link
+              to="/blog/uniform-care"
+              className="mt-4 inline-flex items-center gap-3 text-sm font-semibold text-white/85 transition hover:text-white"
+            >
+              <ChevronRight className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
+              Uniform Care Guide
+            </Link>
           </div>
 
           {/* Newsletter */}
