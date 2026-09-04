@@ -13,3 +13,4 @@ Weaverbird handles the whole process in-house: weaving, cutting, embroidery, scr
 - [About](/about): Company story since 1996, mission, values and leadership.
 - [Contact](/contact): Phone, email, social channels and factory location in Thika.
 - [Request a Quote](/quote): Form for bulk uniform quotes with garment details and branding options.
+- [Uniform Care Guide](/blog/uniform-care): How to remove oil, ink, blood, grass and sweat stains from uniforms.
