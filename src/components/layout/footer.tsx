@@ -10,6 +10,7 @@ import {
   Leaf,
 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import footerFabric from "@/assets/footer-fabric.jpg";
 import { InstagramIcon, FacebookCircleLogo, TiktokColorLogo, WhatsappLogo } from "@/assets/icons";
