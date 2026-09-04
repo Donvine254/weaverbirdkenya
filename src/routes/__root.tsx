@@ -63,14 +63,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Weaverbird leads the garment manufacturing industry, delivering top-quality, innovative apparel solutions. From design to production, we craft clothing with..",
+          "Weaverbird Garments Manufacturers Ltd designs and produces school, corporate, security, sports and hospitality uniforms in Kenya, from first sketch to delivery.",
       },
       { name: "author", content: "Weaverbird" },
+      { property: "og:site_name", content: "Weaverbird Garments Manufacturers Ltd" },
       { property: "og:title", content: "Weaverbird Garments Manufacturers Ltd" },
       {
         property: "og:description",
         content:
-          "Weaverbird leads the garment manufacturing industry, delivering top-quality, innovative apparel solutions. From design to production, we craft clothing with..",
+          "Kenyan uniform and apparel manufacturer since 1996: school, corporate, security, sports and hospitality wear made and delivered nationwide.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -79,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "twitter:description",
         content:
-          "Weaverbird leads the garment manufacturing industry, delivering top-quality, innovative apparel solutions. From design to production, we craft clothing with..",
+          "Kenyan uniform and apparel manufacturer since 1996: school, corporate, security, sports and hospitality wear made and delivered nationwide.",
       },
       // { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/381a9932-fd1c-4b32-af2e-4a88edf76a86/id-preview-e96b4304--24f83c8d-9f2b-4587-be61-acf624ce11a3.lovable.app-1781938223717.png" },
       // { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/381a9932-fd1c-4b32-af2e-4a88edf76a86/id-preview-e96b4304--24f83c8d-9f2b-4587-be61-acf624ce11a3.lovable.app-1781938223717.png" },
