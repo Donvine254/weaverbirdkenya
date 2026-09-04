@@ -1,0 +1,15 @@
+# Weaverbird Garments Manufacturers Ltd
+
+> Kenyan uniform and apparel manufacturer founded in 1996, making school, corporate, security, sports and hospitality wear at its Thika factory and delivering nationwide.
+
+Weaverbird handles the whole process in-house: weaving, cutting, embroidery, screen printing, tailoring, quality control and delivery. Orders can be placed through the online quote request or at any of the branches across Kenya.
+
+## Pages
+
+- [Home](/): Overview of products, capabilities, industries served and how to order.
+- [Products](/products): Uniform categories including school, corporate, security, sports, hospitality and industrial wear.
+- [Services](/services): Embroidery, screen printing, weaving, cutting and stitching, sampling, tailoring, bulk manufacturing and delivery.
+- [Branches](/branches): Shop and factory locations across Kenya with a searchable map.
+- [About](/about): Company story since 1996, mission, values and leadership.
+- [Contact](/contact): Phone, email, social channels and factory location in Thika.
+- [Request a Quote](/quote): Form for bulk uniform quotes with garment details and branding options.
