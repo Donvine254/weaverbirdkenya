@@ -33,6 +33,31 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://weaverbirdkenya.lovable.app/#business",
+          name: "Weaverbird Garments Manufacturers Ltd",
+          url: "https://weaverbirdkenya.lovable.app/",
+          telephone: "+254722264464",
+          email: "info@weaverbirdkenya.com",
+          foundingDate: "1996",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress:
+              "Off Thika-Garissa Highway, along Kianjau–Athena Road, near Broadway Secondary School",
+            addressLocality: "Thika",
+            addressCountry: "KE",
+          },
+          areaServed: "KE",
+          description:
+            "Uniform and apparel manufacturer in Thika, Kenya, with branches nationwide serving schools, corporates, security firms, hotels and sports teams.",
+        }),
+      },
+    ],
   }),
   component: Index,
 });

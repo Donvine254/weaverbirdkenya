@@ -11,7 +11,7 @@ export function Logo({ light = false }: { light?: boolean }) {
     <div className="flex items-center gap-3">
       <img
         src={weaverLogo}
-        alt="Weaverbird Apparel Solutions logo"
+        alt="Weaverbird Garments Manufacturers Ltd"
         className="h-12 w-auto object-contain sm:h-16"
       />
       <div className="hidden flex-col leading-tight sm:flex">
