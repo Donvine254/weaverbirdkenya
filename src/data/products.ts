@@ -319,32 +319,35 @@ export const AllProductCategories = {
         "Heavy-Duty Twill / Drill / Canvas",
         "Reinforced Stitching",
         "Reflective Tape Compliance",
+        "Screen Printing",
+        "Embroidery",
+        "Labels & Tags"
       ],
       products: [
         {
           name: "Full Body Overalls",
           text: "All-in-one protection with reinforced knees and multiple pockets.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614094/weaverbird/products/ybgmflvojobm327agtio.jpg",
         },
         {
           name: "Work Shirts",
           text: "Tough shirts built for workshops, warehouses and fieldwork.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614063/weaverbird/products/js8wkg43xx1kg2iode3f.jpg",
         },
         {
           name: "Work Trousers",
           text: "Heavy-duty trousers with tool pockets and reinforced stress points.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614029/weaverbird/products/ekwln4tykeymsmkyn8zd.jpg",
         },
         {
           name: "High-Vis Safety Jackets",
           text: "Reflective jackets for roadside, construction and low-light sites.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613995/weaverbird/products/iqcrthhqeiww2thddtp1.jpg",
         },
         {
           name: "Dust Coats",
           text: "Light protective coats for factories, labs and clean environments.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613962/weaverbird/products/c4ah0mvmdlc2zjpgvi0u.jpg",
         },
         {
           name: "Lab Coats",
@@ -354,6 +357,71 @@ export const AllProductCategories = {
         {
           name: "Utility Vests",
           text: "Multi-pocket vests for technicians, engineers and outdoor teams.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613866/weaverbird/products/d7lf9rkvs420ymr94bqp.jpg",
+        },
+        {
+          name: "PPE Helmets",
+          text: "Impact-resistant hard hats designed for optimal head protection on work sites.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788615002/weaverbird/products/lj2zgkyhpuuzkqxtmef9.jpg",
+        },
+        {
+          name: "Safety Jackets",
+          text: "Weatherproof, high-visibility outerwear built for harsh working conditions.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614439/weaverbird/products/xpgvztfvaxfln1pu4dsk.jpg",
+        },
+        {
+          name: "Safety Vests",
+          text: "Lightweight, breathable vests engineered for day and night site safety.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614516/weaverbird/products/rcil4j1s8d6xqi8gsfts.jpg",
+        },
+        {
+          name: "Reflector Jackets",
+          text: "Bright reflective jackets ensuring maximum visibility in low-light environments.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614476/weaverbird/products/scdowhrrsp3ilucm0hcl.jpg",
+        },
+        {
+          name: "Protective Riding Gear",
+          text: "Heavy-duty protective apparel engineered for impact resistance and rider safety.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614608/weaverbird/products/qtlsxeret6n3tfslo83f.jpg",
+        },
+        {
+          name: "Security Shirts",
+          text: "Crisp, professional security uniform shirts complete with epaulettes.",
+          image: "",
+        },
+        {
+          name: "Security Trousers",
+          text: "Durable, tailored trousers designed for security personnel on daily patrol.",
+          image: "",
+        },
+        {
+          name: "Security Jackets",
+          text: "Heavy-duty uniform jackets built to withstand long outdoor shifts.",
+          image: "",
+        },
+        {
+          name: "Security Sweaters",
+          text: "Warm V-neck uniform knits featuring reinforced shoulder and elbow patches.",
+          image: "",
+        },
+        {
+          name: "Security Fleeces",
+          text: "Soft, insulated fleece jackets providing warmth during cold guard duties.",
+          image: "",
+        },
+        {
+          name: "Security Shoes",
+          text: "Sturdy, slip-resistant footwear designed for all-day comfort and stability.",
+          image: "",
+        },
+        {
+          name: "Security Hats",
+          text: "Formal uniform caps and headwear engineered for a commanding appearance.",
+          image: "",
+        },
+        {
+          name: "Security Ties",
+          text: "Professional uniform ties available in clip-on and standard styles.",
           image: "",
         },
       ],
