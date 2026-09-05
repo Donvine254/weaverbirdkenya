@@ -13,11 +13,13 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ProductsRouteImport } from './routes/products'
+import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BranchesRouteImport } from './routes/branches'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogUniformCareRouteImport } from './routes/blog.uniform-care'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -37,6 +39,11 @@ const QuoteRoute = QuoteRouteImport.update({
 const ProductsRoute = ProductsRouteImport.update({
   id: '/products',
   path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -64,16 +71,24 @@ const BlogUniformCareRoute = BlogUniformCareRouteImport.update({
   path: '/blog/uniform-care',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/mcp': typeof McpRoute
   '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
 }
 export interface FileRoutesByTo {
@@ -81,10 +96,12 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/mcp': typeof McpRoute
   '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
 }
 export interface FileRoutesById {
@@ -93,10 +110,12 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/mcp': typeof McpRoute
   '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
 }
 export interface FileRouteTypes {
@@ -106,10 +125,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/mcp'
     | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
+    | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -117,10 +138,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/mcp'
     | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
+    | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
   id:
     | '__root__'
@@ -128,10 +151,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/mcp'
     | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
+    | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
   fileRoutesById: FileRoutesById
 }
@@ -140,10 +165,12 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BranchesRoute: typeof BranchesRoute
   ContactRoute: typeof ContactRoute
+  McpRoute: typeof McpRoute
   ProductsRoute: typeof ProductsRoute
   QuoteRoute: typeof QuoteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BlogUniformCareRoute: typeof BlogUniformCareRoute
 }
 
@@ -175,6 +202,13 @@ declare module '@tanstack/react-router' {
       path: '/products'
       fullPath: '/products'
       preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -212,6 +246,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogUniformCareRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -220,10 +261,13 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BranchesRoute: BranchesRoute,
   ContactRoute: ContactRoute,
+  McpRoute: McpRoute,
   ProductsRoute: ProductsRoute,
   QuoteRoute: QuoteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BlogUniformCareRoute: BlogUniformCareRoute,
 }
 export const routeTree = rootRouteImport
