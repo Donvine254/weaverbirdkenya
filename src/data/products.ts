@@ -375,7 +375,7 @@ export const AllProductCategories = {
       pitch:
         "Versatile, stylish and high-retention apparel ideal for corporate identity, events and promotions.",
       banner:
-        "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/zjxlcyrdwdayezjvl6ie.jpg",
+        "https://res.cloudinary.com/dipkbpinx/image/upload/v1788586892/weaverbird/ka0f3otvgrs8o5ckbbdu.jpg",
       tagsLabel: "Customization",
       tags: ["Screen Printing", "Heat Transfer", "High-Density Embroidery"],
       products: [
@@ -422,7 +422,7 @@ export const AllProductCategories = {
       short: "Jumpers & Sweaters",
       pitch: "Superior warmth and clean aesthetics without compromising professional looks.",
       banner:
-        "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899978/weaverbird/products/lzee9dstwdenr0bnegra.jpg",
+        "https://res.cloudinary.com/dipkbpinx/image/upload/v1788587091/weaverbird/udemfgx1abiztv6qsjic.jpg",
       tagsLabel: "Knit options",
       tags: ["Anti-Pilling Yarns", "Acrylic & Cotton Blends", "Custom School Stripes"],
       products: [
