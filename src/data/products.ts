@@ -76,8 +76,8 @@ export const AllProductCategories = {
         "Quality, comfort and durability designed to withstand daily wear while promoting pride and discipline.",
       banner:
         "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/osw2cqofzjsu3r9qrzff.jpg",
-      tagsLabel: "Available fabrics",
-      tags: ["Poly-Viscose Blends", "Twill", "Gabardine", "100% Cotton", "Knitted Fabrics"],
+      tagsLabel: "Available fabrics & features",
+      tags: ["Poly-Viscose Blends", "Twill", "Gabardine", "100% Cotton", "Knitted Fabrics","Custom Designs & Embroidery","All Sizes & Age Groups","Durable, Easy-Care Finishes"],
       products: [
         {
           name: "Shirts",
@@ -96,6 +96,11 @@ export const AllProductCategories = {
           text: "Boys and girls cuts in hard-wearing, stain-resistant twill.",
           image:
             "https://res.cloudinary.com/dipkbpinx/image/upload/v1788522641/weaverbird/products/iac5d4wcruv58rtxenqz.jpg",
+        },
+        {
+          name: "Shorts",
+          text: "Tailored, durable school shorts designed for comfort and active daily wear.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592769/weaverbird/products/rhonrhok5tw5nzjycslt.jpg",
         },
         {
           name: "Dresses",
@@ -126,6 +131,86 @@ export const AllProductCategories = {
           text: "Elasticted and standard ties with colour-matched stripes.",
           image:
             "https://res.cloudinary.com/dipkbpinx/image/upload/v1788523451/weaverbird/products/vyraioxk6azbz7d5umbp.jpg",
+        },
+        {
+          name: "Cardigans",
+          text: "Soft, warm knitted cardigans designed for daily school wear.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788591771/weaverbird/products/meiz64cdfwwok0ouxzks.jpg",
+        },
+        {
+          name: "Fleece Sweaters",
+          text: "Cozy, durable fleece sweaters providing extra warmth during colder days.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592046/weaverbird/products/qypxtnnbom8ghjk55ge3.jpg",
+        },
+        {
+          name: "Leg Warmers",
+          text: "Comfortable, snug leg warmers to stay warm on chilly school mornings.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592191/weaverbird/products/pvk9vza5gjwbhktonz69.jpg",
+        },
+        {
+          name: "Belted Pinafores",
+          text: "Smart, tailored pinafores featuring secure belt fastenings.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592568/weaverbird/products/iybgman9zxgz3bcrjlja.jpg",
+        },
+        {
+          name: "Tracksuits",
+          text: "Flexible and breathable sports tracksuits for physical education.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788593181/weaverbird/products/hdqan3uz7sbaouviddpi.jpg",
+        },
+        {
+          name: "School Hijabs",
+          text: "Lightweight, comfortable hijabs tailored to meet uniform guidelines.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788593763/weaverbird/products/vgfmgolktm1uxqeu8tim.jpg",
+        },
+        {
+          name: "Dust Coats",
+          text: "Protective, easy-care dust coats ideal for science labs and practical work.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
+        },
+        {
+          name: "T-Shirts",
+          text: "Breathable, durable cotton t-shirts ideal for sports and everyday active wear.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594493/weaverbird/products/xwspjr4q3gxqwj1oolyt.jpg",
+        },
+        // {
+        //   name: "Scarves",
+        //   text: "Warm knitted scarves available in official school color schemes.",
+        //   image: "",
+        // },
+        {
+          name: "Raincoats",
+          text: "Fully waterproof raincoats to keep students dry during stormy weather.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788595204/weaverbird/products/gbwivmfztecs0dgbhkcs.jpg",
+        },
+        {
+          name: "Nightdresses",
+          text: "Soft, breathable cotton nightdresses designed for boarding students.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788596375/weaverbird/products/urt5vjrlzdnbasjsqwl1.jpg",
+        },
+        {
+          name: "Marvin Caps",
+          text: "Snug knitted marvin beanies for winter morning assemblies.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788596565/weaverbird/products/l0elqpftybypv3wxsnhj.jpg",
+        },
+        {
+          name: "Pyjamas",
+          text: "Durable and comfortable two-piece pyjama sets for boarding sleepwear.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788595359/weaverbird/products/cjszxlz32fibjevxd19i.jpg",
+        },
+        {
+          name: "Swimming Costumes",
+          text: "Quick-drying, chlorine-resistant swimwear for physical training.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788597093/weaverbird/products/v2azypkwzptnzavi66og.jpg",
+        },
+        {
+          name: "Tunics",
+          text: "Classic uniform tunics engineered with reinforced stitching.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788597426/weaverbird/products/xgq3rhozpg1grahwpuz1.jpg",
+        },
+        {
+          name: "Wrappers & Bloomers",
+          text: "Comfortable undergarment combinations for active school days.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788598373/weaverbird/products/a9pujcmmn58bvdqy1vs2.jpg",
         },
         {
           name: "Shoes",
@@ -167,42 +252,42 @@ export const AllProductCategories = {
         {
           name: "Classic & Modern Suits",
           text: "Timeless and contemporary cuts for a polished boardroom look.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589017/weaverbird/products/z10xjhpaomzsz7fsity1.jpg",
         },
         {
           name: "Dress Shirts",
           text: "Crisp cotton-blend shirts in slim, regular and tailored fits.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589665/weaverbird/products/jwfsgxkyfqc6ycjjyjkl.jpg",
         },
         {
           name: "Blouses",
           text: "Elegant office blouses in breathable, easy-care fabrics.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589885/weaverbird/products/k89jggcyl6fvtca4wgje.jpg",
         },
         {
           name: "Smart Skirts",
           text: "Knee-length and pencil styles for professional uniforms.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590077/weaverbird/products/kxhj9cujz04c6radooks.jpg",
         },
         {
           name: "Men & Women Trousers",
           text: "Tailored trousers with crease-retention and all-day stretch.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590175/weaverbird/products/wbmejlbjodiqeajjokdp.jpg",
         },
         {
           name: "Waistcoats",
           text: "Layered formality for reception, hospitality and corporate events.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590365/weaverbird/products/znzmdwlhzgsm6zvy2bw6.jpg",
         },
         {
           name: "Blazers",
           text: "Structured blazers with subtle branding options.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590584/weaverbird/products/n00yxsf2jlklcqzid2v3.jpg",
         },
         {
           name: "Cardigans",
           text: "Lightweight knitted layers for climate-controlled offices.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788591113/weaverbird/products/vjqagrc2dnbv3gkadaxr.jpg",
         },
       ],
     },
@@ -249,7 +334,7 @@ export const AllProductCategories = {
         {
           name: "Lab Coats",
           text: "Hygienic white coats with secure pockets and easy laundering.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
         },
         {
           name: "Utility Vests",

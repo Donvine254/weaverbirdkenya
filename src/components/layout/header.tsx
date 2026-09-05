@@ -118,7 +118,7 @@ export function Header({ current = "Home" }: { current?: string }) {
                     aria-label="Show product categories"
                     aria-expanded={productsOpen}
                     onClick={() => setProductsOpen((v) => !v)}
-                    className="rounded-sm p-0.5 text-white/70 transition hover:text-white"
+                    className="rounded-sm p-0.5 cursor-pointer text-white/70 transition hover:text-white"
                   >
                     <ChevronDown
                       className={`h-4 w-4 transition-transform duration-200 ${productsOpen ? "rotate-180" : ""}`}
