@@ -172,11 +172,11 @@ export const AllProductCategories = {
           text: "Breathable, durable cotton t-shirts ideal for sports and everyday active wear.",
           image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594493/weaverbird/products/xwspjr4q3gxqwj1oolyt.jpg",
         },
-        // {
-        //   name: "Scarves",
-        //   text: "Warm knitted scarves available in official school color schemes.",
-        //   image: "",
-        // },
+        {
+          name: "Scarves",
+          text: "Warm knitted scarves available in official school color schemes.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788600497/weaverbird/products/otw6gucpny0vuzvja2x1.jpg",
+        },
         {
           name: "Raincoats",
           text: "Fully waterproof raincoats to keep students dry during stormy weather.",
@@ -235,6 +235,21 @@ export const AllProductCategories = {
           text: "Comfortable pillows with matching cases for restful sleep.",
           image:
             "https://res.cloudinary.com/dipkbpinx/image/upload/v1788524203/weaverbird/products/xtqjckfydg1aqq2lpxmb.jpg",
+        },
+        {
+          name: "Mattresses",
+          text: "Supportive, durable mattresses designed to fit standard boarding school beds.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788602972/weaverbird/products/jqur6umi9r6was3ykiwn.jpg",
+        },
+        {
+          name: "Bedcovers",
+          text: "Easy-to-clean, long-lasting bedcovers to keep dormitory beds neat and tidy.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788601094/weaverbird/products/izqua1dxzcfk9xaar83q.jpg",
+        },
+        {
+          name: "Blankets",
+          text: "Warm and cozy blankets providing maximum comfort on cool nights.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788602194/weaverbird/products/rvnwsgxsplw5qgiydahv.jpg",
         },
       ],
     },
@@ -524,7 +539,7 @@ export const AllProductCategories = {
         {
           name: "Cardigans",
           text: "Button-front cardigans for layering across seasons.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788591113/weaverbird/products/vjqagrc2dnbv3gkadaxr.jpg",
         },
         {
           name: "Zip-Neck Pullovers",
