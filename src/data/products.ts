@@ -564,7 +564,7 @@ export const AllProductCategories = {
       short: "Promotional & Bags",
       pitch: "High-impact branded goods to boost brand awareness and customer loyalty.",
       banner:
-        "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/a82gzu0pemfgxwpt35h8.jpg",
+        "https://res.cloudinary.com/dipkbpinx/image/upload/v1788587823/weaverbird/elpt8uctwqh3twug68c6.jpg",
       tagsLabel: "Branding",
       tags: ["Pad & Screen Printing", "Laser Engraving", "Full-Colour Wraps"],
       products: [
