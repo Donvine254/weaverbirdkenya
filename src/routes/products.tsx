@@ -250,7 +250,7 @@ function ProductCard({ item }: { item: ProductItem }) {
           {item.name}
         </h3>
 
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
           {item.text}
         </p>
       </div>

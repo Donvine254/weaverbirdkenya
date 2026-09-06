@@ -77,7 +77,7 @@ export const AllProductCategories = {
       banner:
         "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/osw2cqofzjsu3r9qrzff.jpg",
       tagsLabel: "Available fabrics & features",
-      tags: ["Poly-Viscose Blends", "Twill", "Gabardine", "100% Cotton", "Knitted Fabrics","Custom Designs & Embroidery","All Sizes & Age Groups","Durable, Easy-Care Finishes"],
+      tags: ["Poly-Viscose Blends", "Twill", "Gabardine", "100% Cotton", "Knitted Fabrics", "Custom Designs & Embroidery", "All Sizes & Age Groups", "Durable, Easy-Care Finishes"],
       products: [
         {
           name: "Shirts",
@@ -321,7 +321,8 @@ export const AllProductCategories = {
         "Reflective Tape Compliance",
         "Screen Printing",
         "Embroidery",
-        "Labels & Tags"
+        "Labels & Tags",
+        "Badges & Pathces"
       ],
       products: [
         {
@@ -387,42 +388,42 @@ export const AllProductCategories = {
         {
           name: "Security Shirts",
           text: "Crisp, professional security uniform shirts complete with epaulettes.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707377/weaverbird/products/lk8vapguauqzextcabbd.jpg",
         },
         {
           name: "Security Trousers",
           text: "Durable, tailored trousers designed for security personnel on daily patrol.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707985/weaverbird/products/wuxzrhao1uxprvumwnm1.jpg",
         },
         {
           name: "Security Jackets",
           text: "Heavy-duty uniform jackets built to withstand long outdoor shifts.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707527/weaverbird/products/owmnwzo5ahmddl6pvjme.jpg",
         },
         {
           name: "Security Sweaters",
           text: "Warm V-neck uniform knits featuring reinforced shoulder and elbow patches.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707821/weaverbird/products/omjmpucncqsqi2qjnme4.jpg",
         },
         {
           name: "Security Fleeces",
           text: "Soft, insulated fleece jackets providing warmth during cold guard duties.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708106/weaverbird/products/nsdi7u0kuefso2yunlig.jpg",
         },
         {
           name: "Security Shoes",
           text: "Sturdy, slip-resistant footwear designed for all-day comfort and stability.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708304/weaverbird/products/drs9rs5znqucs28kawus.jpg",
         },
         {
           name: "Security Hats",
           text: "Formal uniform caps and headwear engineered for a commanding appearance.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708574/weaverbird/products/ssllnjrh5ythp0sfq0oz.jpg",
         },
         {
           name: "Security Ties",
           text: "Professional uniform ties available in clip-on and standard styles.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708633/weaverbird/products/bo0qydz1fyjpd3klwobg.jpg",
         },
       ],
     },
@@ -440,42 +441,82 @@ export const AllProductCategories = {
         {
           name: "Scrub Suits (V-Neck)",
           text: "V-neck scrub sets in soft, anti-bacterial fabric.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708938/weaverbird/products/yir8yempvsxrgjdgwbrw.jpg",
         },
         {
           name: "Medical Trousers",
           text: "Comfortable drawstring trousers with reinforced waistbands.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709054/weaverbird/products/oi2gfzfmxcxswygolut4.jpg",
         },
         {
           name: "Doctor Lab Coats",
           text: "Professional lab coats with a tailored fit and ample pockets.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
         },
         {
           name: "Nurse Uniforms",
           text: "Classic and modern nurse dresses and tunics.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709208/weaverbird/products/brtl5bglncxtihzurszv.jpg",
         },
         {
           name: "Theatre Wear",
           text: "Sterile-style sets for operating and procedure areas.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709380/weaverbird/products/m8t2h6qpn6p960mgzbuz.jpg",
         },
         {
           name: "Tunic Tops",
           text: "Smart healthcare tunics with contrast trim options.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709638/weaverbird/products/ass5zvsoymso83ngh8we.jpg",
         },
         {
           name: "Patient Gowns",
           text: "Back-fastening gowns designed for dignity and easy access.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709857/weaverbird/products/lelfhssrbsk9jxmx5m4i.jpg",
         },
         {
           name: "Pharmacy & Dental Wear",
           text: "Clean, professional uniforms for pharmacy and dental staff.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710095/weaverbird/products/vmx1delkrxflqie0i511.jpg",
+        },
+        {
+          name: "Maternity Gowns",
+          text: "Comfortable maternity gowns designed for ease of movement, nursing and patient care.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710506/weaverbird/products/gvbam1gkfmtlnj2e54v8.jpg",
+        },
+        {
+          name: "Hospital Bed Sheets & Linen",
+          text: "Durable, easy-care hospital linen for wards, clinics and patient rooms.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710659/weaverbird/products/jtrv9wsfuzzues2mlhxt.jpg",
+        },
+        {
+          name: "Medical Aprons",
+          text: "Practical protective aprons for clinical, laboratory and healthcare environments.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710857/weaverbird/products/kidyjialw73ihhkm1dp0.jpg",
+        },
+        {
+          name: "Medical & Theatre Caps",
+          text: "Lightweight reusable caps designed for theatre, procedure and clinical environments.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711084/weaverbird/products/fg6ezp1fbk3ebpurijyr.jpg",
+        },
+        {
+          name: "Nurse Student Blazers",
+          text: "Smart institutional blazers tailored for nursing students with custom college branding.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711699/weaverbird/products/jbpzdhllktm86etokzy2.jpg",
+        },
+        {
+          name: "Nurse Student Sweaters",
+          text: "Warm knitted sweaters for nursing students in institutional colours with branding options.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711916/weaverbird/products/v8h1lpc3zcefbe0c9ek5.jpg",
+        },
+        {
+          name: "Nurse Student Dresses",
+          text: "Professional nursing student dresses and tunics tailored to institutional uniform requirements.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788712269/weaverbird/products/nwunjjhwnh4nlbknezyq.jpg",
+        },
+        {
+          name: "Nurse Student Shirts",
+          text: "Smart shirts and blouses designed for nursing students, classroom wear and clinical training.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788712440/weaverbird/products/alw0l4bqc5grtfn56zzu.jpg",
         },
       ],
     },
