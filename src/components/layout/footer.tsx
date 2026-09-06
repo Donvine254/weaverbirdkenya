@@ -43,12 +43,12 @@ export function FooterColHeader({ icon: Icon, title }: { icon: any; title: strin
 
 export function Footer() {
   const services = [
-    "School Uniforms",
-    "Corporate & Security Uniforms",
-    "Screen Printing",
-    "Embroidery",
-    "Weaving",
-    "Other Apparel",
+    { title: "School Uniforms", href: "/products#school-uniforms" },
+    { title: "Corporate & Security Uniforms", href: "/products#corporate-wear" },
+    { title: "Screen Printing", href: "/services#screen-printing" },
+    { title: "Embroidery", href: "/services#embroidery" },
+    { title: "Weaving", href: "/services#weaving" },
+    { title: "Other Apparel", href: "/products#medical-wear" },
   ];
   const socials = [
     {
@@ -177,14 +177,14 @@ export function Footer() {
           <div>
             <FooterColHeader icon={Shirt} title="OUR SERVICES" />
             <ul className="space-y-3">
-              {services.map((s) => (
-                <li key={s}>
+              {services.map((service) => (
+                <li key={service.title}>
                   <a
-                    href="#"
+                    href={service.href}
                     className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
                   >
                     <ChevronRight className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
-                    {s}
+                    {service.title}
                   </a>
                 </li>
               ))}
