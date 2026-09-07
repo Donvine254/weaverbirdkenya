@@ -845,22 +845,22 @@ export const AllProductCategories = {
         {
           name: "Branded Backpacks",
           text: "Durable backpacks with printed or embroidered logos.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788780708/weaverbird/products/wy4h98nuslrtq1totcqy.jpg",
         },
         {
           name: "Tote Bags",
           text: "Reusable cotton and canvas totes for events and retail.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781210/weaverbird/products/sqepxzjy3veiku3x8trc.jpg",
         },
         {
           name: "Water Bottles",
           text: "Metal and BPA-free bottles branded with your logo.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781527/weaverbird/products/ik96q4k8cq7rd2pneiuz.jpg",
         },
         {
           name: "Mugs",
           text: "Ceramic mugs perfect for corporate gifts and giveaways.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788782237/weaverbird/products/wdelz8q0r0bkyw1tqzhb.png",
         },
         {
           name: "Caps",
@@ -870,17 +870,17 @@ export const AllProductCategories = {
         {
           name: "Notebooks",
           text: "Branded notebooks and journals for offices and events.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781039/weaverbird/products/huggww8risjfsvqqzbyu.jpg",
         },
         {
           name: "USB Drives",
           text: "Custom-engraved USB drives for tech-focused promotions.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788784486/weaverbird/products/gflyrryqdxegzw18osei.png",
         },
         {
           name: "Pens",
           text: "Printed pens in a range of colours and finishes.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788784207/weaverbird/products/floxox42w3yslpmmwrai.jpg",
         },
         {
           name: "Keyrings",
@@ -890,11 +890,6 @@ export const AllProductCategories = {
         {
           name: "Skorts",
           text: "Practical skorts for school, sport and promotional kits.",
-          image: "",
-        },
-        {
-          name: "Masks",
-          text: "Reusable branded face masks for staff and event packs.",
           image: "",
         },
       ],
