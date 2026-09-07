@@ -411,7 +411,7 @@ export const AllProductCategories = {
           image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708106/weaverbird/products/nsdi7u0kuefso2yunlig.jpg",
         },
         {
-          name: "Security Shoes",
+          name: "Security Boots",
           text: "Sturdy, slip-resistant footwear designed for all-day comfort and stability.",
           image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708304/weaverbird/products/drs9rs5znqucs28kawus.jpg",
         },
@@ -673,7 +673,7 @@ export const AllProductCategories = {
       banner:
         "https://res.cloudinary.com/dipkbpinx/image/upload/v1788587091/weaverbird/udemfgx1abiztv6qsjic.jpg",
       tagsLabel: "Knit options",
-      tags: ["Anti-Pilling Yarns", "Acrylic & Cotton Blends", "Custom School Stripes","Embroidery & Logo Patches"],
+      tags: ["Anti-Pilling Yarns", "Acrylic & Cotton Blends", "Custom School Stripes", "Embroidery & Logo Patches"],
       products: [
         {
           name: "V-Neck Jumpers",
@@ -686,7 +686,7 @@ export const AllProductCategories = {
           image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771180/weaverbird/products/lvppjjabbbpgognbgnkw.jpg",
         },
         {
-          name: "Cardigans",
+          name: "Buttoned Cardigans",
           text: "Button-front cardigans for layering across seasons.",
           image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771347/weaverbird/products/xbwd7bt5y2kn86pjdvay.jpg",
         },
@@ -730,37 +730,62 @@ export const AllProductCategories = {
         {
           name: "Team Tracksuits",
           text: "Matching tracksuit sets for squads, schools and clubs.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775219/weaverbird/products/wzdjz6asztyyuf6mxdvx.jpg",
         },
         {
-          name: "Sport Shorts",
-          text: "Lightweight shorts for training, match day and gym sessions.",
-          image: "",
+          name: "Sport/ PE Shorts",
+          text: "Lightweight & breathable shorts for training, match day and gym sessions.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775841/weaverbird/products/x42tyfbluxaks1xmnec4.jpg",
         },
         {
           name: "Training Wear",
           text: "Jerseys and tops designed for intensive practice sessions.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775460/weaverbird/products/gjumu3ezx1klnqcbta7y.jpg",
         },
         {
           name: "Performance Sets",
           text: "Coordinated performance tops and bottoms for athletes.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775305/weaverbird/products/ebhljmzti7d7yn2m3n83.jpg",
         },
         {
           name: "Hoodies",
           text: "Warm-up hoodies for pre- and post-training comfort.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775986/weaverbird/products/fazlayz08uksgxtfjsdo.jpg",
         },
         {
           name: "Windbreakers",
           text: "Light shell jackets that block wind without overheating.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788777154/weaverbird/products/eaardqg5rrtqcenwdlz5.jpg",
         },
         {
           name: "Kids Sportswear",
           text: "Sized-down sportswear for school teams and youth clubs.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788778599/weaverbird/products/hhto3tujaxcjj2j1owlr.jpg",
+        },
+        {
+          name: "Leisure Wear Tracksuits",
+          text: "Relaxed and comfortable tracksuits designed for everyday wear, travel and casual activities.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788776661/weaverbird/products/kha2hsqeypbsaiqbjxm2.jpg",
+        },
+        {
+          name: "Club Sports Uniforms",
+          text: "Custom sports uniforms for clubs, schools and teams with colours and branding to match.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788777444/weaverbird/products/alj34n6yacpmqtfpalnx.jpg",
+        },
+        {
+          name: "Footballs & Volleyballs",
+          text: "Quality volleyballs & footballs designed for school, club, training and competitive play.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788779442/weaverbird/products/rmnf2a7z8dlwhxydpj7w.jpg",
+        },
+        {
+          name: "Sports Socks",
+          text: "Comfortable performance socks for football, training and other sporting activities.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788778898/weaverbird/products/hvk2wm2ryexythxsd6lm.jpg",
+        },
+        {
+          name: "Sports Bibs",
+          text: "Lightweight breathable training bibs for team identification, practice sessions and sports events.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788776853/weaverbird/products/wniipbntrgti8jf24ai2.jpg",
         },
       ],
     },
@@ -778,32 +803,32 @@ export const AllProductCategories = {
         {
           name: "Classic Checks Shuka",
           text: "Traditional checked shukas in bold, iconic patterns.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774553/weaverbird/products/dy30bmz37fxerwnycfwu.jpg",
         },
         {
           name: "Modern Pattern Shuka",
           text: "Contemporary shuka designs for fashion and events.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788773524/weaverbird/products/zxp2iuo2tvi4yhtjmy1d.jpg",
         },
         {
           name: "Striped Shuka",
           text: "Striped heritage wraps in vibrant colour combinations.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788773650/weaverbird/products/u2bic6bjis6qkrjjqytw.jpg",
         },
         {
           name: "Premium Luxury Fabrics",
           text: "Finer, softer shuka fabrics for gifts and special occasions.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774255/weaverbird/products/oinnhgqcxplacwlvdmp2.jpg",
         },
         {
           name: "Plain Editions",
           text: "Solid-colour shukas for understated everyday wear.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774396/weaverbird/products/uwxoynaiiatwsmff7bmi.jpg",
         },
         {
           name: "Black & White Editions",
           text: "Monochrome shukas with bold contrast and clean lines.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774747/weaverbird/products/jtqrfj47qmcf9owycgtd.jpg",
         },
       ],
     },
