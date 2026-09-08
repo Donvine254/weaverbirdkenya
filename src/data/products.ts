@@ -821,6 +821,16 @@ export const AllProductCategories = {
           image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774255/weaverbird/products/oinnhgqcxplacwlvdmp2.jpg",
         },
         {
+          name: "Yellow Checks Shuka",
+          text: "Vibrant yellow checked shukas with bold contrasting patterns for cultural, fashion and event wear.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853881/weaverbird/products/wowx9mhpacdmyyovxifg.jpg",
+        },
+        {
+          name: "Green Checks Shuka",
+          text: "Rich green checked shukas with traditional contrasting accents for cultural, casual and ceremonial wear.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788854018/weaverbird/products/czqbpeoi6ip8foumhav5.jpg",
+        },
+        {
           name: "Plain Editions",
           text: "Solid-colour shukas for understated everyday wear.",
           image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774396/weaverbird/products/uwxoynaiiatwsmff7bmi.jpg",
@@ -865,7 +875,7 @@ export const AllProductCategories = {
         {
           name: "Caps",
           text: "Baseball and snapback caps with embroidered branding.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788846008/weaverbird/products/sdznpskydxyaectlkbrs.jpg",
         },
         {
           name: "Notebooks",
@@ -885,12 +895,22 @@ export const AllProductCategories = {
         {
           name: "Keyrings",
           text: "Metal and acrylic keyrings for everyday brand visibility.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788846260/weaverbird/products/hmbhamrztlgk7ytdqzky.jpg",
         },
         {
           name: "Skorts",
           text: "Practical skorts for school, sport and promotional kits.",
-          image: "",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788851753/weaverbird/products/tje7ka4h0wjjxxkwfgmv.jpg",
+        },
+        {
+          name: "Umbrellas",
+          text: "Branded umbrellas for corporate gifts, events and outdoor promotions.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853102/weaverbird/products/kwimmphy8jscyykscnke.jpg",
+        },
+        {
+          name: "Drawstring Bags",
+          text: "Lightweight branded drawstring bags for schools, sports and events.",
+          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853326/weaverbird/products/oxzbfpytfjqlrjbqjxe2.jpg",
         },
       ],
     },
