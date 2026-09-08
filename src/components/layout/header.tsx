@@ -17,6 +17,19 @@ const productCategories = [
   { label: "Maasai Shukas", hash: "shukas-heritage" },
 ];
 
+/* ----------------- Service categories ----------------- */
+const serviceCategories = [
+  { label: "Embroidery", hash: "embroidery" },
+  { label: "Screen Printing", hash: "screen-printing" },
+  { label: "Weaving and Knitting", hash: "weaving" },
+  { label: "Cutting & Stitching", hash: "cutting-stitching" },
+  { label: "Design & Sampling", hash: "design-sampling" },
+  { label: "Custom Tailoring & Alterations", hash: "tailoring" },
+  { label: "Bulk Manufacturing", hash: "bulk-manufacturing" },
+  { label: "Labelling", hash: "labelling" },
+  { label: "Packaging & Delivery", hash: "packaging-delivery" },
+];
+
 /* ----------------- Brand Logo ----------------- */
 export function Logo({ light = false }: { light?: boolean }) {
   return (
