@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Package, Shirt, ArrowRight, Tag, Store, ArrowDownToLine } from "lucide-react";
+import { Package, Shirt, ArrowRight, Tag, Store, ArrowDownToLine, ReceiptText } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
@@ -48,10 +48,12 @@ function ProductsPage() {
           }
           subtitle="From school uniforms to corporate wear, medical scrubs to Maasai shukas — every garment is designed, cut and stitched under one roof at our Thika factory."
         />
-        {AllProductCategories.categories.map((category, i) => (
+        <div className="lg:pt-12 lg:bg-maroon/5 lg:bg-[radial-gradient(ellipse_at_top,_var(--color-maroon)_0%,_transparent_80%)]">
+          {AllProductCategories.categories.map((category, i) => (
           <CategorySection key={category.id} category={category} index={i} />
         ))}
         <ProductsCta />
+        </div>
       </main>
       <Footer />
     </div>
@@ -67,14 +69,14 @@ function CategorySection({ category, index }: { category: Category; index: numbe
       className={`scroll-mt-24 ${muted ? "bg-secondary/60" : "bg-background"}`}
     >
       {/* Full-width banner: text left, image right on large screens */}
-      <div className="border-b border-black/5 bg-card lg:flex lg:min-h-[28rem]">
+      <div className="border-b bg-black/10 border-black/5  lg:flex lg:min-h-[28rem]">
         {/* Text column */}
         <div className="flex flex-col justify-center px-6 py-10 sm:px-8 lg:w-1/2 lg:px-12 lg:py-0 xl:px-16">
           <span
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest"
-            style={{ color: "var(--accent-red)" }}
+            style={{ color: "var(--color-maroon)" }}
           >
-            <span className="h-px w-8" style={{ background: "var(--accent-red)" }} />
+            <span className="h-px w-8 text-maroon" style={{ background: "var(--color-maroon)" }} />
             {String(index + 1).padStart(2, "0")} — Category
           </span>
           <h2
@@ -111,18 +113,18 @@ function CategorySection({ category, index }: { category: Category; index: numbe
                 boxShadow: "var(--shadow-red)",
               }}
             >
+              <ReceiptText className="h-4 w-4" />
               Get a Quote
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-
             <a
               href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/technical_datasheet.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6"
             >
-              <ArrowDownToLine />
+              <ArrowDownToLine className="h-4 w-4 group-hover:animate-bounce" />
               Technical Specifications
             </a>
           </div>
@@ -136,14 +138,14 @@ function CategorySection({ category, index }: { category: Category; index: numbe
             loading="lazy"
             className="h-72 w-full object-cover sm:h-96 lg:h-full lg:min-h-[28rem]"
           />
-          <div
+          {/* <div
             className="absolute inset-0 hidden lg:block"
             style={{
               background:
-                "linear-gradient(90deg, oklch(1 0 0 / 1) 0%, oklch(1 0 0 / 0.5) 30%, transparent 70%)",
+                "linear-gradient(90deg, oklch(1 0 0 / 1) 0%, oklch(1 0 0 / 0.5) 30%, transparent 60%)",
             }}
             aria-hidden="true"
-          />
+          /> */}
         </div>
       </div>
 
@@ -159,62 +161,6 @@ function CategorySection({ category, index }: { category: Category; index: numbe
   );
 }
 
-// function ProductCard({ item }: { item: ProductItem }) {
-//   return (
-//     <li className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-//       <div
-//         className="relative flex aspect-[4/3] items-center justify-center overflow-hidden"
-//         style={{
-//           background:
-//             "linear-gradient(135deg, oklch(0.22 0.07 155) 0%, oklch(0.13 0.05 155) 100%)",
-//         }}
-//       >
-//         {item.image ? (
-//           <img
-//             src={item.image}
-//             alt={item.name}
-//             loading="lazy"
-//             className="h-full w-full object-contain p-6 transition-transform duration-500 group-hover:scale-105"
-//           />
-//         ) : (
-//           <>
-//             <Shirt
-//               className="h-14 w-14 text-white/25 transition-transform duration-500 group-hover:scale-110"
-//               aria-hidden="true"
-//             />
-
-//             <span
-//               className="absolute bottom-3 right-3 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-white/70 backdrop-blur-sm"
-//               aria-hidden="true"
-//             >
-//               Photo coming soon
-//             </span>
-//           </>
-//         )}
-
-//         <span
-//           className="absolute left-3 top-3 h-1 w-8 rounded-full"
-//           style={{ background: "var(--accent-red)" }}
-//           aria-hidden="true"
-//         />
-//       </div>
-
-//       <div className="flex flex-1 flex-col p-5">
-//         <h3
-//           className="font-bold"
-//           style={{ color: "var(--primary-darker)" }}
-//         >
-//           {item.name}
-//         </h3>
-
-//         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-//           {item.text}
-//         </p>
-//       </div>
-//     </li>
-//   );
-// }
-
 function ProductCard({ item }: { item: ProductItem }) {
   return (
     <li className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -225,8 +171,7 @@ function ProductCard({ item }: { item: ProductItem }) {
             ? `url("${item.image}")`
             : "linear-gradient(135deg, oklch(0.22 0.07 155) 0%, oklch(0.13 0.05 155) 100%)",
           backgroundSize: item.image ? "cover" : "auto",
-        }}
-      >
+        }}>
         {!item.image && (
           <>
             <div className="absolute inset-0 flex items-center justify-center">
@@ -245,13 +190,13 @@ function ProductCard({ item }: { item: ProductItem }) {
           </>
         )}
 
-        <span
+        {!item.image && <span
           className="absolute left-3 top-3 h-1 w-8 rounded-full"
-          style={{ background: "var(--accent-red)" }}
+          style={{ background: "var(--color-maroon)" }}
           aria-hidden="true"
-        />
+        />}
 
-        {/* Optional dark overlay on hover */}
+        {/* dark overlay on hover */}
         {item.image && (
           <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
         )}
