@@ -187,6 +187,53 @@ export function Header({ current = "Home" }: { current?: string }) {
                 </div>
               );
             }
+            if (l.label === "Services") {
+              return (
+                <div key={l.label} ref={servicesDropdownRef} className="relative flex items-center gap-0.5">
+                  <Link to="/services" className={cls} onClick={() => setServicesOpen(false)}>
+                    Services
+                    {underline}
+                  </Link>
+                  <button
+                    type="button"
+                    aria-label="Show services"
+                    aria-expanded={servicesOpen}
+                    onClick={() => setServicesOpen((v) => !v)}
+                    className="rounded-sm p-0.5 cursor-pointer text-white/70 transition hover:text-white"
+                  >
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  {servicesOpen && (
+                    <div
+                      className="absolute left-0 top-full z-50 mt-3 w-72 overflow-hidden rounded-md border border-white/10 py-2 shadow-xl"
+                      style={{ background: "var(--primary-darker)" }}
+                    >
+                      {serviceCategories.map((c) => (
+                        <a
+                          key={c.hash}
+                          href={`/services#${c.hash}`}
+                          onClick={() => setServicesOpen(false)}
+                          className="block px-4 py-2.5 text-sm text-white/80 transition hover:bg-white/10 hover:text-white"
+                        >
+                          {c.label}
+                        </a>
+                      ))}
+                      <div className="mt-1 border-t border-white/10 pt-1">
+                        <Link
+                          to="/services"
+                          onClick={() => setServicesOpen(false)}
+                          className="block px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                        >
+                          View all services
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            }
             const inner = (
               <>
                 {l.label}
