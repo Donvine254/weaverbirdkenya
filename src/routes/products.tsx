@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Package, Shirt, ArrowRight, Tag, Store } from "lucide-react";
+import { Package, Shirt, ArrowRight, Tag, Store, ArrowDownToLine } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
@@ -102,15 +102,30 @@ function CategorySection({ category, index }: { category: Category; index: numbe
               </span>
             ))}
           </div>
+          {/* Buttons */}
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link
+              to="/quote"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-maroon px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:w-auto"
+              style={{
+                boxShadow: "var(--shadow-red)",
+              }}
+            >
+              Get a Quote
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
 
-          <Link
-            to="/quote"
-            className="group mt-6 inline-flex w-fit items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-            style={{ background: "var(--color-maroon)", boxShadow: "var(--shadow-red)" }}
-          >
-            Get a Quote
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+            <a
+              href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/technical_datasheet.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6"
+            >
+              <ArrowDownToLine />
+              Technical Specifications
+            </a>
+          </div>
         </div>
 
         {/* Image column */}

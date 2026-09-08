@@ -68,7 +68,7 @@ export function Hero() {
             </Link>
 
             <a
-              href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/catalogue.pdf"
+              href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/catalogue.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
