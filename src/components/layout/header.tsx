@@ -319,6 +319,46 @@ export function Header({ current = "Home" }: { current?: string }) {
                     </div>
                   );
                 }
+                if (l.label === "Services") {
+                  return (
+                    <div key={l.label}>
+                      <div className="flex items-center">
+                        <Link
+                          to="/services"
+                          onClick={() => setOpen(false)}
+                          className={`${cls} flex-1`}
+                        >
+                          Services
+                        </Link>
+                        <button
+                          type="button"
+                          aria-label="Show services"
+                          aria-expanded={mobileServicesOpen}
+                          onClick={() => setMobileServicesOpen((v) => !v)}
+                          className="rounded-md p-3 text-white/70 transition hover:bg-white/10 hover:text-white"
+                        >
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                      </div>
+                      {mobileServicesOpen && (
+                        <div className="ml-3 flex flex-col border-l border-white/10 pl-2">
+                          {serviceCategories.map((c) => (
+                            <a
+                              key={c.hash}
+                              href={`/services#${c.hash}`}
+                              onClick={() => setOpen(false)}
+                              className="rounded-md px-3 py-2.5 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
+                            >
+                              {c.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
                 return l.to ? (
                   <Link key={l.label} to={l.to} onClick={() => setOpen(false)} className={cls}>
                     {l.label}
