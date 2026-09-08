@@ -26,7 +26,7 @@ const serviceCategories = [
   { label: "Design & Sampling", hash: "design-sampling" },
   { label: "Custom Tailoring & Alterations", hash: "tailoring" },
   { label: "Bulk Manufacturing", hash: "bulk-manufacturing" },
-  { label: "Labelling", hash: "labelling" },
+  // { label: "Labelling", hash: "labelling" },
   { label: "Packaging & Delivery", hash: "packaging-delivery" },
 ];
 
