@@ -8,6 +8,7 @@ import {
   Factory,
   Layers,
   PenTool,
+  Tag,
 } from "lucide-react";
 
 
@@ -153,6 +154,23 @@ export const services: ServiceItem[] = [
     icon: Factory,
     image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg",
     imageAlt: "Rows of industrial sewing machines in a garment factory",
+  },
+  {
+    id: "labelling",
+    title: "Labelling",
+    tagline: "Names, sizes and care labels on every garment",
+    description:
+      "Lost sweaters and mixed-up kits are a thing of the past. We add woven or printed labels to every garment — student names on school uniforms, staff names on corporate wear, plus size tags and care instructions — so each piece always finds its owner.",
+    features: [
+      "Individual student and staff name labels",
+      "Woven brand labels with your logo",
+      "Size tags and care instruction labels",
+      "Labelled and sorted per class, team or department",
+    ],
+    equipment: ["Woven label looms", "Heat-seal label presses", "Name tape printers"],
+    icon: Tag,
+    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788856308/weaverbird/products/efogndhldntwol8hg43c.jpg",
+    imageAlt: "Name and size labels being attached to school uniform garments",
   },
   {
     id: "packaging-delivery",
