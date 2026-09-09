@@ -68,9 +68,10 @@ export function Hero() {
             </Link>
 
             <a
-              href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/catalogue.pdf"
-              rel="noopener noreferrer"
-              download
+              // href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/catalogue.pdf"
+              // rel="noopener noreferrer"
+              href="/resources/catalogue.pdf"
+              download="Weaverbird-Product-Catalogue.pdf"
               className="inline-flex w-full items-center justify-center gap-2 group rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-maroon active:scale-95 sm:w-auto sm:px-6">
               <ArrowDownToLine className="h-5 w-5 group-hover:animate-bounce" />
               Download Product Catalogue

@@ -50,9 +50,9 @@ function ProductsPage() {
         />
         <div className="lg:pt-12 lg:bg-maroon/5 lg:bg-[radial-gradient(ellipse_at_top,_var(--color-maroon)_0%,_transparent_80%)]">
           {AllProductCategories.categories.map((category, i) => (
-          <CategorySection key={category.id} category={category} index={i} />
-        ))}
-        <ProductsCta />
+            <CategorySection key={category.id} category={category} index={i} />
+          ))}
+          <ProductsCta />
         </div>
       </main>
       <Footer />
@@ -66,24 +66,21 @@ function CategorySection({ category, index }: { category: Category; index: numbe
     <section
       id={category.id}
       aria-labelledby={`${category.id}-heading`}
-      className={`scroll-mt-24 ${muted ? "bg-secondary/60" : "bg-background"}`}
-    >
+      className={`scroll-mt-24 ${muted ? "bg-secondary/60" : "bg-background"}`}>
       {/* Full-width banner: text left, image right on large screens */}
       <div className="border-b bg-black/10 border-black/5  lg:flex lg:min-h-[28rem]">
         {/* Text column */}
         <div className="flex flex-col justify-center px-6 py-10 sm:px-8 lg:w-1/2 lg:px-12 lg:py-0 xl:px-16">
           <span
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest"
-            style={{ color: "var(--color-maroon)" }}
-          >
+            style={{ color: "var(--color-maroon)" }}>
             <span className="h-px w-8 text-maroon" style={{ background: "var(--color-maroon)" }} />
             {String(index + 1).padStart(2, "0")} — Category
           </span>
           <h2
             id={`${category.id}-heading`}
             className="mt-3 text-3xl font-extrabold sm:text-4xl"
-            style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
-          >
+            style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}>
             {category.name}
           </h2>
           <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">
@@ -111,18 +108,16 @@ function CategorySection({ category, index }: { category: Category; index: numbe
               className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-maroon px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:w-auto"
               style={{
                 boxShadow: "var(--shadow-red)",
-              }}
-            >
+              }}>
               <ReceiptText className="h-4 w-4" />
               Get a Quote
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <a
-              href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/technical_datasheet.pdf"
-              rel="noopener noreferrer"
-              download
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6"
-            >
+              // href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/technical_datasheet.pdf"
+              href="/resources/technical_datasheet.pdf"
+              download="Weaverbird-Technical-Datasheet.pdf"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6">
               <ArrowDownToLine className="h-4 w-4 group-hover:animate-bounce" />
               Technical Specifications
             </a>
@@ -133,7 +128,7 @@ function CategorySection({ category, index }: { category: Category; index: numbe
         <div className="relative lg:w-1/2">
           <img
             src={category.banner}
-            alt={`${category.name} by Weaverbird Apparel Solutions`}
+            alt={`${category.name} by Weaverbird Kenya`}
             loading="lazy"
             className="h-72 w-full object-cover sm:h-96 lg:h-full lg:min-h-[28rem]"
           />
