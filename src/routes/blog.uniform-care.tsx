@@ -18,7 +18,22 @@ export const Route = createFileRoute("/blog/uniform-care")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: URL },
       { property: "og:type", content: "article" },
+      {
+        name: "keywords",
+        content:
+          "uniform care, remove uniform stains, school uniform washing tips, garment care Kenya, uniform maintenance, stain removal guide, how to wash uniforms",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [
