@@ -119,7 +119,6 @@ function CategorySection({ category, index }: { category: Category; index: numbe
             </Link>
             <a
               href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/technical_datasheet.pdf"
-              target="_blank"
               rel="noopener noreferrer"
               download
               className="group inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6"
@@ -163,7 +162,7 @@ function CategorySection({ category, index }: { category: Category; index: numbe
 
 function ProductCard({ item }: { item: ProductItem }) {
   return (
-    <li className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <li className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in-up">
       <div
         className="relative aspect-[4/3] overflow-hidden bg-cover bg-center transition-transform duration-500"
         style={{

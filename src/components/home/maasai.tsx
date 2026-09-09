@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 export default function Maasai() {
   return (
     <section
@@ -6,8 +7,7 @@ export default function Maasai() {
         backgroundColor: "#7d1522",
         backgroundImage:
           "repeating-linear-gradient(45deg, rgba(244,239,226,0.04) 0 2px, transparent 2px 22px)",
-      }}
-    >
+      }} >
       <div className="relative z-10 mx-auto max-w-7xl px-6 grid-cols-1 items-center grid gap-16 md:grid-cols-2">
         {/* Image */}
         <div
@@ -35,7 +35,7 @@ export default function Maasai() {
           </div>
 
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl" style={{ color: "#fbf8f0" }}>
-            Maasai Shukas &amp; African Apparel
+            <Link to="/products#shukas-heritage">Maasai Shukas &amp; African Apparel</Link>
           </h2>
 
           <p className="mb-6" style={{ color: "rgba(251, 248, 240, 0.85)" }}>
@@ -101,9 +101,9 @@ export default function Maasai() {
               }}
             />
             <div
-              className="hidden sm:block h-11 w-11 rounded-full border-2"
+              className="hidden lg:block h-11 w-11 rounded-full border-2"
               style={{
-                backgroundColor: "#001a84",
+                backgroundColor: "#f0cd0a",
                 borderColor: "#fbf8f0",
               }}
             />

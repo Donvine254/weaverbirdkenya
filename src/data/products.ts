@@ -5,6 +5,7 @@ import {
   HardHat,
   Volleyball,
   UtensilsCrossed,
+  Stethoscope
 } from "lucide-react";
 
 export const ProductCategories = [
@@ -13,56 +14,61 @@ export const ProductCategories = [
     name: "School Uniforms",
     slug: "school-uniforms",
     icon: GraduationCap,
+    link: "/products#school-uniforms",
     description: "Durable and comfortable uniforms for primary, secondary schools and colleges.",
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1785823001/weaverbird/products/e6o1honqvhessjig9kx4.webp",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788935691/weaverbird/products/qtsxkvly09ai4hgg8kay.jpg",
   },
   {
     id: "corporate-wear",
     name: "Corporate Wear",
     slug: "corporate-uniforms",
     icon: Briefcase,
+    link: "/products#corporate-wear",
     description: "Professional custom-made and branded uniforms for offices and businesses.",
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1785822986/weaverbird/products/mc9tkjk5dqao3cqi3s5s.webp",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788935879/weaverbird/products/ya8npakcvkqnv3voxfss.jpg",
   },
   {
-    id: "security-uniform",
-    name: "Security Uniforms",
-    slug: "security-uniforms",
-    icon: ShieldUser,
-    description: "Professional attire for security personnel and guard services.",
+    id: "healthcare-uniform",
+    name: "Healthcare Uniforms",
+    slug: "healthcare-uniforms",
+    icon: Stethoscope,
+    link: "/products/#medical-wear",
+    description: "Professional scrubs, lab coats, and medical attire for healthcare personnel.",
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1785823005/weaverbird/products/tafnpdsf3j4mkciqdu2v.webp",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788936255/weaverbird/products/pk0xxtttwyqjyyfoshmj.jpg",
+  },
+  {
+    id: "ppe-workwear",
+    name: "PPE, Workwear & Security",
+    slug: "ppe-workwear",
+    icon: HardHat,
+    link: "/products#workwear-overalls",
+    description: "High-visibility safety gear, industrial workwear, overalls, and professional security uniforms.",
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788936612/weaverbird/products/r5wld1hlrmcla0puomul.jpg",
   },
   {
     id: "hospitality-uniform",
     name: "Hospitality Uniforms",
     slug: "hospitality-uniforms",
     icon: UtensilsCrossed,
+    link: "/products/#workwear-overalls",
     description: "Uniforms for hotels, restaurants, and catering staff.",
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1785823348/weaverbird/products/y90zntu1lcqt8jfwgcbu.webp",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788935506/weaverbird/products/nh7zwexyrhoirfokrqqx.png",
   },
   {
     id: "sportswear",
     name: "Sportswear",
     slug: "sports-uniforms",
     icon: Volleyball,
+    link: "/products#tracksuits-sportswear",
     description:
       "High-performance sportswear and team uniforms designed for schools, clubs, and professional organizations.",
     image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1785823032/weaverbird/products/rqqvkwha5mi63kaie1ea.webp",
-  },
-  {
-    id: "ppe-workwear",
-    name: "PPE & Workwear",
-    slug: "sports-uniforms",
-    icon: HardHat,
-    description:
-      "High-performance sportswear and team uniforms designed for schools, clubs, and professional organizations.",
-    image:
-      "https://res.cloudinary.com/dipkbpinx/image/upload/v1785823007/weaverbird/products/vanq2kyabbgxliphejy4.webp",
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788936345/weaverbird/products/wsiqmekanfzqbwb9hltj.jpg",
   },
 ];
 

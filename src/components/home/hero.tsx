@@ -64,17 +64,15 @@ export function Hero() {
               }}
             >
               Get a Bulk Quote
-              <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:animate-[moveLeft_1s_ease-in-out_infinite]" />
             </Link>
 
             <a
               href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/catalogue.pdf"
-              target="_blank"
               rel="noopener noreferrer"
               download
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-maroon active:scale-95 sm:w-auto sm:px-6"
-            >
-              <ArrowDownToLine />
+              className="inline-flex w-full items-center justify-center gap-2 group rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-maroon active:scale-95 sm:w-auto sm:px-6">
+              <ArrowDownToLine className="h-5 w-5 group-hover:animate-bounce" />
               Download Product Catalogue
             </a>
           </div>

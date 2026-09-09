@@ -57,7 +57,7 @@ export function Footer() {
       href: "https://facebook.com/weaverbirdgarmentsltd",
     },
     // { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
-    { icon: InstagramIcon, label: "Instagram", href: "https://instagram.com/" },
+    { icon: InstagramIcon, label: "Instagram", href: "https://www.instagram.com/popular/weaverbird-kenya" },
     { icon: TiktokColorLogo, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
     { icon: WhatsappLogo, label: "Whatsapp", href: "https://wa.me/254722264464" },
   ];

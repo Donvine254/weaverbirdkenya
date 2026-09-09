@@ -20,6 +20,7 @@ export function TrustedBy() {
     "THIKA CLOTH MILLS",
     "DELFIRM HOTEL",
     "ZIWA FARM",
+    "Makini Schools",
     "THIKA COFFEE MILL",
     "MPESA FOUNDATION",
     "JOMO KENYATTA FOUNDATION",
