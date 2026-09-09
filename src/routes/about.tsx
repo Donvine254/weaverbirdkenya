@@ -29,6 +29,11 @@ export const Route = createFileRoute("/about")({
         content:
           "Weaverbird Garments Manufacturers Ltd was founded in 1996. Two directors, 13 shops, a Thika factory, 400+ employees and 50+ product categories. Made in Kenya with 98% quality standards.",
       },
+      {
+        name: "keywords",
+        content:
+          "Weaverbird Kenya, Weaverbird Garments Manufacturers, uniform manufacturer since 1996, Kenyan garment factory, made in Kenya uniforms, Thika garment factory, about Weaverbird, uniform company Kenya",
+      },
       { property: "og:title", content: "About Weaverbird Kenya" },
       {
         property: "og:description",
@@ -38,6 +43,16 @@ export const Route = createFileRoute("/about")({
       { property: "og:url", content: "https://weaverbirdkenya.lovable.app/about" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
     ],
     links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/about" }],
   }),
