@@ -35,7 +35,7 @@ export default function Maasai() {
           </div>
 
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl" style={{ color: "#fbf8f0" }}>
-            <Link to="/products#shukas-heritage">Maasai Shukas &amp; African Apparel</Link>
+            <Link to="/products" hash="shukas-heritage">Maasai Shukas &amp; African Apparel</Link>
           </h2>
 
           <p className="mb-6" style={{ color: "rgba(251, 248, 240, 0.85)" }}>

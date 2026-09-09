@@ -24,6 +24,11 @@ export const Route = createFileRoute("/contact")({
         content:
           "Get in touch with Weaverbird Kenya. Call, email or visit our factory in Thika. Find a store near you across our 12 nationwide branches.",
       },
+      {
+        name: "keywords",
+        content:
+          "contact Weaverbird Kenya, uniform supplier contact, garment manufacturer phone number Kenya, uniform factory Thika contact, order uniforms Kenya, uniform WhatsApp Kenya",
+      },
       { property: "og:title", content: "Contact Weaverbird Kenya" },
       {
         property: "og:description",
@@ -33,6 +38,16 @@ export const Route = createFileRoute("/contact")({
       { property: "og:url", content: "https://weaverbirdkenya.lovable.app/contact" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
     ],
     links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/contact" }],
   }),

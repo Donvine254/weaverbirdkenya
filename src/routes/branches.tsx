@@ -30,6 +30,11 @@ export const Route = createFileRoute("/branches")({
         content:
           "Find a Weaverbird shop near you. 12 branches across Kenya plus our Thika factory & headquarters. Addresses, phone numbers, opening hours & directions.",
       },
+      {
+        name: "keywords",
+        content:
+          "uniform shops Kenya, Weaverbird branches, uniform store near me, school uniform shop Nairobi, uniform shop Thika, buy uniforms Kenya, uniform outlet locations, garment store locator Kenya",
+      },
       { property: "og:title", content: "Weaverbird Branches — Store Locator" },
       {
         property: "og:description",
@@ -39,6 +44,16 @@ export const Route = createFileRoute("/branches")({
       { property: "og:url", content: "https://weaverbirdkenya.lovable.app/branches" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
     ],
     links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/branches" }],
   }),
