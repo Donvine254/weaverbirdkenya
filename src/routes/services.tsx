@@ -14,6 +14,11 @@ export const Route = createFileRoute("/services")({
         content:
           "Embroidery, screen printing, in-house weaving, cutting & stitching, sampling, tailoring, bulk manufacturing and nationwide delivery from our Thika factory.",
       },
+      {
+        name: "keywords",
+        content:
+          "embroidery Kenya, screen printing Kenya, uniform manufacturing, weaving and knitting, cutting and stitching, garment design and sampling, custom tailoring, alterations, bulk garment manufacturing, labelling, school uniform name labels, packaging and delivery, garment factory Thika, uniform production Kenya",
+      },
       { property: "og:title", content: "Uniform Manufacturing Services in Kenya" },
       {
         property: "og:description",
@@ -23,6 +28,16 @@ export const Route = createFileRoute("/services")({
       { property: "og:url", content: "https://weaverbirdkenya.lovable.app/services" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
     ],
     links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/services" }],
   }),

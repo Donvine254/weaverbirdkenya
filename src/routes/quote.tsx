@@ -54,11 +54,26 @@ export const Route = createFileRoute("/quote")({
     meta: [
       { title: "Request a Quote — Weaverbird Apparel Solutions" },
       { name: "description", content: "Request a costed quotation for your organisation's uniforms and apparel. School, corporate, security, hospitality, healthcare & industrial." },
+      {
+        name: "keywords",
+        content:
+          "uniform quote Kenya, school uniform quotation, corporate wear quote, bulk uniform order Kenya, custom uniform pricing, security uniform quote, hospitality uniform quote, garment manufacturing quotation, request uniform quote",
+      },
       { property: "og:title", content: "Request a Quote — Weaverbird" },
       { property: "og:description", content: "Tell us what you're outfitting and we'll send back a costed quotation." },
       { property: "og:url", content: "https://weaverbirdkenya.lovable.app/quote" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
     ],
     links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/quote" }],
   }),

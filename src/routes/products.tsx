@@ -17,6 +17,11 @@ export const Route = createFileRoute("/products")({
         content:
           "Explore our full catalogue: school uniforms, corporate wear, workwear & overalls, medical wear, hospitality wear, t-shirts & polos, knitwear, sportswear, Maasai shukas and promotional merchandise.",
       },
+      {
+        name: "keywords",
+        content:
+          "school uniforms Kenya, corporate wear, workwear and overalls, medical wear, scrubs Kenya, hospitality uniforms, chef jackets, t-shirts and polo shirts, jumpers sweaters fleece, tracksuits sportswear, Maasai shukas, promotional merchandise, branded apparel Kenya, uniform catalogue, buy uniforms Kenya",
+      },
       { property: "og:title", content: "Uniforms & Apparel Products — Weaverbird Kenya" },
       {
         property: "og:description",
@@ -26,6 +31,16 @@ export const Route = createFileRoute("/products")({
       { property: "og:url", content: "https://weaverbirdkenya.lovable.app/products" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
     ],
     links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/products" }],
   }),

@@ -22,6 +22,11 @@ export const Route = createFileRoute("/")({
         content:
           "Premium school, corporate, security, sports and hospitality uniforms designed and manufactured in Kenya since 1996.",
       },
+      {
+        name: "keywords",
+        content:
+          "uniforms Kenya, garment manufacturers Kenya, school uniforms Kenya, corporate wear Kenya, security uniforms, hospitality uniforms, sports uniforms, workwear Kenya, overalls, medical scrubs Kenya, t-shirts and polo shirts, sweaters and fleece, tracksuits, sportswear, Maasai shukas, uniform manufacturers Thika, custom uniforms Nairobi, branded apparel Kenya, embroidery Kenya, screen printing Kenya, uniform supplier Kenya, Weaverbird Kenya",
+      },
       { property: "og:title", content: "Weaverbird Garments Manufacturers Ltd" },
       {
         property: "og:description",
@@ -31,6 +36,16 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://weaverbirdkenya.lovable.app/" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
+      },
     ],
     links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/" }],
     scripts: [
