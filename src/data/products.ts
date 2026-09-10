@@ -5,7 +5,7 @@ import {
   HardHat,
   Volleyball,
   UtensilsCrossed,
-  Stethoscope
+  Stethoscope,
 } from "lucide-react";
 
 export const ProductCategories = [
@@ -45,7 +45,8 @@ export const ProductCategories = [
     slug: "ppe-workwear",
     icon: HardHat,
     link: "/products#workwear-overalls",
-    description: "High-visibility safety gear, industrial workwear, overalls, and professional security uniforms.",
+    description:
+      "High-visibility safety gear, industrial workwear, overalls, and professional security uniforms.",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788936612/weaverbird/products/r5wld1hlrmcla0puomul.jpg",
   },
@@ -83,7 +84,13 @@ export const AllProductCategories = {
       banner:
         "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/osw2cqofzjsu3r9qrzff.jpg",
       tagsLabel: "Available fabrics & features",
-      tags: ["Poly-Viscose Blends", "Twill", "Gabardine", "100% Cotton", "Knitted Fabrics", "Custom Designs & Embroidery", "All Sizes & Age Groups", "Durable, Easy-Care Finishes"],
+      tags: [
+        "Poly-Viscose Blends",
+        "Twill & Gabardine",
+        "Knitted Fabrics",
+        "Custom Designs & Embroidery",
+        "All Sizes & Age Groups",
+      ],
       products: [
         {
           name: "Shirts",
@@ -106,7 +113,8 @@ export const AllProductCategories = {
         {
           name: "Shorts",
           text: "Tailored, durable school shorts designed for comfort and active daily wear.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592769/weaverbird/products/rhonrhok5tw5nzjycslt.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592769/weaverbird/products/rhonrhok5tw5nzjycslt.jpg",
         },
         {
           name: "Dresses",
@@ -141,82 +149,98 @@ export const AllProductCategories = {
         {
           name: "Cardigans",
           text: "Soft, warm knitted cardigans designed for daily school wear.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788591771/weaverbird/products/meiz64cdfwwok0ouxzks.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788591771/weaverbird/products/meiz64cdfwwok0ouxzks.jpg",
         },
         {
           name: "Fleece Sweaters",
           text: "Cozy, durable fleece sweaters providing extra warmth during colder days.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592046/weaverbird/products/qypxtnnbom8ghjk55ge3.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592046/weaverbird/products/qypxtnnbom8ghjk55ge3.jpg",
         },
         {
           name: "Leg Warmers",
           text: "Comfortable, snug leg warmers to stay warm on chilly school mornings.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592191/weaverbird/products/pvk9vza5gjwbhktonz69.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592191/weaverbird/products/pvk9vza5gjwbhktonz69.jpg",
         },
         {
           name: "Belted Pinafores",
           text: "Smart, tailored pinafores featuring secure belt fastenings.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592568/weaverbird/products/iybgman9zxgz3bcrjlja.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788592568/weaverbird/products/iybgman9zxgz3bcrjlja.jpg",
         },
         {
           name: "Tracksuits",
           text: "Flexible and breathable sports tracksuits for physical education.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788593181/weaverbird/products/hdqan3uz7sbaouviddpi.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788593181/weaverbird/products/hdqan3uz7sbaouviddpi.jpg",
         },
         {
           name: "School Hijabs",
           text: "Lightweight, comfortable hijabs tailored to meet uniform guidelines.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788593763/weaverbird/products/vgfmgolktm1uxqeu8tim.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788593763/weaverbird/products/vgfmgolktm1uxqeu8tim.jpg",
         },
         {
           name: "Dust Coats",
           text: "Protective, easy-care dust coats ideal for science labs and practical work.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
         },
         {
           name: "T-Shirts",
           text: "Breathable, durable cotton t-shirts ideal for sports and everyday active wear.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594493/weaverbird/products/xwspjr4q3gxqwj1oolyt.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594493/weaverbird/products/xwspjr4q3gxqwj1oolyt.jpg",
         },
         {
           name: "Scarves",
           text: "Warm knitted scarves available in official school color schemes.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788600497/weaverbird/products/otw6gucpny0vuzvja2x1.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788600497/weaverbird/products/otw6gucpny0vuzvja2x1.jpg",
         },
         {
           name: "Raincoats",
           text: "Fully waterproof raincoats to keep students dry during stormy weather.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788595204/weaverbird/products/gbwivmfztecs0dgbhkcs.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788595204/weaverbird/products/gbwivmfztecs0dgbhkcs.jpg",
         },
         {
           name: "Nightdresses",
           text: "Soft, breathable cotton nightdresses designed for boarding students.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788596375/weaverbird/products/urt5vjrlzdnbasjsqwl1.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788596375/weaverbird/products/urt5vjrlzdnbasjsqwl1.jpg",
         },
         {
           name: "Marvin Caps",
           text: "Snug knitted marvin beanies for winter morning assemblies.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788596565/weaverbird/products/l0elqpftybypv3wxsnhj.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788596565/weaverbird/products/l0elqpftybypv3wxsnhj.jpg",
         },
         {
           name: "Pyjamas",
           text: "Durable and comfortable two-piece pyjama sets for boarding sleepwear.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788595359/weaverbird/products/cjszxlz32fibjevxd19i.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788595359/weaverbird/products/cjszxlz32fibjevxd19i.jpg",
         },
         {
           name: "Swimming Costumes",
           text: "Quick-drying, chlorine-resistant swimwear for physical training.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788597093/weaverbird/products/v2azypkwzptnzavi66og.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788597093/weaverbird/products/v2azypkwzptnzavi66og.jpg",
         },
         {
           name: "Tunics",
           text: "Classic uniform tunics engineered with reinforced stitching.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788597426/weaverbird/products/xgq3rhozpg1grahwpuz1.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788597426/weaverbird/products/xgq3rhozpg1grahwpuz1.jpg",
         },
         {
           name: "Wrappers & Bloomers",
           text: "Comfortable undergarment combinations for active school days.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788598373/weaverbird/products/a9pujcmmn58bvdqy1vs2.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788598373/weaverbird/products/a9pujcmmn58bvdqy1vs2.jpg",
         },
         {
           name: "Shoes",
@@ -245,17 +269,20 @@ export const AllProductCategories = {
         {
           name: "Mattresses",
           text: "Supportive, durable mattresses designed to fit standard boarding school beds.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788602972/weaverbird/products/jqur6umi9r6was3ykiwn.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788602972/weaverbird/products/jqur6umi9r6was3ykiwn.jpg",
         },
         {
           name: "Bedcovers",
           text: "Easy-to-clean, long-lasting bedcovers to keep dormitory beds neat and tidy.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788601094/weaverbird/products/izqua1dxzcfk9xaar83q.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788601094/weaverbird/products/izqua1dxzcfk9xaar83q.jpg",
         },
         {
           name: "Blankets",
           text: "Warm and cozy blankets providing maximum comfort on cool nights.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788602194/weaverbird/products/rvnwsgxsplw5qgiydahv.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788602194/weaverbird/products/rvnwsgxsplw5qgiydahv.jpg",
         },
       ],
     },
@@ -273,42 +300,74 @@ export const AllProductCategories = {
         {
           name: "Classic & Modern Suits",
           text: "Timeless and contemporary cuts for a polished boardroom look.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589017/weaverbird/products/z10xjhpaomzsz7fsity1.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589017/weaverbird/products/z10xjhpaomzsz7fsity1.jpg",
         },
         {
           name: "Dress Shirts",
           text: "Crisp cotton-blend shirts in slim, regular and tailored fits.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589665/weaverbird/products/jwfsgxkyfqc6ycjjyjkl.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589665/weaverbird/products/jwfsgxkyfqc6ycjjyjkl.jpg",
         },
         {
           name: "Blouses",
           text: "Elegant office blouses in breathable, easy-care fabrics.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589885/weaverbird/products/k89jggcyl6fvtca4wgje.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788589885/weaverbird/products/k89jggcyl6fvtca4wgje.jpg",
         },
         {
           name: "Smart Skirts",
           text: "Knee-length and pencil styles for professional uniforms.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590077/weaverbird/products/kxhj9cujz04c6radooks.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590077/weaverbird/products/kxhj9cujz04c6radooks.jpg",
         },
         {
           name: "Men & Women Trousers",
           text: "Tailored trousers with crease-retention and all-day stretch.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590175/weaverbird/products/wbmejlbjodiqeajjokdp.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590175/weaverbird/products/wbmejlbjodiqeajjokdp.jpg",
         },
         {
           name: "Waistcoats",
           text: "Layered formality for reception, hospitality and corporate events.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590365/weaverbird/products/znzmdwlhzgsm6zvy2bw6.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590365/weaverbird/products/znzmdwlhzgsm6zvy2bw6.jpg",
         },
         {
           name: "Blazers",
           text: "Structured blazers with subtle branding options.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590584/weaverbird/products/n00yxsf2jlklcqzid2v3.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788590584/weaverbird/products/n00yxsf2jlklcqzid2v3.jpg",
         },
         {
           name: "Cardigans",
           text: "Lightweight knitted layers for climate-controlled offices.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788591113/weaverbird/products/vjqagrc2dnbv3gkadaxr.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788591113/weaverbird/products/vjqagrc2dnbv3gkadaxr.jpg",
+        },
+        {
+          name: "Branded T-Shirts",
+          text: "Professional corporate T-shirts customized with printed or embroidered company branding.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789026204/weaverbird/products/lqlvrg9zxw7zoxt82txy.jpg",
+        },
+        {
+          name: "Branded Shirts",
+          text: "Smart corporate shirts customized with embroidered logos and company colours.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789026204/weaverbird/products/cetdqf7g123r7bay4btj.jpg",
+        },
+        {
+          name: "Corporate Ties",
+          text: "Classic and custom-branded ties designed to complement professional corporate uniforms.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789026205/weaverbird/products/l3hcneyu9g825omcdrsl.jpg",
+        },
+        {
+          name: "Corporate Sweaters",
+          text: "Smart knitted sweaters for office uniforms, available with custom colours and embroidered branding.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789026841/weaverbird/products/dcgeui0dkzel51pgn5hl.jpg",
         },
       ],
     },
@@ -328,108 +387,128 @@ export const AllProductCategories = {
         "Screen Printing",
         "Embroidery",
         "Labels & Tags",
-        "Badges & Pathces"
+        "Badges & Pathces",
       ],
       products: [
         {
           name: "Full Body Overalls",
           text: "All-in-one protection with reinforced knees and multiple pockets.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614094/weaverbird/products/ybgmflvojobm327agtio.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614094/weaverbird/products/ybgmflvojobm327agtio.jpg",
         },
         {
           name: "Work Shirts",
           text: "Tough shirts built for workshops, warehouses and fieldwork.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614063/weaverbird/products/js8wkg43xx1kg2iode3f.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614063/weaverbird/products/js8wkg43xx1kg2iode3f.jpg",
         },
         {
           name: "Work Trousers",
           text: "Heavy-duty trousers with tool pockets and reinforced stress points.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614029/weaverbird/products/ekwln4tykeymsmkyn8zd.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614029/weaverbird/products/ekwln4tykeymsmkyn8zd.jpg",
         },
         {
           name: "High-Vis Safety Jackets",
           text: "Reflective jackets for roadside, construction and low-light sites.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613995/weaverbird/products/iqcrthhqeiww2thddtp1.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613995/weaverbird/products/iqcrthhqeiww2thddtp1.jpg",
         },
         {
           name: "Dust Coats",
           text: "Light protective coats for factories, labs and clean environments.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613962/weaverbird/products/c4ah0mvmdlc2zjpgvi0u.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613962/weaverbird/products/c4ah0mvmdlc2zjpgvi0u.jpg",
         },
         {
           name: "Lab Coats",
           text: "Hygienic white coats with secure pockets and easy laundering.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
         },
         {
           name: "Utility Vests",
           text: "Multi-pocket vests for technicians, engineers and outdoor teams.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613866/weaverbird/products/d7lf9rkvs420ymr94bqp.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788613866/weaverbird/products/d7lf9rkvs420ymr94bqp.jpg",
         },
         {
           name: "PPE Helmets",
           text: "Impact-resistant hard hats designed for optimal head protection on work sites.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788615002/weaverbird/products/lj2zgkyhpuuzkqxtmef9.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788615002/weaverbird/products/lj2zgkyhpuuzkqxtmef9.jpg",
         },
         {
           name: "Safety Jackets",
           text: "Weatherproof, high-visibility outerwear built for harsh working conditions.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614439/weaverbird/products/xpgvztfvaxfln1pu4dsk.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614439/weaverbird/products/xpgvztfvaxfln1pu4dsk.jpg",
         },
         {
           name: "Safety Vests",
           text: "Lightweight, breathable vests engineered for day and night site safety.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614516/weaverbird/products/rcil4j1s8d6xqi8gsfts.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614516/weaverbird/products/rcil4j1s8d6xqi8gsfts.jpg",
         },
         {
           name: "Reflector Jackets",
           text: "Bright reflective jackets ensuring maximum visibility in low-light environments.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614476/weaverbird/products/scdowhrrsp3ilucm0hcl.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614476/weaverbird/products/scdowhrrsp3ilucm0hcl.jpg",
         },
         {
           name: "Protective Riding Gear",
           text: "Heavy-duty protective apparel engineered for impact resistance and rider safety.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614608/weaverbird/products/qtlsxeret6n3tfslo83f.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788614608/weaverbird/products/qtlsxeret6n3tfslo83f.jpg",
         },
         {
           name: "Security Shirts",
           text: "Crisp, professional security uniform shirts complete with epaulettes.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707377/weaverbird/products/lk8vapguauqzextcabbd.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707377/weaverbird/products/lk8vapguauqzextcabbd.jpg",
         },
         {
           name: "Security Trousers",
           text: "Durable, tailored trousers designed for security personnel on daily patrol.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707985/weaverbird/products/wuxzrhao1uxprvumwnm1.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707985/weaverbird/products/wuxzrhao1uxprvumwnm1.jpg",
         },
         {
           name: "Security Jackets",
           text: "Heavy-duty uniform jackets built to withstand long outdoor shifts.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707527/weaverbird/products/owmnwzo5ahmddl6pvjme.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707527/weaverbird/products/owmnwzo5ahmddl6pvjme.jpg",
         },
         {
           name: "Security Sweaters",
           text: "Warm V-neck uniform knits featuring reinforced shoulder and elbow patches.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707821/weaverbird/products/omjmpucncqsqi2qjnme4.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788707821/weaverbird/products/omjmpucncqsqi2qjnme4.jpg",
         },
         {
           name: "Security Fleeces",
           text: "Soft, insulated fleece jackets providing warmth during cold guard duties.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708106/weaverbird/products/nsdi7u0kuefso2yunlig.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708106/weaverbird/products/nsdi7u0kuefso2yunlig.jpg",
         },
         {
           name: "Security Boots",
           text: "Sturdy, slip-resistant footwear designed for all-day comfort and stability.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708304/weaverbird/products/drs9rs5znqucs28kawus.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708304/weaverbird/products/drs9rs5znqucs28kawus.jpg",
         },
         {
           name: "Security Hats",
           text: "Formal uniform caps and headwear engineered for a commanding appearance.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708574/weaverbird/products/ssllnjrh5ythp0sfq0oz.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708574/weaverbird/products/ssllnjrh5ythp0sfq0oz.jpg",
         },
         {
           name: "Security Ties",
           text: "Professional uniform ties available in clip-on and standard styles.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708633/weaverbird/products/bo0qydz1fyjpd3klwobg.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708633/weaverbird/products/bo0qydz1fyjpd3klwobg.jpg",
         },
       ],
     },
@@ -447,82 +526,98 @@ export const AllProductCategories = {
         {
           name: "Scrub Suits (V-Neck)",
           text: "V-neck scrub sets in soft, anti-bacterial fabric.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708938/weaverbird/products/yir8yempvsxrgjdgwbrw.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788708938/weaverbird/products/yir8yempvsxrgjdgwbrw.jpg",
         },
         {
           name: "Medical Trousers",
           text: "Comfortable drawstring trousers with reinforced waistbands.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709054/weaverbird/products/oi2gfzfmxcxswygolut4.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709054/weaverbird/products/oi2gfzfmxcxswygolut4.jpg",
         },
         {
           name: "Doctor Lab Coats",
           text: "Professional lab coats with a tailored fit and ample pockets.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
         },
         {
           name: "Nurse Uniforms",
           text: "Classic and modern nurse dresses and tunics.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709208/weaverbird/products/brtl5bglncxtihzurszv.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709208/weaverbird/products/brtl5bglncxtihzurszv.jpg",
         },
         {
           name: "Theatre Wear",
           text: "Sterile-style sets for operating and procedure areas.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709380/weaverbird/products/m8t2h6qpn6p960mgzbuz.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709380/weaverbird/products/m8t2h6qpn6p960mgzbuz.jpg",
         },
         {
           name: "Tunic Tops",
           text: "Smart healthcare tunics with contrast trim options.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709638/weaverbird/products/ass5zvsoymso83ngh8we.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709638/weaverbird/products/ass5zvsoymso83ngh8we.jpg",
         },
         {
           name: "Patient Gowns",
           text: "Back-fastening gowns designed for dignity and easy access.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709857/weaverbird/products/lelfhssrbsk9jxmx5m4i.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788709857/weaverbird/products/lelfhssrbsk9jxmx5m4i.jpg",
         },
         {
           name: "Pharmacy & Dental Wear",
           text: "Clean, professional uniforms for pharmacy and dental staff.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710095/weaverbird/products/vmx1delkrxflqie0i511.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710095/weaverbird/products/vmx1delkrxflqie0i511.jpg",
         },
         {
           name: "Maternity Gowns",
           text: "Comfortable maternity gowns designed for ease of movement, nursing and patient care.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710506/weaverbird/products/gvbam1gkfmtlnj2e54v8.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710506/weaverbird/products/gvbam1gkfmtlnj2e54v8.jpg",
         },
         {
           name: "Hospital Bed Sheets & Linen",
           text: "Durable, easy-care hospital linen for wards, clinics and patient rooms.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710659/weaverbird/products/jtrv9wsfuzzues2mlhxt.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710659/weaverbird/products/jtrv9wsfuzzues2mlhxt.jpg",
         },
         {
           name: "Medical Aprons",
           text: "Practical protective aprons for clinical, laboratory and healthcare environments.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710857/weaverbird/products/kidyjialw73ihhkm1dp0.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788710857/weaverbird/products/kidyjialw73ihhkm1dp0.jpg",
         },
         {
           name: "Medical & Theatre Caps",
           text: "Lightweight reusable caps designed for theatre, procedure and clinical environments.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711084/weaverbird/products/fg6ezp1fbk3ebpurijyr.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711084/weaverbird/products/fg6ezp1fbk3ebpurijyr.jpg",
         },
         {
           name: "Nurse Student Blazers",
           text: "Smart institutional blazers tailored for nursing students with custom college branding.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711699/weaverbird/products/jbpzdhllktm86etokzy2.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711699/weaverbird/products/jbpzdhllktm86etokzy2.jpg",
         },
         {
           name: "Nurse Student Sweaters",
           text: "Warm knitted sweaters for nursing students in institutional colours with branding options.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711916/weaverbird/products/v8h1lpc3zcefbe0c9ek5.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788711916/weaverbird/products/v8h1lpc3zcefbe0c9ek5.jpg",
         },
         {
           name: "Nurse Student Dresses",
           text: "Professional nursing student dresses and tunics tailored to institutional uniform requirements.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788712269/weaverbird/products/nwunjjhwnh4nlbknezyq.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788712269/weaverbird/products/nwunjjhwnh4nlbknezyq.jpg",
         },
         {
           name: "Nurse Student Shirts",
           text: "Smart shirts and blouses designed for nursing students, classroom wear and clinical training.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788712440/weaverbird/products/alw0l4bqc5grtfn56zzu.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788712440/weaverbird/products/alw0l4bqc5grtfn56zzu.jpg",
         },
       ],
     },
@@ -539,82 +634,98 @@ export const AllProductCategories = {
         {
           name: "Chef Jackets",
           text: "Professional double-breasted chef jackets in breathable, kitchen-ready fabrics.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766690/weaverbird/products/wkyrgcot78joxv4bell5.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766690/weaverbird/products/wkyrgcot78joxv4bell5.jpg",
         },
         {
           name: "Kitchen Wear",
           text: "Hygienic and durable kitchen uniforms designed for demanding food-service environments.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766688/weaverbird/products/pqvobjjnbusa41hir2gw.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766688/weaverbird/products/pqvobjjnbusa41hir2gw.jpg",
         },
         {
           name: "Chef Trousers",
           text: "Comfortable chef trousers in plain and checked fabrics for everyday kitchen use.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766687/weaverbird/products/fjk5ykzzi9inlwtzkghi.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766687/weaverbird/products/fjk5ykzzi9inlwtzkghi.jpg",
         },
         {
           name: "Chef Caps",
           text: "Classic pleated chef caps available in multiple colours to complement kitchen uniforms.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/xqatfxnlo0mxcbzfnbwi.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/xqatfxnlo0mxcbzfnbwi.jpg",
         },
         {
           name: "Waiter & Waitress Shirts",
           text: "Smart branded shirts and blouses tailored for professional front-of-house teams.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766685/weaverbird/products/ob42gq6npvkqiggqfvmt.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766685/weaverbird/products/ob42gq6npvkqiggqfvmt.jpg",
         },
         {
           name: "Waiter Uniforms",
           text: "Sharp, coordinated uniforms designed for professional restaurant and hospitality service.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766689/weaverbird/products/b7aqgujb9awc7nnattrl.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766689/weaverbird/products/b7aqgujb9awc7nnattrl.jpg",
         },
         {
           name: "Waitress Skirts",
           text: "Smart tailored skirts designed to complement waitress and front-of-house uniforms.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766684/weaverbird/products/ayqrgac3fnnumds7ynnq.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766684/weaverbird/products/ayqrgac3fnnumds7ynnq.jpg",
         },
         {
           name: "Waiter & Waitress Sweaters",
           text: "Branded sleeveless V-neck sweaters for smart, layered hospitality uniforms.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/kdydllxjcjtx2ksilvha.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/kdydllxjcjtx2ksilvha.jpg",
         },
         {
           name: "Server Half Aprons",
           text: "Practical waist aprons with pockets for order pads, pens and service essentials.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766685/weaverbird/products/yxxcqkwelqsnpz4fbazr.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766685/weaverbird/products/yxxcqkwelqsnpz4fbazr.jpg",
         },
         {
           name: "Housekeeping Uniforms",
           text: "Comfortable, easy-care uniforms designed for professional housekeeping teams.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766688/weaverbird/products/feu46ys69dptqmymsgaz.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766688/weaverbird/products/feu46ys69dptqmymsgaz.jpg",
         },
         {
           name: "Reception Suits",
           text: "Elegant tailored suiting for hotel reception, concierge and guest-service teams.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766687/weaverbird/products/k71buwqq78sldikddt7c.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766687/weaverbird/products/k71buwqq78sldikddt7c.jpg",
         },
         {
           name: "Restaurant Polos",
           text: "Branded, breathable polo shirts for casual dining and quick-service teams.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766687/weaverbird/products/apdgz32nlbcmipd9dcrr.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766687/weaverbird/products/apdgz32nlbcmipd9dcrr.jpg",
         },
         {
           name: "Aprons",
           text: "Bib and waist aprons available in custom colours and branded finishes.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766688/weaverbird/products/w5e9rfjh56ckqrlg93up.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766688/weaverbird/products/w5e9rfjh56ckqrlg93up.jpg",
         },
         {
           name: "Spa & Wellness Wear",
           text: "Soft, relaxed and professional uniforms for spa and wellness teams.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/j9ocyueqjovmioepkyos.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/j9ocyueqjovmioepkyos.jpg",
         },
         {
           name: "Hospitality Headwear",
           text: "Professional caps and headwear designed to complete hospitality staff uniforms.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/zb10mgqeqojmopjexuql.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/zb10mgqeqojmopjexuql.jpg",
         },
         {
           name: "Hotel Bedding & Linen",
           text: "Premium bedsheets, pillowcases and bedcovers with custom branding for hotels, lodges and resorts.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766685/weaverbird/products/guymxrvouemgcsyetl0z.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766685/weaverbird/products/guymxrvouemgcsyetl0z.jpg",
         },
       ],
     },
@@ -632,42 +743,50 @@ export const AllProductCategories = {
         {
           name: "Classic Polos",
           text: "Timeless piqué polos for uniforms, events and gifting.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788768272/weaverbird/products/zzncotnhq97flw7jka5o.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788768272/weaverbird/products/zzncotnhq97flw7jka5o.jpg",
         },
         {
           name: "Piqué Polos",
           text: "Textured cotton-rich polos with a premium feel. 100% cotton.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788768368/weaverbird/products/a8jhgfqgg9azf6rk3cxj.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788768368/weaverbird/products/a8jhgfqgg9azf6rk3cxj.jpg",
         },
         {
           name: "Contrast Collar Polos",
           text: "Two-tone collar and cuff styles for standout branding.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788768578/weaverbird/products/tts7r5p4cdkbdgialk5u.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788768578/weaverbird/products/tts7r5p4cdkbdgialk5u.jpg",
         },
         {
           name: "Round Neck Tees",
           text: "Everyday crew neck tees in soft, colour-fast jersey.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788769282/weaverbird/products/u9m33mkgq9vty4hgxzps.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788769282/weaverbird/products/u9m33mkgq9vty4hgxzps.jpg",
         },
         {
           name: "V-Neck Tees",
           text: "Modern V-neck tees for casual and promotional use.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788769378/weaverbird/products/xqkvsoe8pnjasvzt60rr.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788769378/weaverbird/products/xqkvsoe8pnjasvzt60rr.jpg",
         },
         {
           name: "Performance Polos",
           text: "Moisture-wicking polos for active teams and outdoor work.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788769587/weaverbird/products/jbnm7ibf1g4watxtdyty.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788769587/weaverbird/products/jbnm7ibf1g4watxtdyty.jpg",
         },
         {
           name: "Long Sleeve Tees",
           text: "Layer-friendly long sleeves for cooler days and events.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788769700/weaverbird/products/cojqeyhac6jtzfw3ppcs.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788769700/weaverbird/products/cojqeyhac6jtzfw3ppcs.jpg",
         },
         {
           name: "PE T-Shirts",
           text: "Comfortable and durable round-neck T-shirts for school PE, sports and physical activities.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788770055/weaverbird/products/a1dkqolwre271xsdu3jj.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788770055/weaverbird/products/a1dkqolwre271xsdu3jj.jpg",
         },
       ],
     },
@@ -679,47 +798,60 @@ export const AllProductCategories = {
       banner:
         "https://res.cloudinary.com/dipkbpinx/image/upload/v1788587091/weaverbird/udemfgx1abiztv6qsjic.jpg",
       tagsLabel: "Knit options",
-      tags: ["Anti-Pilling Yarns", "Acrylic & Cotton Blends", "Custom School Stripes", "Embroidery & Logo Patches"],
+      tags: [
+        "Anti-Pilling Yarns",
+        "Acrylic & Cotton Blends",
+        "Custom School Stripes",
+        "Embroidery & Logo Patches",
+      ],
       products: [
         {
           name: "V-Neck Jumpers",
           text: "Classic V-neck knits for school, corporate and casual use.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788770673/weaverbird/products/fydxlmdnka50fczuvwfd.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788770673/weaverbird/products/fydxlmdnka50fczuvwfd.jpg",
         },
         {
           name: "Crew Neck Jumpers",
           text: "Versatile round-neck sweaters in cotton and acrylic blends.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771180/weaverbird/products/lvppjjabbbpgognbgnkw.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771180/weaverbird/products/lvppjjabbbpgognbgnkw.jpg",
         },
         {
           name: "Buttoned Cardigans",
           text: "Button-front cardigans for layering across seasons.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771347/weaverbird/products/xbwd7bt5y2kn86pjdvay.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771347/weaverbird/products/xbwd7bt5y2kn86pjdvay.jpg",
         },
         {
           name: "Zip-Neck Pullovers",
           text: "Zip-neck styles for sport, work and smart-casual looks.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771721/weaverbird/products/vrzjnbmc5clytjhsmfgz.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771721/weaverbird/products/vrzjnbmc5clytjhsmfgz.jpg",
         },
         {
           name: "Sweatshirts",
           text: "Cotton-blend sweatshirts perfect for branding and uniforms.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771810/weaverbird/products/mnianrdeb6ntgi073f0u.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788771810/weaverbird/products/mnianrdeb6ntgi073f0u.jpg",
         },
         {
           name: "Hoodies",
           text: "Cosy hooded sweatshirts with kangaroo pockets.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788772008/weaverbird/products/lj2np1kbvx8pw7egslex.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788772008/weaverbird/products/lj2np1kbvx8pw7egslex.jpg",
         },
         {
           name: "Sleeveless Pullovers",
           text: "Lightweight sleeveless layers for active wear and schools.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788772755/weaverbird/products/swodhildyg0m8b27lx7e.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788772755/weaverbird/products/swodhildyg0m8b27lx7e.jpg",
         },
         {
           name: "Fleece Jackets",
           text: "Warm, quick-drying fleece jackets for work and teams. 100% cotton, easy-care and breathable.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788772990/weaverbird/products/eou3yfzyzdp7qjaxiczu.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788772990/weaverbird/products/eou3yfzyzdp7qjaxiczu.jpg",
         },
       ],
     },
@@ -736,62 +868,74 @@ export const AllProductCategories = {
         {
           name: "Team Tracksuits",
           text: "Matching tracksuit sets for squads, schools and clubs.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775219/weaverbird/products/wzdjz6asztyyuf6mxdvx.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775219/weaverbird/products/wzdjz6asztyyuf6mxdvx.jpg",
         },
         {
           name: "Sport/ PE Shorts",
           text: "Lightweight & breathable shorts for training, match day and gym sessions.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775841/weaverbird/products/x42tyfbluxaks1xmnec4.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775841/weaverbird/products/x42tyfbluxaks1xmnec4.jpg",
         },
         {
           name: "Training Wear",
           text: "Jerseys and tops designed for intensive practice sessions.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775460/weaverbird/products/gjumu3ezx1klnqcbta7y.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775460/weaverbird/products/gjumu3ezx1klnqcbta7y.jpg",
         },
         {
           name: "Performance Sets",
           text: "Coordinated performance tops and bottoms for athletes.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775305/weaverbird/products/ebhljmzti7d7yn2m3n83.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775305/weaverbird/products/ebhljmzti7d7yn2m3n83.jpg",
         },
         {
           name: "Hoodies",
           text: "Warm-up hoodies for pre- and post-training comfort.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775986/weaverbird/products/fazlayz08uksgxtfjsdo.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788775986/weaverbird/products/fazlayz08uksgxtfjsdo.jpg",
         },
         {
           name: "Windbreakers",
           text: "Light shell jackets that block wind without overheating.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788777154/weaverbird/products/eaardqg5rrtqcenwdlz5.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788777154/weaverbird/products/eaardqg5rrtqcenwdlz5.jpg",
         },
         {
           name: "Kids Sportswear",
           text: "Sized-down sportswear for school teams and youth clubs.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788778599/weaverbird/products/hhto3tujaxcjj2j1owlr.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788778599/weaverbird/products/hhto3tujaxcjj2j1owlr.jpg",
         },
         {
           name: "Leisure Wear Tracksuits",
           text: "Relaxed and comfortable tracksuits designed for everyday wear, travel and casual activities.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788776661/weaverbird/products/kha2hsqeypbsaiqbjxm2.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788776661/weaverbird/products/kha2hsqeypbsaiqbjxm2.jpg",
         },
         {
           name: "Club Sports Uniforms",
           text: "Custom sports uniforms for clubs, schools and teams with colours and branding to match.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788777444/weaverbird/products/alj34n6yacpmqtfpalnx.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788777444/weaverbird/products/alj34n6yacpmqtfpalnx.jpg",
         },
         {
           name: "Footballs & Volleyballs",
           text: "Quality volleyballs & footballs designed for school, club, training and competitive play.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788779442/weaverbird/products/rmnf2a7z8dlwhxydpj7w.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788779442/weaverbird/products/rmnf2a7z8dlwhxydpj7w.jpg",
         },
         {
           name: "Sports Socks",
           text: "Comfortable performance socks for football, training and other sporting activities.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788778898/weaverbird/products/hvk2wm2ryexythxsd6lm.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788778898/weaverbird/products/hvk2wm2ryexythxsd6lm.jpg",
         },
         {
           name: "Sports Bibs",
           text: "Lightweight breathable training bibs for team identification, practice sessions and sports events.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788776853/weaverbird/products/wniipbntrgti8jf24ai2.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788776853/weaverbird/products/wniipbntrgti8jf24ai2.jpg",
         },
       ],
     },
@@ -804,47 +948,84 @@ export const AllProductCategories = {
       banner:
         "https://res.cloudinary.com/dipkbpinx/image/upload/v1788545785/weaverbird/uhcxkgl1sb7sfkpevaxw.jpg",
       tagsLabel: "Heritage",
-      tags: ["Made in Africa", "Gift & Export Packaging", "Bulk Event Orders"],
+      tags: [
+        "Made in Africa",
+        "Gift & Export Packaging",
+        "Bulk Event Orders",
+        "Custom Designs & Products",
+      ],
       products: [
         {
           name: "Classic Checks Shuka",
           text: "Traditional checked shukas in bold, iconic patterns.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774553/weaverbird/products/dy30bmz37fxerwnycfwu.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774553/weaverbird/products/dy30bmz37fxerwnycfwu.jpg",
         },
         {
           name: "Modern Pattern Shuka",
           text: "Contemporary shuka designs for fashion and events.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788773524/weaverbird/products/zxp2iuo2tvi4yhtjmy1d.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788773524/weaverbird/products/zxp2iuo2tvi4yhtjmy1d.jpg",
         },
         {
           name: "Striped Shuka",
           text: "Striped heritage wraps in vibrant colour combinations.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788773650/weaverbird/products/u2bic6bjis6qkrjjqytw.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788773650/weaverbird/products/u2bic6bjis6qkrjjqytw.jpg",
         },
         {
           name: "Premium Luxury Fabrics",
           text: "Finer, softer shuka fabrics for gifts and special occasions.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774255/weaverbird/products/oinnhgqcxplacwlvdmp2.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774255/weaverbird/products/oinnhgqcxplacwlvdmp2.jpg",
         },
         {
           name: "Yellow Checks Shuka",
           text: "Vibrant yellow checked shukas with bold contrasting patterns for cultural, fashion and event wear.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853881/weaverbird/products/wowx9mhpacdmyyovxifg.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853881/weaverbird/products/wowx9mhpacdmyyovxifg.jpg",
         },
         {
           name: "Green Checks Shuka",
           text: "Rich green checked shukas with traditional contrasting accents for cultural, casual and ceremonial wear.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788854018/weaverbird/products/czqbpeoi6ip8foumhav5.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788854018/weaverbird/products/czqbpeoi6ip8foumhav5.jpg",
         },
         {
           name: "Plain Editions",
           text: "Solid-colour shukas for understated everyday wear.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774396/weaverbird/products/uwxoynaiiatwsmff7bmi.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774396/weaverbird/products/uwxoynaiiatwsmff7bmi.jpg",
         },
         {
           name: "Black & White Editions",
           text: "Monochrome shukas with bold contrast and clean lines.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774747/weaverbird/products/jtqrfj47qmcf9owycgtd.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788774747/weaverbird/products/jtqrfj47qmcf9owycgtd.jpg",
+        },
+        {
+          name: "Maasai Tops",
+          text: "Distinctive shirts crafted from vibrant Maasai-inspired checked fabrics with decorative traditional detailing.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789024492/weaverbird/products/wxymhjujxktyo8gnoofg.jpg",
+        },
+        {
+          name: "Maasai Bedcovers",
+          text: "Warm checked bedcovers inspired by traditional Maasai patterns, designed for homes, lodges and hospitality spaces.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789024498/weaverbird/products/rpt6t9rd6b1utohl8emk.jpg",
+        },
+        {
+          name: "Maasai Cushion & Sofa Covers",
+          text: "Vibrant Maasai-inspired cushion, picnic pillow and sofa covers for homes, lodges and safari hospitality spaces.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789024499/weaverbird/products/q2bt9eblnap6ljohkclj.jpg",
+        },
+        {
+          name: "Maasai Blankets & Duvets",
+          text: "Warm Maasai-inspired blankets and duvets available in colourful checked and striped patterns.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789024493/weaverbird/products/bcwmdsdr4lnvd8sdjwsg.jpg",
         },
       ],
     },
@@ -861,62 +1042,74 @@ export const AllProductCategories = {
         {
           name: "Branded Backpacks",
           text: "Durable backpacks with printed or embroidered logos.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788780708/weaverbird/products/wy4h98nuslrtq1totcqy.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788780708/weaverbird/products/wy4h98nuslrtq1totcqy.jpg",
         },
         {
           name: "Tote Bags",
           text: "Reusable cotton and canvas totes for events and retail.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781210/weaverbird/products/sqepxzjy3veiku3x8trc.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781210/weaverbird/products/sqepxzjy3veiku3x8trc.jpg",
         },
         {
           name: "Water Bottles",
           text: "Metal and BPA-free bottles branded with your logo.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781527/weaverbird/products/ik96q4k8cq7rd2pneiuz.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781527/weaverbird/products/ik96q4k8cq7rd2pneiuz.jpg",
         },
         {
           name: "Mugs",
           text: "Ceramic mugs perfect for corporate gifts and giveaways.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788782237/weaverbird/products/wdelz8q0r0bkyw1tqzhb.png",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788782237/weaverbird/products/wdelz8q0r0bkyw1tqzhb.png",
         },
         {
           name: "Caps",
           text: "Baseball and snapback caps with embroidered branding.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788846008/weaverbird/products/sdznpskydxyaectlkbrs.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788846008/weaverbird/products/sdznpskydxyaectlkbrs.jpg",
         },
         {
           name: "Notebooks",
           text: "Branded notebooks and journals for offices and events.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781039/weaverbird/products/huggww8risjfsvqqzbyu.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788781039/weaverbird/products/huggww8risjfsvqqzbyu.jpg",
         },
         {
           name: "USB Drives",
           text: "Custom-engraved USB drives for tech-focused promotions.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788784486/weaverbird/products/gflyrryqdxegzw18osei.png",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788784486/weaverbird/products/gflyrryqdxegzw18osei.png",
         },
         {
           name: "Pens",
           text: "Printed pens in a range of colours and finishes.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788784207/weaverbird/products/floxox42w3yslpmmwrai.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788784207/weaverbird/products/floxox42w3yslpmmwrai.jpg",
         },
         {
           name: "Keyrings",
           text: "Metal and acrylic keyrings for everyday brand visibility.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788846260/weaverbird/products/hmbhamrztlgk7ytdqzky.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788846260/weaverbird/products/hmbhamrztlgk7ytdqzky.jpg",
         },
         {
           name: "Skorts",
           text: "Practical skorts for school, sport and promotional kits.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788851753/weaverbird/products/tje7ka4h0wjjxxkwfgmv.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788851753/weaverbird/products/tje7ka4h0wjjxxkwfgmv.jpg",
         },
         {
           name: "Umbrellas",
           text: "Branded umbrellas for corporate gifts, events and outdoor promotions.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853102/weaverbird/products/kwimmphy8jscyykscnke.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853102/weaverbird/products/kwimmphy8jscyykscnke.jpg",
         },
         {
           name: "Drawstring Bags",
           text: "Lightweight branded drawstring bags for schools, sports and events.",
-          image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853326/weaverbird/products/oxzbfpytfjqlrjbqjxe2.jpg",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788853326/weaverbird/products/oxzbfpytfjqlrjbqjxe2.jpg",
         },
       ],
     },
