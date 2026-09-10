@@ -18,7 +18,7 @@ export function Industries() {
           Trusted by organizations across Kenya in every major sector.
         </p>
 
-        <div className="grid grid-cols-2 gap-4 py-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-6 md:grid-cols-3">
           {industries.map(({ icon: Icon, title, subtitle, image, link }) => (
             <Link
               key={title}
@@ -35,17 +35,11 @@ export function Industries() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d2b1e]/75 via-[#0d2b1e]/15 to-transparent" />
 
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-4 pb-5">
-                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full border border-red-300/70 bg-black/10 backdrop-blur-md">
+                  <div className="mb-2 hidden sm:flex h-10 w-10 items-center justify-center rounded-full border border-red-300/70 bg-black/10 backdrop-blur-md">
                     <Icon size={18} className="text-red-500" />
                   </div>
-
-                  <div className="text-center text-sm font-bold text-white">
-                    {title}
-                  </div>
-
-                  <div className="mt-0.5 text-center text-xs text-white/70">
-                    {subtitle}
-                  </div>
+                  <div className="text-center text-sm font-bold text-white">{title}</div>
+                  <div className="mt-0.5 text-center text-xs text-white/70">{subtitle}</div>
                 </div>
               </div>
             </Link>
