@@ -692,6 +692,12 @@ export const AllProductCategories = {
             "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766688/weaverbird/products/feu46ys69dptqmymsgaz.jpg",
         },
         {
+          name: "Nanny Uniforms",
+          text: "Smart, comfortable and easy-care uniforms designed for nannies, caregivers and domestic staff.",
+          image:
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1789106939/weaverbird/products/uemafko0sg6m64bmlqkc.jpg",
+        },
+        {
           name: "Reception Suits",
           text: "Elegant tailored suiting for hotel reception, concierge and guest-service teams.",
           image:
@@ -715,12 +721,12 @@ export const AllProductCategories = {
           image:
             "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/j9ocyueqjovmioepkyos.jpg",
         },
-        {
-          name: "Hospitality Headwear",
-          text: "Professional caps and headwear designed to complete hospitality staff uniforms.",
-          image:
-            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/zb10mgqeqojmopjexuql.jpg",
-        },
+        // {
+        //   name: "Hospitality Headwear",
+        //   text: "Professional caps and headwear designed to complete hospitality staff uniforms.",
+        //   image:
+        //     "https://res.cloudinary.com/dipkbpinx/image/upload/v1788766686/weaverbird/products/zb10mgqeqojmopjexuql.jpg",
+        // },
         {
           name: "Hotel Bedding & Linen",
           text: "Premium bedsheets, pillowcases and bedcovers with custom branding for hotels, lodges and resorts.",
