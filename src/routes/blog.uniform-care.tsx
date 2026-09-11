@@ -231,7 +231,7 @@ function UniformCarePage() {
 
             <Link
               to="/products"
-              className="inline-flex bg-primary-deep text-white w-full items-center justify-center gap-2 rounded-md border border-black/10 px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-black/5 sm:w-auto"
+              className="transition-all inline-flex bg-primary-deep text-white w-full items-center justify-center gap-2 rounded-md border border-black/10 px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-black/5 hover:text-maroon sm:w-auto"
             >
               <Shirt className="h-4 w-4" />
               Browse our products
