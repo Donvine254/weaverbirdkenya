@@ -22,18 +22,31 @@ import { Footer } from "@/components/layout/footer";
 const BUSINESS_EMAIL = "sales@weaverbirdkenya.com";
 
 const GARMENT_TYPES = [
-  "Dress", "Shirt", "Shorts", "Trouser", "Skirt", "Blazer / Jacket",
-  "Tracksuit", "T-Shirt", "Overall / Dust Coat", "Sweater", "Non-Woven Bag", "Other",
+  "Dress",
+  "Shirt",
+  "Shorts",
+  "Trouser",
+  "Skirt",
+  "Blazer / Jacket",
+  "Tracksuit",
+  "T-Shirt",
+  "Overall / Dust Coat",
+  "Sweater",
+  "Non-Woven Bag",
+  "Other",
 ] as const;
 
 const ORG_TYPES = [
-  "School / College", "Corporate / Office", "Security firm", "Hospitality",
-  "Healthcare", "Factory / Industrial", "Other",
+  "School / College",
+  "Corporate / Office",
+  "Security firm",
+  "Hospitality",
+  "Healthcare",
+  "Factory / Industrial",
+  "Other",
 ] as const;
 
-const BRANDING_OPTS = [
-  "Embroidery", "Screen printing", "Weaving", "No branding needed",
-] as const;
+const BRANDING_OPTS = ["Embroidery", "Screen printing", "Weaving", "No branding needed"] as const;
 
 type GarmentRow = {
   id: string;
@@ -53,14 +66,21 @@ export const Route = createFileRoute("/quote")({
   head: () => ({
     meta: [
       { title: "Request a Quote — Weaverbird Apparel Solutions" },
-      { name: "description", content: "Request a costed quotation for your organisation's uniforms and apparel. School, corporate, security, hospitality, healthcare & industrial." },
+      {
+        name: "description",
+        content:
+          "Request a costed quotation for your organisation's uniforms and apparel. School, corporate, security, hospitality, healthcare & industrial.",
+      },
       {
         name: "keywords",
         content:
           "uniform quote Kenya, school uniform quotation, corporate wear quote, bulk uniform order Kenya, custom uniform pricing, security uniform quote, hospitality uniform quote, garment manufacturing quotation, request uniform quote",
       },
       { property: "og:title", content: "Request a Quote — Weaverbird" },
-      { property: "og:description", content: "Tell us what you're outfitting and we'll send back a costed quotation." },
+      {
+        property: "og:description",
+        content: "Tell us what you're outfitting and we'll send back a costed quotation.",
+      },
       { property: "og:url", content: "https://weaverbirdkenya.lovable.app/quote" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -128,11 +148,13 @@ function PageHero() {
           Request a <span style={{ color: "oklch(0.78 0.18 145)" }}>Quote</span>
         </h1>
         <p className="animate-fade-in mx-auto mt-5 max-w-2xl text-white/80">
-          Tell us what you're outfitting and we'll send back a detailed, costed quotation tailored to your organisation — usually within one business day.
+          Tell us what you're outfitting and we'll send back a detailed, costed quotation tailored
+          to your organisation — usually within one business day.
         </p>
         <div className="animate-fade-in mx-auto mt-8 hidden max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium text-white/75 md:flex">
           <span className="inline-flex items-center gap-2">
-            <Clock className="h-4 w-4" style={{ color: "var(--accent-red)" }} /> Response within 24 hours
+            <Clock className="h-4 w-4" style={{ color: "var(--accent-red)" }} /> Response within 24
+            hours
           </span>
           <span className="inline-flex items-center gap-2">
             <ShieldCheck className="h-4 w-4" style={{ color: "var(--accent-red)" }} /> No obligation
@@ -184,15 +206,20 @@ function QuoteForm() {
   };
 
   const toggleBranding = (b: string) => {
-    setBranding((prev) => prev.includes(b) ? prev.filter((x) => x !== b) : [...prev, b]);
+    setBranding((prev) => (prev.includes(b) ? prev.filter((x) => x !== b) : [...prev, b]));
   };
 
   const updateRow = (id: string, patch: Partial<GarmentRow>) => {
     setRows((prev) => prev.map((r) => (r.id === id ? { ...r, ...patch } : r)));
   };
 
-  const addRow = () => setRows((prev) => [...prev, { id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" }]);
-  const removeRow = (id: string) => setRows((prev) => prev.length > 1 ? prev.filter((r) => r.id !== id) : prev);
+  const addRow = () =>
+    setRows((prev) => [
+      ...prev,
+      { id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" },
+    ]);
+  const removeRow = (id: string) =>
+    setRows((prev) => (prev.length > 1 ? prev.filter((r) => r.id !== id) : prev));
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -201,34 +228,68 @@ function QuoteForm() {
     const g = (k: string) => (fd.get(k) as string | null)?.trim() ?? "";
 
     const orgName = g("orgName");
-    const lines: string[] = [];
-    lines.push(`Quote reference: ${quoteRef}`);
-    lines.push("");
-    lines.push("== Organisation ==");
-    lines.push(`Company:         ${orgName}`);
-    lines.push(`Contact person:  ${g("contact")}`);
-    lines.push(`Phone:           ${g("phone")}`);
-    lines.push(`Email:           ${g("email")}`);
-    lines.push(`P.O. Box:        ${g("pobox") || "-"}`);
-    lines.push(`Town/Delivery:   ${g("town")}`);
-    lines.push(`Needed by:       ${g("neededBy") || "-"}`);
-    lines.push(`Organisation type: ${orgType}`);
-    lines.push("");
-    lines.push("== Garments ==");
-    rows.forEach((r, i) => {
-      const t = r.type === "Other" ? `Other - ${r.otherDesc}` : r.type;
-      lines.push(`${i + 1}. ${t} | Qty: ${r.qty} | Notes: ${r.notes || "-"}`);
-    });
-    lines.push("");
-    lines.push("== Branding & customisation ==");
-    lines.push(`Options: ${branding.length ? branding.join(", ") : "-"}`);
-    lines.push(`Details: ${g("brandingDetails") || "-"}`);
-    lines.push("");
-    lines.push("== Remarks ==");
-    lines.push(g("remarks") || "-");
 
-    const subject = `Quote request ${quoteRef} — ${orgName}`;
-    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    const garmentLines = rows.flatMap((r, i) => {
+      const garmentType = r.type === "Other" ? `Other — ${r.otherDesc}` : r.type;
+
+      return [
+        `${i + 1}. ${garmentType}`,
+        `   Quantity: ${r.qty}`,
+        `   Size / Notes: ${r.notes || "Not specified"}`,
+        "",
+      ];
+    });
+
+    const lines: string[] = [
+      "WEAVERBIRD GARMENTS MANUFACTURERS LTD.",
+      "REQUEST FOR QUOTATION",
+      "",
+      `Reference: ${quoteRef}`,
+      "────────────────────────────────────────",
+      "",
+      "CUSTOMER DETAILS",
+      "",
+      `Organisation:      ${orgName}`,
+      `Organisation Type: ${orgType}`,
+      `Contact Person:    ${g("contact")}`,
+      `Phone:             ${g("phone")}`,
+      `Email:             ${g("email")}`,
+      `P.O. Box:          ${g("pobox") || "Not provided"}`,
+      `Delivery Location: ${g("town")}`,
+      `Required By:       ${g("neededBy") || "Not specified"}`,
+      "",
+      "",
+      "GARMENTS REQUIRED",
+      "",
+      ...garmentLines,
+      "",
+      "BRANDING & CUSTOMISATION",
+      "",
+      `Branding: ${branding.length ? branding.join(", ") : "Not specified"}`,
+      `Details: ${g("brandingDetails") || "Not provided"}`,
+      "",
+      "",
+      "ADDITIONAL REQUIREMENTS",
+      "",
+      g("remarks") || "No additional requirements provided.",
+      "",
+      "",
+      "────────────────────────────────────────",
+      "QUOTE REQUEST SUMMARY",
+      "",
+      `Reference: ${quoteRef}`,
+      `Organisation: ${orgName}`,
+      "",
+      "Please prepare a quotation based on the requirements above.",
+      "",
+      "Submitted via the Weaverbird website quotation form.",
+    ];
+    const subject = `RFQ | ${quoteRef} | ${orgName}`;
+    const mailto =
+      `mailto:${BUSINESS_EMAIL}` +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(lines.join("\n"))}`;
+
     window.location.href = mailto;
     setSubmitted({ mailto });
   };
@@ -249,12 +310,8 @@ function QuoteForm() {
               className="flex items-center justify-between px-6 py-4 sm:px-10"
               style={{ background: "var(--color-maroon)" }}
             >
-              <p className="text-sm font-semibold text-white">
-                Quote request form
-              </p>
-              <p className="font-mono text-xs tracking-widest text-white/70">
-                {quoteRef}
-              </p>
+              <p className="text-sm font-semibold text-white">Quote request form</p>
+              <p className="font-mono text-xs tracking-widest text-white/70">{quoteRef}</p>
             </div>
 
             <div className="p-6 sm:p-10">
@@ -262,13 +319,24 @@ function QuoteForm() {
               <Fieldset num="01" title="Your organisation">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <Field label="Organisation / Company name" required className="sm:col-span-2">
-                    <input name="orgName" required placeholder="e.g. XYZ Limited" className={inputCls} />
+                    <input
+                      name="orgName"
+                      required
+                      placeholder="e.g. XYZ Limited"
+                      className={inputCls}
+                    />
                   </Field>
                   <Field label="Contact person" required>
                     <input name="contact" required className={inputCls} />
                   </Field>
                   <Field label="Phone number" required>
-                    <input name="phone" type="tel" required placeholder="07XX XXX XXX" className={inputCls} />
+                    <input
+                      name="phone"
+                      type="tel"
+                      required
+                      placeholder="07XX XXX XXX"
+                      className={inputCls}
+                    />
                   </Field>
                   <Field label="Email address" required>
                     <input name="email" type="email" required className={inputCls} />
@@ -295,11 +363,19 @@ function QuoteForm() {
                         type="button"
                         key={o}
                         onClick={() => setOrgType(o)}
-                        className={`rounded-md cursor-pointer border px-3 py-2.5 text-sm font-medium transition-all active:scale-95 ${active
+                        className={`rounded-md cursor-pointer border px-3 py-2.5 text-sm font-medium transition-all active:scale-95 ${
+                          active
                             ? "border-transparent text-white shadow-md"
                             : "border-input bg-background hover:border-[var(--color-maroon)]/50 hover:bg-accent"
-                          }`}
-                        style={active ? { background: "var(--color-maroon)", boxShadow: "0 8px 20px -8px oklch(0.293 0.137 19.5 / 0.5)" } : {}}
+                        }`}
+                        style={
+                          active
+                            ? {
+                                background: "var(--color-maroon)",
+                                boxShadow: "0 8px 20px -8px oklch(0.293 0.137 19.5 / 0.5)",
+                              }
+                            : {}
+                        }
                         aria-pressed={active}
                       >
                         {o}
@@ -323,7 +399,9 @@ function QuoteForm() {
                     >
                       <div className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_120px_1.2fr_auto]">
                         <div>
-                          <label className={labelCls} htmlFor={`garment-type-${idx}`}>Garment type</label>
+                          <label className={labelCls} htmlFor={`garment-type-${idx}`}>
+                            Garment type
+                          </label>
                           <select
                             id={`garment-type-${idx}`}
                             required
@@ -331,8 +409,14 @@ function QuoteForm() {
                             onChange={(e) => updateRow(r.id, { type: e.target.value })}
                             className={inputCls}
                           >
-                            <option value="" disabled>Select…</option>
-                            {GARMENT_TYPES.map((g) => <option key={g} value={g}>{g}</option>)}
+                            <option value="" disabled>
+                              Select…
+                            </option>
+                            {GARMENT_TYPES.map((g) => (
+                              <option key={g} value={g}>
+                                {g}
+                              </option>
+                            ))}
                           </select>
                           {r.type === "Other" && (
                             <input
@@ -346,7 +430,9 @@ function QuoteForm() {
                           )}
                         </div>
                         <div>
-                          <label className={labelCls} htmlFor={`garment-qty-${idx}`}>Quantity</label>
+                          <label className={labelCls} htmlFor={`garment-qty-${idx}`}>
+                            Quantity
+                          </label>
                           <input
                             id={`garment-qty-${idx}`}
                             required
@@ -359,7 +445,9 @@ function QuoteForm() {
                           />
                         </div>
                         <div>
-                          <label className={labelCls} htmlFor={`garment-notes-${idx}`}>Size / notes</label>
+                          <label className={labelCls} htmlFor={`garment-notes-${idx}`}>
+                            Size / notes
+                          </label>
                           <input
                             id={`garment-notes-${idx}`}
                             value={r.notes}
@@ -402,11 +490,19 @@ function QuoteForm() {
                         type="button"
                         key={b}
                         onClick={() => toggleBranding(b)}
-                        className={`rounded-md cursor-pointer border px-3 py-2.5 text-sm font-medium transition-all active:scale-95 ${active
+                        className={`rounded-md cursor-pointer border px-3 py-2.5 text-sm font-medium transition-all active:scale-95 ${
+                          active
                             ? "border-transparent text-white shadow-md"
                             : "border-input bg-background hover:border-[var(--color-maroon)]/50 hover:bg-accent"
-                          }`}
-                        style={active ? { background: "var(--color-maroon)", boxShadow: "0 8px 20px -8px oklch(0.293 0.137 19.5 / 0.5)" } : {}}
+                        }`}
+                        style={
+                          active
+                            ? {
+                                background: "var(--color-maroon)",
+                                boxShadow: "0 8px 20px -8px oklch(0.293 0.137 19.5 / 0.5)",
+                              }
+                            : {}
+                        }
                         aria-pressed={active}
                       >
                         {b}
@@ -415,7 +511,9 @@ function QuoteForm() {
                   })}
                 </div>
                 <div className="mt-4">
-                  <label className={labelCls} htmlFor="brandingDetails">Logo / colours / placement details</label>
+                  <label className={labelCls} htmlFor="brandingDetails">
+                    Logo / colours / placement details
+                  </label>
                   <textarea
                     id="brandingDetails"
                     name="brandingDetails"
@@ -428,7 +526,9 @@ function QuoteForm() {
 
               {/* 05 Remarks */}
               <Fieldset num="05" title="Anything else?" last>
-                <label className={labelCls} htmlFor="remarks">Remarks</label>
+                <label className={labelCls} htmlFor="remarks">
+                  Remarks
+                </label>
                 <textarea
                   id="remarks"
                   name="remarks"
@@ -444,7 +544,10 @@ function QuoteForm() {
                   <button
                     type="submit"
                     className="group cursor-pointer inline-flex flex-1 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg hover:brightness-110 active:scale-95"
-                    style={{ background: "var(--color-maroon)", boxShadow: "0 10px 25px -10px oklch(0.293 0.137 19.5 / 0.55)" }}
+                    style={{
+                      background: "var(--color-maroon)",
+                      boxShadow: "0 10px 25px -10px oklch(0.293 0.137 19.5 / 0.55)",
+                    }}
                   >
                     Send quote request
                     <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -470,7 +573,10 @@ function QuoteForm() {
               <div className="h-1.5" style={{ background: "oklch(0.55 0.18 145)" }} />
               <div className="p-6 sm:p-10">
                 <div className="flex items-start gap-4">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full" style={{ background: "oklch(0.78 0.18 145 / 0.15)" }}>
+                  <span
+                    className="grid h-12 w-12 shrink-0 place-items-center rounded-full"
+                    style={{ background: "oklch(0.78 0.18 145 / 0.15)" }}
+                  >
                     <CheckCircle2 className="h-6 w-6" style={{ color: "oklch(0.55 0.18 145)" }} />
                   </span>
                   <div className="flex-1">
@@ -507,8 +613,12 @@ function QuoteForm() {
             </div>
             <div className="p-6">
               <div className="flex items-center justify-between text-xs font-semibold">
-                <span className="text-muted-foreground">{completedSteps} of 5 sections started</span>
-                <span style={{ color: "var(--color-maroon)" }}>{Math.round((completedSteps / 5) * 100)}%</span>
+                <span className="text-muted-foreground">
+                  {completedSteps} of 5 sections started
+                </span>
+                <span style={{ color: "var(--color-maroon)" }}>
+                  {Math.round((completedSteps / 5) * 100)}%
+                </span>
               </div>
               <div className="mt-3 h-2 overflow-hidden rounded-full bg-muted">
                 <div
@@ -538,7 +648,9 @@ function QuoteForm() {
                     >
                       {s.done ? <CheckCircle2 className="h-3.5 w-3.5" /> : i + 1}
                     </span>
-                    <span className={s.done ? "font-medium text-foreground" : "text-muted-foreground"}>
+                    <span
+                      className={s.done ? "font-medium text-foreground" : "text-muted-foreground"}
+                    >
                       {s.label}
                     </span>
                   </li>
@@ -561,7 +673,10 @@ function QuoteForm() {
                 <li key={i} className="flex items-start gap-3">
                   <span
                     className="grid h-9 w-9 shrink-0 place-items-center rounded-md"
-                    style={{ background: "oklch(0.293 0.137 19.5 / 0.1)", color: "var(--color-maroon)" }}
+                    style={{
+                      background: "oklch(0.293 0.137 19.5 / 0.1)",
+                      color: "var(--color-maroon)",
+                    }}
                   >
                     <step.icon className="h-4 w-4" />
                   </span>
@@ -574,7 +689,9 @@ function QuoteForm() {
           {/* Direct contact */}
           <div
             className="rounded-2xl p-6 text-white shadow-md"
-            style={{ background: "linear-gradient(150deg, var(--primary-darker), oklch(0.10 0.05 155))" }}
+            style={{
+              background: "linear-gradient(150deg, var(--primary-darker), oklch(0.10 0.05 155))",
+            }}
           >
             <h3 className="text-base font-bold" style={{ fontFamily: "var(--font-display)" }}>
               Prefer to talk to us?
@@ -612,7 +729,17 @@ const inputCls =
   "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-maroon)] focus-visible:border-[var(--color-maroon)] hover:border-foreground/30 disabled:cursor-not-allowed disabled:opacity-50";
 const labelCls = "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-muted-foreground";
 
-function Fieldset({ num, title, children, last }: { num: string; title: string; children: React.ReactNode; last?: boolean }) {
+function Fieldset({
+  num,
+  title,
+  children,
+  last,
+}: {
+  num: string;
+  title: string;
+  children: React.ReactNode;
+  last?: boolean;
+}) {
   return (
     <fieldset className={last ? "" : "mb-8 border-b pb-8"}>
       <legend className="mb-4 flex items-center gap-3">
@@ -631,12 +758,27 @@ function Fieldset({ num, title, children, last }: { num: string; title: string; 
   );
 }
 
-function Field({ label, required, className, children }: { label: string; required?: boolean; className?: string; children: React.ReactNode }) {
+function Field({
+  label,
+  required,
+  className,
+  children,
+}: {
+  label: string;
+  required?: boolean;
+  className?: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className={className}>
       <label className="block">
         <span className={labelCls}>
-          {label} {required && <span style={{ color: "var(--accent-red)" }} aria-hidden>*</span>}
+          {label}{" "}
+          {required && (
+            <span style={{ color: "var(--accent-red)" }} aria-hidden>
+              *
+            </span>
+          )}
         </span>
         {children}
       </label>

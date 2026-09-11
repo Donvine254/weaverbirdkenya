@@ -2,12 +2,12 @@ import {
   MapPin,
   Mail,
   Phone,
-  Smartphone,
   Clock,
   Calendar,
   Shirt,
   ChevronRight,
   Leaf,
+  LucideIcon,
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
@@ -16,7 +16,7 @@ import footerFabric from "@/assets/footer-fabric.jpg";
 import { InstagramIcon, FacebookCircleLogo, TiktokColorLogo, WhatsappLogo } from "@/assets/icons";
 
 /* ----------------- Footer ----------------- */
-export function FooterColHeader({ icon: Icon, title }: { icon: any; title: string }) {
+export function FooterColHeader({ icon: Icon, title }: { icon: LucideIcon; title: string }) {
   return (
     <div className="mb-6 flex items-center gap-4">
       <span
@@ -48,7 +48,6 @@ export function Footer() {
     { title: "Screen Printing", href: "/services#screen-printing" },
     { title: "Embroidery", href: "/services#embroidery" },
     { title: "Weaving", href: "/services#weaving" },
-    { title: "Other Apparel", href: "/products#medical-wear" },
   ];
   const socials = [
     {
@@ -57,7 +56,11 @@ export function Footer() {
       href: "https://facebook.com/weaverbirdgarmentsltd",
     },
     // { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
-    { icon: InstagramIcon, label: "Instagram", href: "https://www.instagram.com/popular/weaverbird-kenya" },
+    {
+      icon: InstagramIcon,
+      label: "Instagram",
+      href: "https://www.instagram.com/popular/weaverbird-kenya",
+    },
     { icon: TiktokColorLogo, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
     { icon: WhatsappLogo, label: "Whatsapp", href: "https://wa.me/254722264464" },
   ];
@@ -191,7 +194,7 @@ export function Footer() {
             </ul>
             <Link
               to="/blog/uniform-care"
-              className="mt-4 inline-flex items-center gap-3 text-sm font-semibold text-white/85 transition hover:text-white"
+              className="mt-4 inline-flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
             >
               <ChevronRight className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
               Uniform Care Guide

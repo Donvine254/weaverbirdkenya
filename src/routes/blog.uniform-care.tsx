@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Droplets, ReceiptText } from "lucide-react";
+import { ArrowRight, Droplets, ReceiptText, Shirt } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
@@ -71,7 +71,8 @@ type Stain = {
 const stains: Stain[] = [
   {
     name: "Oil and grease",
-    cause: "Machine oil, cooking fat, chain grease and engine splashes on workwear and kitchen uniforms.",
+    cause:
+      "Machine oil, cooking fat, chain grease and engine splashes on workwear and kitchen uniforms.",
     steps: [
       "Blot the excess with a paper towel — never rub, it pushes oil deeper into the weave.",
       "Cover the mark with a spoonful of dry cornflour, talc or baking soda and leave it 20–30 minutes to draw the oil out, then brush it off.",
@@ -100,7 +101,8 @@ const stains: Stain[] = [
       "Rub in a little bar soap or an enzyme detergent and leave 10 minutes.",
       "Wash cold; repeat before drying if a shadow remains.",
     ],
-    avoid: "Never use hot water — it cooks the protein in blood and locks the stain into the fibres.",
+    avoid:
+      "Never use hot water — it cooks the protein in blood and locks the stain into the fibres.",
   },
   {
     name: "Grass and mud",
@@ -160,11 +162,11 @@ function UniformCarePage() {
           subtitle="Uniforms are built to last, but only if they are cared for well. Here is how our production team treats the stains that shorten a uniform's life fastest."
         />
 
-        <article className="mx-auto max-w-3xl px-6 py-14 lg:py-20">
+        <article className="mx-auto max-w-4xl px-6 py-14 lg:py-16">
           <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
             Before you start
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
             Three rules cover almost every stain: act quickly, work from the back of the fabric so
             the stain travels out rather than through, and keep heat away until the mark is gone. A
             garment that has been tumble dried or ironed over a stain is far harder to rescue.
@@ -177,18 +179,15 @@ function UniformCarePage() {
           </h2>
           <div className="mt-6 space-y-6">
             {stains.map((stain) => (
-              <section
-                key={stain.name}
-                className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_1px_2px_rgba(13,43,30,0.04),0_12px_32px_-16px_rgba(13,43,30,0.15)]"
-              >
+              <section key={stain.name}>
                 <h3 className="text-lg font-bold text-foreground">{stain.name}</h3>
-                <p className="mt-1.5 text-sm text-muted-foreground">{stain.cause}</p>
-                <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-foreground/85">
+                <p className="mt-1.5 text-sm text-foreground/85 sm:text-base">{stain.cause}</p>
+                <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-foreground/85 sm:text-base">
                   {stain.steps.map((step) => (
                     <li key={step}>{step}</li>
                   ))}
                 </ol>
-                <p className="mt-4 text-sm font-medium text-maroon">{stain.avoid}</p>
+                <p className="mt-4 text-sm sm:text-base font-medium text-maroon">{stain.avoid}</p>
               </section>
             ))}
           </div>
@@ -219,21 +218,23 @@ function UniformCarePage() {
             company can be produced without starting the sizing from scratch.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-wrap gap-3 sm:flex-nowrap">
             <Link
               to="/quote"
-              className="group inline-flex items-center gap-2 rounded-md bg-maroon px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-maroon px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:w-auto"
               style={{ boxShadow: "var(--shadow-red)" }}
             >
               <ReceiptText className="h-4 w-4" />
               Request replacement sets
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
+
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 rounded-md border border-black/10 px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-black/5"
+              className="inline-flex bg-primary-deep text-white w-full items-center justify-center gap-2 rounded-md border border-black/10 px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-black/5 sm:w-auto"
             >
-              Browse our uniforms
+              <Shirt className="h-4 w-4" />
+              Browse our products
             </Link>
           </div>
         </article>
