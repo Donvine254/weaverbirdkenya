@@ -351,16 +351,18 @@
 // }
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { TextSpacingIcon } from "../assets/icons";
 import {
   PersonStanding,
   X,
   Type,
   Eye,
+  ListChevronsUpDown,
   Contrast,
   Droplets,
-  Pause,
+  CirclePause,
   BookOpen,
-  MousePointerClick,
+  Link2,
   RotateCcw,
   Check,
 } from "lucide-react";
@@ -384,7 +386,7 @@ const FEATURES: Feature[] = [
   {
     key: "highlightLinks",
     label: "Highlight Links",
-    icon: MousePointerClick,
+    icon: Link2,
     desc: "Make links easier to identify",
   },
   {
@@ -408,7 +410,7 @@ const FEATURES: Feature[] = [
   {
     key: "pauseAnimations",
     label: "Pause Animations",
-    icon: Pause,
+    icon: CirclePause,
     desc: "Stop animations and transitions",
   },
   {
@@ -422,6 +424,7 @@ const FEATURES: Feature[] = [
 const STORAGE_KEY = "wbd-a11y-prefs";
 
 const MAX_FONT_SIZE = 4;
+const MAX_LINE_HEIGHT = 3;
 
 export function AccessibilityWidget() {
   const [open, setOpen] = useState(false);
@@ -429,6 +432,7 @@ export function AccessibilityWidget() {
   const [active, setActive] = useState<Set<FeatureKey>>(() => new Set<FeatureKey>());
 
   const [fontSize, setFontSize] = useState(0);
+  const [lineHeight, setLineHeight] = useState(0);
 
   const panelRef = useRef<HTMLDivElement>(null);
   const guideRef = useRef<HTMLDivElement>(null);
@@ -447,6 +451,7 @@ export function AccessibilityWidget() {
       const parsed = JSON.parse(saved) as {
         features?: FeatureKey[];
         fontSize?: number;
+        lineHeight?: number;
       };
 
       if (Array.isArray(parsed.features)) {
@@ -455,6 +460,10 @@ export function AccessibilityWidget() {
 
       if (typeof parsed.fontSize === "number") {
         setFontSize(Math.min(MAX_FONT_SIZE, Math.max(0, parsed.fontSize)));
+      }
+
+      if (typeof parsed.lineHeight === "number") {
+        setLineHeight(Math.min(MAX_LINE_HEIGHT, Math.max(0, parsed.lineHeight)));
       }
     } catch {
       // Ignore invalid localStorage data
@@ -471,12 +480,13 @@ export function AccessibilityWidget() {
         JSON.stringify({
           features: [...active],
           fontSize,
+          lineHeight,
         }),
       );
     } catch {
       // Ignore storage errors
     }
-  }, [active, fontSize]);
+  }, [active, fontSize, lineHeight]);
 
   /**
    * Apply accessibility feature classes
@@ -509,6 +519,23 @@ export function AccessibilityWidget() {
 
     root.style.fontSize = `${100 + fontSize * 8}%`;
   }, [fontSize]);
+
+  /**
+   * Apply multi-level line height
+   */
+  useEffect(() => {
+    const root = document.documentElement;
+
+    root.classList.remove("a11y-lineHeight-1", "a11y-lineHeight-2", "a11y-lineHeight-3");
+
+    if (lineHeight > 0) {
+      root.classList.add(`a11y-lineHeight-${lineHeight}`);
+    }
+
+    return () => {
+      root.classList.remove("a11y-lineHeight-1", "a11y-lineHeight-2", "a11y-lineHeight-3");
+    };
+  }, [lineHeight]);
 
   /**
    * Reading guide
@@ -657,18 +684,23 @@ export function AccessibilityWidget() {
     });
   }, []);
 
+  const cycleLineHeight = useCallback(() => {
+    setLineHeight((current) => (current >= MAX_LINE_HEIGHT ? 0 : current + 1));
+  }, []);
+
   /**
    * Reset all accessibility settings
    */
   const resetAll = useCallback(() => {
     setActive(new Set());
     setFontSize(0);
+    setLineHeight(0);
   }, []);
 
   /**
    * Number shown on floating accessibility button
    */
-  const enabledCount = active.size + (fontSize > 0 ? 1 : 0);
+  const enabledCount = active.size + (fontSize > 0 ? 1 : 0) + (lineHeight > 0 ? 1 : 0);
 
   return (
     <>
@@ -695,6 +727,7 @@ export function AccessibilityWidget() {
       <button
         type="button"
         ref={triggerRef}
+        tabIndex={0}
         onClick={() => setOpen((previous) => !previous)}
         aria-label="Accessibility options"
         aria-haspopup="dialog"
@@ -729,9 +762,9 @@ export function AccessibilityWidget() {
               HEADER
           ================================================== */}
 
-          <div className="flex items-center justify-between bg-[#101d16] px-5 py-4">
+          <div className="flex items-center justify-between bg-primary-deep px-5 py-4">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold">
                 <PersonStanding size={22} className="text-white" aria-hidden="true" />
               </span>
 
@@ -740,7 +773,7 @@ export function AccessibilityWidget() {
                   Accessibility Menu
                 </div>
 
-                <div className="mt-0.5 text-[11px] text-white/65">
+                <div className="mt-0.5 text-[11px] text-white">
                   Customize your browsing experience
                 </div>
               </div>
@@ -749,12 +782,13 @@ export function AccessibilityWidget() {
             <button
               type="button"
               ref={closeRef}
+              tabIndex={0}
               onClick={() => {
                 setOpen(false);
                 triggerRef.current?.focus();
               }}
               aria-label="Close accessibility menu"
-              className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white/80 transition-colors hover:bg-white/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-white/20 text-white transition-colors hover:bg-white/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               <X size={18} aria-hidden="true" />
             </button>
@@ -772,6 +806,7 @@ export function AccessibilityWidget() {
 
               <button
                 type="button"
+                tabIndex={0}
                 onClick={cycleFontSize}
                 aria-pressed={fontSize > 0}
                 aria-label={
@@ -779,7 +814,7 @@ export function AccessibilityWidget() {
                     ? "Bigger Text. Default size"
                     : `Bigger Text. ${fontSize * 8} percent larger`
                 }
-                className={`group relative flex min-h-[112px] flex-col items-center justify-center rounded-2xl border px-3 py-4 text-center shadow-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 ${
+                className={`group relative flex min-h-[96px] cursor-pointer flex-col items-center justify-center rounded-2xl border px-3 py-3 text-center shadow-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 ${
                   fontSize > 0
                     ? "border-green-700 bg-green-50 shadow-[0_5px_18px_rgba(22,101,52,0.12)]"
                     : "border-gray-200 bg-white hover:-translate-y-0.5 hover:border-green-400 hover:shadow-md"
@@ -825,6 +860,66 @@ export function AccessibilityWidget() {
                 </span>
               </button>
 
+              <button
+                type="button"
+                tabIndex={0}
+                onClick={cycleLineHeight}
+                aria-pressed={lineHeight > 0}
+                aria-label={
+                  lineHeight === 0 ? "Line Height. Default" : `Line Height. Level ${lineHeight}`
+                }
+                className={`group relative flex min-h-[96px] cursor-pointer flex-col items-center justify-center rounded-2xl border px-3 py-3 text-center shadow-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 ${
+                  lineHeight > 0
+                    ? "border-green-700 bg-green-50 shadow-[0_5px_18px_rgba(22,101,52,0.12)]"
+                    : "border-gray-200 bg-white hover:-translate-y-0.5 hover:border-green-400 hover:shadow-md"
+                }`}
+              >
+                {lineHeight > 0 && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute right-2.5 top-2.5 flex h-5 w-5 items-center justify-center rounded-full bg-green-700 text-white"
+                  >
+                    <Check size={12} strokeWidth={3} />
+                  </span>
+                )}
+
+                <ListChevronsUpDown
+                  size={27}
+                  strokeWidth={1.8}
+                  aria-hidden="true"
+                  className={`mb-2 transition-colors ${
+                    lineHeight > 0 ? "text-green-800" : "text-gray-700 group-hover:text-green-800"
+                  }`}
+                />
+
+                <span
+                  className={`text-[13px] font-semibold leading-tight ${
+                    lineHeight > 0 ? "text-green-950" : "text-gray-800"
+                  }`}
+                >
+                  Line Height
+                </span>
+
+                <div aria-hidden="true" className="mt-2 flex gap-1">
+                  {[1, 2, 3].map((level) => (
+                    <span
+                      key={level}
+                      className={`h-1.5 w-5 rounded-full transition-colors ${
+                        level <= lineHeight ? "bg-green-700" : "bg-gray-200"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <span
+                  className={`mt-1.5 text-[10px] font-medium ${
+                    lineHeight > 0 ? "text-green-700" : "text-gray-400"
+                  }`}
+                >
+                  {lineHeight === 0 ? "Default" : `Level ${lineHeight}`}
+                </span>
+              </button>
+
               {/* ==============================================
                   OTHER ACCESSIBILITY TOOLS
               ============================================== */}
@@ -837,11 +932,12 @@ export function AccessibilityWidget() {
                   <button
                     key={feature.key}
                     type="button"
+                    tabIndex={0}
                     onClick={() => toggle(feature.key)}
                     aria-pressed={isOn}
                     aria-label={`${feature.label}. ${isOn ? "Enabled" : "Disabled"}`}
                     title={feature.desc}
-                    className={`group relative flex min-h-[112px] flex-col items-center justify-center rounded-2xl border px-3 py-4 text-center shadow-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 ${
+                    className={`group relative flex min-h-[96px] cursor-pointer flex-col items-center justify-center rounded-2xl border px-3 py-3 text-center shadow-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 ${
                       isOn
                         ? "border-green-700 bg-green-50 shadow-[0_5px_18px_rgba(22,101,52,0.12)]"
                         : "border-gray-200 bg-white hover:-translate-y-0.5 hover:border-green-400 hover:shadow-md"
@@ -857,12 +953,21 @@ export function AccessibilityWidget() {
                       </span>
                     )}
                     {/* Icon */}
-                    <Icon
-                      size={27}
-                      strokeWidth={1.8}
-                      aria-hidden="true"
-                      className={`mb-2 transition-colors ${isOn ? "text-green-800" : "text-gray-700 group-hover:text-green-800"}`}
-                    />
+                    {feature.key === "textSpacing" ? (
+                      <TextSpacingIcon
+                        width={27}
+                        height={27}
+                        aria-hidden="true"
+                        className={`mb-2 transition-colors ${isOn ? "text-green-800" : "text-gray-700 group-hover:text-green-800"}`}
+                      />
+                    ) : (
+                      <Icon
+                        size={27}
+                        strokeWidth={1.8}
+                        aria-hidden="true"
+                        className={`mb-2 transition-colors ${isOn ? "text-green-800" : "text-gray-700 group-hover:text-green-800"}`}
+                      />
+                    )}
 
                     {/* Label */}
 
@@ -888,8 +993,10 @@ export function AccessibilityWidget() {
           <div className="flex items-center justify-between border-t border-gray-100 bg-white px-5 py-3.5">
             <button
               type="button"
+              tabIndex={0}
               onClick={resetAll}
-              disabled={active.size === 0 && fontSize === 0}
+              aria-label="Reset all accessibility settings"
+              disabled={active.size === 0 && fontSize === 0 && lineHeight === 0}
               className="inline-flex items-center gap-1.5 cursor-pointer rounded text-xs font-semibold text-gray-500 transition-colors hover:text-red-600 disabled:cursor-not-allowed disabled:opacity-40 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
             >
               <RotateCcw size={14} aria-hidden="true" />

@@ -212,7 +212,21 @@
 .a11y-textSpacing * {
   letter-spacing: 0.08em !important;
   word-spacing: 0.16em !important;
+}
+
+/* Line height - Level 1 */
+html.a11y-lineHeight-1 * {
+  line-height: 1.6 !important;
+}
+
+/* Line height - Level 2 */
+html.a11y-lineHeight-2 * {
   line-height: 1.8 !important;
+}
+
+/* Line height - Level 3 */
+html.a11y-lineHeight-3 * {
+  line-height: 2 !important;
 }
 
 /* High contrast */
@@ -276,7 +290,11 @@
   animation: scaleIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 @keyframes moveLeft {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(-10px); }
+  0%,
+  100% {
+    transform: translateX(0);
   }
-
+  50% {
+    transform: translateX(-10px);
+  }
+}
