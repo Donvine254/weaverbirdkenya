@@ -32,7 +32,7 @@ export function Industries() {
             <Link
               key={title}
               to={link}
-               aria-label={`Explore ${title}`}
+              aria-label={`Explore ${title}`}
               className="group flex items-center overflow-hidden rounded-xl border border-black/[0.06] bg-white shadow-sm transition hover:shadow-md"
             >
               {/* Image */}

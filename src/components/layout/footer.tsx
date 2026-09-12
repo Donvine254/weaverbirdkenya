@@ -20,7 +20,7 @@ export function FooterColHeader({ icon: Icon, title }: { icon: LucideIcon; title
   return (
     <div className="mb-6 flex items-center gap-4">
       <span
-        className="grid h-14 w-14 place-items-center rounded-full ring-1"
+        className="grid h-10 w-10 place-items-center rounded-full ring-1"
         style={{
           borderColor: "oklch(0.66 0.22 25 / 0.4)",
           background: "oklch(0.13 0.05 155 / 0.4)",
@@ -99,8 +99,8 @@ export function Footer() {
             <FooterColHeader icon={MapPin} title="CONTACT INFO" />
             <ul className="space-y-4 text-sm text-white/85">
               <li className="flex gap-3 border-b border-white/10 pb-4">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
-                  <MapPin className="h-4 w-4 text-white/80" />
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-maroon">
+                  <MapPin className="h-4 w-4 text-white" />
                 </span>
                 <span>
                   Off Thika-Garissa Highway
@@ -109,36 +109,31 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3 border-b border-white/10 pb-4">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
-                  <Mail className="h-4 w-4 text-white/80" />
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-maroon">
+                  <Mail className="h-4 w-4 text-white" />
                 </span>
-                <a
-                  href="mailto:sales@weaverbirdkenya.com"
-                  aria-label="Email Weaverbird sales team"
-                >
+                <a href="mailto:sales@weaverbirdkenya.com" aria-label="Email Weaverbird sales team">
                   sales@weaverbirdkenya.com
                 </a>
               </li>
               <li className="flex items-center gap-3 border-b border-white/10 pb-4">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
-                  <Phone className="h-4 w-4 text-white/80" />
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-maroon">
+                  <Phone className="h-4 w-4 text-white" />
                 </span>
-                <span>
+
+                <span className="flex flex-col gap-3">
                   <a href="tel:0202051487" aria-label="Call Weaverbird toll-free line 020-2051487">
                     020-2051487 (Toll Free)
                   </a>
-                  / <br />
-                  <a href="tel:+254722264464" aria-label="Call Weaverbird mobile line +254 722 264464">
+
+                  <a
+                    href="tel:+254722264464"
+                    aria-label="Call Weaverbird mobile line +254 722 264464"
+                  >
                     +254 722 264464
                   </a>
                 </span>
               </li>
-              {/* <li className="flex items-center gap-3">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/5">
-                  <Smartphone className="h-4 w-4 text-white/80" />
-                </span>
-                <a href="tel:+254722264464">+254 722 264464</a>
-              </li> */}
             </ul>
             {/* socials */}
             <div className="mt-6 flex items-center gap-4">
