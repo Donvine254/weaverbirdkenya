@@ -22,12 +22,12 @@ const serviceCategories = [
   { label: "Embroidery", hash: "embroidery" },
   { label: "Screen Printing", hash: "screen-printing" },
   { label: "Weaving and Knitting", hash: "weaving" },
-  { label: "Cutting & Stitching", hash: "cutting-stitching" },
+  // { label: "Cutting & Stitching", hash: "cutting-stitching" },
   { label: "Design & Sampling", hash: "design-sampling" },
   { label: "Custom Tailoring & Alterations", hash: "tailoring" },
   { label: "Bulk Manufacturing", hash: "bulk-manufacturing" },
   // { label: "Labelling", hash: "labelling" },
-  { label: "Packaging & Delivery", hash: "packaging-delivery" },
+  // { label: "Packaging & Delivery", hash: "packaging-delivery" },
 ];
 
 /* ----------------- Brand Logo ----------------- */
@@ -189,7 +189,11 @@ export function Header({ current = "Home" }: { current?: string }) {
             }
             if (l.label === "Services") {
               return (
-                <div key={l.label} ref={servicesDropdownRef} className="relative flex items-center gap-0.5">
+                <div
+                  key={l.label}
+                  ref={servicesDropdownRef}
+                  className="relative flex items-center gap-0.5"
+                >
                   <Link to="/services" className={cls} onClick={() => setServicesOpen(false)}>
                     Services
                     {underline}
