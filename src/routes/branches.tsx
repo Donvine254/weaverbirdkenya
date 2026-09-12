@@ -231,7 +231,11 @@ function BranchDetail({ branch }: { branch: Branch }) {
             {branch.address}
           </InfoRow>
           <InfoRow icon={Phone} label="Phone">
-            <a href={`tel:${branch.phone.replace(/\s+/g, "")}`} className="hover:underline">
+            <a
+              href={`tel:${branch.phone.replace(/\s+/g, "")}`}
+              aria-label={`Call ${branch.name} at ${branch.phone}`}
+              className="hover:underline"
+            >
               {branch.phone}
             </a>
           </InfoRow>
@@ -258,6 +262,7 @@ function BranchDetail({ branch }: { branch: Branch }) {
             href={branch.map}
             target="_blank"
             title="get directions"
+            aria-label={`Get directions to ${branch.name}`}
             rel="noreferrer noopener"
             className="group inline-flex w-full md:flex-1 items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
             style={{
@@ -272,6 +277,7 @@ function BranchDetail({ branch }: { branch: Branch }) {
           <a
             href={`tel:${branch.phone.replace(/\s+/g, "")}`}
             title="call branch"
+            aria-label={`Call ${branch.name} branch at ${branch.phone}`}
             className="inline-flex w-full md:flex-1 items-center justify-center gap-2 rounded-md border border-input bg-primary-deep px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-gold hover:text-primary-deep active:scale-95"
           >
             <Phone className="h-4 w-4" />
@@ -352,6 +358,7 @@ function FindStoreCta() {
 
       <a
         href="tel:+2022051487"
+        aria-label="Call Weaverbird customer support at 020-2051487"
         className="group mt-6 inline-flex items-center gap-2 rounded-md bg-maroon px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
         style={{ boxShadow: "var(--shadow-red)" }}
       >

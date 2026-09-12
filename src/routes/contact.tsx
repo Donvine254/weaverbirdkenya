@@ -133,6 +133,7 @@ function ContactMethods() {
           <a
             key={m.title}
             href={m.href}
+            aria-label={`${m.cta} for ${m.title}`}
             target={m.href.startsWith("http") ? "_blank" : undefined}
             rel="noreferrer noopener"
             className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
@@ -198,6 +199,7 @@ function SocialSection() {
           <a
             key={s.label}
             href={s.href}
+            aria-label={`${s.label} profile for Weaverbird Kenya`}
             target="_blank"
             rel="noreferrer noopener"
             className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
@@ -272,13 +274,21 @@ function FactorySection() {
               </li>
               <li className="flex gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-maroon" />
-                <a href="mailto:sales@weaverbirdkenya.com" className="hover:underline">
+                <a
+                  href="mailto:sales@weaverbirdkenya.com"
+                  aria-label="Email Weaverbird sales team"
+                  className="hover:underline"
+                >
                   sales@weaverbirdkenya.com
                 </a>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-maroon"/>
-                <a href="tel:+2022051487" className="hover:underline">
+                <a
+                  href="tel:+2022051487"
+                  aria-label="Call Weaverbird toll-free line 020-2051487"
+                  className="hover:underline"
+                >
                   020-2051487 (Toll Free)
                 </a>
               </li>
@@ -286,6 +296,7 @@ function FactorySection() {
             <div className="mt-8 flex  gap-3">
               <a
                 href={FACTORY_MAP}
+                aria-label="Get directions to the Weaverbird Thika factory"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="group inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 bg-maroon"
@@ -297,12 +308,12 @@ function FactorySection() {
               <a
                 href="tel:+2022051487"
                 title="Book a visit appointment at the Weaverbird factory in Thika"
+                aria-label="Book a visit appointment at the Weaverbird factory in Thika"
                 className="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
                 style={{
                   background: "var(--primary)",
                   boxShadow: "var(--shadow-green)",
                 }}
-                aria-label="book a visit appointment at the Weaverbird factory in Thika"
               >
                 <Phone className="h-4 w-4 shrink-0" />
                 <span>

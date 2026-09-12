@@ -92,13 +92,13 @@ export function BranchesMap({
             <Popup>
               <div style={{ minWidth: 180 }}>
                 <div style={{ fontWeight: 700, marginBottom: 4 }}>{b.name}</div>
-                <div style={{ fontSize: 12, color: "#555", marginBottom: 6 }}>
-                  {b.address}
-                </div>
+                <div style={{ fontSize: 12, color: "#555", marginBottom: 6 }}>{b.address}</div>
                 <a
                   href={b.map}
                   target="_blank"
                   rel="noreferrer noopener"
+                  title={`Get directions to ${b.name}`}
+                  aria-label={`Get directions to ${b.name}`}
                   style={{ color: "oklch(0.55 0.20 20)", fontWeight: 600, fontSize: 12 }}
                 >
                   Get directions →

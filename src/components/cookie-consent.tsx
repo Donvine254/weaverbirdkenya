@@ -90,7 +90,11 @@ export function CookieConsent() {
             <p className="text-xs text-gray-500 leading-relaxed">
               We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
               You can choose to enable or disable some non-essential cookies.{' '}
-              <a href="#" className="text-green-700 font-semibold hover:text-green-900 underline">
+              <a
+                href="#"
+                aria-label="Read the Cookie Policy"
+                className="text-green-700 font-semibold hover:text-green-900 underline"
+              >
                 Cookie Policy
               </a>
             </p>
