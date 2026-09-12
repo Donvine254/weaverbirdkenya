@@ -14,9 +14,15 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
       <img
-        src="https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg"
+        src="https://res.cloudinary.com/dipkbpinx/image/upload/q_auto,f_auto,w_1400,c_fill/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg"
         alt=""
         aria-hidden
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        width={1400}
+        height={900}
+        sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover opacity-25"
       />
       <div
@@ -72,7 +78,8 @@ export function Hero() {
               // rel="noopener noreferrer"
               href="/resources/catalogue.pdf"
               download="Weaverbird-Product-Catalogue.pdf"
-              className="inline-flex w-full items-center justify-center gap-2 group rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-maroon active:scale-95 sm:w-auto sm:px-6">
+              className="inline-flex w-full items-center justify-center gap-2 group rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-maroon active:scale-95 sm:w-auto sm:px-6"
+            >
               <ArrowDownToLine className="h-5 w-5 group-hover:animate-bounce" />
               Download Product Catalogue
             </a>
@@ -80,14 +87,19 @@ export function Hero() {
         </div>
         <div className="grid grid-cols-2 gap-4">
           {tiles.map(({ label, img, icon: Icon }) => (
-            <div key={label} className="group relative aspect-[5/4] overflow-hidden rounded-md animate-scale-in">
+            <div
+              key={label}
+              className="group relative aspect-[5/4] overflow-hidden rounded-md animate-scale-in"
+            >
               <img
                 src={img}
                 alt={label}
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 loading="lazy"
+                decoding="async"
                 width={512}
                 height={400}
+                sizes="(max-width: 640px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-3 left-3 flex items-center gap-2">
