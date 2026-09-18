@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -11,7 +10,7 @@ import { useEffect, type ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { CookieConsent } from "@/components/cookie-consent";
 import { NotFound } from "@/components/not-found";
-import {AccessibilityWidget} from "@/components/accessibility-widget"
+import { AccessibilityWidget } from "@/components/accessibility-widget";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -160,7 +159,7 @@ function RootComponent() {
       <Outlet />
       <Toaster />
       <CookieConsent />
-      <AccessibilityWidget /> 
+      <AccessibilityWidget />
     </QueryClientProvider>
   );
 }

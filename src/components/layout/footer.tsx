@@ -197,6 +197,13 @@ export function Footer() {
               ))}
             </ul>
             <Link
+              to="/policies"
+              className="mt-4 inline-flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
+            >
+              <ChevronRight className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
+              Policies & Terms of Service
+            </Link>
+            <Link
               to="/blog/uniform-care"
               className="mt-4 inline-flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
             >

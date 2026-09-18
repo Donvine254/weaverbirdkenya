@@ -239,9 +239,7 @@ function FactorySection() {
           </div>
           <div className="p-6 lg:p-8">
             <div className="flex items-center gap-3">
-              <span
-                className="grid h-11 w-11 place-items-center rounded-full bg-maroon"
-              >
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-maroon">
                 <Factory className="h-5 w-5 text-white" />
               </span>
               <div>
@@ -283,7 +281,7 @@ function FactorySection() {
                 </a>
               </li>
               <li className="flex gap-3">
-                <Phone className="h-5 w-5 shrink-0 text-maroon"/>
+                <Phone className="h-5 w-5 shrink-0 text-maroon" />
                 <a
                   href="tel:+2022051487"
                   aria-label="Call Weaverbird toll-free line 020-2051487"
@@ -373,10 +371,7 @@ function SectionHeader({
 }) {
   return (
     <div className="max-w-2xl">
-      <div
-        className="text-xs font-semibold uppercase tracking-widest text-maroon">
-        {eyebrow}
-      </div>
+      <div className="text-xs font-semibold uppercase tracking-widest text-maroon">{eyebrow}</div>
       <h2
         className="mt-2 text-3xl font-bold text-foreground sm:text-4xl"
         style={{ fontFamily: "var(--font-display)" }}
