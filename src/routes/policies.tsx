@@ -110,7 +110,7 @@ const policies: Policy[] = [
     title: "Return & Exchange Policy",
     description:
       "Our guidelines for eligible returns, exchanges, replacements and related requests.",
-    href: "/policies/returns-and-exchanges",
+    href: "/resources/return_and_exchange_policy.pdf",
     icon: PackageCheck,
   },
   {
@@ -130,7 +130,7 @@ const policies: Policy[] = [
     title: "Human Rights Statement",
     description:
       "Our commitment to respecting human rights across our operations and supply chain.",
-    href: "/policies/human-rights",
+    href: "/resources/human_rights_policy_statement.pdf",
     icon: Users,
   },
   {
@@ -208,68 +208,70 @@ function PoliciesHero() {
 
   return (
     <section
-      className="relative min-h-[430px] overflow-hidden bg-cover bg-center"
+      className="relative overflow-hidden bg-cover bg-right sm:bg-center lg:min-h-[500px]"
       style={{
         backgroundImage: `url("${HERO_IMAGE}")`,
       }}
     >
-      {/* 
-        Subtle overlay for text readability.
-        Strongest on the left and fades away before reaching the products.
-      */}
+      {/* Overlay */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(0, 55, 28, 0.82) 0%, rgba(0, 55, 28, 0.55) 34%, rgba(0, 55, 28, 0.12) 56%, transparent 72%)",
+            "linear-gradient(135deg, oklch(0.13 0.05 155 / 0.72), oklch(0.10 0.06 155 / 0.42))",
         }}
       />
 
-      {/* Mobile overlay — gives better readability when image is cropped */}
-      <div className="pointer-events-none absolute inset-0 bg-black/10 lg:hidden" />
-
-      <div className="relative z-10 mx-auto flex min-h-[430px] max-w-7xl items-center px-6 py-14 sm:py-16 lg:py-20">
-        <div className="max-w-xl">
+      {/* Content */}
+      <div className="relative mx-auto max-w-7xl px-6 py-16 text-white sm:py-20 md:pt-24 md:pb-16 lg:pt-36 lg:pb-16">
+        <div className="max-w-xl animate-fade-in-up">
           {/* Eyebrow */}
-          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
+          <div className="hidden sm:block text-xs font-semibold uppercase tracking-widest text-white/80">
             Trust. Responsibility. Transparency.
           </div>
 
           {/* Heading */}
           <h1
-            className="mt-4 text-4xl font-extrabold tracking-tight text-red-500 sm:text-5xl lg:text-6xl"
+            className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Our Policies
           </h1>
 
           {/* Description */}
-          <p className="mt-5 max-w-lg text-sm leading-7 text-white/85 sm:text-base">
+          <p className="mt-5 max-w-lg text-sm leading-relaxed text-white/80 sm:text-base">
             We are committed to doing business responsibly, ethically and transparently. Find our
             policies, guidelines and important information in one place.
           </p>
 
-          {/* Maroon accent */}
-          <div className="mt-7 h-1 w-12 rounded-full bg-maroon" />
+          {/* Accent */}
+          <div className="mt-6 h-1 w-12 rounded-full bg-maroon" />
 
           {/* Commitments */}
-          <div className="mt-8 grid gap-5 sm:grid-cols-3">
+          <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-7">
             {commitments.map(({ icon: Icon, title, subtitle }) => (
-              <div key={title} className="flex items-center gap-3">
+              <div
+                key={title}
+                className={`flex shrink-0 items-center gap-2 sm:gap-2.5 ${
+                  title === "People" ? "hidden sm:flex" : ""
+                }`}
+              >
                 <span
-                  className="grid h-10 w-10 shrink-0 place-items-center rounded-full"
+                  className="grid h-7 w-7 shrink-0 place-items-center rounded-full sm:h-9 sm:w-9"
                   style={{
-                    background: "rgba(255,255,255,0.12)",
-                    border: "1px solid rgba(255,255,255,0.2)",
-                    backdropFilter: "blur(4px)",
+                    background: "rgba(255,255,255,0.10)",
+                    border: "1px solid rgba(255,255,255,0.18)",
                   }}
                 >
-                  <Icon className="h-5 w-5 text-white" />
+                  <Icon
+                    className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                    style={{ color: "var(--accent-red)" }}
+                  />
                 </span>
 
-                <div className="text-xs leading-tight text-white">
-                  <div className="font-bold">{title}</div>
-                  <div className="mt-0.5 text-white/75">{subtitle}</div>
+                <div className="whitespace-nowrap text-[10px] leading-tight sm:text-xs">
+                  <div className="font-semibold text-white">{title}</div>
+                  <div className="mt-0.5 text-white/70">{subtitle}</div>
                 </div>
               </div>
             ))}
@@ -333,7 +335,7 @@ function PolicyCard({ policy }: { policy: Policy }) {
 
       <div className="mt-auto pt-5">
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-maroon">
-          Read Policy
+          {policy.href === "/faq" ? "View FAQs" : "Read Policy"}
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </div>
