@@ -21,6 +21,8 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PoliciesTermsOfUseRouteImport } from './routes/policies_.terms-of-use'
 import { Route as PoliciesPrivacyPolicyRouteImport } from './routes/policies_.privacy-policy'
+import { Route as PoliciesEnvironmentalPolicyRouteImport } from './routes/policies_.environmental-policy'
+import { Route as PoliciesCookiesPolicyRouteImport } from './routes/policies_.cookies-policy'
 import { Route as BlogUniformCareRouteImport } from './routes/blog.uniform-care'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 
@@ -84,6 +86,17 @@ const PoliciesPrivacyPolicyRoute = PoliciesPrivacyPolicyRouteImport.update({
   path: '/policies/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliciesEnvironmentalPolicyRoute =
+  PoliciesEnvironmentalPolicyRouteImport.update({
+    id: '/policies_/environmental-policy',
+    path: '/policies/environmental-policy',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PoliciesCookiesPolicyRoute = PoliciesCookiesPolicyRouteImport.update({
+  id: '/policies_/cookies-policy',
+  path: '/policies/cookies-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogUniformCareRoute = BlogUniformCareRouteImport.update({
   id: '/blog/uniform-care',
   path: '/blog/uniform-care',
@@ -109,6 +122,8 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
+  '/policies/cookies-policy': typeof PoliciesCookiesPolicyRoute
+  '/policies/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies/terms-of-use': typeof PoliciesTermsOfUseRoute
 }
@@ -125,6 +140,8 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
+  '/policies/cookies-policy': typeof PoliciesCookiesPolicyRoute
+  '/policies/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies/terms-of-use': typeof PoliciesTermsOfUseRoute
 }
@@ -142,6 +159,8 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
+  '/policies_/cookies-policy': typeof PoliciesCookiesPolicyRoute
+  '/policies_/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies_/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies_/terms-of-use': typeof PoliciesTermsOfUseRoute
 }
@@ -160,6 +179,8 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
+    | '/policies/cookies-policy'
+    | '/policies/environmental-policy'
     | '/policies/privacy-policy'
     | '/policies/terms-of-use'
   fileRoutesByTo: FileRoutesByTo
@@ -176,6 +197,8 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
+    | '/policies/cookies-policy'
+    | '/policies/environmental-policy'
     | '/policies/privacy-policy'
     | '/policies/terms-of-use'
   id:
@@ -192,6 +215,8 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
+    | '/policies_/cookies-policy'
+    | '/policies_/environmental-policy'
     | '/policies_/privacy-policy'
     | '/policies_/terms-of-use'
   fileRoutesById: FileRoutesById
@@ -209,6 +234,8 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BlogUniformCareRoute: typeof BlogUniformCareRoute
+  PoliciesCookiesPolicyRoute: typeof PoliciesCookiesPolicyRoute
+  PoliciesEnvironmentalPolicyRoute: typeof PoliciesEnvironmentalPolicyRoute
   PoliciesPrivacyPolicyRoute: typeof PoliciesPrivacyPolicyRoute
   PoliciesTermsOfUseRoute: typeof PoliciesTermsOfUseRoute
 }
@@ -299,6 +326,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PoliciesPrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/policies_/environmental-policy': {
+      id: '/policies_/environmental-policy'
+      path: '/policies/environmental-policy'
+      fullPath: '/policies/environmental-policy'
+      preLoaderRoute: typeof PoliciesEnvironmentalPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/policies_/cookies-policy': {
+      id: '/policies_/cookies-policy'
+      path: '/policies/cookies-policy'
+      fullPath: '/policies/cookies-policy'
+      preLoaderRoute: typeof PoliciesCookiesPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/uniform-care': {
       id: '/blog/uniform-care'
       path: '/blog/uniform-care'
@@ -330,6 +371,8 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BlogUniformCareRoute: BlogUniformCareRoute,
+  PoliciesCookiesPolicyRoute: PoliciesCookiesPolicyRoute,
+  PoliciesEnvironmentalPolicyRoute: PoliciesEnvironmentalPolicyRoute,
   PoliciesPrivacyPolicyRoute: PoliciesPrivacyPolicyRoute,
   PoliciesTermsOfUseRoute: PoliciesTermsOfUseRoute,
 }
