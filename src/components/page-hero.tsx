@@ -38,7 +38,7 @@ export function PageHero({
           {eyebrow}
         </div>
         <h1
-          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
+          className="mt-4 text-4xl font-extrabold sm:text-5xl lg:text-6xl leading-tight"
           style={{ fontFamily: "var(--font-display)" }}
         >
           {title}

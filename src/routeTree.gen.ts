@@ -15,6 +15,7 @@ import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as PoliciesRouteImport } from './routes/policies'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BranchesRouteImport } from './routes/branches'
 import { Route as AboutRouteImport } from './routes/about'
@@ -54,6 +55,11 @@ const PoliciesRoute = PoliciesRouteImport.update({
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -114,6 +120,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/products': typeof ProductsRoute
@@ -132,6 +139,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/products': typeof ProductsRoute
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/products': typeof ProductsRoute
@@ -171,6 +180,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/faq'
     | '/mcp'
     | '/policies'
     | '/products'
@@ -189,6 +199,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/faq'
     | '/mcp'
     | '/policies'
     | '/products'
@@ -207,6 +218,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/faq'
     | '/mcp'
     | '/policies'
     | '/products'
@@ -226,6 +238,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BranchesRoute: typeof BranchesRoute
   ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
   McpRoute: typeof McpRoute
   PoliciesRoute: typeof PoliciesRoute
   ProductsRoute: typeof ProductsRoute
@@ -282,6 +295,13 @@ declare module '@tanstack/react-router' {
       path: '/mcp'
       fullPath: '/mcp'
       preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -362,6 +382,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BranchesRoute: BranchesRoute,
   ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
   McpRoute: McpRoute,
   PoliciesRoute: PoliciesRoute,
   ProductsRoute: ProductsRoute,
