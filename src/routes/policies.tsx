@@ -123,7 +123,7 @@ const policies: Policy[] = [
     title: "Trademark & Copyright Policy",
     description:
       "How our trademarks, designs, website content and other intellectual property are protected.",
-    href: "/policies/trademark-and-copyright",
+    href: "/resources/trademark_and_copyright_policy.pdf",
     icon: Copyright,
   },
   {
@@ -306,12 +306,10 @@ function PoliciesDirectory() {
 
 function PolicyCard({ policy }: { policy: Policy }) {
   const Icon = policy.icon;
+  const isDocument = policy.href.toLowerCase().endsWith(".pdf");
 
-  return (
-    <Link
-      to={policy.href}
-      className="group flex min-h-[255px] flex-col rounded-2xl border border-border bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-maroon/30 hover:shadow-md"
-    >
+  const content = (
+    <>
       <span
         className="grid h-14 w-14 place-items-center rounded-full"
         style={{
@@ -335,10 +333,28 @@ function PolicyCard({ policy }: { policy: Policy }) {
 
       <div className="mt-auto pt-5">
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-maroon">
-          {policy.href === "/faq" ? "View FAQs" : "Read Policy"}
+          {policy.href === "/faq" ? "View FAQs" : isDocument ? "View Document" : "Read Policy"}
+
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </div>
+    </>
+  );
+
+  const className =
+    "group flex min-h-[255px] flex-col rounded-2xl border border-border bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-maroon/30 hover:shadow-md";
+
+  if (isDocument) {
+    return (
+      <a href={policy.href} target="_blank" rel="noopener noreferrer" className={className}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link to={policy.href} className={className}>
+      {content}
     </Link>
   );
 }
