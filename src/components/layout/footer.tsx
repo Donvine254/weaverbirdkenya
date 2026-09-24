@@ -8,8 +8,11 @@ import {
   ChevronRight,
   Leaf,
   LucideIcon,
+  ShieldCheck,
+  CircleHelp,
+  ArrowRight,
 } from "lucide-react";
-import { useState } from "react";
+
 import { Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import footerFabric from "@/assets/footer-fabric.jpg";
@@ -45,9 +48,18 @@ export function Footer() {
   const services = [
     { title: "School Uniforms", href: "/products#school-uniforms" },
     { title: "Corporate & Security Uniforms", href: "/products#corporate-wear" },
+    { title: "Medical Wear", href: "/products#medical-wear" },
     { title: "Screen Printing", href: "/services#screen-printing" },
     { title: "Embroidery", href: "/services#embroidery" },
     { title: "Weaving", href: "/services#weaving" },
+    { title: "Bulk Manufacturing", href: "/services#bulk-manufacturing" },
+  ];
+  const helpLinks = [
+    { title: "Frequently Asked Questions", href: "/faq" },
+    { title: "Privacy Policy", href: "/policies/privacy-policy" },
+    { title: "Cookie Policy", href: "/policies/cookies-policy" },
+    { title: "Terms of Use", href: "/policies/terms-of-use" },
+    { title: "Environmental Policy", href: "/policies/environmental-policy" },
   ];
   const socials = [
     {
@@ -64,16 +76,6 @@ export function Footer() {
     { icon: TiktokColorLogo, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
     { icon: WhatsappLogo, label: "Whatsapp", href: "https://wa.me/254722264464" },
   ];
-  const [email, setEmail] = useState("");
-
-  const handleSignup = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    toast.success("You're subscribed!", {
-      description: "Thank you for joining the Weaverbird newsletter.",
-    });
-    setEmail("");
-  };
 
   return (
     <footer
@@ -197,13 +199,6 @@ export function Footer() {
               ))}
             </ul>
             <Link
-              to="/policies"
-              className="mt-4 inline-flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
-            >
-              <ChevronRight className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
-              Policies & Terms of Use
-            </Link>
-            <Link
               to="/blog/uniform-care"
               className="mt-4 inline-flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
             >
@@ -211,35 +206,33 @@ export function Footer() {
               Uniform Care Guide
             </Link>
           </div>
-
-          {/* Newsletter */}
+          {/* Help & Policies */}
           <div>
-            <FooterColHeader icon={Mail} title="NEWSLETTER" />
-            <p className="text-sm leading-relaxed text-white/80">
-              Stay updated with the latest trends in garment manufacturing and innovative apparel
-              solutions at Weaverbird. Discover industry insights, design inspiration, and updates
-              on our sustainable practices. Sign up today for more!
-            </p>
-            <form
-              onSubmit={handleSignup}
-              className="mt-5 flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] p-1.5 transition hover:border-white/25 focus-within:border-[var(--accent-red)] focus-within:bg-white/[0.07] focus-within:ring-2 focus-within:ring-[var(--accent-red)]"
+            <FooterColHeader icon={ShieldCheck} title="RESOURCES" />
+
+            <ul className="space-y-3">
+              {helpLinks.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    to={item.href}
+                    className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
+                  >
+                    <ChevronRight
+                      className="h-4 w-4 shrink-0"
+                      style={{ color: "var(--accent-red)" }}
+                    />
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Link
+              to="/policies"
+              className="mt-4 inline-flex items-center gap-3 text-sm text-white/85 font-semibold transition hover:text-white"
             >
-              <input
-                type="email"
-                aria-label="Email address"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="min-w-0 flex-1 rounded-l-full bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="shrink-0 whitespace-nowrap rounded-full px-5 py-2 text-sm font-semibold text-white transition-all hover:brightness-110 hover:shadow-md active:scale-95"
-                style={{ background: "var(--gradient-red)" }}
-              >
-                Sign Up
-              </button>
-            </form>
+              <ChevronRight className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
+              View all policies
+            </Link>
           </div>
         </div>
 
