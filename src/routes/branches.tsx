@@ -19,6 +19,7 @@ import { BranchesMap } from "@/components/branches-map";
 import { SectionBand } from "@/components/section-band";
 
 export type { Branch };
+// eslint-disable-next-line react-refresh/only-export-components
 export { branches };
 
 export const Route = createFileRoute("/branches")({
@@ -151,8 +152,9 @@ function Locator() {
                   <button
                     type="button"
                     onClick={() => setSelected(b)}
-                    className={`flex w-full items-start gap-3 p-4 text-left transition hover:bg-muted/50 ${isActive ? "bg-muted/70" : ""
-                      }`}
+                    className={`flex w-full items-start gap-3 p-4 text-left transition hover:bg-muted/50 ${
+                      isActive ? "bg-muted/70" : ""
+                    }`}
                   >
                     <span
                       className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full"
@@ -352,8 +354,8 @@ function FindStoreCta() {
       </h2>
 
       <p className="mx-auto mt-3 max-w-xl text-sm text-white/80">
-        Can't find a branch near you or need help choosing where to visit?
-        Give us a call and our team will be happy to guide you.
+        Can't find a branch near you or need help choosing where to visit? Give us a call and our
+        team will be happy to guide you.
       </p>
 
       <a
@@ -368,4 +370,3 @@ function FindStoreCta() {
     </section>
   );
 }
-

@@ -19,6 +19,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BranchesRouteImport } from './routes/branches'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PoliciesPrivacyPolicyRouteImport } from './routes/policies_.privacy-policy'
 import { Route as BlogUniformCareRouteImport } from './routes/blog.uniform-care'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 
@@ -72,6 +73,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliciesPrivacyPolicyRoute = PoliciesPrivacyPolicyRouteImport.update({
+  id: '/policies_/privacy-policy',
+  path: '/policies/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogUniformCareRoute = BlogUniformCareRouteImport.update({
   id: '/blog/uniform-care',
   path: '/blog/uniform-care',
@@ -97,6 +103,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
+  '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -111,6 +118,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
+  '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -126,6 +134,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
+  '/policies_/privacy-policy': typeof PoliciesPrivacyPolicyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -142,6 +151,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
+    | '/policies/privacy-policy'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -156,6 +166,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
+    | '/policies/privacy-policy'
   id:
     | '__root__'
     | '/'
@@ -170,6 +181,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
+    | '/policies_/privacy-policy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -185,6 +197,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BlogUniformCareRoute: typeof BlogUniformCareRoute
+  PoliciesPrivacyPolicyRoute: typeof PoliciesPrivacyPolicyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -259,6 +272,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/policies_/privacy-policy': {
+      id: '/policies_/privacy-policy'
+      path: '/policies/privacy-policy'
+      fullPath: '/policies/privacy-policy'
+      preLoaderRoute: typeof PoliciesPrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/uniform-care': {
       id: '/blog/uniform-care'
       path: '/blog/uniform-care'
@@ -290,6 +310,7 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BlogUniformCareRoute: BlogUniformCareRoute,
+  PoliciesPrivacyPolicyRoute: PoliciesPrivacyPolicyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
