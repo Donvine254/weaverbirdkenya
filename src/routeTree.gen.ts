@@ -19,6 +19,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BranchesRouteImport } from './routes/branches'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PoliciesTermsOfUseRouteImport } from './routes/policies_.terms-of-use'
 import { Route as PoliciesPrivacyPolicyRouteImport } from './routes/policies_.privacy-policy'
 import { Route as BlogUniformCareRouteImport } from './routes/blog.uniform-care'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
@@ -73,6 +74,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliciesTermsOfUseRoute = PoliciesTermsOfUseRouteImport.update({
+  id: '/policies_/terms-of-use',
+  path: '/policies/terms-of-use',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PoliciesPrivacyPolicyRoute = PoliciesPrivacyPolicyRouteImport.update({
   id: '/policies_/privacy-policy',
   path: '/policies/privacy-policy',
@@ -104,6 +110,7 @@ export interface FileRoutesByFullPath {
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
+  '/policies/terms-of-use': typeof PoliciesTermsOfUseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -119,6 +126,7 @@ export interface FileRoutesByTo {
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
+  '/policies/terms-of-use': typeof PoliciesTermsOfUseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -135,6 +143,7 @@ export interface FileRoutesById {
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies_/privacy-policy': typeof PoliciesPrivacyPolicyRoute
+  '/policies_/terms-of-use': typeof PoliciesTermsOfUseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -152,6 +161,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
     | '/policies/privacy-policy'
+    | '/policies/terms-of-use'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
     | '/policies/privacy-policy'
+    | '/policies/terms-of-use'
   id:
     | '__root__'
     | '/'
@@ -182,6 +193,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-protected-resource'
     | '/blog/uniform-care'
     | '/policies_/privacy-policy'
+    | '/policies_/terms-of-use'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -198,6 +210,7 @@ export interface RootRouteChildren {
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BlogUniformCareRoute: typeof BlogUniformCareRoute
   PoliciesPrivacyPolicyRoute: typeof PoliciesPrivacyPolicyRoute
+  PoliciesTermsOfUseRoute: typeof PoliciesTermsOfUseRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -272,6 +285,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/policies_/terms-of-use': {
+      id: '/policies_/terms-of-use'
+      path: '/policies/terms-of-use'
+      fullPath: '/policies/terms-of-use'
+      preLoaderRoute: typeof PoliciesTermsOfUseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/policies_/privacy-policy': {
       id: '/policies_/privacy-policy'
       path: '/policies/privacy-policy'
@@ -311,6 +331,7 @@ const rootRouteChildren: RootRouteChildren = {
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BlogUniformCareRoute: BlogUniformCareRoute,
   PoliciesPrivacyPolicyRoute: PoliciesPrivacyPolicyRoute,
+  PoliciesTermsOfUseRoute: PoliciesTermsOfUseRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
