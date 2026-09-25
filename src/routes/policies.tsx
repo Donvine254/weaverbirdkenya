@@ -143,27 +143,27 @@ const policies: Policy[] = [
   {
     title: "Anti-Bribery & Anti-Corruption Policy",
     description: "Our standards for conducting business honestly, fairly and transparently.",
-    href: "/policies/anti-bribery-and-corruption",
+    href: "/resources/anti-corruption-and-anti-bribery-policy.pdf",
     icon: ShieldCheck,
   },
   {
     title: "Code of Conduct",
     description:
       "The principles and standards that guide our employees and business relationships.",
-    href: "/policies/code-of-conduct",
+    href: "/resources/employee-conduct-and-ethics.pdf",
     icon: Scale,
   },
   {
     title: "Responsible Sourcing Policy",
     description: "Our commitment to responsible sourcing and ethical supply-chain practices.",
-    href: "/policies/responsible-sourcing",
+    href: "/resources/responsible-sourcing-policy.pdf",
     icon: Truck,
   },
   {
     title: "Supplier Code of Conduct",
     description:
       "The standards we expect suppliers and business partners working with Weaverbird to uphold.",
-    href: "/policies/supplier-code-of-conduct",
+    href: "/resources/supplier-code-of-conduct.pdf",
     icon: Handshake,
   },
 ];
