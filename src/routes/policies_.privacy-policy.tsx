@@ -3,21 +3,17 @@ import { ChevronRight, Headset, ArrowRight } from "lucide-react";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { seoMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/policies_/privacy-policy")({
   component: PrivacyPolicyPage,
-  head: () => ({
-    meta: [
-      {
-        title: "Privacy Policy | Weaverbird Garments Manufacturers Ltd",
-      },
-      {
-        name: "description",
-        content:
-          "Learn how Weaverbird Garments Manufacturers Ltd collects, uses, protects and manages personal information.",
-      },
-    ],
-  }),
+  head: () =>
+    seoMeta({
+      title: "Privacy Policy",
+      description:
+        "Learn how Weaverbird Garments Manufacturers Ltd collects, uses, protects and manages personal information.",
+      path: "/policies/privacy-policy",
+    }),
 });
 
 const sections = [

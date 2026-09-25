@@ -16,21 +16,17 @@ import {
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { PageHero } from "@/components/page-hero";
+import { seoMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/faq")({
   component: FAQPage,
-  head: () => ({
-    meta: [
-      {
-        title: "Frequently Asked Questions | Weaverbird Garments Manufacturers Ltd",
-      },
-      {
-        name: "description",
-        content:
-          "Find answers to frequently asked questions about Weaverbird garments, custom branding, sizing, orders, production and delivery.",
-      },
-    ],
-  }),
+  head: () =>
+    seoMeta({
+      title: "Frequently Asked Questions",
+      description:
+        "Find answers to frequently asked questions about Weaverbird garments, customisation, sizing, orders, production and delivery.",
+      path: "/faq",
+    }),
 });
 
 const faqGroups = [

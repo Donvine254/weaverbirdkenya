@@ -1,23 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, Headset, ArrowRight } from "lucide-react";
-
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { seoMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/policies_/terms-of-use")({
   component: TermsOfUsePage,
-  head: () => ({
-    meta: [
-      {
-        title: "Terms of Use | Weaverbird Garments Manufacturers Ltd",
-      },
-      {
-        name: "description",
-        content:
-          "Terms and conditions governing the use of the Weaverbird Garments Manufacturers Ltd website, content and online services.",
-      },
-    ],
-  }),
+  head: () =>
+    seoMeta({
+      title: "Terms of Use",
+      description:
+        "Read the terms governing the use of the Weaverbird Garments Manufacturers Ltd website, content and online services.",
+      path: "/policies/terms-of-use",
+    }),
 });
 
 const sections = [

@@ -3,21 +3,19 @@ import { ArrowRight, Droplets, Headset, Leaf, PackageCheck, Recycle, Shirt } fro
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { seoMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/policies_/environmental-policy")({
   component: EnvironmentalPolicyPage,
-  head: () => ({
-    meta: [
-      {
-        title: "Environmental Policy | Weaverbird Garments Manufacturers Ltd",
-      },
-      {
-        name: "description",
-        content:
-          "Learn about Weaverbird Garments Manufacturers Ltd's commitment to responsible manufacturing, resource efficiency and environmental protection.",
-      },
-    ],
-  }),
+  head: () =>
+    seoMeta({
+      title: "Environmental Policy",
+      description:
+        "Learn about Weaverbird Garments Manufacturers Ltd's commitment to responsible manufacturing, resource efficiency and environmental protection.",
+      path: "/policies/environmental-policy",
+      image:
+        "https://res.cloudinary.com/dipkbpinx/image/upload/v1790255462/weaverbird/aulqdoq4giwfoabxztcf.jpg",
+    }),
 });
 
 function EnvironmentalPolicyPage() {

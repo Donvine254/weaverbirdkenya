@@ -3,21 +3,17 @@ import { ChevronRight, Headset, ArrowRight } from "lucide-react";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { seoMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/policies_/cookies-policy")({
   component: CookiesPolicyPage,
-  head: () => ({
-    meta: [
-      {
-        title: "Cookies Policy | Weaverbird Garments Manufacturers Ltd",
-      },
-      {
-        name: "description",
-        content:
-          "Learn how Weaverbird Garments Manufacturers Ltd uses cookies and analytics technologies on its website.",
-      },
-    ],
-  }),
+  head: () =>
+    seoMeta({
+      title: "Cookie Policy",
+      description:
+        "Learn how Weaverbird Garments Manufacturers Ltd uses cookies and analytics technologies on its website.",
+      path: "/policies/cookies-policy",
+    }),
 });
 
 const sections = [

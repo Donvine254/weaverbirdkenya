@@ -18,64 +18,19 @@ import {
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { seoMeta } from "@/lib/seo";
 
 const HERO_IMAGE =
   "https://res.cloudinary.com/dipkbpinx/image/upload/v1789732032/weaverbird/products/r6ymdgb6ibkmqtmdzgzj.jpg";
 
 export const Route = createFileRoute("/policies")({
-  head: () => ({
-    meta: [
-      {
-        title: "Company Policies — Weaverbird Apparel Solutions",
-      },
-      {
-        name: "description",
-        content:
-          "View Weaverbird Garments Manufacturers Ltd policies, including privacy, cookies, terms of use, returns and exchanges, human rights, intellectual property and responsible business practices.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Weaverbird policies, privacy policy, cookies policy, terms of use, returns policy, human rights statement, copyright policy, Kenya garment manufacturer policies",
-      },
-      {
-        property: "og:title",
-        content: "Company Policies — Weaverbird Apparel Solutions",
-      },
-      {
-        property: "og:description",
-        content:
-          "Our policies and commitments covering customers, privacy, responsible manufacturing and ethical business practices.",
-      },
-      {
-        property: "og:image",
-        content: HERO_IMAGE,
-      },
-      {
-        property: "og:type",
-        content: "website",
-      },
-      {
-        property: "og:url",
-        content: "https://weaverbirdkenya.lovable.app/policies",
-      },
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-      {
-        name: "twitter:image",
-        content: HERO_IMAGE,
-      },
-    ],
-    links: [
-      {
-        rel: "canonical",
-        href: "https://weaverbirdkenya.lovable.app/policies",
-      },
-    ],
-  }),
-
+  head: () =>
+    seoMeta({
+      title: "Company Policies",
+      description:
+        "View Weaverbird Garments Manufacturers Ltd policies, including privacy, cookies, terms of use, returns and exchanges, human rights, intellectual property and responsible business practices.",
+      path: "/policies",
+    }),
   component: PoliciesPage,
 });
 
