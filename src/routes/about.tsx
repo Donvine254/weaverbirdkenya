@@ -23,7 +23,7 @@ import { PageHero } from "@/components/page-hero";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Weaverbird Apparel Solutions" },
+      { title: "About Us — Weaver Bird Kenya" },
       {
         name: "description",
         content:

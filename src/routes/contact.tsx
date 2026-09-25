@@ -18,7 +18,7 @@ import { FacebookCircleLogo, InstagramIcon, TiktokColorLogo, WhatsappLogo } from
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — Weaverbird Apparel Solutions" },
+      { title: "Contact Us — Weaver Bird Kenya" },
       {
         name: "description",
         content:

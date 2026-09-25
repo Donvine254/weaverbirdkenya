@@ -11,7 +11,7 @@ type ProductItem = Category["products"][number];
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Our Products — Weaverbird Apparel Solutions" },
+      { title: "Our Products — Weaver Bird Kenya" },
       {
         name: "description",
         content:
@@ -81,26 +81,27 @@ function CategorySection({ category, index }: { category: Category; index: numbe
     <section
       id={category.id}
       aria-labelledby={`${category.id}-heading`}
-      className={`scroll-mt-24 ${muted ? "bg-secondary/60" : "bg-background"}`}>
+      className={`scroll-mt-24 ${muted ? "bg-secondary/60" : "bg-background"}`}
+    >
       {/* Full-width banner: text left, image right on large screens */}
       <div className="border-b bg-black/10 border-black/5  lg:flex lg:min-h-[28rem]">
         {/* Text column */}
         <div className="flex flex-col justify-center px-6 py-10 sm:px-8 lg:w-1/2 lg:px-12 lg:py-0 xl:px-16">
           <span
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest"
-            style={{ color: "var(--color-maroon)" }}>
+            style={{ color: "var(--color-maroon)" }}
+          >
             <span className="h-px w-8 text-maroon" style={{ background: "var(--color-maroon)" }} />
             {String(index + 1).padStart(2, "0")} — Category
           </span>
           <h2
             id={`${category.id}-heading`}
             className="mt-3 text-3xl font-extrabold sm:text-4xl"
-            style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}>
+            style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
+          >
             {category.name}
           </h2>
-          <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">
-            {category.pitch}
-          </p>
+          <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">{category.pitch}</p>
 
           <div className="mt-5 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
@@ -123,7 +124,8 @@ function CategorySection({ category, index }: { category: Category; index: numbe
               className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-maroon px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:w-auto"
               style={{
                 boxShadow: "var(--shadow-red)",
-              }}>
+              }}
+            >
               <ReceiptText className="h-4 w-4" />
               Get a Quote
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -132,7 +134,8 @@ function CategorySection({ category, index }: { category: Category; index: numbe
               // href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/technical_datasheet.pdf"
               href="/resources/technical_datasheet.pdf"
               download="Weaverbird-Technical-Datasheet.pdf"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6">
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6"
+            >
               <ArrowDownToLine className="h-4 w-4 group-hover:animate-bounce" />
               Technical Specifications
             </a>
@@ -180,7 +183,8 @@ function ProductCard({ item }: { item: ProductItem }) {
             ? `url("${item.image}")`
             : "linear-gradient(135deg, oklch(0.22 0.07 155) 0%, oklch(0.13 0.05 155) 100%)",
           backgroundSize: item.image ? "cover" : "auto",
-        }}>
+        }}
+      >
         {!item.image && (
           <>
             <div className="absolute inset-0 flex items-center justify-center">
@@ -199,11 +203,13 @@ function ProductCard({ item }: { item: ProductItem }) {
           </>
         )}
 
-        {!item.image && <span
-          className="absolute left-3 top-3 h-1 w-8 rounded-full"
-          style={{ background: "var(--color-maroon)" }}
-          aria-hidden="true"
-        />}
+        {!item.image && (
+          <span
+            className="absolute left-3 top-3 h-1 w-8 rounded-full"
+            style={{ background: "var(--color-maroon)" }}
+            aria-hidden="true"
+          />
+        )}
 
         {/* dark overlay on hover */}
         {item.image && (
@@ -212,21 +218,15 @@ function ProductCard({ item }: { item: ProductItem }) {
       </div>
 
       <div className="flex flex-1 flex-col p-5">
-        <h3
-          className="font-bold"
-          style={{ color: "var(--primary-darker)" }}
-        >
+        <h3 className="font-bold" style={{ color: "var(--primary-darker)" }}>
           {item.name}
         </h3>
 
-        <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-          {item.text}
-        </p>
+        <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">{item.text}</p>
       </div>
     </li>
   );
 }
-
 
 function ProductsCta() {
   return (
@@ -266,7 +266,8 @@ function ProductsCta() {
           </Link>
           <Link
             to="/branches"
-            className="group text-primary-deep bg-white mt-8 hidden sm:inline-flex items-center gap-2 rounded-md px-7 py-3 text-sm font-semibold  shadow-md transition-all hover:shadow-lg active:scale-95">
+            className="group text-primary-deep bg-white mt-8 hidden sm:inline-flex items-center gap-2 rounded-md px-7 py-3 text-sm font-semibold  shadow-md transition-all hover:shadow-lg active:scale-95"
+          >
             <Store className="h-4 w-4" />
             Find A Shop Near You
           </Link>

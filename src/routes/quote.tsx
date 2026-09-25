@@ -65,7 +65,7 @@ function makeRef(): string {
 export const Route = createFileRoute("/quote")({
   head: () => ({
     meta: [
-      { title: "Request a Quote — Weaverbird Apparel Solutions" },
+      { title: "Request a Quote — Weaver Bird Kenya" },
       {
         name: "description",
         content:

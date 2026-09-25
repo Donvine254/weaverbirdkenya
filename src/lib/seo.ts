@@ -1,4 +1,4 @@
-const SITE_NAME = "Weaverbird Garments Manufacturers Ltd";
+const SITE_NAME = "Weaver Bird Kenya";
 const SITE_URL = "https://weaverbirdkenya.lovable.app";
 
 interface SeoMetaOptions {
@@ -9,7 +9,7 @@ interface SeoMetaOptions {
 }
 
 export function seoMeta({ title, description, path = "", image }: SeoMetaOptions) {
-  const fullTitle = `${title} | ${SITE_NAME}`;
+  const fullTitle = `${title} — ${SITE_NAME}`;
   const url = `${SITE_URL}${path}`;
 
   return {

@@ -25,7 +25,7 @@ export { branches };
 export const Route = createFileRoute("/branches")({
   head: () => ({
     meta: [
-      { title: "Branches & Store Locator — Weaverbird Apparel Solutions" },
+      { title: "Branches & Store Locator —Weaverbird Garments Manufacturers Ltd" },
       {
         name: "description",
         content:

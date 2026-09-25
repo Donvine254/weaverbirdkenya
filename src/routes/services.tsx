@@ -8,7 +8,7 @@ import { services, type ServiceItem } from "@/data/services";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Our Services — Weaverbird Apparel Solutions" },
+      { title: "Our Services —Weaverbird Garments Manufacturers Ltd" },
       {
         name: "description",
         content:
