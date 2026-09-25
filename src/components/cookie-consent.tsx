@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Cookie, X, Check, ChevronDown, ChevronUp } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Cookie, X, Check, ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
-const STORAGE_KEY = 'wbd-cookie-consent';
+const STORAGE_KEY = "wbd-cookie-consent";
 const POLICY_VERSION = 1;
 // Best practice (GDPR/ePrivacy guidance): re-ask at most every 6-12 months.
 const MAX_AGE_DAYS = 180;
 
-type ConsentChoice = 'accepted' | 'rejected' | 'partial';
+type ConsentChoice = "accepted" | "rejected" | "partial";
 interface ConsentRecord {
   version?: number;
   choice: ConsentChoice;
@@ -57,14 +58,26 @@ export function CookieConsent() {
   };
 
   const acceptAll = () =>
-    save({ choice: 'accepted', necessary: true, analytics: true, functional: true, date: new Date().toISOString() });
+    save({
+      choice: "accepted",
+      necessary: true,
+      analytics: true,
+      functional: true,
+      date: new Date().toISOString(),
+    });
 
   const rejectAll = () =>
-    save({ choice: 'rejected', necessary: true, analytics: false, functional: false, date: new Date().toISOString() });
+    save({
+      choice: "rejected",
+      necessary: true,
+      analytics: false,
+      functional: false,
+      date: new Date().toISOString(),
+    });
 
   const savePrefs = () =>
     save({
-      choice: 'partial',
+      choice: "partial",
       necessary: true,
       analytics: prefs.analytics,
       functional: prefs.functional,
@@ -88,15 +101,15 @@ export function CookieConsent() {
           <div className="flex-1 min-w-0">
             <h3 className="font-bold text-sm text-gray-900 mb-1">We value your privacy</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
-              You can choose to enable or disable some non-essential cookies.{' '}
-              <a
-                href="#"
+              We use cookies to enhance your browsing experience, serve personalized content, and
+              analyze our traffic. You can choose to enable or disable some non-essential cookies.{" "}
+              <Link
+                to="/policies/cookies-policy"
                 aria-label="Read the Cookie Policy"
                 className="text-green-700 font-semibold hover:text-green-900 underline"
               >
                 Cookie Policy
-              </a>
+              </Link>
             </p>
           </div>
           <button
@@ -140,7 +153,7 @@ export function CookieConsent() {
             className="inline-flex items-center gap-1 text-xs font-semibold text-gray-600 hover:text-gray-900 transition-colors px-2 py-2"
           >
             {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-            {expanded ? 'Hide' : 'Customize'}
+            {expanded ? "Hide" : "Customize"}
           </button>
           <div className="flex-1" />
           <button
@@ -201,12 +214,12 @@ function CookieCategory({
           role="switch"
           aria-checked={checked}
           onClick={onToggle}
-          className={`w-10 h-5.5 rounded-full flex-shrink-0 relative transition-colors ${checked ? 'bg-green-500' : 'bg-gray-300'}`}
+          className={`w-10 h-5.5 rounded-full flex-shrink-0 relative transition-colors ${checked ? "bg-green-500" : "bg-gray-300"}`}
           style={{ height: 22, width: 40 }}
         >
           <span
             className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow-sm transition-all ${
-              checked ? 'left-5' : 'left-0.5'
+              checked ? "left-5" : "left-0.5"
             }`}
           />
         </button>
