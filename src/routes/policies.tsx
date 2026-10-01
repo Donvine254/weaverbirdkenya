@@ -65,7 +65,7 @@ const policies: Policy[] = [
     title: "Return & Exchange Policy",
     description:
       "Our guidelines for eligible returns, exchanges, replacements and related requests.",
-    href: "/resources/return_and_exchange_policy.pdf",
+    href: "/resources/return-and-exchange-policy.pdf",
     icon: PackageCheck,
   },
   {
@@ -78,14 +78,14 @@ const policies: Policy[] = [
     title: "Trademark & Copyright Policy",
     description:
       "How our trademarks, designs, website content and other intellectual property are protected.",
-    href: "/resources/trademark_and_copyright_policy.pdf",
+    href: "/resources/trademark-and-copyright-policy.pdf",
     icon: Copyright,
   },
   {
     title: "Human Rights Statement",
     description:
       "Our commitment to respecting human rights across our operations and supply chain.",
-    href: "/resources/human_rights_policy_statement.pdf",
+    href: "/resources/human-rights-policy.pdf",
     icon: Users,
   },
   {
