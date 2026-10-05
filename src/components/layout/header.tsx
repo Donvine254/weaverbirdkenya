@@ -58,6 +58,8 @@ export function Header({ current = "Home" }: { current?: string }) {
     { label: "Services", to: "/services" },
     { label: "Branches", to: "/branches" },
     { label: "About Us", to: "/about" },
+    { label: "Blog", to: "/blog" },
+    { label: "Downloads", to: "/downloads" },
     { label: "Contact", to: "/contact" },
   ];
   const [open, setOpen] = useState(false);
@@ -130,7 +132,7 @@ export function Header({ current = "Home" }: { current?: string }) {
       </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Logo light />
-        <nav className="hidden items-center gap-7 text-sm font-medium text-white/85 lg:flex">
+        <nav className="hidden items-center gap-5 text-sm xl:gap-7 font-medium text-white/85 lg:flex">
           {links.map((l) => {
             const isActive = l.label === current;
             const cls = `relative transition hover:text-white ${isActive ? "text-white" : ""}`;

@@ -49,16 +49,19 @@ export function Manufacturing() {
             className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground"
           >
             <Factory className="h-3.5 w-3.5" style={{ color: "var(--accent-red)" }} />
-            From sketch to shipment
+            Manufacturer, not reseller
           </span>
           <h2
             className="mt-4 text-3xl font-bold sm:text-4xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Our Manufacturing Process
+            From Fabric to Finished Garment
           </h2>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Five controlled stages inside our Thika factory — every order tracked end to end.
+          <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
+            Weaving, cutting, stitching, embroidery, screen printing, quality control and delivery
+            all happen under our control at our Thika factory. We control more of the manufacturing
+            process, helping us maintain consistency in fabric, colour, construction and branding
+            across repeat orders.
           </p>
         </div>
 

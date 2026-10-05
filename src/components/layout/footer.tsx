@@ -56,6 +56,8 @@ export function Footer() {
   ];
   const helpLinks = [
     { title: "Frequently Asked Questions", href: "/faq" },
+    { title: "Downloads & Resources", href: "/downloads" },
+    { title: "Insights & Blog", href: "/blog" },
     { title: "Privacy Policy", href: "/policies/privacy-policy" },
     { title: "Cookie Policy", href: "/policies/cookies-policy" },
     { title: "Terms of Use", href: "/policies/terms-of-use" },
