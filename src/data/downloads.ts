@@ -24,7 +24,7 @@ export const RESOURCES: Resource[] = [
     title: "Product Catalogue",
     description:
       "Explore our complete range of school uniforms, corporate wear, workwear, medical wear, hospitality uniforms, sportswear, promotional merchandise and more.",
-    button: "Download Product Catalogue",
+    button: "Download Catalogue",
     file: "/resources/catalogue.pdf",
     downloadName: "Weaverbird-Product-Catalogue.pdf",
     related: { label: "Browse products", href: "/products" },
@@ -66,7 +66,7 @@ export const RESOURCES: Resource[] = [
     id: "returns-policy",
     title: "Returns & Exchange Policy",
     description: "Review our guidelines for product returns and exchanges.",
-    button: "View Policy",
+    button: "Download Policy",
     file: "/resources/return-and-exchange-policy.pdf",
     downloadName: "Weaverbird-Returns-and-Exchange-Policy.pdf",
   },

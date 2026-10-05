@@ -32,9 +32,9 @@ export function PageCta({
     </Link>
   );
   return (
-    <section className="px-6 py-16">
+    <section className="p-6">
       <div
-        className="mx-auto max-w-5xl rounded-2xl px-6 py-12 text-center text-white sm:px-12"
+        className="rounded-2xl px-6 py-12 text-center text-white sm:px-12"
         style={{ background: "var(--primary-darker)" }}
       >
         <h2

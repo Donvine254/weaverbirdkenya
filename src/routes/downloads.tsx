@@ -5,27 +5,17 @@ import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
 import { PageCta } from "@/components/page-cta";
 import { RESOURCES, type Resource } from "@/data/downloads";
+import { seoMeta } from "@/lib/seo";
 
-const TITLE = "Downloads & Resources — Weaverbird Garments";
-const DESC =
-  "Access Weaverbird product information, sizing resources, company documents, policies, and garment care guides.";
-const OG =
-  "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg";
 
 export const Route = createFileRoute("/downloads")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESC },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESC },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: OG },
-      { name: "twitter:image", content: OG },
-    ],
-    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/downloads" }],
-  }),
+  head: () => 
+    seoMeta({
+      title: "Downloads & Resources",
+      description:
+        "Access Weaverbird product information, sizing resources, company documents, policies, and garment care guides.",
+      path: "/downloads",
+    }),
   component: DownloadsPage,
 });
 
@@ -37,8 +27,9 @@ function DownloadsPage() {
         <PageHero
           eyebrow="Resources"
           icon={FolderDown}
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1791188243/weaverbird/sj4tru2ok2xrnrajc7lo.jpg"
           title="Downloads & Resources"
-          subtitle={DESC}
+          subtitle="Access Weaverbird product information, sizing resources, company documents, policies, and garment care guides."
         />
         <section className="mx-auto max-w-7xl px-6 py-16">
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

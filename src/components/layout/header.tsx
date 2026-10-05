@@ -58,8 +58,8 @@ export function Header({ current = "Home" }: { current?: string }) {
     { label: "Services", to: "/services" },
     { label: "Branches", to: "/branches" },
     { label: "About Us", to: "/about" },
-    { label: "Blog", to: "/blog" },
-    { label: "Downloads", to: "/downloads" },
+    // { label: "Blog", to: "/blog" },
+    // { label: "Downloads", to: "/downloads" },
     { label: "Contact", to: "/contact" },
   ];
   const [open, setOpen] = useState(false);
