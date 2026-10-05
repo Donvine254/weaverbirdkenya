@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BranchesRouteImport } from './routes/branches'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DownloadsRouteImport } from './routes/downloads'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as PoliciesRouteImport } from './routes/policies'
@@ -45,6 +46,11 @@ const BranchesRoute = BranchesRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DownloadsRoute = DownloadsRouteImport.update({
+  id: '/downloads',
+  path: '/downloads',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -120,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
   '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
@@ -139,6 +146,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
   '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
@@ -159,6 +167,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/branches': typeof BranchesRoute
   '/contact': typeof ContactRoute
+  '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
   '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
@@ -180,6 +189,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/downloads'
     | '/faq'
     | '/mcp'
     | '/policies'
@@ -199,6 +209,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/downloads'
     | '/faq'
     | '/mcp'
     | '/policies'
@@ -218,6 +229,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/branches'
     | '/contact'
+    | '/downloads'
     | '/faq'
     | '/mcp'
     | '/policies'
@@ -238,6 +250,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BranchesRoute: typeof BranchesRoute
   ContactRoute: typeof ContactRoute
+  DownloadsRoute: typeof DownloadsRoute
   FaqRoute: typeof FaqRoute
   McpRoute: typeof McpRoute
   PoliciesRoute: typeof PoliciesRoute
@@ -281,6 +294,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/downloads': {
+      id: '/downloads'
+      path: '/downloads'
+      fullPath: '/downloads'
+      preLoaderRoute: typeof DownloadsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -382,6 +402,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BranchesRoute: BranchesRoute,
   ContactRoute: ContactRoute,
+  DownloadsRoute: DownloadsRoute,
   FaqRoute: FaqRoute,
   McpRoute: McpRoute,
   PoliciesRoute: PoliciesRoute,

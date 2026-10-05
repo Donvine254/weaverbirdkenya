@@ -51,7 +51,7 @@ export function Hero() {
           <ul className="mt-6 grid max-w-md grid-cols-2 gap-3 text-xs sm:text-sm text-white/85">
             {[
               { i: Award, t: "Established in 1996" },
-              { i: Smile, t: "1M+ Happy Clients" },
+              { i: Smile, t: "1M+ Parents & Students Served" },
               { i: Truck, t: "Nationwide Delivery" },
               { i: CircleStar, t: "Unbeatable Quality" },
             ].map(({ i: Icon, t }) => (
