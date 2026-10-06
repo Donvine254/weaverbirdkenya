@@ -1068,96 +1068,1080 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "fabric-quality-in-workwear",
     title: "Why Fabric Quality Matters in Workwear and Industrial Uniforms",
     excerpt:
-      "Workwear takes more strain than office clothing. Here's what to look for when choosing overalls and industrial uniforms.",
+      "Workwear faces more demanding conditions than ordinary office clothing. From fabric strength and garment construction to comfort and care, here is what organisations should consider when choosing overalls and industrial uniforms.",
     category: "Workwear",
     date: "2026-08-24",
-    readMinutes: 4,
+    readMinutes: 9,
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1791272396/weaverbird/products/f8fiiswrdi2docqwof7j.jpg",
-    imageAlt: "Garment production at the Weaverbird factory",
+    imageAlt: "Workwear and industrial uniform production at the Weaverbird factory",
     sections: [
       {
-        heading: "Built for the job",
+        heading: "Workwear has a different job to do",
         paragraphs: [
-          "Overalls and dust coats face friction, heavy washing and sometimes oil or chemicals. Stronger fabrics and reinforced seams mean fewer replacements.",
+          "Office clothing and industrial workwear may both be uniforms, but they operate in very different environments.",
+          "An office shirt may spend most of its working life in relatively controlled indoor conditions. An overall, work trouser or dust coat may be exposed to frequent movement, friction, dirt, repeated washing and demanding day-to-day use.",
+          "That difference should influence how workwear is specified. Fabric should not be selected only because it has the right colour or looks good when new.",
+          "The material, garment construction, fit, functional features and expected maintenance should all reflect the work employees actually perform.",
         ],
       },
       {
-        heading: "Comfort affects safety",
+        heading: "Start with the working environment",
         paragraphs: [
-          "Workers who are comfortable keep their workwear on properly. Consider breathability, fit and freedom of movement as well as strength.",
+          "There is no single workwear fabric that is ideal for every industry.",
+          "A warehouse employee, mechanic, construction worker, technician and factory employee may all require different garment characteristics even if they wear similar-looking overalls or trousers.",
+          "Before selecting fabric, identify where the garment will be used, how much physical movement the job requires, how frequently it will be washed and what kind of everyday wear it is likely to experience.",
+          "Where the workplace includes specific hazards, workwear requirements should be determined through the organisation's appropriate safety and risk-assessment process rather than selecting a garment based on appearance alone.",
+        ],
+      },
+      {
+        heading: "Fabric strength matters",
+        paragraphs: [
+          "Industrial uniforms are frequently exposed to friction and repeated movement. Areas such as knees, elbows, pockets and seat areas can experience particularly high levels of wear.",
+          "A suitable workwear fabric therefore needs enough strength for the intended application.",
+          "However, heavier does not automatically mean better. Fabric strength depends on fibre composition, yarn, weave, weight and finishing, among other factors.",
+          "The objective is to select material that provides an appropriate balance between durability, comfort and the demands of the job.",
+        ],
+      },
+      {
+        heading: "Understand fabric composition",
+        paragraphs: [
+          "Workwear can be produced from cotton, polyester, polyester-cotton blends and other materials depending on the intended use.",
+          "Cotton-containing fabrics can offer comfort and breathability, while polyester-containing materials can contribute characteristics such as durability, shape retention and practical care. Blends are commonly used to balance different properties.",
+          "The fibre percentages alone do not determine whether a material is suitable. Two fabrics with the same composition can perform differently because of differences in weight, weave and finishing.",
+          "Procurement teams should therefore evaluate the complete fabric specification and physical sample rather than selecting material solely by fibre name.",
+        ],
+      },
+      {
+        heading: "Fabric weight should suit the job",
+        paragraphs: [
+          "Fabric weight is another important consideration when specifying workwear.",
+          "A very lightweight material may provide comfort in warm environments but may not offer the durability required for particularly demanding applications. A very heavy material may feel substantial but could become unnecessarily warm or restrictive for employees who move continuously throughout the day.",
+          "The appropriate weight depends on the garment, working conditions and expected level of wear.",
+          "Ask the manufacturer to explain why a proposed fabric weight is suitable for the particular workwear application rather than assuming the heaviest available material is automatically the best option.",
+        ],
+      },
+      {
+        heading: "The weave affects performance",
+        paragraphs: [
+          "Fabric construction is just as important as fibre composition.",
+          "Different weave structures can affect the material's strength, flexibility, surface texture and overall feel. Workwear fabrics may therefore be selected according to both their composition and construction.",
+          "This is why physical samples are valuable during procurement. A technical description can provide useful information, but handling the material gives buyers a better understanding of its weight, stiffness, texture and suitability.",
+        ],
+      },
+      {
+        heading: "Durability is about more than fabric",
+        paragraphs: [
+          "Strong fabric alone does not guarantee durable workwear.",
+          "A garment can still fail prematurely if seams, pockets, zips, buttons or other components are unsuitable for the way it is used.",
+          "Workwear should therefore be evaluated as a complete product. Check the fabric together with stitching, seam construction, closures, pockets and areas that experience frequent stress.",
+          "Good material combined with appropriate garment construction is more useful than focusing on either factor in isolation.",
+        ],
+      },
+      {
+        heading: "Pay attention to high-stress areas",
+        paragraphs: [
+          "Certain parts of a work garment experience more strain than others.",
+          "Pockets may carry tools or frequently used items. Knees bend repeatedly. Seat and crotch areas experience stress during sitting, lifting and movement. Sleeves and elbows can be exposed to regular friction.",
+          "Depending on the application, these areas may require appropriate seam construction, reinforcement or additional fabric.",
+          "When developing custom workwear, explain the employees' actual tasks to the manufacturer so these functional requirements can be considered during garment design.",
+        ],
+      },
+      {
+        heading: "Reinforced seams can extend garment life",
+        paragraphs: [
+          "Seams hold the garment together and are frequently exposed to pulling and repeated movement.",
+          "The appropriate seam type and reinforcement depend on the garment and the areas experiencing stress. Selected points may require additional stitching or reinforcement to withstand regular use.",
+          "When evaluating samples, inspect areas such as pockets, side seams, crotch seams, armholes and other high-stress locations.",
+          "The objective is not simply to add more stitching everywhere, but to construct the garment appropriately for its intended application.",
+        ],
+      },
+      {
+        heading: "Pockets should be designed around the work",
+        paragraphs: [
+          "Pockets are one of the most functional parts of many industrial uniforms.",
+          "Before ordering workwear, consider what employees actually need to carry. A technician may require several utility pockets, while another employee may need only standard trouser or chest pockets.",
+          "Pocket size, position and construction should allow employees to use them without unnecessarily interfering with movement.",
+          "For custom workwear, pocket requirements should be specified before sampling so they can be evaluated on the finished garment.",
+        ],
+      },
+      {
+        heading: "Zips, buttons and closures matter too",
+        paragraphs: [
+          "Closures are relatively small components, but their failure can make an otherwise usable garment difficult to wear.",
+          "Zips, buttons, press fasteners and other closures should be appropriate for the garment and expected working conditions.",
+          "During sample evaluation, check how easily closures operate and whether they are positioned appropriately for normal use.",
+          "These components should form part of the overall workwear specification rather than being treated as an afterthought.",
+        ],
+      },
+      {
+        heading: "Comfort matters in workwear",
+        paragraphs: [
+          "Durability is important, but workwear also needs to be practical for employees to wear throughout the working day.",
+          "A garment that is unnecessarily heavy, restrictive or poorly fitted can make physical tasks more difficult and uncomfortable.",
+          "Consider fabric weight, breathability, garment fit and freedom of movement together. Employees should be able to perform the normal movements required by their roles without the garment pulling excessively or restricting them.",
+          "For teams working in warm conditions, comfort and ventilation can be particularly important considerations when selecting materials and garment designs.",
+        ],
+      },
+      {
+        heading: "Fit affects freedom of movement",
+        paragraphs: [
+          "Industrial workwear should provide enough room for the movements employees regularly perform.",
+          "Depending on the role, workers may need to bend, reach, kneel, climb, lift or operate equipment while wearing the garment.",
+          "Workwear that is too tight may restrict movement, while excessively loose clothing may be unsuitable for some working environments.",
+          "Use an appropriate size range and, where possible, evaluate samples on people performing representative movements before approving a large order.",
+        ],
+      },
+      {
+        heading: "Think about the climate",
+        paragraphs: [
+          "Kenyan workplaces operate across varied climatic conditions, from warmer outdoor environments to cooler highland areas and controlled indoor facilities.",
+          "A single fabric specification may therefore not be appropriate for every organisation or location.",
+          "Teams working outdoors in warmer areas may prioritise lighter and more breathable garments, while other environments may require additional layers or heavier clothing.",
+          "The uniform programme should reflect the actual conditions employees experience rather than using the same specification simply because it is standard.",
+        ],
+      },
+      {
+        heading: "Plan for repeated washing",
+        paragraphs: [
+          "Workwear often needs frequent cleaning because it is exposed to dirt, dust and normal workplace contamination.",
+          "Fabric should therefore be selected with the expected washing routine in mind. Consider colour retention, shrinkage, shape retention and the recommended washing conditions.",
+          "The organisation should understand whether garments will be washed by employees, cleaned centrally or handled through another arrangement.",
+          "Care instructions should be practical for the cleaning method that will actually be used.",
+        ],
+      },
+      {
+        heading: "Colour retention affects professional appearance",
+        paragraphs: [
+          "Industrial uniforms are functional garments, but appearance still matters for many organisations.",
+          "If garments fade at noticeably different rates, teams can begin to look inconsistent even when everyone is wearing the same uniform design.",
+          "Colourfastness and recommended care should therefore be considered when selecting fabric, particularly for darker corporate colours.",
+          "For repeat orders, keeping an approved fabric and colour reference can also help new garments coordinate with existing stock as closely as reasonably possible.",
+        ],
+      },
+      {
+        heading: "Shrinkage should be considered",
+        paragraphs: [
+          "Repeated washing can affect garment dimensions depending on the material and construction.",
+          "Unexpected shrinkage can change fit, sleeve length, trouser length and overall comfort.",
+          "Ask about the proposed material's care requirements and, for a new workwear specification, consider evaluating a washed sample before approving bulk production.",
+          "Sizing and fabric performance should be considered together rather than treating them as separate procurement issues.",
+        ],
+      },
+      {
+        heading: "Ordinary workwear is not automatically protective clothing",
+        paragraphs: [
+          "It is important to distinguish general workwear from specialised protective clothing.",
+          "An overall, dust coat or work jacket may help keep employees' personal clothing cleaner and provide a consistent workplace uniform, but that does not automatically mean the garment provides protection against specific hazards.",
+          "Where workers may be exposed to hazards such as flame, significant heat, electrical risks, hazardous chemicals or other specialised conditions, the organisation should identify the appropriate protective requirements through its safety procedures and obtain garments designed for those specific applications.",
+          "Do not assume that a thick fabric, reflective trim or an industrial appearance makes a garment suitable for a hazard for which it was not designed.",
+        ],
+      },
+      {
+        heading: "Workwear and PPE are not always the same thing",
+        paragraphs: [
+          "The terms workwear and personal protective equipment are sometimes used interchangeably, but they should not automatically be treated as the same category.",
+          "General workwear includes garments such as ordinary overalls, work shirts, trousers, dust coats and jackets used for identification, practicality or everyday workplace clothing.",
+          "PPE is selected to address identified workplace hazards and may be subject to specific performance requirements depending on the application.",
+          "Procurement teams should establish which category is required before requesting quotations so that suppliers understand whether the request is for general-purpose workwear or specialised protective clothing.",
+        ],
+      },
+      {
+        heading: "Reflective details should match the requirement",
+        paragraphs: [
+          "Reflective materials can be incorporated into selected workwear designs where visibility is part of the garment requirement.",
+          "The amount, type and placement should be determined by the intended application rather than added only for appearance.",
+          "Where an organisation requires garments for a safety-critical visibility application, the relevant performance requirements should be clearly stated during procurement.",
+          "For general branded workwear, reflective detailing can also be discussed during the design and sampling stage where appropriate.",
+        ],
+      },
+      {
+        heading: "Branding should suit the garment",
+        paragraphs: [
+          "Workwear often carries company logos, employee names, departments or other identification.",
+          "Embroidery is commonly used for smaller logos on work shirts, jackets, overalls and similar garments because it provides a structured branded finish. Other methods may be appropriate depending on the fabric and design.",
+          "Branding should be positioned so that it does not unnecessarily interfere with pockets, seams or functional garment features.",
+          "Approve the logo size, position and colours on a sample before bulk production begins.",
+        ],
+      },
+      {
+        heading: "Choose colours for practical use",
+        paragraphs: [
+          "Corporate identity may influence workwear colours, but practical considerations should also be taken into account.",
+          "Some working environments expose garments to dust, dirt or frequent staining, while others require employees to be easily identifiable by department or role.",
+          "Different colours or trims can sometimes be used to distinguish teams while maintaining a consistent overall uniform programme.",
+          "If specific brand colours are important, approve the physical fabric rather than relying solely on colours displayed on a screen.",
+        ],
+      },
+      {
+        heading: "Test a sample before committing to a large order",
+        paragraphs: [
+          "Physical samples are especially valuable for workwear because buyers need to evaluate more than appearance.",
+          "Inspect the fabric weight, stitching, pocket construction, closures, fit and freedom of movement. Where appropriate, wash the sample according to the intended care instructions and review how it performs.",
+          "If employees perform demanding physical tasks, a trial garment can also help identify practical design issues before the specification is finalised.",
+          "Changes are easier to make during sampling than after hundreds of garments have already been produced.",
+        ],
+      },
+      {
+        heading: "Consider a wear trial for new specifications",
+        paragraphs: [
+          "For organisations introducing a completely new workwear design, a short practical wear trial may provide useful feedback before a large production run.",
+          "Selected employees can assess factors such as comfort, movement, pocket placement and general practicality during normal work.",
+          "Feedback should focus on functional issues that can reasonably be addressed through garment design or sizing.",
+          "Once the specification is approved, the final sample can become the reference for bulk production.",
+        ],
+      },
+      {
+        heading: "Think in terms of replacement cost, not just purchase price",
+        paragraphs: [
+          "When procurement teams compare workwear quotations, the cheapest garment is not automatically the most economical option.",
+          "If a garment needs to be replaced much more frequently because the material or construction is unsuitable for the job, a lower initial purchase price can result in higher replacement costs over time.",
+          "At the same time, organisations should avoid paying for unnecessary specifications that provide no meaningful benefit for the actual working environment.",
+          "The goal is appropriate quality: material and construction suited to the job at a sustainable cost.",
+        ],
+      },
+      {
+        heading: "Standardisation makes repeat orders easier",
+        paragraphs: [
+          "Once an organisation has approved a successful workwear specification, retain the relevant information for future production.",
+          "This can include fabric composition, colour, garment measurements, pocket design, closures, branding position and approved sample.",
+          "When new employees join or existing garments need replacement, the manufacturer then has a clear reference for repeat production.",
+          "Standardisation can also make procurement easier across different branches or departments.",
+        ],
+      },
+      {
+        heading: "Questions to ask your workwear manufacturer",
+        bullets: [
+          "What fabric do you recommend for this working environment?",
+          "What is the fabric composition and weight?",
+          "Why is this material suitable for the intended use?",
+          "How should the garment be washed and cared for?",
+          "How does the fabric perform after repeated washing?",
+          "Which areas of the garment require reinforcement?",
+          "Can pockets be customised for our employees' tasks?",
+          "What size range is available?",
+          "Can special sizes be produced?",
+          "Can we review a finished sample before bulk production?",
+          "Can the same fabric and design be reproduced for future orders?",
+          "How will our company branding be applied?",
+        ],
+      },
+      {
+        heading: "Workwear procurement checklist",
+        paragraphs: [
+          "Before approving an industrial uniform order, confirm that the garment specification reflects the work employees actually perform.",
+        ],
+        bullets: [
+          "Working environment has been assessed",
+          "Garment type suits the employee's role",
+          "Fabric composition has been confirmed",
+          "Fabric weight is appropriate",
+          "Physical fabric or garment sample has been reviewed",
+          "High-stress areas have been considered",
+          "Pocket requirements have been defined",
+          "Closures and trims are appropriate",
+          "Fit and freedom of movement have been checked",
+          "Size range has been confirmed",
+          "Care and washing requirements are practical",
+          "Colour has been physically approved",
+          "Branding position and method are confirmed",
+          "Specialised protective requirements have been identified separately where applicable",
+          "A pre-production sample has been approved",
+          "Repeat-order requirements have been discussed",
+        ],
+      },
+      {
+        heading: "Choosing workwear for your organisation",
+        paragraphs: [
+          "Good workwear begins with understanding the job. The best material for one working environment may be unnecessarily heavy, too light or otherwise unsuitable for another.",
+          "Rather than selecting an overall or industrial uniform based only on appearance or price, evaluate the fabric, construction, fit, functionality, maintenance requirements and expected level of use together.",
+          "For specialised hazards, make sure the required protective performance is identified separately and that the selected garment is specifically appropriate for that application.",
+          "For general workwear, a well-planned specification can provide employees with practical garments while helping the organisation maintain a consistent professional appearance.",
+        ],
+      },
+      {
+        heading: "Workwear manufacturing at Weaverbird",
+        paragraphs: [
+          "Weaverbird Garments manufactures workwear and industrial uniforms for organisations with different operational requirements.",
+          "Our workwear range includes overalls, work shirts, work trousers, utility garments, dust coats, jackets, reflective wear and other customised work garments.",
+          "During product development, our team can review garment type, fabric, sizing, pockets, branding and other construction requirements before preparing samples for approval.",
+          "For bulk orders, an approved sample and specification provide the reference for production and can support future repeat orders when additional garments are required.",
+          "If your organisation is sourcing new workwear or replacing an existing uniform, share the working environment, garment requirements, quantities and branding needs with our team so we can review the appropriate manufacturing options.",
         ],
       },
     ],
-    links: [{ label: "Workwear & overalls", href: "/products#workwear-overalls" }, QUOTE],
+    links: [
+      { label: "Workwear & overalls", href: "/products#workwear-overalls" },
+      { label: "Bulk manufacturing", href: "/services#bulk-manufacturing" },
+      QUOTE,
+    ],
   },
   {
     slug: "choosing-medical-scrubs",
     title: "A Guide to Choosing Medical Scrubs and Healthcare Uniforms",
     excerpt:
-      "Fit, colour coding and easy care — what hospitals and clinics should consider when ordering scrubs.",
+      "Fit, fabric, colour coding, practical pockets and easy care all matter when selecting healthcare uniforms. Here is what hospitals, clinics and other medical facilities should consider before ordering scrubs and medical wear.",
     category: "Medical Wear",
     date: "2026-08-17",
-    readMinutes: 4,
+    readMinutes: 9,
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788938310/weaverbird/products/bsdlmd5g6lowhknqrx1t.jpg",
-    imageAlt: "Healthcare uniforms",
+    imageAlt: "Medical scrubs and healthcare uniforms",
     sections: [
       {
-        heading: "Colour coding by role",
+        heading: "Healthcare uniforms need to be practical",
         paragraphs: [
-          "Many facilities use different colours for different departments or roles, making it easier for patients and staff to identify who is who.",
+          "Healthcare uniforms are worn in environments where employees may spend long hours standing, walking and moving between patients, departments and work areas.",
+          "A uniform therefore needs to do more than create a professional appearance. It should be comfortable, practical to work in, appropriate for the employee's role and suitable for the facility's laundering arrangements.",
+          "Different healthcare roles can also require different garments. Scrub suits may be appropriate for one department while tunics, dresses, coats, aprons or other uniform styles may be preferred elsewhere.",
+          "The best starting point is to identify who will wear each garment, what their work involves and how the uniform will be maintained.",
         ],
       },
       {
-        heading: "Frequent washing",
+        heading: "Start with the role of the wearer",
         paragraphs: [
-          "Healthcare garments are washed often. Choose fabrics that tolerate regular laundering without fading or losing shape.",
+          "There is no single healthcare uniform that is ideal for every employee.",
+          "Nurses, doctors, theatre teams, pharmacists, dental staff, laboratory personnel, maternity staff, students and support teams can have different practical requirements.",
+          "Before selecting a design, consider the employee's normal working environment, movement, pocket requirements, identification needs and laundering routine.",
+          "A uniform programme can then use different garments where necessary while maintaining a coordinated identity across the facility.",
+        ],
+      },
+      {
+        heading: "Choosing medical scrubs",
+        paragraphs: [
+          "Scrubs are widely used because their relatively simple construction can provide a practical combination of comfort and ease of movement.",
+          "A typical scrub set consists of a top and trousers. V-neck tops are common, although the exact neckline, pocket arrangement and cut can be adapted according to the facility's requirements.",
+          "When comparing scrub designs, look beyond colour. Consider the fabric, fit, pocket placement, waistband, trouser cut and how easily employees can move while wearing the set.",
+          "The finished uniform should suit the role rather than simply copying a design because it is commonly associated with healthcare.",
+        ],
+      },
+      {
+        heading: "Fabric selection matters",
+        paragraphs: [
+          "The material used for healthcare uniforms affects comfort, appearance, durability and care requirements.",
+          "Cotton, polyester and blended fabrics can all be used for different types of medical garments. The appropriate choice depends on factors such as garment design, expected laundering, desired comfort and the facility's requirements.",
+          "Fibre composition alone does not determine quality. Fabric weight, construction and finishing also influence how a material feels and performs.",
+          "Procurement teams should therefore review physical fabric samples rather than selecting uniforms solely from a written fibre percentage.",
+        ],
+      },
+      {
+        heading: "Think about fabric weight",
+        paragraphs: [
+          "Healthcare employees may wear their uniforms for long shifts, so fabric weight should be considered carefully.",
+          "A material that is unnecessarily heavy can become uncomfortable, particularly in warmer environments or roles involving continuous movement. A very lightweight material, however, may not provide the structure or durability desired for a particular garment.",
+          "The appropriate balance depends on the uniform type and working conditions.",
+          "Ask the manufacturer to explain the proposed fabric and compare samples before approving the final specification.",
+        ],
+      },
+      {
+        heading: "Breathability and comfort",
+        paragraphs: [
+          "Comfort becomes particularly important when uniforms are worn for extended periods.",
+          "Consider how the fabric feels against the body, its weight and whether the garment allows employees to move comfortably during normal duties.",
+          "Kenyan healthcare facilities operate in different climatic conditions, so a fabric that feels comfortable in one environment may not be ideal in another.",
+          "Where employees work in warm conditions or physically active roles, fabric and garment design should be selected with those conditions in mind.",
+        ],
+      },
+      {
+        heading: "Frequent washing should influence fabric choice",
+        paragraphs: [
+          "Healthcare garments may require frequent laundering, making care requirements an important part of fabric selection.",
+          "Ask how the proposed material responds to the laundering method the facility expects to use. Colour retention, shrinkage, shape retention and general appearance should all be considered.",
+          "If uniforms will be laundered centrally, provide the manufacturer with information about the intended process so the garment specification can be reviewed accordingly.",
+          "For a new uniform programme, evaluating a washed sample can provide useful information before a large order is approved.",
+        ],
+      },
+      {
+        heading: "Colourfastness matters",
+        paragraphs: [
+          "A facility may use colour to create a coordinated appearance or distinguish different groups of employees.",
+          "Frequent washing can make colour performance particularly important. If garments lose colour at very different rates, staff uniforms can quickly begin to look inconsistent.",
+          "When selecting darker or distinctive colours, ask about appropriate care and how the material is expected to perform under the intended washing conditions.",
+          "Retaining an approved fabric sample also provides a useful colour reference for future orders.",
+        ],
+      },
+      {
+        heading: "Colour coding by role or department",
+        paragraphs: [
+          "Some healthcare facilities use different uniform colours to distinguish departments, roles or teams.",
+          "For example, a facility may assign different colours to nursing teams, theatre personnel, pharmacy staff or other departments according to its own internal system.",
+          "Colour coding can make visual identification easier, but the system should remain simple enough for staff and patients to understand.",
+          "There is no need to introduce different colours for every position unless that level of distinction serves a useful purpose.",
+        ],
+      },
+      {
+        heading: "Create a documented colour system",
+        paragraphs: [
+          "If your facility uses colour coding, record the approved colours rather than relying only on descriptions such as blue, green or maroon.",
+          "Keep physical fabric samples or approved garments so future production can be compared against the original specification.",
+          "This becomes particularly important when uniforms are reordered months or years later.",
+          "The colour system can also be incorporated into staff uniform guidelines so new employees know which garments apply to their role.",
         ],
       },
       {
         heading: "Fit and movement",
         paragraphs: [
-          "Staff bend, lift and move all shift. A comfortable cut with practical pockets makes a real difference.",
+          "Healthcare employees may need to bend, reach, walk quickly, sit, stand and perform other movements repeatedly throughout a shift.",
+          "A uniform should allow those normal movements without excessive restriction.",
+          "When reviewing samples, employees should evaluate the garment while moving rather than only standing in front of a mirror.",
+          "The cut should provide enough room for practical movement while maintaining the intended professional appearance.",
+        ],
+      },
+      {
+        heading: "Avoid relying on one size for everyone",
+        paragraphs: [
+          "A healthcare workforce can include employees with a wide range of body sizes and proportions.",
+          "Before placing a bulk order, request the manufacturer's size chart and collect staff sizes carefully.",
+          "For larger teams, fitting samples or a sizing exercise can help employees select appropriate sizes before production.",
+          "Also identify any requirements outside the standard size range early so they can be addressed during production planning.",
+        ],
+      },
+      {
+        heading: "Scrub trousers deserve as much attention as the top",
+        paragraphs: [
+          "Procurement discussions often focus on the scrub top, but employees wear the trousers for the same length of time.",
+          "Consider the waistband, fit, pocket requirements, trouser length and freedom of movement.",
+          "The waistband should be practical for the intended design and size range, while pockets should be positioned so they remain useful during normal work.",
+          "Top and trouser samples should be evaluated together as a complete uniform rather than approving each piece independently.",
+        ],
+      },
+      {
+        heading: "Pocket design should be practical",
+        paragraphs: [
+          "Pockets are an important feature of many healthcare uniforms, but more pockets are not automatically better.",
+          "Consider what employees genuinely need to carry during their work and where those items can be placed without unnecessarily affecting comfort or movement.",
+          "Chest pockets, lower patch pockets and trouser pockets can be incorporated according to the role and garment design.",
+          "Pocket size and position should be approved on the sample before bulk production begins.",
+        ],
+      },
+      {
+        heading: "Choose necklines and closures carefully",
+        paragraphs: [
+          "V-neck scrub tops are common because of their simple construction and practical appearance, but they are not the only option available.",
+          "Tunics and other healthcare garments may use different necklines, front openings, buttons, zips or other closures depending on the design.",
+          "These details affect both appearance and usability.",
+          "When developing a custom healthcare uniform, evaluate the complete garment rather than choosing design features independently.",
+        ],
+      },
+      {
+        heading: "Nurse uniforms",
+        paragraphs: [
+          "Not every healthcare facility uses scrub suits for all nursing roles.",
+          "Traditional nurse dresses, tunics, trousers and other coordinated garments may still form part of a facility's uniform programme.",
+          "When specifying these garments, the same principles apply: appropriate fabric, practical fit, freedom of movement, easy care and consistent sizing.",
+          "Where several nursing uniform styles are used, they should still form part of a coordinated overall identity.",
+        ],
+      },
+      {
+        heading: "Theatre wear",
+        paragraphs: [
+          "Theatre teams may require dedicated garments according to the facility's procedures and working requirements.",
+          "Where scrub-style garments are specified, colour, sizing, fit, laundering arrangements and departmental identification should be established before ordering.",
+          "Any specialised performance or infection-control requirements should be identified by the healthcare facility and clearly communicated during procurement.",
+          "Do not assume that an ordinary scrub fabric automatically provides specialised protective or clinical performance simply because it is used in a healthcare setting.",
+        ],
+      },
+      {
+        heading: "Pharmacy and dental uniforms",
+        paragraphs: [
+          "Pharmacy and dental teams may use scrubs, tunics, coats or other garments depending on the facility and role.",
+          "These uniforms can be coordinated with the wider healthcare colour system while retaining features appropriate for each team.",
+          "For customer-facing environments such as pharmacies and dental clinics, appearance may be particularly important alongside comfort and practicality.",
+          "Branding and name identification can also be incorporated where required.",
+        ],
+      },
+      {
+        heading: "Patient gowns require a different approach",
+        paragraphs: [
+          "Patient garments serve a different purpose from staff uniforms and should therefore be specified separately.",
+          "Fabric comfort, garment construction, sizing, closures, ease of changing and the facility's laundering process can all influence the design.",
+          "The appropriate specification should reflect the healthcare facility's operational requirements and intended patient use.",
+          "A patient gown should not simply be treated as an oversized version of a staff garment.",
+        ],
+      },
+      {
+        heading: "Maternity garments",
+        paragraphs: [
+          "Healthcare facilities may also require maternity gowns or other garments designed for specific patient or staff needs.",
+          "These garments should provide the required coverage and room while remaining practical for the intended use.",
+          "Fabric, closures, sizing and care requirements should be discussed during the specification and sampling stage.",
+          "As with other medical garments, a physical sample allows the facility to evaluate the design before ordering in quantity.",
+        ],
+      },
+      {
+        heading: "Medical aprons and other supporting garments",
+        paragraphs: [
+          "Aprons may form part of the uniform programme for selected healthcare and support roles.",
+          "The required design depends on how the garment will be used, so length, coverage, ties, pockets and fabric should be specified accordingly.",
+          "General-purpose textile aprons should not automatically be treated as specialised protective equipment.",
+          "Where a role requires protection against a particular hazard or substance, the healthcare facility should specify the appropriate protective requirement separately.",
+        ],
+      },
+      {
+        heading: "Medical and theatre caps",
+        paragraphs: [
+          "Caps and headwear can also form part of a coordinated healthcare clothing programme.",
+          "Sizing, fit, fabric and laundering requirements should be considered alongside the main garments.",
+          "If different cap styles are required for different departments or purposes, include them as separate items in the procurement specification.",
+        ],
+      },
+      {
+        heading: "Healthcare uniforms and protective equipment are not automatically the same",
+        paragraphs: [
+          "A medical uniform identifies staff and provides practical clothing for their role, but ordinary scrubs should not automatically be assumed to protect the wearer from specific clinical hazards.",
+          "Where employees require specialised protective equipment, the facility should identify the required performance based on its safety and infection-control procedures.",
+          "Those requirements should then be specified separately during procurement.",
+          "This distinction helps buyers avoid assuming that colour, fabric thickness or a garment's medical appearance proves a level of protection that has not actually been established.",
+        ],
+      },
+      {
+        heading: "Be careful with claims such as 'antibacterial fabric'",
+        paragraphs: [
+          "Healthcare buyers may encounter fabrics marketed using terms such as antibacterial, antimicrobial or similar descriptions.",
+          "These claims should not be accepted solely because they appear in a product description.",
+          "If a particular performance property is required, procurement teams should ask for the relevant specification or supporting information and determine whether it meets the facility's requirements.",
+          "For ordinary healthcare uniforms, practical fabric selection, correct laundering and the facility's established hygiene procedures remain separate considerations.",
+        ],
+      },
+      {
+        heading: "Branding healthcare uniforms",
+        paragraphs: [
+          "Hospitals, clinics, pharmacies and other healthcare organisations may want their logo or institution name applied to staff uniforms.",
+          "Embroidery is commonly used for smaller logos and names on scrub tops, tunics, coats and other garments, although the appropriate method depends on the material and design.",
+          "Branding should be positioned carefully so that it works with pockets, seams and other garment features.",
+          "Approve the logo size, colours and position on a sample before bulk production.",
+        ],
+      },
+      {
+        heading: "Consider employee names and departments",
+        paragraphs: [
+          "Some organisations add employee names, job titles or department names to uniforms in addition to the main institutional branding.",
+          "If personalised garments are required, provide accurate employee information before production and agree how names and titles should be formatted.",
+          "Personalisation can also affect how replacement garments are ordered, so the organisation should maintain accurate uniform allocation records.",
+        ],
+      },
+      {
+        heading: "Think about modesty and coverage",
+        paragraphs: [
+          "Healthcare teams can include employees with different garment preferences and role requirements.",
+          "When developing a uniform programme, consider whether alternative sleeve lengths, trouser options, longer tunics or other approved variations are needed.",
+          "The objective is to establish a coordinated uniform system that remains practical for the organisation and the people wearing it.",
+          "Any variations should be documented so future orders remain consistent.",
+        ],
+      },
+      {
+        heading: "Consider different working environments",
+        paragraphs: [
+          "A healthcare organisation may operate across wards, clinics, laboratories, pharmacies, dental rooms, reception areas and other spaces.",
+          "Employees in these environments may not all need identical garments.",
+          "Instead of forcing one design across every role, organisations can establish a coordinated family of uniforms with appropriate variations for different teams.",
+          "Consistent colours, branding and design elements can maintain the institutional identity even where garment styles differ.",
+        ],
+      },
+      {
+        heading: "Plan for students and training institutions",
+        paragraphs: [
+          "Medical and nursing training institutions have their own uniform requirements, often involving several garments rather than a single scrub set.",
+          "Student uniforms may include dresses, shirts, trousers, sweaters, blazers, ties or other pieces according to the institution's specification.",
+          "Because students may need replacement garments throughout their training, consistent sizing, colours and repeat availability are important considerations.",
+          "An approved sample and documented specification can help maintain that consistency over successive intakes.",
+        ],
+      },
+      {
+        heading: "Order enough uniforms for the working pattern",
+        paragraphs: [
+          "The quantity issued to each employee should reflect the organisation's work schedule and laundering arrangements.",
+          "An employee who works several consecutive shifts may need enough garments to allow used uniforms to be cleaned before they are required again.",
+          "Procurement teams should calculate quantities per employee rather than simply counting the number of staff members.",
+          "Replacement stock may also be useful for new employees, damaged garments or unexpected size requirements.",
+        ],
+      },
+      {
+        heading: "Plan for new employees",
+        paragraphs: [
+          "Healthcare workforces change over time. New employees join, departments expand and existing staff may require different sizes.",
+          "Choose uniform designs and fabrics that can reasonably be reproduced for future orders and retain approved specifications.",
+          "A small stock of commonly required sizes may help some organisations manage urgent requirements, while other facilities may prefer scheduled repeat orders.",
+          "The appropriate approach depends on workforce size and how frequently staffing changes occur.",
+        ],
+      },
+      {
+        heading: "Keep a uniform allocation record",
+        paragraphs: [
+          "For larger facilities, maintaining a record of uniforms issued to employees can simplify future procurement.",
+          "The record can identify the employee, department, garment type, size and quantity issued.",
+          "When replacements or additional garments are needed, procurement teams can use existing information rather than collecting every detail again.",
+          "Accurate records can also help estimate quantities for future bulk orders.",
+        ],
+      },
+      {
+        heading: "Sample before bulk production",
+        paragraphs: [
+          "A finished sample allows the facility to evaluate the complete garment before committing to a large order.",
+          "Check the fabric, colour, fit, neckline, sleeve length, pockets, waistband, trouser length, stitching, branding and general appearance.",
+          "Where appropriate, have employees from the intended department evaluate the sample for normal movement and practicality.",
+          "Document any changes and approve the final version before bulk production begins.",
+        ],
+      },
+      {
+        heading: "Consider a wear trial for a new uniform programme",
+        paragraphs: [
+          "If a hospital or clinic is introducing a completely new uniform, a short wear trial can provide useful feedback before a large rollout.",
+          "Selected employees can assess comfort, movement, pocket placement, fit and practical care during normal duties.",
+          "Feedback should be reviewed systematically rather than making design changes based on isolated preferences.",
+          "Once the final design is approved, retain the sample as the production reference.",
+        ],
+      },
+      {
+        heading: "Think about repeat orders",
+        paragraphs: [
+          "A healthcare uniform programme rarely ends with the first order.",
+          "Garments wear out, employees join, departments expand and sizes change. The manufacturer may therefore need to reproduce the same uniforms months or years later.",
+          "Retaining fabric, colour, pattern, sizing and branding specifications makes future production easier.",
+          "For distinctive colours or custom materials, discuss future availability and lead times during the initial order.",
+        ],
+      },
+      {
+        heading: "Questions to ask a medical uniform manufacturer",
+        bullets: [
+          "What fabric do you recommend for the intended garment and working environment?",
+          "What is the fabric composition and weight?",
+          "What are the recommended laundering instructions?",
+          "How does the fabric perform under repeated washing?",
+          "What size range is available?",
+          "Can non-standard sizes be produced?",
+          "Can pocket layouts be customised?",
+          "Can different departments use coordinated colours or garment styles?",
+          "Can our logo and staff identification be added?",
+          "Can we review a finished sample before bulk production?",
+          "Can the same fabric and colour be reproduced for repeat orders?",
+          "What lead time should we allow for a bulk institutional order?",
+        ],
+      },
+      {
+        heading: "Healthcare uniform procurement checklist",
+        paragraphs: [
+          "Before approving a medical uniform order, procurement teams can use the following checklist.",
+        ],
+        bullets: [
+          "Staff roles and departments have been identified",
+          "Appropriate garment types have been selected",
+          "Fabric composition and weight have been reviewed",
+          "Laundering requirements have been considered",
+          "Colours have been physically approved",
+          "Department colour coding has been documented where used",
+          "Size range has been confirmed",
+          "Non-standard sizes have been identified",
+          "Fit and freedom of movement have been evaluated",
+          "Pocket requirements have been confirmed",
+          "Branding and identification details are approved",
+          "Specialised protective requirements have been specified separately where applicable",
+          "Physical samples have been reviewed",
+          "Final pre-production sample has been approved",
+          "Quantities have been calculated by garment and size",
+          "Repeat-order requirements have been discussed",
+        ],
+      },
+      {
+        heading: "Choosing healthcare uniforms for your facility",
+        paragraphs: [
+          "A good healthcare uniform programme balances practicality, comfort, appearance and ease of maintenance.",
+          "Instead of choosing garments based only on colour or price, consider who will wear them, what their work involves, how frequently the garments will be laundered and whether different departments have different requirements.",
+          "Physical samples are especially useful because they allow employees and procurement teams to evaluate fabric, fit and functional details before a large order is placed.",
+          "Once a successful uniform has been approved, retain its specifications so future employees can receive garments that remain consistent with the existing team.",
+        ],
+      },
+      {
+        heading: "Medical wear manufacturing at Weaverbird",
+        paragraphs: [
+          "Weaverbird Garments manufactures medical and healthcare uniforms for hospitals, clinics, pharmacies, training institutions and other healthcare organisations.",
+          "Our medical wear range includes scrub suits, medical trousers, nurse uniforms, theatre wear, tunic tops, patient gowns, pharmacy and dental wear, maternity gowns, medical aprons, medical and theatre caps, and selected institutional garments.",
+          "Our team can work with your organisation to review garment designs, fabrics, department colours, sizing, pockets and branding before preparing samples for approval.",
+          "For bulk orders, the approved sample and garment specification provide a reference for production and can help maintain consistency when additional uniforms are required later.",
+          "If your healthcare facility is introducing a new uniform or replacing an existing one, provide your garment requirements, quantities, colours, size range and branding details so our team can review the appropriate manufacturing options.",
         ],
       },
     ],
-    links: [{ label: "Medical wear range", href: "/products#medical-wear" }, QUOTE],
+    links: [
+      { label: "Medical wear range", href: "/products#medical-wear" },
+      { label: "Bulk manufacturing", href: "/services#bulk-manufacturing" },
+      QUOTE,
+    ],
   },
   {
     slug: "procurement-guide-bulk-uniforms",
     title: "What Procurement Teams Should Know Before Ordering Uniforms in Bulk",
     excerpt:
-      "Specifications, samples and timelines — how to prepare a uniform tender or bulk order that runs smoothly.",
+      "Specifications, samples, supplier capacity, quality control and realistic timelines all affect the success of a bulk uniform order. Here is a practical procurement guide for schools, companies and institutions.",
     category: "Manufacturing",
     date: "2026-08-10",
-    readMinutes: 5,
+    readMinutes: 10,
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1791272592/weaverbird/products/j7hgsxcyxuxsm8teshvb.jpg",
-    imageAlt: "Bulk uniform order",
+    imageAlt: "Bulk uniform order prepared for institutional delivery",
     sections: [
       {
-        heading: "Write a clear specification",
+        heading: "Bulk uniform procurement starts before you request quotations",
         paragraphs: [
-          "List each garment, colour, fabric preference, branding and quantity. Clear specifications make quotes easier to compare.",
+          "A successful bulk uniform order begins long before fabric is cut or garments enter production. Procurement teams first need to define exactly what the organisation requires.",
+          "Schools, companies, hospitals, security firms, hospitality businesses and other institutions may order hundreds or thousands of garments at a time. At that scale, small uncertainties in sizing, fabric, colour, branding or quantities can become significant problems during production.",
+          "A quotation is only as useful as the information supplied to the manufacturer. If one supplier quotes for a lightweight fabric while another quotes for a heavier material, comparing only the final price does not provide a meaningful comparison.",
+          "Clear specifications, physical samples and realistic timelines make it easier for both the buyer and manufacturer to understand what is expected before an order is confirmed.",
         ],
       },
       {
-        heading: "Ask for samples",
+        heading: "Start by defining what you actually need",
         paragraphs: [
-          "Approve a physical sample before mass production. It is the best way to avoid surprises.",
+          "Before preparing a tender or requesting quotations, identify every garment that needs to be supplied.",
+          "Avoid broad descriptions such as 'staff uniforms' or 'school uniforms' without breaking the requirement into individual products. A manufacturer needs to understand exactly what is included in the order.",
+          "For example, a school requirement might include shirts, trousers, skirts, dresses, sweaters, blazers, ties and sportswear. A corporate order might include shirts, blouses, trousers, skirts, polo shirts, jackets and branded T-shirts.",
+          "Each product should be treated as a separate line item because specifications, quantities, sizes and pricing can differ.",
+        ],
+      },
+      {
+        heading: "Write a clear garment specification",
+        paragraphs: [
+          "A good specification gives competing suppliers the same starting point and reduces assumptions during quotation.",
+          "At minimum, identify the garment type, colour, approximate quantity, size requirements, fabric preference and branding requirements.",
+          "Where the organisation already has an established uniform, include details from the existing garment or provide an approved physical sample for reference.",
+          "More complex garments may require additional details such as pocket styles, collars, cuffs, buttons, zips, reflective tape, piping, lining or other trims.",
+        ],
+        bullets: [
+          "Garment name and description",
+          "Required colour",
+          "Fabric composition or preferred material",
+          "Fabric weight or construction where specified",
+          "Required sizes or size range",
+          "Estimated quantity by garment",
+          "Logo, badge or other branding",
+          "Branding position and approximate size",
+          "Required pockets, buttons, zips and trims",
+          "Any special functional requirements",
+          "Packaging requirements",
+          "Required delivery date and destination",
+        ],
+      },
+      {
+        heading: "Avoid vague fabric descriptions",
+        paragraphs: [
+          "Fabric is one of the areas where procurement specifications can become too general.",
+          "Terms such as 'good quality material', 'heavy fabric' or 'cotton material' leave considerable room for interpretation. Suppliers may quote very different products while technically complying with the wording.",
+          "Where possible, specify the required fibre composition, fabric construction or an approved reference material. If the organisation does not know which technical specification is appropriate, request fabric options from the manufacturer and evaluate physical samples.",
+          "The objective is not to make every procurement document highly technical. It is to provide enough information for suppliers to quote comparable products.",
+        ],
+      },
+      {
+        heading: "Use an existing garment when specifications are unavailable",
+        paragraphs: [
+          "Sometimes an organisation needs to reorder an existing uniform but does not have the original technical specifications.",
+          "In that situation, provide a good-condition garment as a physical reference. A manufacturer can review its construction, measurements, fabric, trims and branding to better understand what needs to be reproduced.",
+          "The reference garment should then be supplemented with any required changes. For example, the organisation may want to retain the same design while changing the fabric or adjusting the logo.",
+          "Do not rely solely on photographs when a physical sample is available. Photographs cannot accurately communicate fabric weight, texture, exact dimensions or construction details.",
+        ],
+      },
+      {
+        heading: "Specify colours carefully",
+        paragraphs: [
+          "Colour descriptions can also create procurement problems. One supplier's interpretation of navy blue, maroon, grey or green may differ from another's.",
+          "If colour consistency is important, provide an approved physical fabric or garment reference where possible.",
+          "This is particularly important when new garments need to match uniforms already being worn by students or employees.",
+          "For repeat orders, the approved fabric and colour should form part of the organisation's retained uniform specification.",
+        ],
+      },
+      {
+        heading: "Separate mandatory requirements from preferences",
+        paragraphs: [
+          "Procurement teams should distinguish between specifications that must be followed and areas where manufacturers are allowed to recommend alternatives.",
+          "For example, the organisation may require a particular corporate colour and logo position but be willing to consider several suitable fabric compositions.",
+          "Clearly identifying mandatory requirements helps prevent unsuitable quotations while still allowing suppliers to suggest practical alternatives where appropriate.",
+          "If alternatives are allowed, ask suppliers to identify them clearly rather than silently substituting materials.",
+        ],
+      },
+      {
+        heading: "Prepare quantities as accurately as possible",
+        paragraphs: [
+          "Manufacturers need realistic quantities to plan material requirements, production capacity and pricing.",
+          "For an initial quotation, estimated quantities may be sufficient. Before production begins, however, the order should be confirmed by garment and size.",
+          "Remember that the number of employees or students is not necessarily the same as the number of garments required. One person may receive several shirts, trousers, blouses or other pieces.",
+          "A useful quantity schedule separates each product and size so the final order can be checked before production.",
+        ],
+      },
+      {
+        heading: "Collect sizing information early",
+        paragraphs: [
+          "Sizing is one of the most common administrative challenges in institutional uniform orders.",
+          "Do not leave size collection until the manufacturer is ready to begin production. Delays in receiving the final size breakdown can affect the entire production schedule.",
+          "Request the manufacturer's size chart early in the procurement process. For large or complex orders, sample garments or a sizing exercise can help confirm appropriate sizes.",
+          "Also identify any non-standard sizes that may need special production.",
+        ],
+      },
+      {
+        heading: "Define branding requirements",
+        paragraphs: [
+          "If garments require a company logo, school badge, employee name, department name or other branding, include this in the procurement specification.",
+          "Provide good-quality artwork and identify where the branding should appear. The manufacturer can then advise whether embroidery, screen printing or another suitable method should be used.",
+          "Branding can affect both price and production time, so it should not be introduced after the main garment quotation has already been approved.",
+          "For repeat orders, approved branding specifications should be retained alongside the garment specification.",
+        ],
+      },
+      {
+        heading: "Ask suppliers to explain what is included in the price",
+        paragraphs: [
+          "A low quotation may not always include the same services as a higher one.",
+          "Before comparing totals, check whether the quoted price includes branding, special sizing, packaging, delivery, taxes or other relevant costs.",
+          "Also check whether sample development or artwork preparation attracts a separate charge where applicable.",
+          "A clear quotation reduces the likelihood of additional costs appearing after the order has already been approved.",
+        ],
+      },
+      {
+        heading: "Compare quotations on the same basis",
+        paragraphs: [
+          "The lowest price should not automatically determine the successful supplier if the quotations are based on different specifications.",
+          "Compare the fabric, construction, branding, quantities, delivery terms and other inclusions alongside the price.",
+          "If one supplier proposes an alternative material, determine whether it genuinely meets the intended requirement before comparing its price with the specified product.",
+          "A structured comparison makes it easier for procurement teams to explain why one quotation offers better overall value than another.",
+        ],
+      },
+      {
+        heading: "Do not evaluate price without evaluating quality",
+        paragraphs: [
+          "Uniforms are functional garments that may be worn repeatedly for long periods. Purchase price is therefore only one part of the procurement decision.",
+          "A cheaper garment may provide poor value if it needs frequent replacement, loses its appearance quickly or cannot be reproduced when additional pieces are required.",
+          "At the same time, a higher price does not automatically guarantee better quality. Procurement teams should evaluate the actual material, construction and supplier capability rather than assuming price alone indicates quality.",
+          "Physical samples make this evaluation considerably easier.",
+        ],
+      },
+      {
+        heading: "Ask for physical samples",
+        paragraphs: [
+          "A physical sample is one of the most useful tools available to a procurement team.",
+          "It allows the buyer to inspect the actual fabric, construction, fit, colour, branding and finishing before committing to bulk production.",
+          "For a new uniform, the manufacturer may need to develop a sample based on the approved specification. For standard products, existing samples may be available for evaluation.",
+          "Where multiple suppliers are being considered, samples can also make technical evaluation more objective.",
+        ],
+      },
+      {
+        heading: "Approve a pre-production sample",
+        paragraphs: [
+          "Once a supplier has been selected and the final specification agreed, approve a finished sample before mass production begins where appropriate.",
+          "Check the garment against the agreed requirements rather than reviewing it only for general appearance.",
+          "Confirm fabric, colour, measurements, pockets, trims, buttons, zips, branding position and other specified details.",
+          "Any corrections should be documented and incorporated before bulk production proceeds.",
+        ],
+      },
+      {
+        heading: "Keep the approved sample",
+        paragraphs: [
+          "Do not return the approval process to memory once production begins.",
+          "An approved physical sample can serve as a reference for the manufacturer, procurement team and quality-control process.",
+          "For long-term uniform programmes, retaining an approved garment can also help when additional orders are placed months or years later.",
+          "It provides a clearer reference than photographs or written descriptions alone.",
+        ],
+      },
+      {
+        heading: "Assess the supplier's manufacturing capability",
+        paragraphs: [
+          "Large uniform orders require more than the ability to produce a good sample.",
+          "Procurement teams should consider whether the supplier has the capacity to manufacture the required quantity within the agreed period while maintaining consistent quality.",
+          "Ask where the garments are manufactured, which production processes are handled internally and how the supplier manages larger orders.",
+          "Where appropriate, institutional buyers may also consider visiting the manufacturing facility before awarding a significant contract.",
+        ],
+      },
+      {
+        heading: "Manufacturer or reseller?",
+        paragraphs: [
+          "Understanding whether you are dealing with a manufacturer, reseller or a combination of both can help you evaluate supply risk.",
+          "A manufacturer directly involved in garment production can control aspects such as cutting, construction, finishing and production scheduling. Where additional capabilities such as embroidery, printing, weaving or knitting are available, more stages of the order may be coordinated through the same supplier.",
+          "A reseller may also supply suitable uniforms, but procurement teams should understand how the garments will be sourced and what happens if the original source becomes unavailable.",
+          "The important point is transparency about how the order will be fulfilled.",
+        ],
+      },
+      {
+        heading: "Check capacity, not just capability",
+        paragraphs: [
+          "A supplier may be capable of manufacturing a garment without having enough available capacity to complete a very large order within your required timeline.",
+          "Provide realistic quantities and delivery dates when requesting quotations so the supplier can assess production requirements properly.",
+          "For particularly large orders, discuss whether deliveries will be completed at once or in agreed batches.",
+          "This becomes especially important around periods of high demand, such as school openings or major institutional programmes.",
+        ],
+      },
+      {
+        heading: "Ask about quality control",
+        paragraphs: [
+          "Quality requirements should be discussed before production rather than only when finished garments arrive.",
+          "Ask how the manufacturer checks fabric, garment measurements, stitching, branding, trims and finishing.",
+          "For larger orders, procurement teams can agree on inspection stages or acceptance procedures before final delivery.",
+          "The approved sample and written specification should provide the reference against which finished garments are evaluated.",
+        ],
+      },
+      {
+        heading: "Define acceptance criteria",
+        paragraphs: [
+          "Procurement teams should know what will be checked when the finished order is received.",
+          "Acceptance criteria can include conformity with the approved garment, correct quantities, agreed size breakdown, branding position, colour, general construction and absence of obvious manufacturing defects.",
+          "The level of inspection will depend on the size and complexity of the order.",
+          "Defining expectations in advance gives both buyer and supplier a clearer understanding of what constitutes successful completion.",
+        ],
+      },
+      {
+        heading: "Agree how defects and discrepancies will be handled",
+        paragraphs: [
+          "Even with quality-control procedures, an institutional order should have a clear process for dealing with discrepancies.",
+          "Before production begins, understand how the supplier handles manufacturing defects, incorrect quantities, wrong sizes or garments that do not meet the approved specification.",
+          "The objective is not to assume that problems will occur, but to make sure both parties understand the process if they do.",
+          "Clear procedures can prevent relatively small issues from turning into prolonged procurement disputes.",
         ],
       },
       {
         heading: "Allow enough time",
         paragraphs: [
-          "Build in time for sampling, production and delivery, especially around busy periods such as school openings.",
+          "Bulk uniform production involves more than sewing garments. The complete timeline can include specification development, quotation, fabric sourcing, sampling, sample approval, size collection, production, branding, finishing, quality control, packing and delivery.",
+          "Procurement teams should work backwards from the date the uniforms are actually required.",
+          "If garments are needed for a school opening, employee onboarding programme, event or new branch launch, communicate that deadline at the beginning of the process.",
+          "Starting early also provides room to resolve sample changes without immediately putting the final delivery date at risk.",
+        ],
+      },
+      {
+        heading: "Account for internal approval time",
+        paragraphs: [
+          "Not every delay in a uniform order occurs at the factory.",
+          "Internal approvals can also take time. Samples may need to be reviewed by management, branding may need approval from a communications team and purchase orders may require several signatures.",
+          "Include these steps when building the procurement schedule.",
+          "Assigning a clear contact person or approval team can also prevent conflicting instructions being sent to the manufacturer.",
+        ],
+      },
+      {
+        heading: "Be especially careful around peak periods",
+        paragraphs: [
+          "Uniform demand is not evenly distributed throughout the year.",
+          "School opening periods, major events and institutional programmes can create concentrated demand for manufacturers and material suppliers.",
+          "An order that can be completed comfortably during one period may require a longer lead time during another.",
+          "If your deadline falls within a known busy period, begin procurement earlier and confirm production capacity before issuing the final order.",
+        ],
+      },
+      {
+        heading: "Plan delivery before production is finished",
+        paragraphs: [
+          "Large orders can create logistical challenges if delivery requirements are discussed only after the garments have been packed.",
+          "Specify whether the order will be collected, delivered to one location or distributed across several branches or institutions.",
+          "If garments need to be grouped by department, branch, employee, school or size, discuss this with the supplier in advance.",
+          "Appropriate packing and labelling can significantly reduce the administrative work required after delivery.",
+        ],
+      },
+      {
+        heading: "Think about repeat orders",
+        paragraphs: [
+          "Many uniform contracts continue beyond a single purchase.",
+          "Employees join organisations, students enrol, garments become worn and institutions open new branches or departments.",
+          "Ask whether the supplier can reproduce the approved garment later and what information will be retained to support repeat production.",
+          "Patterns, measurements, fabric specifications, colour references and branding details can all help maintain consistency across future orders.",
+        ],
+      },
+      {
+        heading: "Consider availability of custom materials",
+        paragraphs: [
+          "If the uniform uses a custom colour, woven fabric, knitted pattern or other specially produced material, discuss future availability during the initial procurement process.",
+          "Custom materials may require minimum production quantities or longer lead times than readily available fabrics.",
+          "Procurement teams should understand these requirements before approving a specification that the organisation expects to use for several years.",
+          "This makes it easier to plan replacement stock and future production.",
+        ],
+      },
+      {
+        heading: "Keep a procurement record",
+        paragraphs: [
+          "Once an order has been completed successfully, retain the information that made it successful.",
+          "Keep copies of approved specifications, size charts, artwork, quotations, purchase orders, approved samples and relevant delivery documentation.",
+          "For repeat orders, these records reduce the need to recreate the entire requirement from the beginning.",
+          "They can also make supplier evaluation and future tender preparation more consistent.",
+        ],
+      },
+      {
+        heading: "Common mistakes in bulk uniform procurement",
+        bullets: [
+          "Requesting quotations without a clear garment specification",
+          "Comparing prices for different fabrics as though they are identical",
+          "Using vague colour descriptions without physical references",
+          "Submitting final sizes too late",
+          "Adding branding requirements after the quotation is approved",
+          "Skipping sample approval",
+          "Selecting a supplier based only on the lowest price",
+          "Assuming a supplier has capacity without discussing quantities and deadlines",
+          "Leaving too little time for production",
+          "Ignoring packaging and delivery requirements",
+          "Failing to plan for replacements and repeat orders",
+          "Not retaining approved samples and specifications",
+        ],
+      },
+      {
+        heading: "Bulk uniform procurement checklist",
+        paragraphs: [
+          "Before issuing a purchase order or approving bulk production, procurement teams can use the following checklist.",
+        ],
+        bullets: [
+          "Every garment has been listed separately",
+          "Fabric requirements are clearly defined",
+          "Colours have been specified or physically approved",
+          "Estimated quantities are confirmed",
+          "Final size breakdown has been prepared",
+          "Special sizes have been identified",
+          "Branding artwork has been supplied",
+          "Branding method and position are approved",
+          "Physical samples have been reviewed",
+          "A final pre-production sample has been approved where required",
+          "Supplier manufacturing capacity has been considered",
+          "Quality-control requirements are understood",
+          "Acceptance criteria are clear",
+          "Delivery date is realistic",
+          "Packaging and distribution requirements are confirmed",
+          "Quotation inclusions have been checked",
+          "Repeat-order requirements have been discussed",
+        ],
+      },
+      {
+        heading: "What to send when requesting a quotation",
+        paragraphs: [
+          "The more complete your request is, the easier it is for a manufacturer to provide a useful quotation.",
+        ],
+        bullets: [
+          "Organisation or institution name",
+          "List of garments required",
+          "Estimated quantity of each garment",
+          "Required colours",
+          "Fabric specifications or preferences",
+          "Expected size range",
+          "Logo or badge files",
+          "Branding requirements",
+          "Existing garment photographs or physical references where available",
+          "Special construction requirements",
+          "Packaging requirements",
+          "Delivery location",
+          "Required delivery date",
+        ],
+      },
+      {
+        heading: "A good specification protects both buyer and supplier",
+        paragraphs: [
+          "Clear procurement documents do more than make quotations easier to compare. They create a shared understanding of what the manufacturer is expected to produce.",
+          "The buyer has a clearer basis for evaluating the finished garments, while the manufacturer has an approved reference against which to plan production.",
+          "Specifications do not need to make the process unnecessarily complicated. They simply need to remove ambiguity from the details that matter.",
+          "For institutional uniform programmes, that preparation can make the difference between a straightforward production run and repeated changes after manufacturing has already begun.",
+        ],
+      },
+      {
+        heading: "Bulk uniform manufacturing with Weaverbird",
+        paragraphs: [
+          "Weaverbird Garments manufactures uniforms for schools, companies and institutions from our factory in Thika.",
+          "Our production capabilities cover school uniforms, corporate wear, security uniforms, medical wear, hospitality uniforms, workwear, sportswear and other customised garments, together with embroidery, screen printing, weaving and knitting for selected requirements.",
+          "Procurement teams can provide existing specifications or work with our team to review garments, fabrics, colours, sizing and branding before bulk production begins.",
+          "Where required, samples can be developed for approval so that the agreed garment provides a clear reference for production.",
+          "Whether you are preparing a tender, sourcing uniforms for the first time or planning a repeat institutional order, providing clear specifications, quantities and timelines helps us evaluate the requirement and prepare an appropriate quotation.",
         ],
       },
     ],
     links: [
       { label: "Downloads & resources", href: "/downloads" },
       { label: "Bulk manufacturing", href: "/services#bulk-manufacturing" },
+      { label: "Our services", href: "/services" },
       QUOTE,
     ],
   },
@@ -1165,33 +2149,278 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "from-fabric-to-finished-garment",
     title: "From Fabric to Finished Garment: How Weaverbird Manufactures Uniforms",
     excerpt:
-      "A look at the stages every order goes through at our Thika factory, from design to delivery.",
+      "From specifications and sampling to cutting, stitching, branding and quality control, take a look at the stages involved in turning fabric into finished uniforms at our Thika factory.",
     category: "Manufacturing",
     date: "2026-08-03",
-    readMinutes: 4,
+    readMinutes: 9,
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788856308/weaverbird/products/efogndhldntwol8hg43c.jpg",
-    imageAlt: "Inside the Weaverbird factory in Thika",
+    imageAlt: "Inside the Weaverbird uniform manufacturing factory in Thika",
     sections: [
       {
-        heading: "Design and sampling",
+        heading: "What goes into making a uniform?",
         paragraphs: [
-          "Every order begins with your requirements, fabric choices and an approved sample.",
+          "A finished uniform may look simple, but producing it consistently involves a series of carefully coordinated stages. Before a shirt, trouser, sweater, blazer, overall or other garment reaches the person who will wear it, decisions need to be made about its design, fabric, measurements, construction, branding and finishing.",
+          "At Weaverbird Garments, uniform manufacturing begins with understanding what the customer actually needs. A school uniform has different requirements from corporate wear, medical clothing, hospitality uniforms, security wear or industrial workwear.",
+          "The objective is to turn those requirements into a repeatable garment specification that can guide production and future orders.",
+          "Here is a look at the journey from an initial uniform requirement to a finished garment.",
         ],
       },
       {
-        heading: "Weaving, cutting and stitching",
-        paragraphs: ["Fabric is woven or knitted, then cut and stitched on our production lines."],
+        heading: "1. Understanding the customer's requirements",
+        paragraphs: [
+          "Every order begins with a conversation about what needs to be produced.",
+          "Some customers already have an established uniform and need it reproduced. Others are introducing uniforms for the first time or changing an existing design. Schools may provide an existing sweater, shirt or dress as a reference, while businesses may provide brand guidelines, garment ideas and company colours.",
+          "At this stage, we establish the garment types, intended use, approximate quantities, sizes, colours, branding requirements and expected delivery schedule.",
+          "Understanding where and how the garment will be used is important because those conditions can influence fabric and construction choices.",
+        ],
       },
       {
-        heading: "Branding, quality control and delivery",
+        heading: "2. Defining the garment specification",
         paragraphs: [
-          "Garments are embroidered or printed, inspected, packed and delivered to your institution.",
+          "Once the requirements are understood, the garment needs to be translated into clear production specifications.",
+          "Depending on the product, these can include garment measurements, fabric type, colour, collar style, pockets, buttons, zips, cuffs, waistband construction, trims, reflective elements and other details.",
+          "For branded garments, the specification can also identify the logo size, position and application method.",
+          "Clear specifications are particularly important for institutional uniforms because the same garment may need to be reproduced months or years later.",
+        ],
+      },
+      {
+        heading: "3. Selecting the fabric",
+        paragraphs: [
+          "Fabric selection is one of the most important decisions in uniform manufacturing. The material affects the garment's appearance, comfort, durability, care requirements and suitability for its intended environment.",
+          "Different garments require different materials. A corporate shirt does not necessarily need the same fabric characteristics as a pair of work trousers, a school sweater or a medical scrub top.",
+          "We consider factors such as fibre composition, fabric construction, weight, colour, expected use and care requirements when reviewing suitable options.",
+          "Where appropriate, customers can review physical fabric samples before a material is approved for production.",
+        ],
+      },
+      {
+        heading: "4. Weaving and knitting where required",
+        paragraphs: [
+          "Some uniform requirements can be produced using existing suitable fabrics, while others require materials or knitted garments made to particular specifications.",
+          "For selected requirements, weaving and knitting allow greater control over elements such as colour, construction and design.",
+          "Knitting is particularly relevant for garments such as school sweaters, cardigans and other knitted uniform pieces. Custom colours, stripes and other details can form part of the approved specification.",
+          "Where custom fabric or knitting is required, sampling and colour approval take place before bulk garment production.",
+        ],
+      },
+      {
+        heading: "5. Developing the pattern",
+        paragraphs: [
+          "Before fabric can be cut, the garment needs a pattern. Patterns define the shapes and dimensions of the individual pieces that will eventually be stitched together.",
+          "A shirt, for example, requires separate pattern pieces for areas such as the front, back, sleeves, collar and cuffs. Trousers, skirts, jackets and other garments each require their own pattern construction.",
+          "The pattern needs to reflect the approved garment measurements and design. Once established, it provides the foundation for consistent cutting and assembly.",
+          "For uniforms produced in multiple sizes, patterns or graded specifications are prepared to maintain the intended proportions across the required size range.",
+        ],
+      },
+      {
+        heading: "6. Making the sample",
+        paragraphs: [
+          "Before bulk production begins, a sample may be produced so the customer can evaluate the proposed uniform as a finished garment.",
+          "This is an important stage because a specification on paper cannot show everything about how a garment will look and feel when worn.",
+          "The sample can be reviewed for fit, fabric, colour, length, pockets, trims, stitching, branding position and overall appearance.",
+          "If changes are required, they should ideally be made at this stage rather than after bulk production has started.",
+        ],
+      },
+      {
+        heading: "7. Customer approval",
+        paragraphs: [
+          "Once the sample meets the required specification, it becomes an important production reference.",
+          "Approval confirms details such as the garment design, fabric, colour and branding before the larger order proceeds.",
+          "For institutional customers, retaining an approved sample can also be useful for future repeat orders. Both the customer and manufacturer have a physical reference showing what the finished garment is expected to look like.",
+          "This helps reduce ambiguity when additional uniforms are required later.",
+        ],
+      },
+      {
+        heading: "8. Preparing for bulk production",
+        paragraphs: [
+          "After approval, the order moves into production planning.",
+          "The required quantities are organised according to garment type and size. Fabric requirements, trims, buttons, zips, thread and other components are prepared according to the production specification.",
+          "Production also needs to be scheduled so that cutting, sewing, branding and finishing can move in the correct sequence.",
+          "For large institutional orders, careful planning at this stage helps the production team manage quantities and delivery requirements efficiently.",
+        ],
+      },
+      {
+        heading: "9. Fabric inspection and preparation",
+        paragraphs: [
+          "Before cutting begins, the material needs to be prepared for production.",
+          "Fabric is checked against the approved requirements, including relevant characteristics such as colour and material specification.",
+          "The exact preparation process depends on the type of fabric and garment being produced.",
+          "Identifying material issues before cutting is important because once fabric has been converted into garment components, correcting a material problem becomes considerably more difficult.",
+        ],
+      },
+      {
+        heading: "10. Fabric laying and cutting",
+        paragraphs: [
+          "Cutting is the stage where rolls or lengths of fabric begin to take the shape of the final garment.",
+          "The fabric is prepared and arranged for cutting according to the required garment sizes and patterns. Pattern pieces guide the shapes that need to be cut for each component.",
+          "Accuracy matters at this stage. If garment pieces are cut incorrectly, the error can affect fit and assembly later in production.",
+          "Cut components are organised so they can move to the appropriate sewing operations.",
+        ],
+      },
+      {
+        heading: "11. Stitching and garment assembly",
+        paragraphs: [
+          "The cut fabric pieces then move to sewing, where individual components are assembled into complete garments.",
+          "A garment is usually not completed in a single sewing operation. Different stages may be responsible for joining seams, attaching collars, constructing pockets, setting sleeves, adding waistbands, fitting zips, making buttonholes and completing other details.",
+          "The exact sequence depends on the product. A polo shirt, trouser, blazer, overall and school dress all require different construction processes.",
+          "Coordinating these operations helps maintain consistent construction across a production batch.",
+        ],
+      },
+      {
+        heading: "12. Adding pockets, buttons, zips and trims",
+        paragraphs: [
+          "Many uniform garments contain functional and decorative components in addition to the main fabric.",
+          "These can include buttons, zips, elastic, reflective tape, piping, labels, pocket components and other trims.",
+          "The selected components need to suit the garment's intended use. A formal corporate garment, for example, may prioritise appearance, while workwear components may need to withstand more demanding use.",
+          "These details may seem small individually, but together they have a significant effect on the appearance and functionality of the finished uniform.",
+        ],
+      },
+      {
+        heading: "13. Embroidery and branding",
+        paragraphs: [
+          "For many institutional uniforms, branding is an important part of production.",
+          "School badges, company logos, organisation names and other identifiers can be applied using methods such as embroidery or screen printing depending on the garment and design.",
+          "Embroidery is commonly used for badges and smaller logos on items such as polo shirts, sweaters, jackets, workwear and selected formal garments. Screen printing can be suitable for larger designs on products such as T-shirts, sportswear and promotional clothing.",
+          "Branding details such as size, colour and position should be approved before the bulk order is completed so that they remain consistent across the garments.",
+        ],
+      },
+      {
+        heading: "14. Trimming and finishing",
+        paragraphs: [
+          "After sewing and branding, garments move through finishing operations.",
+          "Loose threads and other production remnants are removed, and the garment is prepared for final presentation.",
+          "Depending on the garment, finishing may also involve pressing or ironing so seams, collars, cuffs and other areas sit correctly.",
+          "Good finishing is important because it is often what separates a garment that is merely assembled from one that looks ready to wear.",
+        ],
+      },
+      {
+        heading: "15. Quality control",
+        paragraphs: [
+          "Quality control takes place to identify garments that do not meet the required production standard before they are packed for the customer.",
+          "The checks required depend on the garment and order, but can include measurements, stitching, seams, buttons, zips, branding placement, colour, finishing and general appearance.",
+          "For branded uniforms, the logo should also be checked for correct position and presentation.",
+          "The aim is to identify and correct production issues before garments leave the factory.",
+        ],
+      },
+      {
+        heading: "16. Checking consistency across the order",
+        paragraphs: [
+          "Quality control is not only about checking individual garments. For a uniform order, consistency across the entire batch is also important.",
+          "Garments of the same specification should follow the approved design, colour direction, branding and construction.",
+          "This becomes particularly important for schools and businesses because many people will wear the garments together. Differences that appear small on an individual garment can become noticeable when an entire group is seen side by side.",
+          "The approved sample and production specifications provide useful references during this stage.",
+        ],
+      },
+      {
+        heading: "17. Sorting and packing",
+        paragraphs: [
+          "Once garments have passed the required checks, they are organised for packing.",
+          "Orders may need to be separated according to garment type, size, department, branch or other customer requirements.",
+          "Clear organisation is especially important for large orders containing several garments and many different sizes.",
+          "Packing requirements can be discussed before production is completed so that the finished order is easier for the customer to receive and distribute.",
+        ],
+      },
+      {
+        heading: "18. Delivery",
+        paragraphs: [
+          "The final stage is getting the completed uniforms to the customer.",
+          "Delivery arrangements depend on the order and the agreed collection or distribution requirements.",
+          "For schools, businesses and other institutions working to fixed dates, delivery planning should begin much earlier in the process. Opening dates, corporate launches, events and staff onboarding schedules should be communicated before production begins.",
+          "Realistic lead times allow enough room for sampling, approvals, manufacturing, branding, quality control and packing rather than treating delivery as a separate last-minute step.",
+        ],
+      },
+      {
+        heading: "What happens when you need more uniforms?",
+        paragraphs: [
+          "Manufacturing does not necessarily end with the first order. Schools need replacement uniforms, businesses recruit new employees and organisations expand into new branches.",
+          "Repeat production is much easier when the original garment has been properly specified and approved.",
+          "Details such as patterns, measurements, fabric, colours and branding specifications provide a reference for subsequent orders.",
+          "Customers should still discuss availability and lead times when reordering, particularly where custom fabrics, colours or knitted materials are required.",
+        ],
+      },
+      {
+        heading: "Why sampling matters so much",
+        paragraphs: [
+          "Sampling connects the design stage with production.",
+          "It gives customers an opportunity to evaluate a physical garment before committing to the full order and gives the production team a clear reference for what has been approved.",
+          "For custom uniforms, this can reduce misunderstandings about details that are difficult to communicate through photographs or written descriptions alone.",
+          "Whenever an important specification changes, such as fabric, colour, construction or branding, reviewing a new sample may be appropriate before bulk production.",
+        ],
+      },
+      {
+        heading: "Why manufacturing in-house matters",
+        paragraphs: [
+          "Having garment production capabilities gives a manufacturer greater visibility over how a uniform moves from specification to finished product.",
+          "Patterns, cutting, sewing, branding, finishing and quality checks can be coordinated around the approved garment requirements rather than treating each stage as an unrelated purchase.",
+          "For customers, this can also make communication simpler because questions about construction, branding and repeat production can be handled as part of the same manufacturing process.",
+          "Where weaving or knitting is required, fabric and garment requirements can also be considered together during product development.",
+        ],
+      },
+      {
+        heading: "Different uniforms, different production requirements",
+        paragraphs: [
+          "Not every uniform follows exactly the same manufacturing process. The stages required depend on the product.",
+          "A knitted school sweater has different production requirements from a woven shirt. A corporate blazer requires different construction from a medical scrub top. Reflective workwear introduces details that would not normally appear on a school uniform.",
+          "The manufacturing process therefore needs to adapt to the garment while maintaining the same principle: establish the specification, approve the product and control production against that approved standard.",
+        ],
+      },
+      {
+        heading: "Uniforms we manufacture",
+        paragraphs: [
+          "Weaverbird manufactures garments for schools, businesses and institutions across a range of sectors.",
+        ],
+        bullets: [
+          "School uniforms",
+          "Corporate wear",
+          "Security uniforms",
+          "Medical wear",
+          "Hospitality uniforms",
+          "Workwear and protective clothing",
+          "T-shirts and polo shirts",
+          "Sweaters and jumpers",
+          "Tracksuits and sportswear",
+          "Promotional garments and selected branded items",
+        ],
+      },
+      {
+        heading: "What to prepare before requesting a uniform quotation",
+        paragraphs: [
+          "Providing clear information at the beginning helps us understand your requirements and prepare an appropriate quotation.",
+        ],
+        bullets: [
+          "Garment types required",
+          "Estimated quantities",
+          "Required colours",
+          "Preferred fabric or an existing garment for reference",
+          "Approximate size range",
+          "Company logo or school badge where branding is required",
+          "Embroidery or printing requirements if already known",
+          "Any special garment features",
+          "Required delivery date",
+          "Existing samples or specifications for repeat orders",
+        ],
+      },
+      {
+        heading: "From an idea to a repeatable uniform",
+        paragraphs: [
+          "The goal of uniform manufacturing is not simply to produce a garment once. For many schools and organisations, the same uniform needs to remain available over several years.",
+          "That makes specifications, samples and production records important. They provide a foundation for reproducing the garment when new students enrol, employees join or existing uniforms need replacing.",
+          "By establishing these details during the initial order, future production can begin from an existing reference instead of recreating the uniform from the beginning.",
+        ],
+      },
+      {
+        heading: "Uniform manufacturing at Weaverbird Garments",
+        paragraphs: [
+          "At Weaverbird Garments, we manufacture uniforms from our factory in Thika for schools, companies and institutions with different garment requirements.",
+          "Our process brings together product development, fabric selection, cutting, garment construction, branding, finishing and quality control, with weaving and knitting available for selected requirements.",
+          "Whether you already have an established uniform that needs to be reproduced or you are developing a new uniform programme, our team can review your requirements, prepare samples and establish the specifications needed before bulk production.",
+          "The result is a manufacturing process built around an approved garment rather than guesswork — from the first fabric decision to the finished uniform.",
         ],
       },
     ],
     links: [
       { label: "Our services", href: "/services" },
+      { label: "School uniforms", href: "/products#school-uniforms" },
+      { label: "Corporate wear", href: "/products#corporate-wear" },
       { label: "About Weaverbird", href: "/about" },
       QUOTE,
     ],
@@ -1200,30 +2429,250 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "why-consistent-fabric-colour-matters",
     title: "Why Consistent Fabric Colour Matters for School and Corporate Uniforms",
     excerpt:
-      "Mismatched shades make a uniform look anything but uniform. Here's why colour consistency matters.",
+      "Mismatched shades can make even well-made uniforms look inconsistent. Learn why fabric colour can vary between batches and how schools and organisations can maintain better colour consistency over repeat orders.",
     category: "Fabric & Materials",
     date: "2026-07-27",
-    readMinutes: 3,
+    readMinutes: 8,
     image: IMG.school,
-    imageAlt: "Matching school uniforms",
+    imageAlt: "Matching school uniforms with consistent fabric colours",
     sections: [
       {
         heading: "A uniform should look uniform",
         paragraphs: [
-          "When a new batch is a different shade, old and new garments stand out side by side. That undermines the identity the uniform is meant to create.",
+          "The purpose of a uniform is to create a consistent appearance. Whether it is worn by students at a school or employees within an organisation, colour is often one of the first things people notice.",
+          "When one batch of navy trousers is noticeably lighter than another, or newly produced maroon sweaters do not match those already being worn, the difference can stand out immediately when people are seen together.",
+          "This does not necessarily mean that either garment is poorly made. Fabric colour can vary for several reasons, particularly when garments are produced at different times, from different materials or by different suppliers.",
+          "For schools and organisations that expect to reorder uniforms over several years, colour consistency should therefore be considered when the original uniform specification is created, not only when a mismatch appears.",
         ],
       },
       {
-        heading: "How to protect consistency",
+        heading: "Why colour consistency matters for school uniforms",
+        paragraphs: [
+          "School colours often form an important part of a school's visual identity. A particular shade of blue, green, maroon, grey or another colour may have been associated with the institution for many years.",
+          "Parents, however, do not necessarily purchase every uniform at the same time. One learner may be wearing a sweater purchased recently while another is wearing one bought during the previous school year. Families may also purchase replacement trousers, skirts, shirts or sweaters individually as children grow.",
+          "If repeat batches are produced in noticeably different shades, those differences become visible when learners stand together during assemblies, photographs, sporting activities and normal school days.",
+          "Maintaining an approved colour reference helps the school and manufacturer work towards a consistent appearance whenever new garments are produced.",
+        ],
+      },
+      {
+        heading: "Why colour consistency matters for corporate uniforms",
+        paragraphs: [
+          "The same issue applies to corporate clothing. Uniforms are often part of an organisation's brand identity, particularly for customer-facing employees.",
+          "A company might initially order uniforms for 100 employees and then recruit another 20 employees several months later. If the second order uses a noticeably different fabric shade, the new employees may stand out from the original team even though everyone is technically wearing the same uniform.",
+          "Colour consistency becomes especially important when uniforms use recognised corporate colours or when employees work together in customer-facing environments such as reception areas, retail locations, hotels, restaurants, security operations and events.",
+          "Planning for repeat production from the beginning can make future orders easier to manage.",
+        ],
+      },
+      {
+        heading: "Why can fabric colour vary between batches?",
+        paragraphs: [
+          "Fabric colour is affected by the materials and processes used to manufacture and colour the fabric. Producing the same colour at different times does not automatically guarantee that every production batch will appear completely identical.",
+          "Differences can result from changes in raw materials, dyeing conditions, fabric construction, finishing processes or the source of the fabric itself.",
+          "This is why colour should be treated as a controlled specification rather than simply described using a general colour name.",
+          "Terms such as 'navy blue', 'maroon', 'royal blue', 'green' or 'grey' can describe a broad range of shades. Two suppliers can both describe a fabric as navy while supplying materials that look noticeably different when placed side by side.",
+        ],
+      },
+      {
+        heading: "Different dye lots can produce shade variation",
+        paragraphs: [
+          "A dye lot refers to material coloured together during a particular production batch. Fabric produced in separate dye lots can sometimes show small differences in shade.",
+          "These differences may be difficult to notice when individual garments are viewed separately but become more obvious when they are placed directly beside one another.",
+          "For a large uniform order, using fabric from the same production batch where practical can help improve consistency across the garments being produced at that time.",
+          "For future orders, an approved physical reference gives the manufacturer something to compare against when sourcing or producing the next batch.",
+        ],
+      },
+      {
+        heading: "Fabric composition affects colour",
+        paragraphs: [
+          "The fibres used in a fabric can influence how colour appears. Cotton, polyester, viscose, acrylic and other fibres do not necessarily respond to colouring processes in exactly the same way.",
+          "Even when two fabrics are intended to represent the same colour, differences in fibre composition can affect depth, brightness and overall appearance.",
+          "This is one reason why changing fabric composition during repeat production can create visible differences, even if the supplier is attempting to reproduce the original shade.",
+          "Schools and organisations should therefore record both the approved colour and the approved fabric specification.",
+        ],
+      },
+      {
+        heading: "Fabric construction can change how a colour looks",
+        paragraphs: [
+          "Colour is not influenced by dye alone. The construction and surface texture of the fabric can change how light reflects from it and therefore how the colour appears.",
+          "A smooth woven fabric may appear different from a textured knit even when both use similar colour specifications. Matte and slightly reflective materials can also create different visual results.",
+          "This is particularly relevant when a uniform uses several garment types. A woven pair of trousers and a knitted sweater may both be described as navy blue but may not appear exactly identical because the materials have different surfaces.",
+          "The objective should therefore be visual coordination rather than assuming that every different material will look identical under every lighting condition.",
+        ],
+      },
+      {
+        heading: "Different suppliers can interpret the same colour differently",
+        paragraphs: [
+          "One of the most common challenges with uniform consistency occurs when garments are purchased from several unrelated sources.",
+          "A school might obtain sweaters from one supplier, trousers from another and replacement garments from a third. Each supplier may interpret the school's colour specification differently, particularly if they are working only from a colour name or photograph.",
+          "The same problem can occur when an organisation changes uniform suppliers without providing the new manufacturer with an approved physical reference or detailed specification.",
+          "Centralising specifications and providing approved references can reduce this uncertainty.",
+        ],
+      },
+      {
+        heading: "Digital colours are not reliable fabric references",
+        paragraphs: [
+          "A logo file, website image or photograph can be useful for communicating a general colour direction, but it should not be the only reference used to approve uniform fabric.",
+          "Colours displayed on phones, monitors and other screens can vary according to screen settings, brightness and display technology. Photographs can also be affected by lighting, camera settings and image processing.",
+          "A photograph of a navy sweater may therefore look lighter or darker than the actual garment.",
+          "For important uniform colours, approve the physical material rather than relying entirely on what appears on a screen.",
+        ],
+      },
+      {
+        heading: "Lighting changes how we see colour",
+        paragraphs: [
+          "The same fabric can appear slightly different under natural daylight, fluorescent lighting, warm indoor lighting and other conditions.",
+          "When approving an important school or corporate colour, inspect the sample in more than one normal lighting environment. Natural daylight can be particularly useful when comparing similar shades.",
+          "When comparing two fabrics, place them directly beside one another. Small differences that are difficult to remember can become much easier to see during a side-by-side comparison.",
+        ],
+      },
+      {
+        heading: "Colour consistency and colourfastness are different",
+        paragraphs: [
+          "Colour consistency and colourfastness are related but different considerations.",
+          "Colour consistency refers to how closely the colour of one garment or production batch matches the approved standard or another batch. Colourfastness refers to how well a material retains its colour when exposed to conditions such as washing, rubbing or other normal use.",
+          "A manufacturer may produce two new batches that match closely at the time of production, but garments that have already been worn and washed repeatedly may naturally look different from completely new garments.",
+          "Schools and organisations should therefore consider both the consistency of new production and the expected colour performance of the fabric during use.",
+        ],
+      },
+      {
+        heading: "Some difference between old and new uniforms is normal",
+        paragraphs: [
+          "It is important to set realistic expectations. A newly manufactured garment cannot always look exactly the same as one that has been worn and washed for several years.",
+          "Repeated washing, sunlight, friction, care practices and normal wear can gradually affect the appearance of fabric.",
+          "The objective of colour control is therefore not to make an old garment and a new garment visually identical forever. It is to ensure that new production starts as close as reasonably possible to the approved uniform colour and that unnecessary variation between new batches is reduced.",
+          "Good fabric selection and appropriate care can then help the garment maintain its appearance during its useful life.",
+        ],
+      },
+      {
+        heading: "Keep an approved physical reference sample",
+        paragraphs: [
+          "One of the most practical ways to maintain uniform colour standards is to keep an approved physical reference.",
+          "This might be a fabric swatch, a finished garment or both. The reference should represent the colour, fabric and construction approved by the school or organisation.",
+          "When a repeat order is required, new material can be compared directly with the approved reference before full production begins.",
+          "The school or organisation can retain its own reference while the manufacturer keeps a corresponding production reference.",
+        ],
+      },
+      {
+        heading: "Record more than the colour name",
+        paragraphs: [
+          "Writing 'navy blue' on a uniform specification is rarely enough for long-term consistency.",
+          "The specification should identify the fabric and other important characteristics in addition to the general colour description.",
+          "Where relevant, records can include fibre composition, fabric construction, approved physical sample, garment type and other production details.",
+          "For knitted sweaters and cardigans, yarn specifications and approved knitted samples can also be important because the final appearance depends on more than colour alone.",
+        ],
+      },
+      {
+        heading: "Approve fabric before bulk production",
+        paragraphs: [
+          "When a new batch is being produced, review the proposed material before hundreds or thousands of garments are cut and sewn.",
+          "Compare the new fabric with the approved reference and check it under appropriate lighting. If the shade difference is unacceptable, it is much easier to address the issue before bulk garment production begins.",
+          "For a new uniform programme, the same process should be used to establish the original standard. Once the colour is approved, retain the sample rather than starting the selection process again with every order.",
+        ],
+      },
+      {
+        heading: "Consider the whole uniform together",
+        paragraphs: [
+          "A uniform often combines several different materials. A school uniform might include a woven shirt, trousers or skirt, a knitted sweater, a blazer and a tie. Corporate uniforms may combine shirts, trousers, skirts, polo shirts, jackets and knitwear.",
+          "Because different fibres and constructions can display colour differently, evaluate the complete uniform combination rather than approving each garment completely independently.",
+          "Place the proposed garments or fabric samples together and assess whether the colours coordinate as intended.",
+          "This is particularly useful where several garments use similar shades or where a specific colour forms a major part of the institution's identity.",
+        ],
+      },
+      {
+        heading: "Plan for repeat orders from the beginning",
+        paragraphs: [
+          "Colour consistency becomes much easier to manage when repeat orders are considered during the first production run.",
+          "Ask the supplier how approved fabrics, colours and garment specifications will be recorded. Also discuss whether the material is regularly available or needs to be specially produced.",
+          "If a school or organisation uses a custom woven or knitted colour, understand the production quantities and lead times that may apply to future orders.",
+          "This information allows procurement teams to plan ahead rather than discovering during an urgent reorder that the original material is no longer immediately available.",
+        ],
+      },
+      {
+        heading: "Why working with the same manufacturer can help",
+        paragraphs: [
+          "Using the same manufacturer for repeat orders can make consistency easier because the supplier can retain approved samples, garment specifications and production information.",
+          "This does not mean that shade variation can never occur. Raw materials and production batches can still vary, and older garments will naturally change through wear.",
+          "However, having an established reference and production history gives the manufacturer a clearer standard against which new materials can be evaluated.",
+          "If you change suppliers, provide the new manufacturer with physical samples and detailed specifications rather than relying on photographs or colour names alone.",
+        ],
+      },
+      {
+        heading: "The advantage of controlling fabric production",
+        paragraphs: [
+          "Where a uniform manufacturer also has access to weaving, knitting or other fabric-production capabilities, there can be greater control over certain aspects of the material specification.",
+          "For custom school or corporate colours, this can be particularly useful when the organisation requires fabric or knitwear to be reproduced for future orders.",
+          "Fabric production capability does not eliminate the need for sampling and approval. Instead, it provides another level at which specifications can be documented and controlled.",
+          "The approved material should still be checked before it enters bulk garment production.",
+        ],
+      },
+      {
+        heading: "What schools should ask their uniform supplier",
         bullets: [
+          "How do you record our approved uniform colours?",
+          "Will you keep a physical reference sample for repeat production?",
+          "What is the fibre composition and construction of the approved fabric?",
+          "Can the same or closely matching material be sourced or produced for future orders?",
+          "How do you check new fabric against previous batches?",
+          "Can we approve fabric before bulk garment production begins?",
+          "How does the material perform after repeated washing?",
+          "For sweaters and cardigans, will the same yarn and knit specification be retained?",
+          "If the original material becomes unavailable, how will an alternative be approved?",
+        ],
+      },
+      {
+        heading: "What corporate buyers should ask",
+        bullets: [
+          "Are our corporate colours recorded as part of the uniform specification?",
+          "Can new employee uniforms be reproduced later?",
+          "Will repeat orders use the same fabric specification?",
+          "Can we keep an approved garment or fabric swatch as a reference?",
+          "How will replacement material be approved if the original fabric is discontinued?",
+          "Can uniforms for different branches be produced to the same specification?",
+          "Will branding thread or print colours also be recorded?",
+        ],
+      },
+      {
+        heading: "How to protect colour consistency",
+        paragraphs: [
+          "Colour consistency is easier to maintain when it is treated as part of the uniform specification from the beginning.",
+        ],
+        bullets: [
+          "Approve colours using physical fabric or garment samples",
           "Keep an approved reference sample",
-          "Work with a supplier who controls fabric production",
-          "Re-order from the same supplier where possible",
+          "Record fabric composition and construction",
+          "Avoid relying only on general colour names",
+          "Compare repeat-production fabric against the approved reference",
+          "Inspect colours under suitable lighting",
+          "Consider all garments in the uniform together",
+          "Discuss colourfastness and recommended care",
+          "Plan repeat orders before stock becomes critically low",
+          "Work with the same supplier where practical",
+          "Provide physical references and specifications when changing suppliers",
+          "Approve any substitute material before production begins",
+        ],
+      },
+      {
+        heading: "Colour consistency is part of quality control",
+        paragraphs: [
+          "Uniform quality is often discussed in terms of stitching, fabric strength, sizing and finishing. Colour deserves the same attention.",
+          "A beautifully constructed garment can still look out of place if its shade is noticeably different from the rest of the uniform.",
+          "For schools, consistent colours help maintain the visual identity students share. For businesses and organisations, they contribute to a coordinated professional appearance across employees and locations.",
+          "Colour should therefore be included in the approval and quality-control process rather than treated as a minor aesthetic detail.",
+        ],
+      },
+      {
+        heading: "Maintaining consistent uniform colours with Weaverbird",
+        paragraphs: [
+          "When planning a school or corporate uniform programme, think beyond the first production batch. Consider how the same colours, fabrics and garment specifications will be managed when replacements or additional uniforms are required later.",
+          "At Weaverbird Garments, fabric and garment specifications can be established during the sampling and approval process before bulk production. Approved references help guide subsequent production and repeat orders.",
+          "Our manufacturing capabilities include school uniforms, corporate wear and other customised garments, together with weaving and knitting for selected uniform requirements.",
+          "If your school or organisation requires a particular colour, fabric, stripe, check or knitted specification, our team can review the requirement and develop samples for approval before bulk production.",
         ],
       },
     ],
     links: [
       { label: "Weaving and knitting", href: "/services#weaving" },
+      { label: "School uniforms", href: "/products#school-uniforms" },
       { label: "Corporate wear", href: "/products#corporate-wear" },
       QUOTE,
     ],
