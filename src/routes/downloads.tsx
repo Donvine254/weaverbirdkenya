@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { FileText, FolderDown, ArrowDownToLine, ExternalLink, Clock } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -117,4 +117,3 @@ function ResourceCard({ r }: { r: Resource }) {
   );
 }
 
-export { Link };
