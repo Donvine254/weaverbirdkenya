@@ -77,6 +77,7 @@ function ContactPage() {
           <ContactMethods />
           <SocialSection />
           <FactorySection />
+          <LocationMap />
           <FindStoreCta />
         </div>
       </main>
@@ -322,6 +323,43 @@ function FactorySection() {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function LocationMap() {
+  return (
+    <section aria-labelledby="location-map-heading">
+      {/* Section heading */}
+      <div className="mb-8">
+        <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#7d0010]">
+          <span className="h-px w-3 bg-[#7d0010]" />
+          Find Us
+        </p>
+
+        <h2
+          id="location-map-heading"
+          className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+        >
+          Our Location
+        </h2>
+
+        <p className="mt-3 text-muted-foreground">
+          Find Weaverbird Garments headquarters and factory in Thika, Kenya.
+        </p>
+      </div>
+
+      {/* Map */}
+      <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d107341.50271069305!2d37.02751142272563!3d-1.0853788378986349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4f006f636a91%3A0xe41e13372a8459a0!2sWeaver%20Bird%20Garments%20Ltd%2C%20Headquarters!5e0!3m2!1sen!2ske!4v1791280633667!5m2!1sen!2ske"
+          title="Weaver Bird Garments Ltd Headquarters"
+          className="block h-[360px] md:h-[400px] w-full border-0 sm:h-[420px] lg:h-[480px]"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
       </div>
     </section>
   );
