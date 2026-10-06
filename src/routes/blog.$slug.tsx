@@ -86,13 +86,38 @@ function ArticleNotFound() {
   return (
     <div className="min-h-dvh bg-background">
       <Header current="Blog" />
-      <main id="main-content" className="mx-auto max-w-2xl px-6 py-32 text-center">
-        <h1 className="text-3xl font-bold">Article not found</h1>
-        <p className="mt-3 text-muted-foreground">This article may have moved or been removed.</p>
-        <a href="/blog" className="mt-6 inline-block font-semibold text-primary hover:underline">
-          Back to all articles
-        </a>
+      <main
+        id="main-content"
+        className="mx-auto flex min-h-[65vh] max-w-2xl items-center justify-center px-6 py-24 text-center"
+      >
+        <div>
+          <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-secondary">
+            <ArrowLeft className="h-6 w-6 text-primary" />
+          </div>
+          <h1
+            className="text-3xl font-extrabold sm:text-4xl"
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "var(--primary-darker)",
+            }}
+          >
+            Article not found
+          </h1>
+
+          <p className="mx-auto mt-4 max-w-md leading-7 text-muted-foreground">
+            This article may have moved, been renamed, or is no longer available.
+          </p>
+
+          <a
+            href="/blog"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to all articles
+          </a>
+        </div>
       </main>
+
       <Footer />
     </div>
   );
@@ -101,102 +126,209 @@ function ArticleNotFound() {
 function related(post: BlogPost) {
   const others = BLOG_POSTS.filter((p) => p.slug !== post.slug);
   const same = others.filter((p) => p.category === post.category);
+
   return [...same, ...others.filter((p) => p.category !== post.category)].slice(0, 3);
 }
 
 function ArticlePage() {
   const { post } = Route.useLoaderData();
-  const url = `${SITE}/blog/${post.slug}`;
 
   return (
     <div className="min-h-dvh bg-background" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Blog" />
+
       <main id="main-content">
         <article>
-          <header className="mx-auto max-w-3xl px-6 pt-12 sm:pt-16">
+          {/* =====================================================
+              ARTICLE HEADER
+          ====================================================== */}
+          <header className="mx-auto max-w-[850px] px-5 pt-10 sm:px-6 sm:pt-14 lg:pt-16">
             <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground">
-              <a href="/blog" className="inline-flex items-center gap-1.5 hover:text-foreground">
-                <ArrowLeft className="h-4 w-4" /> All articles
+              <a
+                href="/blog"
+                className="inline-flex items-center gap-2 font-medium transition-colors hover:text-primary"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                All articles
               </a>
             </nav>
-            <div className="mt-6">
+
+            <div className="mt-7">
               <CategoryTag>{post.category}</CategoryTag>
             </div>
+
             <h1
-              className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
+              className="mt-5 text-3xl font-extrabold leading-[1.12] tracking-[-0.025em] sm:text-4xl lg:text-[44px]"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--primary-darker)",
+              }}
             >
               {post.title}
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground">{post.excerpt}</p>
-            <div className="mt-5">
+
+            <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+              {post.excerpt}
+            </p>
+
+            <div className="mt-6 border-t border-border/60 pt-5">
               <BlogMeta post={post} />
             </div>
           </header>
 
-          <div className="mx-auto mt-8 max-w-5xl px-6">
-            <img
-              src={post.image}
-              alt={post.imageAlt}
-              className="aspect-[16/9] w-full rounded-2xl object-cover"
-            />
-          </div>
+          {/* =====================================================
+              FEATURED IMAGE
+              Reduced from max-w-5xl
+          ====================================================== */}
+          <div className="mx-auto mt-8 max-w-[880px]">
+            <div className="px-5 sm:px-6">
+              <div className="overflow-hidden rounded-xl border border-border/60 bg-secondary/20 shadow-sm sm:rounded-2xl">
+                <img
+                  src={post.image}
+                  alt={post.imageAlt}
+                  className="aspect-[16/9] w-full object-cover"
+                />
+              </div>
+            </div>
 
-          <div className="mx-auto max-w-3xl px-6 py-12">
-            {post.sections.map((s) => (
-              <section key={s.heading} className="mt-10 first:mt-0">
-                <h2
-                  className="text-2xl font-bold"
-                  style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
+            {/* =====================================================
+              ARTICLE CONTENT
+          ====================================================== */}
+            <div className="py-12 px-5 sm:px-6 sm:py-14 lg:py-16">
+              {post.sections.map((s, index) => (
+                <section
+                  key={s.heading}
+                  className={`${index === 0 ? "" : "mt-12 border-t border-border/60 pt-12"}`}
                 >
-                  {s.heading}
-                </h2>
-                {s.paragraphs?.map((t) => (
-                  <p key={t} className="mt-4 leading-relaxed text-foreground/85">
-                    {t}
-                  </p>
-                ))}
-                {s.bullets && (
-                  <ul className="mt-4 list-disc space-y-2 pl-5 text-foreground/85">
-                    {s.bullets.map((b) => (
-                      <li key={b}>{b}</li>
+                  {/* Small Weaverbird red accent */}
+                  <div
+                    className="mb-4 h-1 w-10 rounded-full"
+                    style={{ backgroundColor: "var(--primary)" }}
+                  />
+
+                  <h2
+                    className="text-2xl font-bold leading-tight tracking-[-0.015em] sm:text-[28px]"
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      color: "var(--primary-darker)",
+                    }}
+                  >
+                    {s.heading}
+                  </h2>
+
+                  {s.paragraphs?.map((t) => (
+                    <p
+                      key={t}
+                      className="mt-5 text-[16.5px] leading-[1.8] text-foreground/85 sm:text-[17px]"
+                    >
+                      {t}
+                    </p>
+                  ))}
+
+                  {s.bullets && (
+                    <ul className="mt-6 space-y-3">
+                      {s.bullets.map((b) => (
+                        <li
+                          key={b}
+                          className="flex items-start gap-3 text-[16.5px] leading-7 text-foreground/85 sm:text-[17px]"
+                        >
+                          <span
+                            className="mt-[10px] h-2 w-2 shrink-0 rounded-full"
+                            style={{ backgroundColor: "var(--primary)" }}
+                            aria-hidden="true"
+                          />
+
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+              ))}
+
+              {/* =================================================
+                RELATED / USEFUL LINKS
+            ================================================== */}
+              {post.links.length > 0 && (
+                <aside className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
+                  <div className="flex items-start justify-between gap-6">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-red-600" />
+
+                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-red-600">
+                          Explore More
+                        </p>
+                      </div>
+
+                      <h2
+                        className="mt-2 text-xl font-bold text-slate-900 sm:text-[22px]"
+                        style={{ fontFamily: "var(--font-display)" }}
+                      >
+                        Related Resources
+                      </h2>
+
+                      <p className="mt-2 max-w-lg text-sm leading-6 text-slate-500">
+                        Helpful guides and resources related to this article.
+                      </p>
+                    </div>
+                  </div>
+
+                  <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {post.links.map((l) => (
+                      <li key={l.href}>
+                        <a
+                          href={l.href}
+                          className="group flex h-full items-center justify-between gap-4 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3.5 text-sm font-semibold text-slate-800 transition-all duration-200 hover:border-red-200 hover:bg-red-50/50 hover:text-red-700"
+                        >
+                          <span>{l.label}</span>
+
+                          <span
+                            aria-hidden="true"
+                            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-base text-slate-500 shadow-sm ring-1 ring-slate-200 transition-all duration-200 group-hover:bg-red-600 group-hover:text-white group-hover:ring-red-600"
+                          >
+                            →
+                          </span>
+                        </a>
+                      </li>
                     ))}
                   </ul>
-                )}
-              </section>
-            ))}
-
-            {post.links.length > 0 && (
-              <aside className="mt-12 rounded-2xl border border-border bg-secondary/50 p-6">
-                <h2 className="text-base font-bold">Useful links</h2>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {post.links.map((l) => (
-                    <li key={l.href}>
-                      <a
-                        href={l.href}
-                        className="inline-block rounded-full border border-border bg-card px-4 py-2 text-sm font-medium hover:bg-secondary"
-                      >
-                        {l.label} →
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            )}
-
-            <ShareBar url={url} title={post.title} />
+                </aside>
+              )}
+            </div>
           </div>
         </article>
 
-        <section className="bg-secondary/60 py-16" aria-labelledby="related-heading">
-          <div className="mx-auto max-w-7xl px-6">
-            <h2
-              id="related-heading"
-              className="text-2xl font-bold sm:text-3xl"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              Related articles
-            </h2>
+        {/* =====================================================
+            RELATED ARTICLES
+        ====================================================== */}
+        <section
+          className="border-y border-border/60 bg-secondary/45 py-14 sm:py-16 lg:py-20"
+          aria-labelledby="related-heading"
+        >
+          <div className="mx-auto max-w-7xl px-5 sm:px-6">
+            <div className="max-w-2xl">
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">
+                Keep reading
+              </p>
+
+              <h2
+                id="related-heading"
+                className="mt-2 text-2xl font-bold sm:text-3xl"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  color: "var(--primary-darker)",
+                }}
+              >
+                Related Articles
+              </h2>
+
+              <p className="mt-3 leading-7 text-muted-foreground">
+                Continue exploring practical guides, manufacturing insights, and uniform advice from
+                Weaverbird.
+              </p>
+            </div>
+
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {related(post).map((p) => (
                 <BlogCard key={p.slug} post={p} />
@@ -205,66 +337,16 @@ function ArticlePage() {
           </div>
         </section>
 
+        {/* =====================================================
+            EXISTING CTA
+        ====================================================== */}
         <PageCta
           title="Looking for a Reliable Uniform Manufacturing Partner?"
           text="Talk to Weaverbird about your school, corporate, medical, hospitality, workwear or institutional uniform requirements."
         />
       </main>
-      <Footer />
-    </div>
-  );
-}
 
-function ShareBar({ url, title }: { url: string; title: string }) {
-  const [copied, setCopied] = useState(false);
-  const u = encodeURIComponent(url);
-  const t = encodeURIComponent(title);
-  const btn =
-    "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card transition hover:bg-secondary";
-  return (
-    <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-border pt-6">
-      <span className="text-sm font-semibold">Share this article:</span>
-      <a
-        className={btn}
-        aria-label="Share on WhatsApp"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={`https://wa.me/?text=${t}%20${u}`}
-      >
-        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
-          <path d="M12.05.7C5.78.7.67 5.8.67 12.07c0 2 .52 3.96 1.52 5.68L.57 23.7l6.09-1.6a11.36 11.36 0 0 0 5.39 1.37c6.27 0 11.38-5.1 11.38-11.37C23.43 5.8 18.32.7 12.05.7Zm5.42 13.68c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49 2.47 1.07 2.97.85 3.56.79.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z" />
-        </svg>
-      </a>
-      <a
-        className={btn}
-        aria-label="Share on Facebook"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={`https://www.facebook.com/sharer/sharer.php?u=${u}`}
-      >
-        <Facebook className="h-4 w-4" />
-      </a>
-      <a
-        className={btn}
-        aria-label="Share on LinkedIn"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={`https://www.linkedin.com/sharing/share-offsite/?url=${u}`}
-      >
-        <Linkedin className="h-4 w-4" />
-      </a>
-      <button
-        type="button"
-        className={`${btn} cursor-pointer`}
-        aria-label="Copy link"
-        onClick={() => {
-          navigator.clipboard?.writeText(url);
-          setCopied(true);
-          setTimeout(() => setCopied(false), 2000);
-        }}
-      >
-        {copied ? <Check className="h-4 w-4" /> : <Link2 className="h-4 w-4" />}
-      </button>
+      <Footer />
     </div>
   );
 }

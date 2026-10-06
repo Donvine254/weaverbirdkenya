@@ -35,12 +35,12 @@ export function BlogCard({ post }: { post: BlogPost }) {
       className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-transform duration-300 hover:-translate-y-1"
       style={{ boxShadow: "var(--shadow-card)" }}
     >
-      <a href={postPath(post)} className="block aspect-[16/10] overflow-hidden" tabIndex={-1}>
+      <a href={postPath(post)} className="block aspect-video overflow-hidden" tabIndex={-1}>
         <img
           src={post.image}
           alt={post.imageAlt}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover bg-center transition-transform duration-500 group-hover:scale-105"
         />
       </a>
       <div className="flex flex-1 flex-col p-6">

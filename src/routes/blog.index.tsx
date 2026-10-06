@@ -63,7 +63,13 @@ function BlogPage() {
     <div className="min-h-dvh bg-background" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Blog" />
       <main id="main-content">
-        <PageHero eyebrow="Blog" icon={Newspaper} title="Insights & Resources" subtitle={DESC} />
+        <PageHero
+          eyebrow="Blog"
+          icon={Newspaper}
+          image="https://res.cloudinary.com/dipkbpinx/image/upload/v1791271282/weaverbird/products/lsnyuanp5cxkenotm7ke.jpg"
+          title="Insights & Resources"
+          subtitle={DESC}
+        />
 
         {/* Featured */}
         <section className="mx-auto max-w-7xl px-6 pt-16" aria-labelledby="featured-heading">
@@ -74,7 +80,11 @@ function BlogPage() {
             className="group grid overflow-hidden rounded-2xl border border-border bg-card lg:grid-cols-2"
             style={{ boxShadow: "var(--shadow-card)" }}
           >
-            <a href={postPath(featured)} className="block aspect-[16/10] overflow-hidden lg:aspect-auto" tabIndex={-1}>
+            <a
+              href={postPath(featured)}
+              className="block aspect-[16/10] overflow-hidden lg:aspect-auto"
+              tabIndex={-1}
+            >
               <img
                 src={featured.image}
                 alt={featured.imageAlt}

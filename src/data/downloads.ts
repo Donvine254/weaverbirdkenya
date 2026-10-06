@@ -52,6 +52,8 @@ export const RESOURCES: Resource[] = [
     title: "Size Guide",
     description: "Use our sizing guide to select appropriate garment sizes and measurements.",
     button: "Download Size Guide",
+    file: "/resources/size-guide.pdf",
+    downloadName: "Garment-Size-Guide.pdf",
     related: { label: "Ask our team", href: "/contact" },
   },
   {

@@ -48,7 +48,7 @@ const IMG = {
     "https://res.cloudinary.com/dipkbpinx/image/upload/v1787899976/weaverbird/products/nabth0lum2fljecqgqfw.jpg",
   og: "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
   labels:
-    "https://res.cloudinary.com/dipkbpinx/image/upload/v1788856308/weaverbird/products/efogndhldntwol8hg43c.jpg",
+    "https://res.cloudinary.com/dipkbpinx/image/upload/v1788857348/weaverbird/products/ptgzzboohgki2hovhhf1.jpg",
 };
 
 const QUOTE: BlogLink = { label: "Request a quote", href: "/quote" };
@@ -178,7 +178,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Fabric & Materials",
     date: "2026-09-07",
     readMinutes: 4,
-    image: IMG.products,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1791272234/weaverbird/products/orxm302g7bcgv4mjljx8.jpg",
     imageAlt: "Selection of uniform fabrics and garments",
     sections: [
       {
@@ -210,39 +211,110 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-to-care-for-school-uniforms",
     title: "How to Care for School Uniforms and Make Them Last Longer",
     excerpt:
-      "Simple washing, drying and ironing habits that keep uniforms looking smart all year.",
+      "Simple washing, drying, ironing and storage habits that help school uniforms stay clean, smart and presentable throughout the school year.",
     category: "Garment Care",
     date: "2026-08-31",
-    readMinutes: 3,
-    image: IMG.school,
+    readMinutes: 5,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1791272067/weaverbird/products/hqlgycer3ciguaarhuqr.jpg",
     imageAlt: "Neatly kept school uniforms",
+
     sections: [
       {
-        heading: "Washing",
-        bullets: [
-          "Follow the care label and wash dark colours separately",
-          "Turn garments inside out to protect colour and badges",
-          "Treat stains as soon as possible, before washing",
-        ],
-      },
-      {
-        heading: "Drying and ironing",
-        bullets: [
-          "Dry in the shade to reduce fading",
-          "Iron embroidered badges from the reverse side",
-          "Hang blazers and skirts rather than folding them",
-        ],
-      },
-      {
-        heading: "Dealing with stains",
+        heading: "Why Proper Uniform Care Matters",
         paragraphs: [
-          "For step-by-step stain removal, read our detailed uniform care guide.",
+          "School uniforms go through a lot during the year. Shirts, trousers, skirts, sweaters and other garments may be worn several times each week, washed frequently and exposed to everything from classroom activities to outdoor play.",
+          "Good care helps uniforms maintain their colour, shape and overall appearance for longer. It can also reduce unnecessary wear, helping parents get more use from each garment before it needs to be replaced.",
+          "Different garments and fabrics may require different care, so the garment care label should always be the first point of reference.",
+        ],
+      },
+
+      {
+        heading: "Wash Uniforms the Right Way",
+        paragraphs: [
+          "Frequent washing does not necessarily have to mean faster wear. Much of the difference comes down to how the garments are washed. Before putting a uniform into the washing machine, check pockets, close zips where appropriate and separate garments by colour.",
+          "Turning shirts, T-shirts, sweaters and other suitable garments inside out before washing can help reduce direct friction on the outer surface. This is particularly useful for garments with embroidery, printed designs or school branding.",
+          "Use an appropriate detergent and follow the recommended washing temperature on the care label. Excessively harsh washing or unsuitable products can contribute to fading and unnecessary fabric wear.",
+        ],
+        bullets: [
+          "Separate whites, darks and strongly coloured garments where appropriate.",
+          "Treat visible stains before the garment goes into the normal wash.",
+          "Avoid overloading the washing machine so garments can move and rinse properly.",
+        ],
+      },
+
+      {
+        heading: "Treat Stains as Soon as Possible",
+        paragraphs: [
+          "Food, ink, mud, grass and other stains are a normal part of everyday school life. The sooner a stain is treated, the better the chance of removing it without repeated washing or aggressive scrubbing.",
+          "Remove any excess material carefully and use a stain treatment suitable for the garment's fabric and colour. Avoid rubbing a fresh stain aggressively, as this can spread it or work it deeper into the fibres.",
+          "Before drying or ironing the garment, check whether the stain has disappeared. Heat can make some stains more difficult to remove.",
+        ],
+      },
+
+      {
+        heading: "Dry Uniforms Carefully",
+        paragraphs: [
+          "Drying is an important but sometimes overlooked part of uniform care. Where the garment instructions allow, air drying is a gentle option for many everyday school uniform items.",
+          "Strong, prolonged sunlight can contribute to fading, particularly on dark or brightly coloured garments. Drying coloured uniforms in a well-ventilated shaded area can help preserve their appearance.",
+          "Sweaters and other knitwear may need additional care because hanging a wet knitted garment can sometimes pull it out of shape. Follow the care label and reshape garments where necessary before allowing them to dry.",
+        ],
+      },
+
+      {
+        heading: "Iron at the Correct Temperature",
+        paragraphs: [
+          "A well-ironed uniform looks neat and presentable, but excessive heat can damage some fabrics, prints and trims. Always check the garment label before selecting the iron temperature.",
+          "For shirts, skirts and trousers, ironing while the fabric is slightly damp can make creases easier to remove. Take additional care around embroidered logos, printed branding and reflective details.",
+          "Where appropriate, turn embroidered or decorated areas inside out and iron from the reverse rather than placing a hot iron directly over the decoration.",
+        ],
+      },
+
+      {
+        heading: "Take Extra Care of Sweaters and Knitwear",
+        paragraphs: [
+          "School sweaters and cardigans often need different care from woven shirts and trousers. Rough washing, excessive heat and poor drying methods can affect their shape and appearance.",
+          "Wash knitwear according to its care label and avoid unnecessarily high temperatures. After washing, gently reshape the garment rather than stretching it. Store sweaters neatly once completely dry.",
+          "If a sweater develops small loose fibres or surface pilling over time, avoid pulling them by hand because this can damage the knit. Use an appropriate fabric-care method instead.",
+        ],
+      },
+
+      {
+        heading: "Store Uniforms Properly",
+        paragraphs: [
+          "How uniforms are stored between wears also affects how smart they look. Shirts, dresses, skirts, trousers and blazers should be hung neatly where appropriate to reduce unnecessary creasing.",
+          "Sweaters and heavier knitwear are generally better folded neatly rather than left hanging for long periods, as hanging can place stress on the shoulders and gradually affect their shape.",
+          "Make sure garments are completely dry before placing them in a wardrobe or school bag. Clean, dry and well-ventilated storage helps keep uniforms fresh and ready for the next school day.",
+        ],
+      },
+
+      {
+        heading: "Rotate Uniforms Where Possible",
+        paragraphs: [
+          "Having more than one set of frequently worn uniform items can make school-week care easier. Rotating shirts, blouses, trousers, skirts and other everyday pieces gives each garment time to be properly washed and dried before it is worn again.",
+          "Rotation can also distribute everyday wear across several garments rather than placing all the strain on one item. This can be particularly helpful for uniforms worn five days a week.",
+        ],
+      },
+
+      {
+        heading: "A Little Care Goes a Long Way",
+        paragraphs: [
+          "School uniforms are made for regular use, but simple care habits can make a noticeable difference to how long they remain smart and presentable. Washing according to the care label, treating stains promptly, drying garments appropriately and using the correct ironing temperature all help protect the uniform.",
+          "It is also worth checking uniforms periodically for loose buttons, small seam openings or other minor issues. Dealing with these early can prevent a small repair from becoming a larger problem.",
+          "For stubborn stains that need more attention, see our dedicated stain removal guide for practical advice on dealing with common uniform stains.",
         ],
       },
     ],
+
     links: [
-      { label: "Stain removal guide", href: "/blog/uniform-care" },
-      { label: "School uniforms", href: "/products#school-uniforms" },
+      {
+        label: "Stain Removal Guide",
+        href: "/blog/uniform-care",
+      },
+      {
+        label: "Explore School Uniforms",
+        href: "/products#school-uniforms",
+      },
     ],
   },
   {
@@ -253,7 +325,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Workwear",
     date: "2026-08-24",
     readMinutes: 4,
-    image: IMG.factory,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1791272396/weaverbird/products/f8fiiswrdi2docqwof7j.jpg",
     imageAlt: "Garment production at the Weaverbird factory",
     sections: [
       {
@@ -269,10 +342,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
       },
     ],
-    links: [
-      { label: "Workwear & overalls", href: "/products#workwear-overalls" },
-      QUOTE,
-    ],
+    links: [{ label: "Workwear & overalls", href: "/products#workwear-overalls" }, QUOTE],
   },
   {
     slug: "choosing-medical-scrubs",
@@ -282,7 +352,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Medical Wear",
     date: "2026-08-17",
     readMinutes: 4,
-    image: IMG.products,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788938310/weaverbird/products/bsdlmd5g6lowhknqrx1t.jpg",
     imageAlt: "Healthcare uniforms",
     sections: [
       {
@@ -314,7 +385,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Manufacturing",
     date: "2026-08-10",
     readMinutes: 5,
-    image: IMG.corporate,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1791272592/weaverbird/products/j7hgsxcyxuxsm8teshvb.jpg",
     imageAlt: "Bulk uniform order",
     sections: [
       {
@@ -350,18 +422,19 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Manufacturing",
     date: "2026-08-03",
     readMinutes: 4,
-    image: IMG.factory,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788856308/weaverbird/products/efogndhldntwol8hg43c.jpg",
     imageAlt: "Inside the Weaverbird factory in Thika",
     sections: [
       {
         heading: "Design and sampling",
-        paragraphs: ["Every order begins with your requirements, fabric choices and an approved sample."],
+        paragraphs: [
+          "Every order begins with your requirements, fabric choices and an approved sample.",
+        ],
       },
       {
         heading: "Weaving, cutting and stitching",
-        paragraphs: [
-          "Fabric is woven or knitted, then cut and stitched on our production lines.",
-        ],
+        paragraphs: ["Fabric is woven or knitted, then cut and stitched on our production lines."],
       },
       {
         heading: "Branding, quality control and delivery",
@@ -417,7 +490,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Garment Care",
     date: "2026-07-20",
     readMinutes: 6,
-    image: IMG.og,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1791272650/weaverbird/products/wgqurojefvazdxl9ljrc.jpg",
     imageAlt: "Uniform care guide",
     sections: [],
     links: [],
