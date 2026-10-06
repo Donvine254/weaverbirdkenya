@@ -243,19 +243,57 @@ html.a11y-lineHeight-3 * {
   filter: grayscale(100%) !important;
 }
 
-/* Pause animations */
+/* =========================================================
+   REDUCED MOTION
+   Respect operating-system/browser preference
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}
+/* =========================================================
+   PAUSE ANIMATIONS
+   User-controlled accessibility setting
+========================================================= */
+
 .a11y-pauseAnimations *,
 .a11y-pauseAnimations *::before,
 .a11y-pauseAnimations *::after {
-  animation-play-state: paused !important;
+  animation-duration: 0.01ms !important;
+  animation-delay: 0ms !important;
+  animation-iteration-count: 1 !important;
   transition: none !important;
   scroll-behavior: auto !important;
 }
 
-/* Stop Tailwind hover scales when animations are paused */
+/*
+ * Disable interactive transform animations.
+ */
 .a11y-pauseAnimations [class*="hover:scale"]:hover {
-  --tw-scale-x: 1 !important;
-  --tw-scale-y: 1 !important;
+  scale: 1 !important;
+  transform: none !important;
+}
+
+
+
+
+/* Also respect reduced-motion for hover scaling */
+@media (prefers-reduced-motion: reduce) {
+  [class*="hover:scale"]:hover {
+    --tw-scale-x: 1 !important;
+    --tw-scale-y: 1 !important;
+  }
 }
 
 @keyframes fade-in-up {

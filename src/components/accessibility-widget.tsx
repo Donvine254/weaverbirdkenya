@@ -381,7 +381,8 @@ export function AccessibilityWidget() {
         aria-haspopup="dialog"
         aria-expanded={open}
         title="Accessibility Menu"
-        className="fixed bottom-5 right-5 z-[9999] flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-maroon text-white shadow-[0_4px_12px_rgba(0,0,0,0.25)] transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400/40"
+        className="fixed bottom-5 right-5 z-[9999] flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-maroon text-white shadow-[0_4px_12px_rgba(0,0,0,0.25)] transition-transform duration-200 motion-reduce:transition-none
+  motion-reduce:hover:scale-100 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400/40"
       >
         {/* Outer white circular ring */}
         <span
@@ -413,7 +414,7 @@ export function AccessibilityWidget() {
           role="dialog"
           aria-modal="true"
           aria-label="Accessibility settings"
-          className="fixed bottom-24 right-5 z-[9999] w-[390px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-[24px] border border-black/[0.07] bg-white shadow-[0_25px_80px_rgba(0,0,0,0.24)] animate-in fade-in slide-in-from-bottom-3 duration-200"
+          className="fixed bottom-24 right-5 z-[9999] w-[390px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-[24px] border border-black/[0.07] bg-white shadow-[0_25px_80px_rgba(0,0,0,0.24)] animate-in fade-in slide-in-from-bottom-3 duration-200 motion-reduce:animate-none"
         >
           {/* ==================================================
               HEADER
