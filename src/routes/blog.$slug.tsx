@@ -6,7 +6,6 @@ import { Footer } from "@/components/layout/footer";
 import { PageCta } from "@/components/page-cta";
 import { BlogCard, BlogMeta, CategoryTag } from "@/components/blog-card";
 import { ARTICLE_POSTS, BLOG_POSTS, type BlogPost } from "@/data/blog";
-import { WHATSAPP_NUMBER } from "@/lib/contact";
 
 const SITE = "https://weaverbirdkenya.lovable.app";
 
@@ -266,7 +265,6 @@ function ShareBar({ url, title }: { url: string; title: string }) {
       >
         {copied ? <Check className="h-4 w-4" /> : <Link2 className="h-4 w-4" />}
       </button>
-      <span className="sr-only">{WHATSAPP_NUMBER ? "" : ""}</span>
     </div>
   );
 }

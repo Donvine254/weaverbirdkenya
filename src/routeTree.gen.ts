@@ -22,6 +22,8 @@ import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BlogUniformCareRouteImport } from './routes/blog.uniform-care'
 import { Route as PoliciesCookiesPolicyRouteImport } from './routes/policies_.cookies-policy'
 import { Route as PoliciesEnvironmentalPolicyRouteImport } from './routes/policies_.environmental-policy'
@@ -94,6 +96,16 @@ const Char91DotwellKnownChar93OauthProtectedResourceRoute =
     path: '/.well-known/oauth-protected-resource',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogUniformCareRoute = BlogUniformCareRouteImport.update({
   id: '/blog/uniform-care',
   path: '/blog/uniform-care',
@@ -135,11 +147,13 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies/cookies-policy': typeof PoliciesCookiesPolicyRoute
   '/policies/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies/terms-of-use': typeof PoliciesTermsOfUseRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -155,11 +169,13 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies/cookies-policy': typeof PoliciesCookiesPolicyRoute
   '/policies/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies/terms-of-use': typeof PoliciesTermsOfUseRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -176,11 +192,13 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies_/cookies-policy': typeof PoliciesCookiesPolicyRoute
   '/policies_/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies_/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies_/terms-of-use': typeof PoliciesTermsOfUseRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -198,11 +216,13 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
+    | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies/cookies-policy'
     | '/policies/environmental-policy'
     | '/policies/privacy-policy'
     | '/policies/terms-of-use'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -218,11 +238,13 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
+    | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies/cookies-policy'
     | '/policies/environmental-policy'
     | '/policies/privacy-policy'
     | '/policies/terms-of-use'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -238,11 +260,13 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/.well-known/oauth-protected-resource'
+    | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies_/cookies-policy'
     | '/policies_/environmental-policy'
     | '/policies_/privacy-policy'
     | '/policies_/terms-of-use'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -259,11 +283,13 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   BlogUniformCareRoute: typeof BlogUniformCareRoute
   PoliciesCookiesPolicyRoute: typeof PoliciesCookiesPolicyRoute
   PoliciesEnvironmentalPolicyRoute: typeof PoliciesEnvironmentalPolicyRoute
   PoliciesPrivacyPolicyRoute: typeof PoliciesPrivacyPolicyRoute
   PoliciesTermsOfUseRoute: typeof PoliciesTermsOfUseRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -359,6 +385,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/uniform-care': {
       id: '/blog/uniform-care'
       path: '/blog/uniform-care'
@@ -412,11 +452,13 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
+  BlogSlugRoute: BlogSlugRoute,
   BlogUniformCareRoute: BlogUniformCareRoute,
   PoliciesCookiesPolicyRoute: PoliciesCookiesPolicyRoute,
   PoliciesEnvironmentalPolicyRoute: PoliciesEnvironmentalPolicyRoute,
   PoliciesPrivacyPolicyRoute: PoliciesPrivacyPolicyRoute,
   PoliciesTermsOfUseRoute: PoliciesTermsOfUseRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
