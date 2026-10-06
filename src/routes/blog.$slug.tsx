@@ -167,7 +167,7 @@ function ArticlePage() {
               {post.title}
             </h1>
 
-            <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+            <p className="mt-5 max-w-3xl text-xs sm:text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
               {post.excerpt}
             </p>
 
