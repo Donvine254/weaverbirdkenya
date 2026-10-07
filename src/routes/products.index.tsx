@@ -1,12 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Package, Shirt, ArrowRight, Tag, Store, ArrowDownToLine, ReceiptText } from "lucide-react";
+import { Package, ArrowRight, Store } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
 import { AllProductCategories } from "@/data/products";
 
 type Category = (typeof AllProductCategories.categories)[number];
-type ProductItem = Category["products"][number];
 
 export const Route = createFileRoute("/products/")({
   head: () => ({
@@ -61,170 +60,67 @@ function ProductsPage() {
               Our <span style={{ color: "oklch(0.78 0.18 145)" }}>Products</span>
             </>
           }
-          subtitle="From school uniforms to corporate wear, medical scrubs to Maasai shukas — every garment is designed, cut and stitched under one roof at our Thika factory."
+          subtitle="From school uniforms and corporate wear to workwear, medical apparel and sportswear, Weaverbird manufactures garments tailored to your organisation’s requirements."
         />
-        <div className="lg:pt-12 lg:bg-maroon/5 lg:bg-[radial-gradient(ellipse_at_top,_var(--color-maroon)_0%,_transparent_80%)]">
-          {AllProductCategories.categories.map((category, i) => (
-            <CategorySection key={category.id} category={category} index={i} />
-          ))}
-          <ProductsCta />
-        </div>
+        <CategoryGrid />
+        <ProductsCta />
       </main>
       <Footer />
     </div>
   );
 }
 
-function CategorySection({ category, index }: { category: Category; index: number }) {
-  const muted = index % 2 === 1;
+function CategoryGrid() {
   return (
-    <section
-      id={category.id}
-      aria-labelledby={`${category.id}-heading`}
-      className={`scroll-mt-24 ${muted ? "bg-secondary/60" : "bg-background"}`}
-    >
-      {/* Full-width banner: text left, image right on large screens */}
-      <div className="border-b bg-black/10 border-black/5  lg:flex lg:min-h-[28rem]">
-        {/* Text column */}
-        <div className="flex flex-col justify-center px-6 py-10 sm:px-8 lg:w-1/2 lg:px-12 lg:py-0 xl:px-16">
-          <span
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest"
-            style={{ color: "var(--color-maroon)" }}
-          >
-            <span className="h-px w-8 text-maroon" style={{ background: "var(--color-maroon)" }} />
-            {String(index + 1).padStart(2, "0")} — Category
-          </span>
-          <h2
-            id={`${category.id}-heading`}
-            className="mt-3 text-3xl font-extrabold sm:text-4xl"
-            style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
-          >
-            {category.name}
-          </h2>
-          <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">{category.pitch}</p>
-
-          <div className="mt-5 flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
-              <Tag className="h-3.5 w-3.5" />
-              {category.tagsLabel}
-            </span>
-            {category.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-foreground shadow-sm"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-          {/* Buttons */}
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+    <section className="mx-auto max-w-7xl px-6 py-14 lg:py-20" aria-labelledby="categories-heading">
+      <div className="mx-auto max-w-3xl text-center">
+        <h2
+          id="categories-heading"
+          className="text-3xl font-extrabold sm:text-4xl"
+          style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
+        >
+          Browse by Category
+        </h2>
+        <p className="mt-4 rounded-xl border-l-4 bg-secondary/60 px-5 py-4 text-left text-sm leading-relaxed text-muted-foreground sm:text-base" style={{ borderColor: "var(--color-maroon)" }}>
+          Every organisation is different. The products shown represent our manufacturing
+          capabilities and can be customised to your preferred design, colours, fabric, sizing and
+          branding.
+        </p>
+      </div>
+      <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {AllProductCategories.categories.map((c: Category) => (
+          <li key={c.id}>
             <Link
-              to="/quote"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-maroon px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95 sm:w-auto"
-              style={{
-                boxShadow: "var(--shadow-red)",
-              }}
+              to="/products/$category"
+              params={{ category: c.id }}
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <ReceiptText className="h-4 w-4" />
-              Get a Quote
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={c.banner}
+                  alt={`${c.name} by Weaverbird Kenya`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <span className="absolute left-4 top-4 rounded-full bg-black/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
+                  {c.products.length} examples
+                </span>
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-lg font-extrabold uppercase tracking-wide" style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}>
+                  {c.name}
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{c.pitch}</p>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--color-maroon)" }}>
+                  Explore Category
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </div>
             </Link>
-            <a
-              // href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/technical_datasheet.pdf"
-              href="/resources/technical_datasheet.pdf"
-              download="Weaverbird-Technical-Datasheet.pdf"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6"
-            >
-              <ArrowDownToLine className="h-4 w-4 group-hover:animate-bounce" />
-              Technical Specifications
-            </a>
-          </div>
-        </div>
-
-        {/* Image column */}
-        <div className="relative lg:w-1/2">
-          <img
-            src={category.banner}
-            alt={`${category.name} by Weaverbird Kenya`}
-            loading="lazy"
-            className="h-72 w-full object-cover sm:h-96 lg:h-full lg:min-h-[28rem]"
-          />
-          {/* <div
-            className="absolute inset-0 hidden lg:block"
-            style={{
-              background:
-                "linear-gradient(90deg, oklch(1 0 0 / 1) 0%, oklch(1 0 0 / 0.5) 30%, transparent 60%)",
-            }}
-            aria-hidden="true"
-          /> */}
-        </div>
-      </div>
-
-      {/* Product grid */}
-      <div className="mx-auto max-w-7xl px-6 py-14 lg:py-20">
-        <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {category.products.map((item) => (
-            <ProductCard key={item.name} item={item} />
-          ))}
-        </ul>
-      </div>
+          </li>
+        ))}
+      </ul>
     </section>
-  );
-}
-
-function ProductCard({ item }: { item: ProductItem }) {
-  return (
-    <li className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in-up">
-      <div
-        className="relative aspect-[4/3] overflow-hidden bg-cover bg-center transition-transform duration-500"
-        style={{
-          backgroundImage: item.image
-            ? `url("${item.image}")`
-            : "linear-gradient(135deg, oklch(0.22 0.07 155) 0%, oklch(0.13 0.05 155) 100%)",
-          backgroundSize: item.image ? "cover" : "auto",
-        }}
-      >
-        {!item.image && (
-          <>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Shirt
-                className="h-14 w-14 text-white/25 transition-transform duration-500 group-hover:scale-110"
-                aria-hidden="true"
-              />
-            </div>
-
-            <span
-              className="absolute bottom-3 right-3 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-white/70 backdrop-blur-sm"
-              aria-hidden="true"
-            >
-              Photo coming soon
-            </span>
-          </>
-        )}
-
-        {!item.image && (
-          <span
-            className="absolute left-3 top-3 h-1 w-8 rounded-full"
-            style={{ background: "var(--color-maroon)" }}
-            aria-hidden="true"
-          />
-        )}
-
-        {/* dark overlay on hover */}
-        {item.image && (
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
-        )}
-      </div>
-
-      <div className="flex flex-1 flex-col p-5">
-        <h3 className="font-bold" style={{ color: "var(--primary-darker)" }}>
-          {item.name}
-        </h3>
-
-        <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-      </div>
-    </li>
   );
 }
 
