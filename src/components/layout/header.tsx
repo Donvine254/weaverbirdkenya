@@ -168,7 +168,7 @@ export function Header({ current = "Home" }: { current?: string }) {
                       {productCategories.map((c) => (
                         <a
                           key={c.hash}
-                          href={`/products#${c.hash}`}
+                          href={`/products/${c.hash}`}
                           onClick={() => setProductsOpen(false)}
                           className="block px-4 py-2.5 text-sm text-white/80 transition hover:bg-white/10 hover:text-white"
                         >
@@ -313,7 +313,7 @@ export function Header({ current = "Home" }: { current?: string }) {
                           {productCategories.map((c) => (
                             <a
                               key={c.hash}
-                              href={`/products#${c.hash}`}
+                              href={`/products/${c.hash}`}
                               onClick={() => setOpen(false)}
                               className="rounded-md px-3 py-2.5 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
                             >

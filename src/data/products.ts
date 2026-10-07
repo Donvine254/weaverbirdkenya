@@ -14,7 +14,7 @@ export const ProductCategories = [
     name: "School Uniforms",
     slug: "school-uniforms",
     icon: GraduationCap,
-    link: "/products#school-uniforms",
+    link: "/products/school-uniforms",
     description: "Durable and comfortable uniforms for primary, secondary schools and colleges.",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788935691/weaverbird/products/qtsxkvly09ai4hgg8kay.jpg",
@@ -24,7 +24,7 @@ export const ProductCategories = [
     name: "Corporate Wear",
     slug: "corporate-uniforms",
     icon: Briefcase,
-    link: "/products#corporate-wear",
+    link: "/products/corporate-wear",
     description: "Professional custom-made and branded uniforms for offices and businesses.",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788935879/weaverbird/products/ya8npakcvkqnv3voxfss.jpg",
@@ -34,7 +34,7 @@ export const ProductCategories = [
     name: "Healthcare Uniforms",
     slug: "healthcare-uniforms",
     icon: Stethoscope,
-    link: "/products/#medical-wear",
+    link: "/products/medical-wear",
     description: "Professional scrubs, lab coats, and medical attire for healthcare personnel.",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788936255/weaverbird/products/pk0xxtttwyqjyyfoshmj.jpg",
@@ -44,7 +44,7 @@ export const ProductCategories = [
     name: "PPE, Workwear & Security",
     slug: "ppe-workwear",
     icon: HardHat,
-    link: "/products#workwear-overalls",
+    link: "/products/workwear-overalls",
     description:
       "High-visibility safety gear, industrial workwear, overalls, and professional security uniforms.",
     image:
@@ -55,7 +55,7 @@ export const ProductCategories = [
     name: "Hospitality Uniforms",
     slug: "hospitality-uniforms",
     icon: UtensilsCrossed,
-    link: "/products/#workwear-overalls",
+    link: "/products/workwear-overalls",
     description: "Uniforms for hotels, restaurants, and catering staff.",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788935506/weaverbird/products/nh7zwexyrhoirfokrqqx.png",
@@ -65,7 +65,7 @@ export const ProductCategories = [
     name: "Sportswear",
     slug: "sports-uniforms",
     icon: Volleyball,
-    link: "/products#tracksuits-sportswear",
+    link: "/products/tracksuits-sportswear",
     description:
       "High-performance sportswear and team uniforms designed for schools, clubs, and professional organizations.",
     image:
