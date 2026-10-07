@@ -3,6 +3,7 @@ export function TrustedBy() {
   const clients = [
     "KCB",
     "EQUITY",
+    "EQUITY GROUP FOUNDATION",
     "KENYA AIRWAYS",
     "G4S",
     "JKUAT",
@@ -13,6 +14,7 @@ export function TrustedBy() {
     "HFCB",
     "KEBS",
     "KPA",
+    "CO-OPERATIVE BANK",
     "THIKA SPORTS CLUB",
     "KMTC",
     "IMPERIAL COLLEGE",
@@ -20,13 +22,32 @@ export function TrustedBy() {
     "THIKA CLOTH MILLS",
     "DELFIRM HOTEL",
     "ZIWA FARM",
-    "Makini Schools",
+    "DIAMOND TRUST BANK",
+    "GERTON UNIVERSITY",
+    "MAKINI SCHOOLS",
     "THIKA COFFEE MILL",
+    "WATERFRONT HIGH SCHOOL",
+    "THIKA POLYTECHNIC",
+    "KIAMBU COUNTY GOVERNMENT",
+    "KIHARU TECHNICAL TRAINING INSTITUTE",
+    "KENYA ASSOCIATION OF MANUFACTURERS",
     "MPESA FOUNDATION",
     "JOMO KENYATTA FOUNDATION",
+    "FOOD AGRICULTURE ORGANIZATION OF THE UNITED NATIONS",
     "COMMONWEALTH COLLEGE",
     "MOUNT KENYA UNIVERSITY",
     "KONG SECURITY",
+    "AFRICAN INSITUTE FOR CAPACITY DEVELOPMENT (AICAD)",
+    "ACROSS AGRICULTURE LTD",
+    "KISII UNIVERSITY",
+    "BIC EAST AFRICA",
+    "BONFIRE ADVENTURES",
+    "BRAEBURN SCHOOLS",
+    "CAMFED KENYA",
+    "CATHOLIC ARCHDIOCESE OF ARUSHA",
+    "INSTITUTE FOR CULTURE & ECOLOGY",
+    "KENYA INSTITUTE OF SPECIAL EDUCATION",
+    "KENYA NUT COMPANY LTD",
   ];
   const row = [...clients, ...clients];
   return (
@@ -59,14 +80,21 @@ export function TrustedBy() {
           ].map((m) => (
             <div key={m.t} className="text-center">
               <div
-                className="text-2xl font-extrabold"
-                style={{ color: "var(--accent-red)", fontFamily: "var(--font-display)" }}
+                className="text-2xl font-extrabold text-maroon"
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 {m.n}
               </div>
               <div className="mt-1 text-xs leading-tight text-muted-foreground">{m.t}</div>
             </div>
           ))}
+        </div>
+        <div className="flex items-center justify-center p-4">
+          <img
+            src="https://res.cloudinary.com/dipkbpinx/image/upload/v1791364802/weaverbird/Client%20Logos/xvonmzm9r32deaulqk7b.jpg"
+            alt="Made in Kenya"
+            className="h-auto max-h-[96px] w-full max-w-sm object-contain sm:max-w-md md:max-w-lg lg:max-w-xl"
+          />
         </div>
       </div>
     </section>
