@@ -217,7 +217,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     links: [
-      { label: "School uniforms we make", href: "/products#school-uniforms" },
+      { label: "School uniforms we make", href: "/products/school-uniforms" },
       { label: "Find a Weaverbird shop", href: "/branches" },
       QUOTE,
     ],
@@ -478,7 +478,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     links: [
-      { label: "Corporate wear range", href: "/products#corporate-wear" },
+      { label: "Corporate wear range", href: "/products/corporate-wear" },
       { label: "Embroidery service", href: "/services#embroidery" },
       QUOTE,
     ],
@@ -950,7 +950,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "Weaving and knitting", href: "/services#weaving" },
-      { label: "School uniforms", href: "/products#school-uniforms" },
+      { label: "School uniforms", href: "/products/school-uniforms" },
       QUOTE,
     ],
   },
@@ -1060,7 +1060,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         label: "Explore School Uniforms",
-        href: "/products#school-uniforms",
+        href: "/products/school-uniforms",
       },
     ],
   },
@@ -1371,7 +1371,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     links: [
-      { label: "Workwear & overalls", href: "/products#workwear-overalls" },
+      { label: "Workwear & overalls", href: "/products/workwear-overalls" },
       { label: "Bulk manufacturing", href: "/services#bulk-manufacturing" },
       QUOTE,
     ],
@@ -1763,7 +1763,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     links: [
-      { label: "Medical wear range", href: "/products#medical-wear" },
+      { label: "Medical wear range", href: "/products/medical-wear" },
       { label: "Bulk manufacturing", href: "/services#bulk-manufacturing" },
       QUOTE,
     ],
@@ -2419,8 +2419,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "Our services", href: "/services" },
-      { label: "School uniforms", href: "/products#school-uniforms" },
-      { label: "Corporate wear", href: "/products#corporate-wear" },
+      { label: "School uniforms", href: "/products/school-uniforms" },
+      { label: "Corporate wear", href: "/products/corporate-wear" },
       { label: "About Weaverbird", href: "/about" },
       QUOTE,
     ],
@@ -2672,8 +2672,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "Weaving and knitting", href: "/services#weaving" },
-      { label: "School uniforms", href: "/products#school-uniforms" },
-      { label: "Corporate wear", href: "/products#corporate-wear" },
+      { label: "School uniforms", href: "/products/school-uniforms" },
+      { label: "Corporate wear", href: "/products/corporate-wear" },
       QUOTE,
     ],
   },

@@ -46,9 +46,9 @@ export function FooterColHeader({ icon: Icon, title }: { icon: LucideIcon; title
 
 export function Footer() {
   const services = [
-    { title: "School Uniforms", href: "/products#school-uniforms" },
-    { title: "Corporate & Security Uniforms", href: "/products#corporate-wear" },
-    { title: "Medical Wear", href: "/products#medical-wear" },
+    { title: "School Uniforms", href: "/products/school-uniforms" },
+    { title: "Corporate & Security Uniforms", href: "/products/corporate-wear" },
+    { title: "Medical Wear", href: "/products/medical-wear" },
     { title: "Screen Printing", href: "/services#screen-printing" },
     { title: "Embroidery", href: "/services#embroidery" },
     { title: "Weaving", href: "/services#weaving" },

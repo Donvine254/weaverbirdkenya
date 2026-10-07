@@ -8,7 +8,7 @@ import { AllProductCategories } from "@/data/products";
 type Category = (typeof AllProductCategories.categories)[number];
 type ProductItem = Category["products"][number];
 
-export const Route = createFileRoute("/products")({
+export const Route = createFileRoute("/products/")({
   head: () => ({
     meta: [
       { title: "Our Products — Weaver Bird Kenya" },
