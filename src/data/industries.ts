@@ -8,16 +8,15 @@ import {
   ShoppingBag,
   Megaphone,
   ShieldAlert,
-  Volleyball
+  Volleyball,
 } from "lucide-react";
-
 
 export const industries = [
   {
     title: "Education",
     subtitle: "Schools & Colleges",
     icon: GraduationCap,
-    link:"/products#school-uniforms",
+    link: "/products/school-uniforms",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1787920184/weaverbird/products/q1y64ybehztnzg8gs46e.jpg",
   },
@@ -25,7 +24,7 @@ export const industries = [
     title: "Corporate",
     subtitle: "Offices & Institutions",
     icon: Briefcase,
-    link:"/products#corporate-wear",
+    link: "/products/corporate-wear",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788163761/weaverbird/products/uyki7qzgicpplaclxasb.jpg",
   },
@@ -33,7 +32,7 @@ export const industries = [
     title: "Security",
     subtitle: "Guard Services",
     icon: ShieldAlert,
-    link:"/products#workwear-overalls",
+    link: "/products/workwear-overalls",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788938630/weaverbird/products/tbj9y83ecojrhnz6ex1o.jpg",
   },
@@ -41,7 +40,7 @@ export const industries = [
     title: "Sports & Clubs",
     subtitle: "Teams & Sporting Organizations",
     icon: Volleyball,
-    link:"/products#tracksuits-sportswear",
+    link: "/products/tracksuits-sportswear",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788937991/weaverbird/products/fd7kexllrbzeewrskx4s.jpg",
   },
@@ -49,7 +48,7 @@ export const industries = [
     title: "Manufacturing",
     subtitle: "Factories & Industrial",
     icon: Factory,
-    link:"/products#workwear-overalls",
+    link: "/products/workwear-overalls",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788938410/weaverbird/products/bonjwp1l3amfnyhswcbw.jpg",
   },
@@ -57,7 +56,7 @@ export const industries = [
     title: "Hospitality",
     subtitle: "Hotels & Restaurants",
     icon: Utensils,
-    link:"/products#hospitality-wear",
+    link: "/products/hospitality-wear",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788934209/weaverbird/products/w7cdgjj4suc3hsw3shcr.jpg",
   },
@@ -65,7 +64,7 @@ export const industries = [
     title: "Healthcare",
     subtitle: "Hospitals & Clinics",
     icon: Hospital,
-    link:"/products#medical-wear",
+    link: "/products/medical-wear",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788938310/weaverbird/products/bsdlmd5g6lowhknqrx1t.jpg",
   },
@@ -73,7 +72,7 @@ export const industries = [
     title: "Retail & Fashion",
     subtitle: "Retailers & Fashion Brands",
     icon: ShoppingBag,
-    link:"/products#tshirts-polos",
+    link: "/products/tshirts-polos",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788173962/weaverbird/sehy7igsn3mm3wzeiovc.jpg",
   },
@@ -81,7 +80,7 @@ export const industries = [
     title: "Events & Promotions",
     subtitle: "Events & Promotional Teams",
     icon: Megaphone,
-    link:"/products#promotional-items",
+    link: "/products/promotional-items",
     image:
       "https://res.cloudinary.com/dipkbpinx/image/upload/v1788938185/weaverbird/products/dtrp7awwil5uxzocjzl3.jpg",
   },

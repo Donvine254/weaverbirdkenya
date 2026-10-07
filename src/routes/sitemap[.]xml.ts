@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { ARTICLE_POSTS } from "@/data/blog";
+import { AllProductCategories } from "@/data/products";
 
 const BASE_URL = "https://weaverbirdkenya.com";
 
@@ -25,7 +26,16 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/blog/uniform-care", changefreq: "yearly", priority: "0.6" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
           { path: "/downloads", changefreq: "monthly", priority: "0.7" },
-          ...ARTICLE_POSTS.map((p) => ({ path: `/blog/${p.slug}`, changefreq: "yearly" as const, priority: "0.6" })),
+          ...AllProductCategories.categories.map((c) => ({
+            path: `/products/${c.id}`,
+            changefreq: "monthly" as const,
+            priority: "0.8",
+          })),
+          ...ARTICLE_POSTS.map((p) => ({
+            path: `/blog/${p.slug}`,
+            changefreq: "yearly" as const,
+            priority: "0.6",
+          })),
         ];
 
         const urls = entries.map((e) =>
