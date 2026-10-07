@@ -16,7 +16,6 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DownloadsRouteImport } from './routes/downloads'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as PoliciesRouteImport } from './routes/policies'
-import { Route as ProductsRouteImport } from './routes/products'
 import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -27,6 +26,8 @@ import { Route as PoliciesCookiesPolicyRouteImport } from './routes/policies_.co
 import { Route as PoliciesEnvironmentalPolicyRouteImport } from './routes/policies_.environmental-policy'
 import { Route as PoliciesPrivacyPolicyRouteImport } from './routes/policies_.privacy-policy'
 import { Route as PoliciesTermsOfUseRouteImport } from './routes/policies_.terms-of-use'
+import { Route as ProductsIndexRouteImport } from './routes/products.index'
+import { Route as ProductsCategoryRouteImport } from './routes/products.$category'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -61,11 +62,6 @@ const FaqRoute = FaqRouteImport.update({
 const PoliciesRoute = PoliciesRouteImport.update({
   id: '/policies',
   path: '/policies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProductsRoute = ProductsRouteImport.update({
-  id: '/products',
-  path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuoteRoute = QuoteRouteImport.update({
@@ -119,6 +115,16 @@ const PoliciesTermsOfUseRoute = PoliciesTermsOfUseRouteImport.update({
   path: '/policies/terms-of-use',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductsIndexRoute = ProductsIndexRouteImport.update({
+  id: '/products/',
+  path: '/products/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsCategoryRoute = ProductsCategoryRouteImport.update({
+  id: '/products/$category',
+  path: '/products/$category',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -128,7 +134,6 @@ export interface FileRoutesByFullPath {
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
   '/policies': typeof PoliciesRoute
-  '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -138,7 +143,9 @@ export interface FileRoutesByFullPath {
   '/policies/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies/terms-of-use': typeof PoliciesTermsOfUseRoute
+  '/products/$category': typeof ProductsCategoryRoute
   '/blog/': typeof BlogIndexRoute
+  '/products/': typeof ProductsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -148,7 +155,6 @@ export interface FileRoutesByTo {
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
   '/policies': typeof PoliciesRoute
-  '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -158,7 +164,9 @@ export interface FileRoutesByTo {
   '/policies/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies/terms-of-use': typeof PoliciesTermsOfUseRoute
+  '/products/$category': typeof ProductsCategoryRoute
   '/blog': typeof BlogIndexRoute
+  '/products': typeof ProductsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -169,7 +177,6 @@ export interface FileRoutesById {
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
   '/policies': typeof PoliciesRoute
-  '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -179,7 +186,9 @@ export interface FileRoutesById {
   '/policies_/environmental-policy': typeof PoliciesEnvironmentalPolicyRoute
   '/policies_/privacy-policy': typeof PoliciesPrivacyPolicyRoute
   '/policies_/terms-of-use': typeof PoliciesTermsOfUseRoute
+  '/products/$category': typeof ProductsCategoryRoute
   '/blog/': typeof BlogIndexRoute
+  '/products/': typeof ProductsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -191,7 +200,6 @@ export interface FileRouteTypes {
     | '/downloads'
     | '/faq'
     | '/policies'
-    | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
@@ -201,7 +209,9 @@ export interface FileRouteTypes {
     | '/policies/environmental-policy'
     | '/policies/privacy-policy'
     | '/policies/terms-of-use'
+    | '/products/$category'
     | '/blog/'
+    | '/products/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -211,7 +221,6 @@ export interface FileRouteTypes {
     | '/downloads'
     | '/faq'
     | '/policies'
-    | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
@@ -221,7 +230,9 @@ export interface FileRouteTypes {
     | '/policies/environmental-policy'
     | '/policies/privacy-policy'
     | '/policies/terms-of-use'
+    | '/products/$category'
     | '/blog'
+    | '/products'
   id:
     | '__root__'
     | '/'
@@ -231,7 +242,6 @@ export interface FileRouteTypes {
     | '/downloads'
     | '/faq'
     | '/policies'
-    | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
@@ -241,7 +251,9 @@ export interface FileRouteTypes {
     | '/policies_/environmental-policy'
     | '/policies_/privacy-policy'
     | '/policies_/terms-of-use'
+    | '/products/$category'
     | '/blog/'
+    | '/products/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -252,7 +264,6 @@ export interface RootRouteChildren {
   DownloadsRoute: typeof DownloadsRoute
   FaqRoute: typeof FaqRoute
   PoliciesRoute: typeof PoliciesRoute
-  ProductsRoute: typeof ProductsRoute
   QuoteRoute: typeof QuoteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -262,7 +273,9 @@ export interface RootRouteChildren {
   PoliciesEnvironmentalPolicyRoute: typeof PoliciesEnvironmentalPolicyRoute
   PoliciesPrivacyPolicyRoute: typeof PoliciesPrivacyPolicyRoute
   PoliciesTermsOfUseRoute: typeof PoliciesTermsOfUseRoute
+  ProductsCategoryRoute: typeof ProductsCategoryRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  ProductsIndexRoute: typeof ProductsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -314,13 +327,6 @@ declare module '@tanstack/react-router' {
       path: '/policies'
       fullPath: '/policies'
       preLoaderRoute: typeof PoliciesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products': {
-      id: '/products'
-      path: '/products'
-      fullPath: '/products'
-      preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quote': {
@@ -393,6 +399,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PoliciesTermsOfUseRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/products/': {
+      id: '/products/'
+      path: '/products'
+      fullPath: '/products/'
+      preLoaderRoute: typeof ProductsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/$category': {
+      id: '/products/$category'
+      path: '/products/$category'
+      fullPath: '/products/$category'
+      preLoaderRoute: typeof ProductsCategoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -404,7 +424,6 @@ const rootRouteChildren: RootRouteChildren = {
   DownloadsRoute: DownloadsRoute,
   FaqRoute: FaqRoute,
   PoliciesRoute: PoliciesRoute,
-  ProductsRoute: ProductsRoute,
   QuoteRoute: QuoteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -414,7 +433,9 @@ const rootRouteChildren: RootRouteChildren = {
   PoliciesEnvironmentalPolicyRoute: PoliciesEnvironmentalPolicyRoute,
   PoliciesPrivacyPolicyRoute: PoliciesPrivacyPolicyRoute,
   PoliciesTermsOfUseRoute: PoliciesTermsOfUseRoute,
+  ProductsCategoryRoute: ProductsCategoryRoute,
   BlogIndexRoute: BlogIndexRoute,
+  ProductsIndexRoute: ProductsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
