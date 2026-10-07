@@ -9,75 +9,28 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as QuoteRouteImport } from './routes/quote'
-import { Route as ProductsRouteImport } from './routes/products'
-import { Route as PoliciesRouteImport } from './routes/policies'
-import { Route as McpRouteImport } from './routes/mcp'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as DownloadsRouteImport } from './routes/downloads'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as BranchesRouteImport } from './routes/branches'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BranchesRouteImport } from './routes/branches'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DownloadsRouteImport } from './routes/downloads'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as PoliciesRouteImport } from './routes/policies'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as QuoteRouteImport } from './routes/quote'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as PoliciesTermsOfUseRouteImport } from './routes/policies_.terms-of-use'
-import { Route as PoliciesPrivacyPolicyRouteImport } from './routes/policies_.privacy-policy'
-import { Route as PoliciesEnvironmentalPolicyRouteImport } from './routes/policies_.environmental-policy'
-import { Route as PoliciesCookiesPolicyRouteImport } from './routes/policies_.cookies-policy'
-import { Route as BlogUniformCareRouteImport } from './routes/blog.uniform-care'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as BlogUniformCareRouteImport } from './routes/blog.uniform-care'
+import { Route as PoliciesCookiesPolicyRouteImport } from './routes/policies_.cookies-policy'
+import { Route as PoliciesEnvironmentalPolicyRouteImport } from './routes/policies_.environmental-policy'
+import { Route as PoliciesPrivacyPolicyRouteImport } from './routes/policies_.privacy-policy'
+import { Route as PoliciesTermsOfUseRouteImport } from './routes/policies_.terms-of-use'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const QuoteRoute = QuoteRouteImport.update({
-  id: '/quote',
-  path: '/quote',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProductsRoute = ProductsRouteImport.update({
-  id: '/products',
-  path: '/products',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PoliciesRoute = PoliciesRouteImport.update({
-  id: '/policies',
-  path: '/policies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DownloadsRoute = DownloadsRouteImport.update({
-  id: '/downloads',
-  path: '/downloads',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BranchesRoute = BranchesRouteImport.update({
-  id: '/branches',
-  path: '/branches',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -85,9 +38,49 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BranchesRoute = BranchesRouteImport.update({
+  id: '/branches',
+  path: '/branches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DownloadsRoute = DownloadsRouteImport.update({
+  id: '/downloads',
+  path: '/downloads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliciesRoute = PoliciesRouteImport.update({
+  id: '/policies',
+  path: '/policies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuoteRoute = QuoteRouteImport.update({
+  id: '/quote',
+  path: '/quote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -95,14 +88,19 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PoliciesTermsOfUseRoute = PoliciesTermsOfUseRouteImport.update({
-  id: '/policies_/terms-of-use',
-  path: '/policies/terms-of-use',
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PoliciesPrivacyPolicyRoute = PoliciesPrivacyPolicyRouteImport.update({
-  id: '/policies_/privacy-policy',
-  path: '/policies/privacy-policy',
+const BlogUniformCareRoute = BlogUniformCareRouteImport.update({
+  id: '/blog/uniform-care',
+  path: '/blog/uniform-care',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliciesCookiesPolicyRoute = PoliciesCookiesPolicyRouteImport.update({
+  id: '/policies_/cookies-policy',
+  path: '/policies/cookies-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoliciesEnvironmentalPolicyRoute =
@@ -111,27 +109,16 @@ const PoliciesEnvironmentalPolicyRoute =
     path: '/policies/environmental-policy',
     getParentRoute: () => rootRouteImport,
   } as any)
-const PoliciesCookiesPolicyRoute = PoliciesCookiesPolicyRouteImport.update({
-  id: '/policies_/cookies-policy',
-  path: '/policies/cookies-policy',
+const PoliciesPrivacyPolicyRoute = PoliciesPrivacyPolicyRouteImport.update({
+  id: '/policies_/privacy-policy',
+  path: '/policies/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogUniformCareRoute = BlogUniformCareRouteImport.update({
-  id: '/blog/uniform-care',
-  path: '/blog/uniform-care',
+const PoliciesTermsOfUseRoute = PoliciesTermsOfUseRouteImport.update({
+  id: '/policies_/terms-of-use',
+  path: '/policies/terms-of-use',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Char91DotwellKnownChar93OauthProtectedResourceRoute =
-  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
-    id: '/.well-known/oauth-protected-resource',
-    path: '/.well-known/oauth-protected-resource',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -140,13 +127,11 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
-  '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies/cookies-policy': typeof PoliciesCookiesPolicyRoute
@@ -162,13 +147,11 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
-  '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies/cookies-policy': typeof PoliciesCookiesPolicyRoute
@@ -185,13 +168,11 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
-  '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/products': typeof ProductsRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies_/cookies-policy': typeof PoliciesCookiesPolicyRoute
@@ -209,13 +190,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/downloads'
     | '/faq'
-    | '/mcp'
     | '/policies'
     | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies/cookies-policy'
@@ -231,13 +210,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/downloads'
     | '/faq'
-    | '/mcp'
     | '/policies'
     | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies/cookies-policy'
@@ -253,13 +230,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/downloads'
     | '/faq'
-    | '/mcp'
     | '/policies'
     | '/products'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies_/cookies-policy'
@@ -276,13 +251,11 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DownloadsRoute: typeof DownloadsRoute
   FaqRoute: typeof FaqRoute
-  McpRoute: typeof McpRoute
   PoliciesRoute: typeof PoliciesRoute
   ProductsRoute: typeof ProductsRoute
   QuoteRoute: typeof QuoteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BlogUniformCareRoute: typeof BlogUniformCareRoute
   PoliciesCookiesPolicyRoute: typeof PoliciesCookiesPolicyRoute
@@ -294,74 +267,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/quote': {
-      id: '/quote'
-      path: '/quote'
-      fullPath: '/quote'
-      preLoaderRoute: typeof QuoteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products': {
-      id: '/products'
-      path: '/products'
-      fullPath: '/products'
-      preLoaderRoute: typeof ProductsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/policies': {
-      id: '/policies'
-      path: '/policies'
-      fullPath: '/policies'
-      preLoaderRoute: typeof PoliciesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/downloads': {
-      id: '/downloads'
-      path: '/downloads'
-      fullPath: '/downloads'
-      preLoaderRoute: typeof DownloadsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/branches': {
-      id: '/branches'
-      path: '/branches'
-      fullPath: '/branches'
-      preLoaderRoute: typeof BranchesRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -371,11 +281,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/branches': {
+      id: '/branches'
+      path: '/branches'
+      fullPath: '/branches'
+      preLoaderRoute: typeof BranchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/downloads': {
+      id: '/downloads'
+      path: '/downloads'
+      fullPath: '/downloads'
+      preLoaderRoute: typeof DownloadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/policies': {
+      id: '/policies'
+      path: '/policies'
+      fullPath: '/policies'
+      preLoaderRoute: typeof PoliciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quote': {
+      id: '/quote'
+      path: '/quote'
+      fullPath: '/quote'
+      preLoaderRoute: typeof QuoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -385,32 +351,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/policies_/terms-of-use': {
-      id: '/policies_/terms-of-use'
-      path: '/policies/terms-of-use'
-      fullPath: '/policies/terms-of-use'
-      preLoaderRoute: typeof PoliciesTermsOfUseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/policies_/privacy-policy': {
-      id: '/policies_/privacy-policy'
-      path: '/policies/privacy-policy'
-      fullPath: '/policies/privacy-policy'
-      preLoaderRoute: typeof PoliciesPrivacyPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/policies_/environmental-policy': {
-      id: '/policies_/environmental-policy'
-      path: '/policies/environmental-policy'
-      fullPath: '/policies/environmental-policy'
-      preLoaderRoute: typeof PoliciesEnvironmentalPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/policies_/cookies-policy': {
-      id: '/policies_/cookies-policy'
-      path: '/policies/cookies-policy'
-      fullPath: '/policies/cookies-policy'
-      preLoaderRoute: typeof PoliciesCookiesPolicyRouteImport
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/uniform-care': {
@@ -420,18 +365,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogUniformCareRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
+    '/policies_/cookies-policy': {
+      id: '/policies_/cookies-policy'
+      path: '/policies/cookies-policy'
+      fullPath: '/policies/cookies-policy'
+      preLoaderRoute: typeof PoliciesCookiesPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/.well-known/oauth-protected-resource': {
-      id: '/.well-known/oauth-protected-resource'
-      path: '/.well-known/oauth-protected-resource'
-      fullPath: '/.well-known/oauth-protected-resource'
-      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+    '/policies_/environmental-policy': {
+      id: '/policies_/environmental-policy'
+      path: '/policies/environmental-policy'
+      fullPath: '/policies/environmental-policy'
+      preLoaderRoute: typeof PoliciesEnvironmentalPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/policies_/privacy-policy': {
+      id: '/policies_/privacy-policy'
+      path: '/policies/privacy-policy'
+      fullPath: '/policies/privacy-policy'
+      preLoaderRoute: typeof PoliciesPrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/policies_/terms-of-use': {
+      id: '/policies_/terms-of-use'
+      path: '/policies/terms-of-use'
+      fullPath: '/policies/terms-of-use'
+      preLoaderRoute: typeof PoliciesTermsOfUseRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -444,14 +403,11 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DownloadsRoute: DownloadsRoute,
   FaqRoute: FaqRoute,
-  McpRoute: McpRoute,
   PoliciesRoute: PoliciesRoute,
   ProductsRoute: ProductsRoute,
   QuoteRoute: QuoteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  Char91DotwellKnownChar93OauthProtectedResourceRoute:
-    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BlogSlugRoute: BlogSlugRoute,
   BlogUniformCareRoute: BlogUniformCareRoute,
   PoliciesCookiesPolicyRoute: PoliciesCookiesPolicyRoute,

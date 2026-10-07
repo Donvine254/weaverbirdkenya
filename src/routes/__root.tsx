@@ -7,7 +7,7 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { CookieConsent } from "@/components/cookie-consent";
 import { NotFound } from "@/components/not-found";
@@ -15,14 +15,10 @@ import { AccessibilityWidget } from "@/components/accessibility-widget";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -83,8 +79,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Kenyan uniform and apparel manufacturer since 1996: school, corporate, security, sports and hospitality wear made and delivered nationwide.",
       },
-      // { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/381a9932-fd1c-4b32-af2e-4a88edf76a86/id-preview-e96b4304--24f83c8d-9f2b-4587-be61-acf624ce11a3.lovable.app-1781938223717.png" },
-      // { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/381a9932-fd1c-4b32-af2e-4a88edf76a86/id-preview-e96b4304--24f83c8d-9f2b-4587-be61-acf624ce11a3.lovable.app-1781938223717.png" },
     ],
     links: [
       {
@@ -115,7 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Weaverbird Garments Manufacturers Ltd",
-          url: "https://weaverbirdkenya.lovable.app",
+          url: "https://weaverbirdkenya.com",
           foundingDate: "1996",
           description:
             "Kenyan manufacturer of school, corporate, security, sports, hospitality and industrial uniforms.",

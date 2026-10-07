@@ -25,7 +25,7 @@ export const Route = createFileRoute("/services")({
         content:
           "From sketch to stitch under one roof: embroidery, printing, weaving, tailoring, bulk production and delivery.",
       },
-      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/services" },
+      { property: "og:url", content: "https://weaverbirdkenya.com/services" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/services")({
           "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
       },
     ],
-    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/services" }],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.com/services" }],
   }),
   component: ServicesPage,
 });

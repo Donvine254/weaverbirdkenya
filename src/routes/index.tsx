@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
         content:
           "Kenya's leading uniform & apparel manufacturer. From design to delivery, nationwide.",
       },
-      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/" },
+      { property: "og:url", content: "https://weaverbirdkenya.com/" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -47,16 +47,16 @@ export const Route = createFileRoute("/")({
           "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
       },
     ],
-    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.com/" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "@id": "https://weaverbirdkenya.lovable.app/#business",
+          "@id": "https://weaverbirdkenya.com/#business",
           name: "Weaverbird Garments Manufacturers Ltd",
-          url: "https://weaverbirdkenya.lovable.app/",
+          url: "https://weaverbirdkenya.com/",
           telephone: "+254722264464",
           email: "info@weaverbirdkenya.com",
           foundingDate: "1996",

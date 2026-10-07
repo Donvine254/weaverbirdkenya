@@ -28,7 +28,7 @@ export const Route = createFileRoute("/products")({
         content:
           "School uniforms, corporate wear, workwear, medical wear, hospitality uniforms, sportswear and branded merchandise — all made in our Thika factory.",
       },
-      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/products" },
+      { property: "og:url", content: "https://weaverbirdkenya.com/products" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/products")({
           "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
       },
     ],
-    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/products" }],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.com/products" }],
   }),
   component: ProductsPage,
 });

@@ -81,7 +81,7 @@ export const Route = createFileRoute("/quote")({
         property: "og:description",
         content: "Tell us what you're outfitting and we'll send back a costed quotation.",
       },
-      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/quote" },
+      { property: "og:url", content: "https://weaverbirdkenya.com/quote" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -95,7 +95,7 @@ export const Route = createFileRoute("/quote")({
           "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
       },
     ],
-    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/quote" }],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.com/quote" }],
   }),
   component: QuotePage,
 });

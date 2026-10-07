@@ -40,7 +40,7 @@ export const Route = createFileRoute("/about")({
         content:
           "Premium uniforms and apparel made in Kenya since 1996. 30 years of experience, 12 branches and a factory in Thika.",
       },
-      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/about" },
+      { property: "og:url", content: "https://weaverbirdkenya.com/about" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -54,7 +54,7 @@ export const Route = createFileRoute("/about")({
           "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
       },
     ],
-    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.com/about" }],
   }),
   component: AboutPage,
 });

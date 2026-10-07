@@ -1,5 +1,5 @@
 const SITE_NAME = "Weaver Bird Kenya";
-const SITE_URL = "https://weaverbirdkenya.lovable.app";
+const SITE_URL = "https://weaverbirdkenya.com";
 
 interface SeoMetaOptions {
   title: string;
