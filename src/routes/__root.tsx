@@ -139,13 +139,7 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="09d6e590-968f-484d-821f-ae83fe36281d"
-          data-blockingmode="auto"
-          type="text/javascript"
-        ></script>
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="09d6e590-968f-484d-821f-ae83fe36281d" data-blockingmode="auto" type="text/javascript"></script>
         <HeadContent />
       </head>
       <body>
