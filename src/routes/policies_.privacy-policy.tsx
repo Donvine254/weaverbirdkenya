@@ -84,6 +84,25 @@ function PrivacyPolicyPage() {
     <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
       <Header current="Policies" />
       <main id="main-content">
+        <nav aria-label="Breadcrumb" className="border-b border-black/5 bg-secondary/40">
+          <ol className="mx-auto flex max-w-7xl flex-wrap items-center gap-1.5 px-6 py-3 text-sm text-muted-foreground">
+            <li>
+              <Link to="/" className="hover:text-foreground">
+                Home
+              </Link>
+            </li>
+            <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
+            <li>
+              <Link to="/policies" className="hover:text-foreground">
+                Policies
+              </Link>
+            </li>
+            <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
+            <li aria-current="page" className="font-semibold text-foreground">
+              Privacy Policy
+            </li>
+          </ol>
+        </nav>
         <PrivacyPolicyContent />
       </main>
       <Footer />
