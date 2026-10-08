@@ -64,6 +64,13 @@ export const Route = createFileRoute("/products/$category")({
   component: CategoryPage,
 });
 
+const sizeGuideCategories = new Set([
+  "school-uniforms",
+  "corporate-wear",
+  "hospitality-wear",
+  "medical-wear",
+]);
+
 const customise = [
   {
     icon: PenTool,
@@ -98,6 +105,14 @@ function CategoryPage() {
   const index = all.findIndex((c) => c.id === slug);
   const category = all[index];
   const others = [1, 2, 3].map((n) => all[(index + n) % all.length]);
+  const isSizeGuideCategory = sizeGuideCategories.has(slug);
+  const specPdf = isSizeGuideCategory
+    ? "/resources/size-guide.pdf"
+    : "/resources/technical_datasheet.pdf";
+  const specLabel = isSizeGuideCategory ? "View Size Guide" : "Technical Specifications";
+  const specDownloadName = isSizeGuideCategory
+    ? "Garment-Size-Guide.pdf"
+    : "Weaverbird-Technical-Datasheet.pdf";
 
   return (
     <div className="min-h-dvh bg-background font-sans" style={{ fontFamily: "var(--font-sans)" }}>
@@ -162,12 +177,12 @@ function CategoryPage() {
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <a
-              href="/resources/technical_datasheet.pdf"
-              download="Weaverbird-Technical-Datasheet.pdf"
+              href={specPdf}
+              download={specDownloadName}
               className="group inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 bg-primary-deep px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-primary active:scale-95 sm:w-auto sm:px-6"
             >
               <ArrowDownToLine className="h-4 w-4 group-hover:animate-bounce" />
-              Technical Specifications
+              {specLabel}
             </a>
           </div>
         </section>

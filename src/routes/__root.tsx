@@ -9,7 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { type ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
-import { CookieConsent } from "@/components/cookie-consent";
+// import { CookieConsent } from "@/components/cookie-consent";
 import { NotFound } from "@/components/not-found";
 import { AccessibilityWidget } from "@/components/accessibility-widget";
 import { WhatsAppButton } from "@/components/whatsapp-button";
@@ -64,7 +64,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Weaverbird" },
       { property: "og:site_name", content: "Weaverbird Garments Manufacturers Ltd" },
-      { property: "og:title", content: "Weaverbird Garments Manufacturers Ltd — Uniforms Made in Kenya" },
+      {
+        property: "og:title",
+        content: "Weaverbird Garments Manufacturers Ltd — Uniforms Made in Kenya",
+      },
       {
         property: "og:description",
         content:
@@ -136,7 +139,13 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="09d6e590-968f-484d-821f-ae83fe36281d" data-blockingmode="auto" type="text/javascript"></script>
+        <script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="09d6e590-968f-484d-821f-ae83fe36281d"
+          data-blockingmode="auto"
+          type="text/javascript"
+        ></script>
         <HeadContent />
       </head>
       <body>
@@ -155,7 +164,6 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Toaster />
-      <CookieConsent />
       <AccessibilityWidget />
       <WhatsAppButton />
     </QueryClientProvider>
