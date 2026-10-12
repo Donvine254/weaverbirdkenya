@@ -286,6 +286,17 @@ function BranchDetail({ branch }: { branch: Branch }) {
             Call Shop
           </a>
         </div>
+        <div className="mt-4 sm:mt-6 min-h-[350px] flex-1 overflow-hidden rounded-xl border border-border">
+          <iframe
+            src={branch.mapEmbed}
+            className="h-full min-h-[350px] w-full border-0"
+            key={branch.name}
+            title={`${branch.name} location on Google Maps`}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
