@@ -31,7 +31,7 @@ export const branches: Branch[] = [
     coords: [-1.0316, 37.1],
   },
   {
-    name: "Nairobi",
+    name: "Nairobi Flaship Branch ⭐",
     type: "branch",
     phone: "+254724089655",
     hours: {
@@ -46,7 +46,7 @@ export const branches: Branch[] = [
     coords: [-1.2841, 36.829],
   },
   {
-    name: "Chuka",
+    name: "Chuka Shop",
     type: "branch",
     phone: "+254799111222",
     hours: {
@@ -61,22 +61,7 @@ export const branches: Branch[] = [
     coords: [-0.3323, 37.6489],
   },
   {
-    name: "Thika Shop 1",
-    type: "branch",
-    phone: "0718343353",
-    hours: {
-      monday_friday: "8:30AM - 6:00PM",
-      saturday: "8:30AM - 6:00PM",
-      sunday: "Closed",
-    },
-    address: "Eco Bank Plaza, Opposite Post Bank, Thika",
-    map: "https://maps.app.goo.gl/joniKCQ4y5ummbsN6",
-    mapEmbed:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d510635.01259728713!2d36.722371!3d-0.8908756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4f304afd9b39%3A0x2255b740c124f0bb!2sWeaver%20Bird%2CThika%20Shop%202!5e0!3m2!1sen!2ske!4v1791787237659!5m2!1sen!2ske",
-    coords: [-1.0389, 37.0692],
-  },
-  {
-    name: "Thika Shop 2",
+    name: "Thika Shop 1 [CBD]",
     type: "branch",
     phone: "0738447700",
     hours: {
@@ -91,7 +76,23 @@ export const branches: Branch[] = [
     coords: [-1.0396, 37.07],
   },
   {
-    name: "Ruiru",
+    name: "Thika Shop 2",
+    type: "branch",
+    phone: "0718343353",
+    hours: {
+      monday_friday: "8:30AM - 6:00PM",
+      saturday: "8:30AM - 6:00PM",
+      sunday: "Closed",
+    },
+    address: "Eco Bank Plaza, Opposite Post Bank, Thika",
+    map: "https://maps.app.goo.gl/joniKCQ4y5ummbsN6",
+    mapEmbed:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d510635.01259728713!2d36.722371!3d-0.8908756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4f304afd9b39%3A0x2255b740c124f0bb!2sWeaver%20Bird%2CThika%20Shop%202!5e0!3m2!1sen!2ske!4v1791787237659!5m2!1sen!2ske",
+    coords: [-1.0389, 37.0692],
+  },
+
+  {
+    name: "Ruiru Shop",
     type: "branch",
     phone: "0745444447",
     hours: {
@@ -106,7 +107,7 @@ export const branches: Branch[] = [
     coords: [-1.1479, 36.9598],
   },
   {
-    name: "Runda",
+    name: "Runda Mall Shop",
     type: "branch",
     phone: "0745444446",
     hours: {
@@ -121,7 +122,7 @@ export const branches: Branch[] = [
     coords: [-1.2145, 36.83],
   },
   {
-    name: "TRM (Thika Road Mall)",
+    name: "TRM Shop (Thika Road Mall)",
     type: "branch",
     phone: "0725666444",
     hours: {
@@ -136,7 +137,7 @@ export const branches: Branch[] = [
     coords: [-1.2192, 36.888],
   },
   {
-    name: "Kisumu",
+    name: "Kisumu Shop",
     type: "branch",
     phone: "0754666444",
     hours: {
@@ -151,7 +152,7 @@ export const branches: Branch[] = [
     coords: [-0.0917, 34.768],
   },
   {
-    name: "Nakuru",
+    name: "Nakuru Shop",
     type: "branch",
     phone: "0743103103",
     hours: {
@@ -166,7 +167,7 @@ export const branches: Branch[] = [
     coords: [-0.2833, 36.0667],
   },
   {
-    name: "Nanyuki",
+    name: "Nanyuki Shop [NEW ⭐]",
     type: "branch",
     phone: "0745444222",
     hours: {
@@ -181,7 +182,7 @@ export const branches: Branch[] = [
     coords: [0.01465507206258696, 37.07647772379612],
   },
   {
-    name: "Meru",
+    name: "Meru Shop",
     type: "branch",
     phone: "0727399399",
     hours: {
@@ -196,7 +197,7 @@ export const branches: Branch[] = [
     coords: [0.047, 37.6497],
   },
   {
-    name: "Kerugoya",
+    name: "Kerugoya Shop",
     type: "branch",
     phone: "0745444445",
     hours: {
@@ -211,7 +212,7 @@ export const branches: Branch[] = [
     coords: [-0.4986, 37.2836],
   },
   {
-    name: "Murang'a",
+    name: "Murang'a Shop",
     type: "branch",
     phone: "+254712444482",
     hours: {
