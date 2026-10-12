@@ -82,7 +82,7 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl space-y-12 px-6 py-12 lg:py-16">
           <MissionVisionSection />
           <ValuesSection />
-          <LeadershipSection />
+          {/* <LeadershipSection /> */}
           <CtaSection />
         </div>
       </main>
