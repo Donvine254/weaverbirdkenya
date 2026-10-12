@@ -31,7 +31,7 @@ export const branches: Branch[] = [
     coords: [-1.0316, 37.1],
   },
   {
-    name: "Nairobi Flaship Branch ⭐",
+    name: "Nairobi Flagship Branch ⭐",
     type: "branch",
     phone: "+254724089655",
     hours: {
