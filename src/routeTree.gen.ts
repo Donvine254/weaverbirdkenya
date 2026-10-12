@@ -15,12 +15,10 @@ import { Route as BranchesRouteImport } from './routes/branches'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DownloadsRouteImport } from './routes/downloads'
 import { Route as FaqRouteImport } from './routes/faq'
-import { Route as McpRouteImport } from './routes/mcp'
 import { Route as PoliciesRouteImport } from './routes/policies'
 import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BlogUniformCareRouteImport } from './routes/blog.uniform-care'
@@ -59,11 +57,6 @@ const DownloadsRoute = DownloadsRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoliciesRoute = PoliciesRouteImport.update({
@@ -146,12 +139,10 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
-  '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies/cookies-policy': typeof PoliciesCookiesPolicyRoute
@@ -169,12 +160,10 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
-  '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies/cookies-policy': typeof PoliciesCookiesPolicyRoute
@@ -193,12 +182,10 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/faq': typeof FaqRoute
-  '/mcp': typeof McpRoute
   '/policies': typeof PoliciesRoute
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/uniform-care': typeof BlogUniformCareRoute
   '/policies_/cookies-policy': typeof PoliciesCookiesPolicyRoute
@@ -218,12 +205,10 @@ export interface FileRouteTypes {
     | '/contact'
     | '/downloads'
     | '/faq'
-    | '/mcp'
     | '/policies'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies/cookies-policy'
@@ -241,12 +226,10 @@ export interface FileRouteTypes {
     | '/contact'
     | '/downloads'
     | '/faq'
-    | '/mcp'
     | '/policies'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies/cookies-policy'
@@ -264,12 +247,10 @@ export interface FileRouteTypes {
     | '/contact'
     | '/downloads'
     | '/faq'
-    | '/mcp'
     | '/policies'
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/blog/uniform-care'
     | '/policies_/cookies-policy'
@@ -288,12 +269,10 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DownloadsRoute: typeof DownloadsRoute
   FaqRoute: typeof FaqRoute
-  McpRoute: typeof McpRoute
   PoliciesRoute: typeof PoliciesRoute
   QuoteRoute: typeof QuoteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BlogUniformCareRoute: typeof BlogUniformCareRoute
   PoliciesCookiesPolicyRoute: typeof PoliciesCookiesPolicyRoute
@@ -349,13 +328,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/policies': {
       id: '/policies'
       path: '/policies'
@@ -382,13 +354,6 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.well-known/oauth-protected-resource': {
-      id: '/.well-known/oauth-protected-resource'
-      path: '/.well-known/oauth-protected-resource'
-      fullPath: '/.well-known/oauth-protected-resource'
-      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -464,13 +429,10 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DownloadsRoute: DownloadsRoute,
   FaqRoute: FaqRoute,
-  McpRoute: McpRoute,
   PoliciesRoute: PoliciesRoute,
   QuoteRoute: QuoteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  Char91DotwellKnownChar93OauthProtectedResourceRoute:
-    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BlogSlugRoute: BlogSlugRoute,
   BlogUniformCareRoute: BlogUniformCareRoute,
   PoliciesCookiesPolicyRoute: PoliciesCookiesPolicyRoute,

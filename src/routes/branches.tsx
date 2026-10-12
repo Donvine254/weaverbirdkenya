@@ -42,7 +42,7 @@ export const Route = createFileRoute("/branches")({
         content:
           "Find your nearest Weaverbird shop across Kenya. Get directions, phone numbers and opening hours.",
       },
-      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/branches" },
+      { property: "og:url", content: "https://weaverbirdkenya.com/branches" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/branches")({
           "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
       },
     ],
-    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/branches" }],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.com/branches" }],
   }),
   component: BranchesPage,
 });
@@ -285,6 +285,17 @@ function BranchDetail({ branch }: { branch: Branch }) {
             <Phone className="h-4 w-4" />
             Call Shop
           </a>
+        </div>
+        <div className="mt-4 sm:mt-6 min-h-[350px] flex-1 overflow-hidden rounded-xl border border-border">
+          <iframe
+            src={branch.mapEmbed}
+            className="h-full min-h-[350px] w-full border-0"
+            key={branch.name}
+            title={`${branch.name} location on Google Maps`}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>

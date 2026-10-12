@@ -1,5 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Droplets, Headset, Leaf, PackageCheck, Recycle, Shirt } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronRight,
+  Droplets,
+  Headset,
+  Leaf,
+  PackageCheck,
+  Recycle,
+  Shirt,
+} from "lucide-react";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
@@ -24,6 +33,25 @@ function EnvironmentalPolicyPage() {
       <Header current="Policies" />
 
       <main id="main-content">
+        <nav aria-label="Breadcrumb" className="border-b border-black/5 bg-secondary/40">
+          <ol className="mx-auto flex max-w-7xl flex-wrap items-center gap-1.5 px-6 py-3 text-sm text-muted-foreground">
+            <li>
+              <Link to="/" className="hover:text-foreground">
+                Home
+              </Link>
+            </li>
+            <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
+            <li>
+              <Link to="/policies" className="hover:text-foreground">
+                Policies
+              </Link>
+            </li>
+            <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
+            <li aria-current="page" className="font-semibold text-foreground">
+              Environmental Policy
+            </li>
+          </ol>
+        </nav>
         <EnvironmentalPolicyHero />
         <EnvironmentalPolicyContent />
       </main>

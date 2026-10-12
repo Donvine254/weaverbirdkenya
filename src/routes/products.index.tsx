@@ -81,7 +81,10 @@ function CategoryGrid() {
         >
           Browse by Category
         </h2>
-        <p className="mt-4 rounded-xl border-l-4 bg-secondary/60 px-5 py-4 text-left text-sm leading-relaxed text-muted-foreground sm:text-base" style={{ borderColor: "var(--color-maroon)" }}>
+        <p
+          className="mt-4 rounded-xl border-l-4 bg-secondary/60 px-5 py-4 text-left text-sm leading-relaxed text-muted-foreground sm:text-base"
+          style={{ borderColor: "var(--color-maroon)" }}
+        >
           Every organisation is different. The products shown represent our manufacturing
           capabilities and can be customised to your preferred design, colours, fabric, sizing and
           branding.
@@ -107,11 +110,19 @@ function CategoryGrid() {
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-lg font-extrabold uppercase tracking-wide" style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}>
+                <h3
+                  className="text-lg font-extrabold uppercase tracking-wide"
+                  style={{ fontFamily: "var(--font-display)", color: "var(--primary-darker)" }}
+                >
                   {c.name}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{c.pitch}</p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--color-maroon)" }}>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {c.pitch}
+                </p>
+                <span
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold"
+                  style={{ color: "var(--color-maroon)" }}
+                >
                   Explore Category
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>

@@ -8,7 +8,7 @@ import { PageCta } from "@/components/page-cta";
 import { BlogCard, BlogMeta, CategoryTag } from "@/components/blog-card";
 import { BLOG_CATEGORIES, BLOG_POSTS, postPath, type BlogCategory } from "@/data/blog";
 
-const URL = "https://weaverbirdkenya.lovable.app/blog";
+const URL = "https://weaverbirdkenya.com/blog";
 const TITLE = "Insights & Resources — Weaverbird Garments Blog";
 const DESC =
   "Expert guidance, uniform care tips, industry insights and updates from Weaverbird Garments Manufacturers.";
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/blog/")({
             "@type": "BlogPosting",
             headline: p.title,
             datePublished: p.date,
-            url: `https://weaverbirdkenya.lovable.app${postPath(p)}`,
+            url: `https://weaverbirdkenya.com${postPath(p)}`,
           })),
         }),
       },

@@ -2,8 +2,7 @@
 
 A fast, responsive marketing website for **Weaverbird Garments Manufacturers Ltd**, a Kenyan uniform and apparel manufacturer founded in 1996. The site showcases products, manufacturing capabilities, branch locations, and a quote request flow.
 
-- **Live preview:** https://id-preview--24f83c8d-9f2b-4587-be61-acf624ce11a3.lovable.app
-- **Published site:** https://weaverbirdkenya.lovable.app
+- **Website:** https://weaverbirdkenya.com
 
 ---
 
@@ -159,7 +158,7 @@ bun run format
 
 ## Deployment
 
-This project is built and deployed through Lovable. Production builds target a serverless edge runtime via TanStack Start / Nitro.
+Production builds target a serverless edge runtime via TanStack Start / Nitro.
 
 ---
 

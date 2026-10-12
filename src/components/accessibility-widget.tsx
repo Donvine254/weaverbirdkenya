@@ -414,7 +414,7 @@ export function AccessibilityWidget() {
           role="dialog"
           aria-modal="true"
           aria-label="Accessibility settings"
-          className="fixed bottom-24 right-5 z-[9999] w-[390px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-[24px] border border-black/[0.07] bg-white shadow-[0_25px_80px_rgba(0,0,0,0.24)] animate-in fade-in slide-in-from-bottom-3 duration-200 motion-reduce:animate-none"
+          className="fixed bottom-24 right-5 z-[9999] flex max-h-[calc(100dvh-7.5rem)] w-[390px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-[24px] border border-black/[0.07] bg-white shadow-[0_25px_80px_rgba(0,0,0,0.24)] animate-in fade-in slide-in-from-bottom-3 duration-200 motion-reduce:animate-none"
         >
           {/* ==================================================
               HEADER
@@ -456,7 +456,7 @@ export function AccessibilityWidget() {
               TOOLS
           ================================================== */}
 
-          <div className="max-h-[480px] overflow-y-auto overscroll-contain bg-[#f7f8f7] p-4">
+          <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain bg-[#f7f8f7] p-4">
             <div className="grid grid-cols-2 gap-3">
               {/* ==============================================
                   BIGGER TEXT

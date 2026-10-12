@@ -35,7 +35,7 @@ export const Route = createFileRoute("/contact")({
         content:
           "Reach our team by phone, email or WhatsApp. Visit our Thika factory or find your nearest branch.",
       },
-      { property: "og:url", content: "https://weaverbirdkenya.lovable.app/contact" },
+      { property: "og:url", content: "https://weaverbirdkenya.com/contact" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/contact")({
           "https://res.cloudinary.com/dipkbpinx/image/upload/w_1200,h_630,c_fill,q_auto,f_jpg/v1788943972/weaverbird/mnpf4rlrru8sz3vzy6xl.jpg",
       },
     ],
-    links: [{ rel: "canonical", href: "https://weaverbirdkenya.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://weaverbirdkenya.com/contact" }],
   }),
   component: ContactPage,
 });

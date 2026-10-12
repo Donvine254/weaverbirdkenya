@@ -1,4 +1,4 @@
-import { ChevronRight, Award, Truck, Smile, CircleStar, ArrowDownToLine } from "lucide-react";
+import { ChevronRight, Award, Truck, Smile, ArrowRight, CircleStar, Shirt } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { products } from "@/assets/uniforms";
 
@@ -73,16 +73,14 @@ export function Hero() {
               <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:animate-[moveLeft_1s_ease-in-out_infinite]" />
             </Link>
 
-            <a
-              // href="https://cdn.jsdelivr.net/gh/Donvine254/weaverbirdkenya@main/public/resources/catalogue.pdf"
-              // rel="noopener noreferrer"
-              href="/resources/catalogue.pdf"
-              download="Weaverbird-Product-Catalogue.pdf"
+            <Link
+              to="/products"
               className="inline-flex w-full items-center justify-center gap-2 group rounded-md border border-white/30 px-3 py-3 text-sm font-semibold text-white transition-all hover:border-white/50 hover:bg-maroon active:scale-95 sm:w-auto sm:px-6"
             >
-              <ArrowDownToLine className="h-5 w-5 group-hover:animate-bounce" />
-              Download Product Catalogue
-            </a>
+              <Shirt className="h-5 w-5" />
+              Explore Products
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">

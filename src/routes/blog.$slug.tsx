@@ -7,7 +7,7 @@ import { PageCta } from "@/components/page-cta";
 import { BlogCard, BlogMeta, CategoryTag } from "@/components/blog-card";
 import { ARTICLE_POSTS, BLOG_POSTS, type BlogPost } from "@/data/blog";
 
-const SITE = "https://weaverbirdkenya.lovable.app";
+const SITE = "https://weaverbirdkenya.com";
 
 function shareImage(src: string) {
   return src.includes("/upload/w_")

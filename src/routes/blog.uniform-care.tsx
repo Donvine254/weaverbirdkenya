@@ -7,7 +7,7 @@ import { PageHero } from "@/components/page-hero";
 const TITLE = "Uniform Care: How to Remove Common Stains";
 const DESCRIPTION =
   "A practical guide to removing oil, grease, ink, blood, grass and sweat stains from school, corporate and workwear uniforms, plus washing tips that keep colours strong.";
-const URL = "https://weaverbirdkenya.lovable.app/blog/uniform-care";
+const URL = "https://weaverbirdkenya.com/blog/uniform-care";
 
 export const Route = createFileRoute("/blog/uniform-care")({
   head: () => ({
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/blog/uniform-care")({
           publisher: {
             "@type": "Organization",
             name: "Weaverbird Garments Manufacturers Ltd",
-            url: "https://weaverbirdkenya.lovable.app/",
+            url: "https://weaverbirdkenya.com/",
           },
         }),
       },
