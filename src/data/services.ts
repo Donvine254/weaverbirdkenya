@@ -11,7 +11,6 @@ import {
   Tag,
 } from "lucide-react";
 
-
 export interface ServiceItem {
   id: string;
   title: string;
@@ -27,7 +26,7 @@ export interface ServiceItem {
 export const services: ServiceItem[] = [
   {
     id: "embroidery",
-    title: "Embroidery",
+    title: "Precision Computerised Embroidery",
     tagline: "Stitched logos & branding that lasts a lifetime",
     description:
       "Our computerised multi-head embroidery floor stitches crisp, colour-accurate logos into every garment we make. Thread branding never cracks, peels or fades in the wash, which is why schools, banks and security firms trust it for uniforms worn every single day.",
@@ -47,6 +46,31 @@ export const services: ServiceItem[] = [
     imageAlt: "Industrial embroidery machines stitching a logo onto fabric",
   },
   {
+    id: "dtf-printing",
+    title: "DTF Printing",
+    tagline: "Photographic detail, vibrant colour & lasting flexibility",
+    description:
+      "Our cutting-edge Direct-to-Film (DTF) transfer technology delivers photographic clarity, crisp micro-details and rich colour gradients across dark and light garments. DTF produces flexible, durable prints on cotton, fleece and synthetic textiles while retaining a soft feel and excellent stretch.",
+    features: [
+      "Infinite colour spectrum with photographic detail",
+      "Crisp micro-details and smooth colour gradients",
+      "Elastic, soft-touch finish with excellent crack resistance",
+      "Excellent adhesion on cotton, fleece and synthetic fabrics",
+      "Suitable for both dark and light garments",
+      "50+ machine washes with vibrant colour retention",
+    ],
+    equipment: [
+      "Professional DTF printer",
+      "DTF powder application & curing system",
+      "Industrial heat press",
+    ],
+    icon: Printer,
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1791977207/weaverbird/o3o2rikok8mrhhisp1cq.jpg",
+    imageAlt:
+      "Direct-to-Film DTF printing process producing a vibrant full-colour textile transfer",
+  },
+  {
     id: "screen-printing",
     title: "Screen Printing",
     tagline: "High-volume, vibrant prints on any fabric",
@@ -58,13 +82,10 @@ export const services: ServiceItem[] = [
       "Full-front, back and sleeve prints",
       "Volume pricing from 50 pieces up",
     ],
-    equipment: [
-      "6-station rotary carousel",
-      "Infrared conveyor dryer",
-      "UV exposure unit",
-    ],
+    equipment: ["6-station rotary carousel", "Infrared conveyor dryer", "UV exposure unit"],
     icon: Printer,
-    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1788857348/weaverbird/products/ptgzzboohgki2hovhhf1.jpg",
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1788857348/weaverbird/products/ptgzzboohgki2hovhhf1.jpg",
     imageAlt: "Screen printing press applying ink to textiles",
   },
   {
@@ -152,7 +173,8 @@ export const services: ServiceItem[] = [
     ],
     equipment: ["400+ trained machinists", "Multiple production lines", "In-line QC stations"],
     icon: Factory,
-    image: "https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg",
+    image:
+      "https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg",
     imageAlt: "Rows of industrial sewing machines in a garment factory",
   },
   // {

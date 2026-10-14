@@ -20,6 +20,7 @@ const productCategories = [
 /* ----------------- Service categories ----------------- */
 const serviceCategories = [
   { label: "Embroidery", hash: "embroidery" },
+  { label: "DTF Printing", hash: "dtf-printing" },
   { label: "Screen Printing", hash: "screen-printing" },
   { label: "Weaving and Knitting", hash: "weaving" },
   // { label: "Cutting & Stitching", hash: "cutting-stitching" },
