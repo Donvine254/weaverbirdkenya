@@ -19,6 +19,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
 import { AllProductCategories } from "@/data/products";
+import { productColors } from "@/data/colors";
 
 type Category = (typeof AllProductCategories.categories)[number];
 type ProductItem = Category["products"][number];
@@ -43,7 +44,7 @@ export const Route = createFileRoute("/products/$category")({
       .slice(0, 6)
       .map((p) => p.name.toLowerCase())
       .join(", ");
-    const title = `${c.name} Kenya | Weaverbird Garments`;
+    const title = `${c.name} — Weaverbird Kenya`;
     const description = `Custom ${c.name.toLowerCase()} manufactured in Kenya, including ${items} and more. Made to your organisation's design and specifications.`;
     const url = `${BASE}/products/${c.id}`;
     return {
@@ -74,8 +75,8 @@ const sizeGuideCategories = new Set([
 const customise = [
   {
     icon: PenTool,
-    title: "Design & Style",
-    text: "Manufactured according to your approved design or reference sample.",
+    title: "Design, Size & Style",
+    text: "Manufactured according to your approved design or reference sample and sizes.",
   },
   {
     icon: Palette,
@@ -92,11 +93,11 @@ const customise = [
     title: "Branding",
     text: "Embroidery, screen printing, woven labels and other branding options.",
   },
-  {
-    icon: Ruler,
-    title: "Sizing",
-    text: "Produced across the required size range for your organisation.",
-  },
+  // {
+  //   icon: Ruler,
+  //   title: "Sizing",
+  //   text: "Produced across the required size range for your organisation.",
+  // },
 ];
 
 function CategoryPage() {
@@ -124,6 +125,7 @@ function CategoryPage() {
           image={category.banner}
           title={category.name}
           subtitle={category.pitch}
+          className="bg-top"
         />
 
         {/* Breadcrumb */}
@@ -194,7 +196,7 @@ function CategoryPage() {
         >
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {category.products.map((item) => (
-              <ProductCard key={item.name} item={item} />
+              <ProductCard key={item.name} item={item} categoryId={category.id} />
             ))}
           </ul>
         </section>
@@ -375,7 +377,11 @@ function CategoryPage() {
   );
 }
 
-function ProductCard({ item }: { item: ProductItem }) {
+function ProductCard({ item, categoryId }: { item: ProductItem; categoryId: string }) {
+  const colors = productColors[categoryId]?.[item.name]?.colors ?? [];
+
+  const visibleColors = colors.slice(0, 6);
+  const remainingColors = colors.length - visibleColors.length;
   return (
     <li className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div
@@ -402,9 +408,39 @@ function ProductCard({ item }: { item: ProductItem }) {
         <p className="mt-2 flex-1 text-xs leading-relaxed text-muted-foreground sm:text-sm">
           {item.text}
         </p>
+        {colors.length > 0 && (
+          <div className="flex items-center gap-2 py-2">
+            <div className="flex items-center -space-x-2">
+              {visibleColors.map((color) => (
+                <span
+                  key={`${color.name}-${color.hex}`}
+                  title={color.name}
+                  aria-label={color.name}
+                  className="relative h-6 w-6 shrink-0 rounded-full border-2 border-border shadow-sm transition-transform hover:z-10 hover:scale-125 cursor-pointer"
+                  style={{ backgroundColor: color.hex }}
+                />
+              ))}
+            </div>
+            {remainingColors > 0 ? (
+              <span
+                className="text-xs font-bold text-muted-foreground"
+                title={colors
+                  .slice(4)
+                  .map((color) => color.name)
+                  .join(", ")}
+              >
+                +{remainingColors} {remainingColors === 1 ? "Color" : "Colors"}
+              </span>
+            ) : (
+              <span className="text-xs font-bold text-muted-foreground" title="All colors">
+                {colors.length} {colors.length === 1 ? "Color" : "Colors"}
+              </span>
+            )}
+          </div>
+        )}
         <Link
           to="/quote"
-          className="mt-4 inline-flex items-center gap-1 text-xs font-semibold"
+          className="inline-flex cursor-pointer items-center gap-1 text-xs font-semibold"
           style={{ color: "var(--color-maroon)" }}
         >
           Enquire about this product{" "}

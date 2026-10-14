@@ -13,6 +13,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { NotFound } from "@/components/not-found";
 import { AccessibilityWidget } from "@/components/accessibility-widget";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { CallButton } from "@/components/call-button";
 
 import appCss from "../styles.css?url";
 
@@ -166,6 +167,7 @@ function RootComponent() {
       <Toaster />
       <AccessibilityWidget />
       <WhatsAppButton />
+      <CallButton />
     </QueryClientProvider>
   );
 }
