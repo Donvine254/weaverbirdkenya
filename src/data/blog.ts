@@ -1371,7 +1371,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     links: [
-      { label: "Workwear & overalls", href: "/products#workwear-overalls" },
+      { label: "Workwear & overalls", href: "/products/workwear-overalls" },
       { label: "Bulk manufacturing", href: "/services#bulk-manufacturing" },
       QUOTE,
     ],
