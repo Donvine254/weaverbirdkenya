@@ -73,7 +73,6 @@ function ServicesPage() {
   );
 }
 
-
 function ServiceCard({ service, index }: { service: ServiceItem; index: number }) {
   const Icon = service.icon;
   const reversed = index % 2 === 1;
@@ -107,9 +106,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
               }}
               aria-hidden="true"
             />
-            <span
-              className="absolute left-4 top-4 rounded-xl px-3 py-1.5 text-sm font-bold text-white bg-maroon"
-            >
+            <span className="absolute left-4 top-4 rounded-xl px-3 py-1.5 text-sm font-bold text-white bg-maroon">
               {number}
             </span>
             <span
@@ -150,9 +147,7 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
           <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
             {service.title}
           </h2>
-          <p className="mt-1.5 text-sm font-semibold text-maroon" >
-            {service.tagline}
-          </p>
+          <p className="mt-1.5 text-sm font-semibold text-maroon">{service.tagline}</p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
             {service.description}
           </p>
@@ -178,7 +173,9 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
 
 function ServicesCta() {
   return (
-    <section className="py-8" style={{
+    <section
+      className="py-8"
+      style={{
         backgroundColor: "var(--color-maroon)",
         backgroundImage: `repeating-radial-gradient(
       ellipse at 50% 100%,
@@ -186,26 +183,26 @@ function ServicesCta() {
       rgba(244,239,226,0.045) 19px 21px,
       transparent 22px 42px
     )`,
-      }} >
-        <div className="bg-primary-darker w-full">
-      <div
-        className="mx-auto max-w-7xl overflow-hidden px-6 py-12 text-center sm:px-12">
-        <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
-          Ready to put our factory to work?
-        </h2>
-        <p className="mx-auto mt-3 max-w-xl text-sm text-white/75 sm:text-base">
-          Tell us what you need and we'll come back with samples, timelines and pricing.
-        </p>
-        <Link
-          to="/quote"
-          className="group mt-7 inline-flex bg-maroon items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
-          style={{ boxShadow: "var(--shadow-red)" }}
-        >
-           <ReceiptText className="h-4 w-4" />
-          Get a Bulk Quote
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </Link>
-      </div>
+      }}
+    >
+      <div className="bg-primary-darker w-full">
+        <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 text-center sm:px-12">
+          <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+            Ready to put our factory to work?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-white/75 sm:text-base">
+            Tell us what you need and we'll come back with samples, timelines and pricing.
+          </p>
+          <Link
+            to="/quote"
+            className="group mt-7 inline-flex bg-maroon items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg active:scale-95"
+            style={{ boxShadow: "var(--shadow-red)" }}
+          >
+            <ReceiptText className="h-4 w-4" />
+            Get a Bulk Quote
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </div>
       </div>
     </section>
   );
