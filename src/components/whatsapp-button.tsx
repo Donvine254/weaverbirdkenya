@@ -31,7 +31,6 @@ function buildMessage(pathname: string, hash: string) {
   return name ? `${base} I was viewing the ${name} page on your website.` : base;
 }
 
-
 export function WhatsAppButton() {
   const { pathname, hash } = useRouterState({
     select: (s) => ({

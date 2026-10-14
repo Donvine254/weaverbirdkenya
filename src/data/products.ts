@@ -186,7 +186,7 @@ export const AllProductCategories = {
           name: "Dust Coats",
           text: "Protective, easy-care dust coats ideal for science labs and practical work.",
           image:
-            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1791962285/weaverbird/products/budgk2zvnpeigamzuu1y.jpg",
         },
         {
           name: "T-Shirts",
@@ -424,7 +424,7 @@ export const AllProductCategories = {
           name: "Lab Coats",
           text: "Hygienic white coats with secure pockets and easy laundering.",
           image:
-            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1791962285/weaverbird/products/budgk2zvnpeigamzuu1y.jpg",
         },
         {
           name: "Utility Vests",
@@ -539,7 +539,7 @@ export const AllProductCategories = {
           name: "Doctor Lab Coats",
           text: "Professional lab coats with a tailored fit and ample pockets.",
           image:
-            "https://res.cloudinary.com/dipkbpinx/image/upload/v1788594894/weaverbird/products/e1p88wf8itis0xrkq7qj.jpg",
+            "https://res.cloudinary.com/dipkbpinx/image/upload/v1791962285/weaverbird/products/budgk2zvnpeigamzuu1y.jpg",
         },
         {
           name: "Nurse Uniforms",

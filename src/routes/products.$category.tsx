@@ -74,8 +74,8 @@ const sizeGuideCategories = new Set([
 const customise = [
   {
     icon: PenTool,
-    title: "Design & Style",
-    text: "Manufactured according to your approved design or reference sample.",
+    title: "Design, Size & Style",
+    text: "Manufactured according to your approved design or reference sample and sizes.",
   },
   {
     icon: Palette,
@@ -92,11 +92,11 @@ const customise = [
     title: "Branding",
     text: "Embroidery, screen printing, woven labels and other branding options.",
   },
-  {
-    icon: Ruler,
-    title: "Sizing",
-    text: "Produced across the required size range for your organisation.",
-  },
+  // {
+  //   icon: Ruler,
+  //   title: "Sizing",
+  //   text: "Produced across the required size range for your organisation.",
+  // },
 ];
 
 function CategoryPage() {
@@ -124,6 +124,7 @@ function CategoryPage() {
           image={category.banner}
           title={category.name}
           subtitle={category.pitch}
+          className="bg-top"
         />
 
         {/* Breadcrumb */}
