@@ -43,7 +43,7 @@ export const Route = createFileRoute("/products/$category")({
       .slice(0, 6)
       .map((p) => p.name.toLowerCase())
       .join(", ");
-    const title = `${c.name} Kenya | Weaverbird Garments`;
+    const title = `${c.name} — Weaverbird Kenya`;
     const description = `Custom ${c.name.toLowerCase()} manufactured in Kenya, including ${items} and more. Made to your organisation's design and specifications.`;
     const url = `${BASE}/products/${c.id}`;
     return {
