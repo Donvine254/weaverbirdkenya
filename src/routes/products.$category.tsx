@@ -130,7 +130,7 @@ function CategoryPage() {
 
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="border-b border-black/5 bg-secondary/40">
-          <ol className="mx-auto flex max-w-7xl flex-wrap items-center gap-1.5 px-6 py-3 text-sm text-muted-foreground">
+          <ol className="mx-auto flex max-w-7xl xl:max-w-max flex-wrap items-center gap-1.5 px-6 py-3 text-sm text-muted-foreground">
             <li>
               <Link to="/" className="hover:text-foreground">
                 Home

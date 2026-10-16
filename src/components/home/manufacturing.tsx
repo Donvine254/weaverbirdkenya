@@ -39,15 +39,12 @@ export function Manufacturing() {
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-64 opacity-[0.07]"
         style={{
-          background:
-            "radial-gradient(60% 100% at 50% 0%, var(--accent-red), transparent 70%)",
+          background: "radial-gradient(60% 100% at 50% 0%, var(--accent-red), transparent 70%)",
         }}
       />
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative px-6">
         <div>
-          <span
-            className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground"
-          >
+          <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
             <Factory className="h-3.5 w-3.5" style={{ color: "var(--accent-red)" }} />
             Manufacturer, not reseller
           </span>
@@ -108,4 +105,3 @@ export function Manufacturing() {
     </section>
   );
 }
-

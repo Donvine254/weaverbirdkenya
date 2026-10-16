@@ -72,8 +72,8 @@ function ProductsPage() {
 
 function CategoryGrid() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-14 lg:py-20" aria-labelledby="categories-heading">
-      <div className="mx-auto max-w-3xl text-center">
+    <section className="mx-auto px-6 py-14 lg:py-20" aria-labelledby="categories-heading">
+      <div className="mx-auto max-w-3xl xl:max-w-max text-center">
         <h2
           id="categories-heading"
           className="text-3xl font-extrabold sm:text-4xl"
@@ -150,7 +150,7 @@ function ProductsCta() {
       }}
       aria-labelledby="products-cta-heading"
     >
-      <div className="mx-auto max-w-4xl px-6 py-16 text-center text-white lg:py-20">
+      <div className="mx-auto max-w-4xl xl:max-w-max px-6 py-16 text-center text-white lg:py-20">
         <h2
           id="products-cta-heading"
           className="text-3xl font-extrabold sm:text-4xl"
@@ -158,7 +158,7 @@ function ProductsCta() {
         >
           Can't find exactly what you need?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-white/80">
+        <p className="mx-auto mt-4 max-w-xl xl:max-w-max text-white/80">
           We manufacture to your exact specification — fabric, colour, fit and branding. Tell us
           what you need and we'll send a tailored quote.
         </p>

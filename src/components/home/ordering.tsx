@@ -60,43 +60,40 @@ export default function OrderingProcess() {
   ];
 
   return (
-    <section id="process" className="bg-white py-12">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-14 px-8 md:px-0">
-          <div className="mb-3.5 flex items-center gap-2.5 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-maroon">
-            &mdash; Ordering Process
-          </div>
-
-          <h2 className="mb-3.5 text-3xl font-bold sm:text-4xl">Simple. Transparent. Reliable.</h2>
-
-          <p className="text-base text-foreground/80">
-            We're committed to making your experience seamless, from first inquiry to final
-            delivery.
-          </p>
+    <section id="process" className="bg-white py-12 px-6">
+      <div className="mb-14 px-8 md:px-0">
+        <div className="mb-3.5 flex items-center gap-2.5 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-maroon">
+          &mdash; Ordering Process
         </div>
 
-        <div className="grid grid-cols-1 gap-px bg-gold/30 sm:grid-cols-2 md:grid-cols-3">
-          {processSteps.map((step, i) => {
-            const Icon = step.icon;
+        <h2 className="mb-3.5 text-3xl font-bold sm:text-4xl">Simple. Transparent. Reliable.</h2>
 
-            return (
-              <div key={step.title} className="relative bg-white p-8">
-                {/* Number + Icon */}
-                <div className="flex items-center justify-between gap-4">
-                  <Icon className="size-7 shrink-0 text-maroon" strokeWidth={1.4} aria-hidden />
+        <p className="text-base text-foreground/80">
+          We're committed to making your experience seamless, from first inquiry to final delivery.
+        </p>
+      </div>
 
-                  <span className="font-display text-3xl font-bold leading-none text-primary/15">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
+      <div className="grid grid-cols-1 gap-px bg-gold/30 sm:grid-cols-2 md:grid-cols-3">
+        {processSteps.map((step, i) => {
+          const Icon = step.icon;
 
-                <h4 className="mt-4 text-sm font-bold uppercase tracking-[0.08em]">{step.title}</h4>
+          return (
+            <div key={step.title} className="relative bg-white p-8">
+              {/* Number + Icon */}
+              <div className="flex items-center justify-between gap-4">
+                <Icon className="size-7 shrink-0 text-maroon" strokeWidth={1.4} aria-hidden />
 
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+                <span className="font-display text-3xl font-bold leading-none text-primary/15">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </div>
-            );
-          })}
-        </div>
+
+              <h4 className="mt-4 text-sm font-bold uppercase tracking-[0.08em]">{step.title}</h4>
+
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

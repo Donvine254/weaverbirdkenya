@@ -131,7 +131,7 @@ export function Header({ current = "Home" }: { current?: string }) {
       >
         Skip to main content
       </a>
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex items-center justify-between px-6 py-4">
         <Logo light />
         <nav className="hidden items-center gap-5 text-sm xl:gap-7 font-medium text-white/85 lg:flex">
           {links.map((l) => {

@@ -58,7 +58,7 @@ export function Features() {
         className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full blur-3xl"
         style={{ background: "oklch(0.66 0.22 25 / 0.28)" }}
       />
-      <div className="relative max-w-7xl px-6">
+      <div className="relative px-6">
         <div className="mb-14">
           <span
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em]"

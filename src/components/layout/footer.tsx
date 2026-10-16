@@ -93,7 +93,7 @@ export function Footer() {
           background: "linear-gradient(90deg, var(--primary-darker) 50%, transparent 100%)",
         }}
       />
-      <div className="relative mx-auto max-w-7xl px-6 py-16">
+      <div className="relative  px-6 py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Contact */}
           <div>

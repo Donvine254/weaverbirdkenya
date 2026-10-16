@@ -9,7 +9,7 @@ export default function Maasai() {
           "repeating-linear-gradient(45deg, rgba(244,239,226,0.04) 0 2px, transparent 2px 22px)",
       }}
     >
-      <div className="relative z-10 mx-auto max-w-7xl px-6 grid-cols-1 items-center grid gap-16 md:grid-cols-2">
+      <div className="relative z-10  px-6 grid-cols-1 items-center grid gap-16 md:grid-cols-2">
         {/* Image */}
         <div
           className="border p-3.5"

@@ -11,7 +11,7 @@ export function StatsBar() {
     { i: Factory, n: "Factory", t: "Production" },
   ];
   return (
-    <section className="hidden sm:block mx-auto -mt-8 max-w-7xl px-6">
+    <section className="hidden sm:block mx-auto -mt-8  px-6">
       <div
         className="relative grid grid-cols-2 gap-3 rounded-2xl px-3 py-5 text-white sm:grid-cols-3 sm:gap-4 sm:px-4 sm:py-6 lg:grid-cols-6 "
         style={{ background: "var(--primary-deep)", boxShadow: "var(--shadow-card)" }}

@@ -6,7 +6,7 @@ import { ArrowRight, ShieldCheck, Users, ChartNoAxesColumnIncreasing } from "luc
 export function Industries() {
   return (
     <section id="industries" className="pt-10 sm:pt-14">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="px-4 sm:px-6">
         <div className="max-w-3xl">
           <div className="mb-3 flex items-center gap-3 text-[0.68rem] font-bold uppercase tracking-[0.24em] text-maroon">
             <span className="h-px w-8 bg-maroon" />

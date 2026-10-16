@@ -31,10 +31,10 @@ export function Hero() {
             "linear-gradient(90deg, oklch(0.13 0.05 155 / 0.92) 0%, oklch(0.13 0.05 155 / 0.5) 100%)",
         }}
       />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28">
+      <div className="relative grid items-center gap-12 px-6 py-20 lg:px-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]  lg:py-28 xl:grid-cols-[minmax(520px,0.85fr)_minmax(0,1.15fr)]  2xl:grid-cols-[minmax(600px,0.8fr)_minmax(0,1.2fr)] 2xl:py-32">
         <div className="text-white">
           <h1
-            className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl"
+            className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl 2xl:text-7xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Kenya's Leading
@@ -43,11 +43,11 @@ export function Hero() {
             <br />
             Manufacturer
           </h1>
-          <p className="mt-6 max-w-md text-white/75">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/75 2xl:max-w-2xl 2xl:text-lg">
             From schools and businesses to institutions and organisations, we design and manufacture
             custom apparel for clients locally and internationally.
           </p>
-          <ul className="mt-6 grid max-w-md grid-cols-2 gap-3 text-xs sm:text-sm text-white/85">
+          <ul className="mt-6 grid max-w-xl grid-cols-2 gap-x-8 gap-y-3 text-xs text-white/85 sm:text-sm 2xl:max-w-2xl 2xl:text-base">
             {[
               { i: Landmark, t: "Established in 1996" },
               { i: Store, t: "13 Retail Locations" },
