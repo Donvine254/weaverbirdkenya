@@ -48,13 +48,25 @@ export function CtaBanner() {
             <p className="mt-4 text-base text-white/80 sm:text-lg">
               Get a quick quote tailored to your needs.
             </p>
-            <Link
-              to="/quote"
-              className="group mt-8 inline-flex items-center gap-3 rounded-md bg-white px-8 py-4 text-sm font-bold text-black transition-all hover:bg-white/90 hover:shadow-lg active:scale-95"
-            >
-              Request a Bulk Quote{" "}
-              <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              {/* Primary CTA */}
+              <Link
+                to="/quote"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-md bg-white px-8 py-4 text-sm font-bold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-lg active:translate-y-0 active:scale-[0.98] sm:w-auto"
+              >
+                Request a Quote
+                <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+
+              {/* Secondary CTA */}
+              <Link
+                to="/branches"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-md border border-white/40 bg-transparent px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/10 active:translate-y-0 active:scale-[0.98] sm:w-auto"
+              >
+                Find a Store Near You
+                <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

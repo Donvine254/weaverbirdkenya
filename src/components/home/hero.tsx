@@ -1,7 +1,7 @@
-import { ChevronRight, Award, Truck, Smile, ArrowRight, CircleStar, Shirt } from "lucide-react";
+import { ChevronRight, Award, Truck, Store, ArrowRight, CircleStar, Shirt } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { products } from "@/assets/uniforms";
-
+import { AwardIcon } from "@/assets/icons";
 /* ----------------- Hero ----------------- */
 export function Hero() {
   const tiles = products
@@ -45,13 +45,13 @@ export function Hero() {
             Manufacturer
           </h1>
           <p className="mt-6 max-w-md text-white/75">
-            From school uniforms to corporate branding, we design, manufacture and deliver premium
-            apparel solutions across Kenya.
+            From schools and businesses to institutions and organisations, we design and manufacture
+            custom apparel for clients locally and internationally.
           </p>
           <ul className="mt-6 grid max-w-md grid-cols-2 gap-3 text-xs sm:text-sm text-white/85">
             {[
-              { i: Award, t: "Established in 1996" },
-              { i: Smile, t: "1M+ Parents & Students Served" },
+              { i: AwardIcon, t: "Established in 1996" },
+              { i: Store, t: "13 Retail Locations" },
               { i: Truck, t: "Nationwide Delivery" },
               { i: CircleStar, t: "Unbeatable Quality" },
             ].map(({ i: Icon, t }) => (
@@ -69,7 +69,7 @@ export function Hero() {
                 boxShadow: "var(--shadow-red)",
               }}
             >
-              Get a Bulk Quote
+              Request a Quote
               <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:animate-[moveLeft_1s_ease-in-out_infinite]" />
             </Link>
 

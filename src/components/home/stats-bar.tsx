@@ -1,12 +1,12 @@
-import { MapPin, Award, ThumbsUp, Truck, Factory, Shirt } from "lucide-react";
-
+import { MapPin, ThumbsUp, Truck, Factory, Shirt, WalletCards } from "lucide-react";
+import { QualityIcon } from "@/assets/icons";
 /* ----------------- Stats ----------------- */
 export function StatsBar() {
   const stats = [
-    { i: Award, n: "30+", t: "Years Experience" },
+    { i: QualityIcon, n: "30+", t: "Years Experience" },
     { i: Shirt, n: "1000+", t: "Garment Designs" },
     { i: ThumbsUp, n: "98%", t: "Client Satisfaction" },
-    { i: MapPin, n: "13", t: "Branches Nationwide" },
+    { i: WalletCards, n: "Direct", t: "Factory Pricing" },
     { i: Truck, n: "Fast", t: "Delivery Nationwide" },
     { i: Factory, n: "Factory", t: "Production" },
   ];
@@ -19,13 +19,13 @@ export function StatsBar() {
         {stats.map(({ i: Icon, n, t }) => (
           <div key={t} className="flex min-w-0 items-center gap-2 sm:gap-3">
             <span
-              className="grid aspect-square h-10 w-10 shrink-0 place-items-center rounded-full ring-1 sm:h-12 sm:w-12"
-              style={{
-                background: "oklch(0.20 0.07 155)",
-                borderColor: "oklch(0.78 0.18 145 / 0.4)",
-              }}
+              className="grid aspect-square h-8 w-8 shrink-0 place-items-center bg-green-100 rounded-full ring-1 sm:h-10 sm:w-10"
+              // style={{
+              //   background: "oklch(0.20 0.07 155)",
+              //   borderColor: "oklch(0.78 0.18 145 / 0.4)",
+              // }}
             >
-              <Icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: "oklch(0.78 0.18 145)" }} />
+              <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
             </span>
             <div className="min-w-0 leading-tight">
               <div
