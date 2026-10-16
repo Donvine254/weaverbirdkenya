@@ -1,7 +1,6 @@
-import { ChevronRight, Award, Truck, Store, ArrowRight, CircleStar, Shirt } from "lucide-react";
+import { ChevronRight, Landmark, Truck, Store, ArrowRight, CircleStar, Shirt } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { products } from "@/assets/uniforms";
-import { AwardIcon } from "@/assets/icons";
 /* ----------------- Hero ----------------- */
 export function Hero() {
   const tiles = products
@@ -50,7 +49,7 @@ export function Hero() {
           </p>
           <ul className="mt-6 grid max-w-md grid-cols-2 gap-3 text-xs sm:text-sm text-white/85">
             {[
-              { i: AwardIcon, t: "Established in 1996" },
+              { i: Landmark, t: "Established in 1996" },
               { i: Store, t: "13 Retail Locations" },
               { i: Truck, t: "Nationwide Delivery" },
               { i: CircleStar, t: "Unbeatable Quality" },
