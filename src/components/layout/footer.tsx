@@ -72,13 +72,13 @@ export function Footer() {
       label: "Facebook",
       href: "https://facebook.com/weaverbirdgarmentsltd",
     },
-    { icon: TwitterXIcon, label: "Twitter", href: "https://x.com/WeaverBirdLtd" },
+    { icon: TwitterXIcon, label: "Twitter", href: "https://x.com/weaverbirdkenya" },
     {
       icon: InstagramIcon,
       label: "Instagram",
       href: "https://www.instagram.com/weaverbirdkenya",
     },
-    { icon: TiktokColorLogo, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
+    { icon: TiktokColorLogo, label: "TikTok", href: "https://www.tiktok.com/@weaverbirdkenya" },
     { icon: WhatsappLogo, label: "Whatsapp", href: "https://wa.me/254722264464" },
   ];
 

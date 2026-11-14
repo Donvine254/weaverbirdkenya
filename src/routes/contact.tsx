@@ -190,14 +190,14 @@ function SocialSection() {
     {
       icon: TiktokColorLogo,
       label: "TikTok",
-      handle: "@weaver.bird.garme5",
-      href: "https://www.tiktok.com/@weaver.bird.garme5",
+      handle: "@weaverbirdkenya",
+      href: "https://www.tiktok.com/@weaverbirdkenya",
     },
     {
       icon: TwitterXIcon,
       label: "Twitter/X",
-      handle: "@WeaverBirdLtd",
-      href: "https://x.com/WeaverBirdLtd",
+      handle: "@Weaverbirdkenya",
+      href: "https://x.com/weaverbirdkenya",
     },
   ];
   return (
