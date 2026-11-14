@@ -13,7 +13,13 @@ import {
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PageHero } from "@/components/page-hero";
-import { FacebookCircleLogo, InstagramIcon, TiktokColorLogo, WhatsappLogo } from "@/assets/icons";
+import {
+  FacebookCircleLogo,
+  InstagramIcon,
+  TwitterXIcon,
+  TiktokColorLogo,
+  WhatsappLogo,
+} from "@/assets/icons";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -177,8 +183,8 @@ function SocialSection() {
     {
       icon: InstagramIcon,
       label: "Instagram",
-      handle: "@weaverbird.ke",
-      href: "https://instagram.com/",
+      handle: "@weaverbirdkenya",
+      href: "https://instagram.com/weaverbirdkenya",
     },
 
     {
@@ -186,6 +192,12 @@ function SocialSection() {
       label: "TikTok",
       handle: "@weaver.bird.garme5",
       href: "https://www.tiktok.com/@weaver.bird.garme5",
+    },
+    {
+      icon: TwitterXIcon,
+      label: "Twitter/X",
+      handle: "@WeaverBirdLtd",
+      href: "https://x.com/WeaverBirdLtd",
     },
   ];
   return (

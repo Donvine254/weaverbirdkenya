@@ -13,7 +13,13 @@ import {
 
 import { Link } from "@tanstack/react-router";
 import footerFabric from "@/assets/footer-fabric.jpg";
-import { InstagramIcon, FacebookCircleLogo, TiktokColorLogo, WhatsappLogo } from "@/assets/icons";
+import {
+  InstagramIcon,
+  FacebookCircleLogo,
+  TiktokColorLogo,
+  WhatsappLogo,
+  TwitterXIcon,
+} from "@/assets/icons";
 
 /* ----------------- Footer ----------------- */
 export function FooterColHeader({ icon: Icon, title }: { icon: LucideIcon; title: string }) {
@@ -66,11 +72,11 @@ export function Footer() {
       label: "Facebook",
       href: "https://facebook.com/weaverbirdgarmentsltd",
     },
-    // { icon: Twitter, label: "Twitter", href: "https://twitter.com/" },
+    { icon: TwitterXIcon, label: "Twitter", href: "https://x.com/WeaverBirdLtd" },
     {
       icon: InstagramIcon,
       label: "Instagram",
-      href: "https://www.instagram.com/popular/weaverbird-kenya",
+      href: "https://www.instagram.com/weaverbirdkenya",
     },
     { icon: TiktokColorLogo, label: "TikTok", href: "https://www.tiktok.com/@weaver.bird.garme5" },
     { icon: WhatsappLogo, label: "Whatsapp", href: "https://wa.me/254722264464" },
