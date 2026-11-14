@@ -15,6 +15,7 @@ import {
   PenTool,
   ArrowRight,
 } from "lucide-react";
+import EmailStatusDialog, { type EmailStatus } from "@/components/email-status";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { sendQuoteRequest } from "@/lib/quote-email.functions";
@@ -197,7 +198,8 @@ function QuoteForm() {
   const [rows, setRows] = useState<GarmentRow[]>([
     { id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" },
   ]);
-  const [submitted, setSubmitted] = useState(false);
+  const [emailStatus, setEmailStatus] = useState<EmailStatus>("idle");
+  const [emailMessage, setEmailMessage] = useState("");
 
   const [orgDone, setOrgDone] = useState(false);
   const [remarksDone, setRemarksDone] = useState(false);
@@ -223,7 +225,8 @@ function QuoteForm() {
     setRows([{ id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" }]);
     setOrgDone(false);
     setRemarksDone(false);
-    setSubmitted(null);
+    setEmailStatus("idle");
+    setEmailMessage("");
   };
 
   const toggleBranding = (b: string) => {
@@ -244,7 +247,9 @@ function QuoteForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!orgType) return;
+
+    if (!orgType || emailStatus === "loading") return;
+
     const fd = new FormData(e.currentTarget);
     const g = (k: string) => (fd.get(k) as string | null)?.trim() ?? "";
 
@@ -269,22 +274,46 @@ function QuoteForm() {
       remarks: g("remarks") || undefined,
     };
 
+    // Show loading dialog immediately
+    setEmailMessage("");
+    setEmailStatus("loading");
+
     try {
       const result = await sendQuoteRequest({ data });
 
       if (result.success) {
-        setSubmitted(true);
-        //clear form data
+        setEmailMessage(
+          "Your quote request has been sent to our sales team. We'll review it and send you a detailed quotation, usually within one business day. Please check your email (including spam/junk folders) for our response.",
+        );
+
+        setEmailStatus("success");
+
+        // Clear form data after successful submission
         formRef.current?.reset();
         setOrgType("");
         setBranding([]);
-        setRows([{ id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" }]);
+        setRows([
+          {
+            id: crypto.randomUUID(),
+            type: "",
+            otherDesc: "",
+            qty: "",
+            notes: "",
+          },
+        ]);
         setOrgDone(false);
         setRemarksDone(false);
       }
     } catch (error) {
       console.error("Quote submission failed:", error);
-      // Display an error message to the user.
+
+      setEmailMessage(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong while submitting your request. Please try again.",
+      );
+
+      setEmailStatus("error");
     }
   };
 
@@ -561,35 +590,15 @@ function QuoteForm() {
               </div>
             </div>
           </form>
-
-          {submitted && (
-            <div className="mt-8 overflow-hidden rounded-2xl border bg-card shadow-md">
-              <div className="h-1.5" style={{ background: "oklch(0.55 0.18 145)" }} />
-              <div className="p-6 sm:p-10">
-                <div className="flex items-start gap-4">
-                  <span
-                    className="grid h-12 w-12 shrink-0 place-items-center rounded-full"
-                    style={{ background: "oklch(0.78 0.18 145 / 0.15)" }}
-                  >
-                    <CheckCircle2 className="h-6 w-6" style={{ color: "oklch(0.55 0.18 145)" }} />
-                  </span>
-                  <div className="flex-1">
-                    <h2 className="text-xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
-                      Quote request submitted successfully!
-                    </h2>
-                    <p className="mt-1 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                      {quoteRef}
-                    </p>
-                    <p className="mt-3 text-sm text-muted-foreground">
-                      Your quote request has been sent to our sales team. We'll review it and send
-                      you a detailed quotation, usually within one business day. Please check your
-                      email (including spam/junk folders) for our response.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          <EmailStatusDialog
+            status={emailStatus}
+            message={emailMessage}
+            reference={quoteRef}
+            onClose={() => {
+              setEmailStatus("idle");
+              setEmailMessage("");
+            }}
+          />
         </div>
 
         {/* ============ SIDEBAR ============ */}

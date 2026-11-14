@@ -45,6 +45,7 @@ export const sendQuoteRequest = createServerFn({
 
       const result = await sendEmail({
         to: BUSINESS_EMAIL,
+        cc: ["sales@weaverbirdkenya.com", "info@weaverbirdkenya.com"],
         replyTo: {
           name: data.contact,
           address: data.email,
@@ -61,7 +62,6 @@ export const sendQuoteRequest = createServerFn({
       };
     } catch (error) {
       console.error("Quote email failed:", error);
-
       throw new Error("We could not submit your quote request. Please try again.");
     }
   });

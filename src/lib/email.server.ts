@@ -28,6 +28,7 @@ function getTransporter() {
         pass: password,
       },
     });
+
     transporterCredentials = { user, password };
   }
 
@@ -36,6 +37,8 @@ function getTransporter() {
 
 type EmailMessage = {
   to: string;
+  cc?: string | string[];
+  bcc?: string | string[];
   subject: string;
   html?: string;
   text?: string;

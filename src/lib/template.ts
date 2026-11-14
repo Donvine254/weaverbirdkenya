@@ -99,7 +99,7 @@ export const QuoteRequestEmailTemplate = (data: QuoteEmailData) => {
               />
 
               <p style="margin:0;color:#dce9df;font-size:11px;letter-spacing:2px;font-weight:bold;">
-                GARMENTS MANUFACTURERS LTD.
+              WEAVERBIRD  GARMENTS MANUFACTURERS LTD.
               </p>
 
               <div style="margin-top:20px;">
