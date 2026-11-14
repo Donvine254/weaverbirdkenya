@@ -145,10 +145,6 @@ export function Footer() {
                 </span>
 
                 <span className="flex flex-col gap-3">
-                  <a href="tel:0202051487" aria-label="Call Weaverbird toll-free line 020-2051487">
-                    020-2051487 (Toll Free)
-                  </a>
-
                   <a
                     href="tel:+254722264464"
                     aria-label="Call Weaverbird mobile line +254 722 264464"
