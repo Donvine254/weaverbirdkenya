@@ -1,10 +1,11 @@
-type GarmentItem = {
+export type GarmentItem = {
   type: string;
-  qty: string;
+  quantity: number;
   notes?: string;
+  description?: string;
 };
 
-type QuoteEmailData = {
+export type QuoteEmailData = {
   reference: string;
   orgName: string;
   orgType: string;
@@ -19,7 +20,6 @@ type QuoteEmailData = {
   brandingDetails?: string;
   remarks?: string;
 };
-
 const LOGO_URL =
   "https://res.cloudinary.com/dipkbpinx/image/upload/v1794649752/weaverbird/Client%20Logos/cf9ktihaemtrygufhxjj.png";
 
@@ -49,7 +49,7 @@ export const QuoteRequestEmailTemplate = (data: QuoteEmailData) => {
             </strong>
           </td>
           <td style="padding:14px 12px;text-align:center;border-bottom:1px solid #e8ece9;font-weight:600;color:#173d32;">
-            ${escapeHtml(garment.qty)}
+            ${garment.quantity}
           </td>
           <td style="padding:14px 12px;border-bottom:1px solid #e8ece9;color:#64748b;">
             ${formatValue(garment.notes)}

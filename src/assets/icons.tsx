@@ -128,7 +128,7 @@ export const QualityIcon = ({ width = "24px", height = "24px", ...props }) => (
     {...props}
     width={width}
     height={height}
-    clasName="text-primary h-5 w-5 sm:h-6 sm:w-6"
+    className="text-primary h-5 w-5 sm:h-6 sm:w-6"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
     viewBox="0 0 24 24"

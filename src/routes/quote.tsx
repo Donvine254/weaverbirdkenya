@@ -5,7 +5,6 @@ import {
   X,
   Send,
   CheckCircle2,
-  Mail,
   RotateCcw,
   ClipboardList,
   Phone,
@@ -18,8 +17,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-
-const BUSINESS_EMAIL = "sales@weaverbirdkenya.com";
+import { sendQuoteRequest } from "@/lib/quote-email.functions";
 
 const GARMENT_TYPES = [
   "Dress",
@@ -54,6 +52,29 @@ type GarmentRow = {
   otherDesc: string;
   qty: string;
   notes: string;
+};
+
+type GarmentItem = {
+  type: string;
+  quantity: number;
+  notes?: string;
+  description?: string;
+};
+
+type QuoteEmailData = {
+  reference: string;
+  orgName: string;
+  orgType: string;
+  contact: string;
+  phone: string;
+  email: string;
+  pobox?: string;
+  town: string;
+  neededBy?: string;
+  garments: GarmentItem[];
+  branding: string[];
+  brandingDetails?: string;
+  remarks?: string;
 };
 
 function makeRef(): string {
@@ -176,7 +197,7 @@ function QuoteForm() {
   const [rows, setRows] = useState<GarmentRow[]>([
     { id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" },
   ]);
-  const [submitted, setSubmitted] = useState<{ mailto: string } | null>(null);
+  const [submitted, setSubmitted] = useState(false);
 
   const [orgDone, setOrgDone] = useState(false);
   const [remarksDone, setRemarksDone] = useState(false);
@@ -221,77 +242,50 @@ function QuoteForm() {
   const removeRow = (id: string) =>
     setRows((prev) => (prev.length > 1 ? prev.filter((r) => r.id !== id) : prev));
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!orgType) return;
     const fd = new FormData(e.currentTarget);
     const g = (k: string) => (fd.get(k) as string | null)?.trim() ?? "";
 
-    const orgName = g("orgName");
+    const data: QuoteEmailData = {
+      reference: quoteRef,
+      orgName: g("orgName"),
+      orgType,
+      contact: g("contact"),
+      phone: g("phone"),
+      email: g("email"),
+      pobox: g("pobox") || undefined,
+      town: g("town"),
+      neededBy: g("neededBy") || undefined,
+      garments: rows.map((row) => ({
+        type: row.type,
+        quantity: Number(row.qty),
+        notes: row.notes.trim() || undefined,
+        description: row.type === "Other" ? row.otherDesc.trim() : undefined,
+      })),
+      branding,
+      brandingDetails: g("brandingDetails") || undefined,
+      remarks: g("remarks") || undefined,
+    };
 
-    const garmentLines = rows.flatMap((r, i) => {
-      const garmentType = r.type === "Other" ? `Other — ${r.otherDesc}` : r.type;
+    try {
+      const result = await sendQuoteRequest({ data });
 
-      return [
-        `${i + 1}. ${garmentType}`,
-        `   Quantity: ${r.qty}`,
-        `   Size / Notes: ${r.notes || "Not specified"}`,
-        "",
-      ];
-    });
-
-    const lines: string[] = [
-      "WEAVERBIRD GARMENTS MANUFACTURERS LTD.",
-      "REQUEST FOR QUOTATION",
-      "",
-      `Reference: ${quoteRef}`,
-      "────────────────────────────────────────",
-      "",
-      "CUSTOMER DETAILS",
-      "",
-      `Organisation:      ${orgName}`,
-      `Organisation Type: ${orgType}`,
-      `Contact Person:    ${g("contact")}`,
-      `Phone:             ${g("phone")}`,
-      `Email:             ${g("email")}`,
-      `P.O. Box:          ${g("pobox") || "Not provided"}`,
-      `Delivery Location: ${g("town")}`,
-      `Required By:       ${g("neededBy") || "Not specified"}`,
-      "",
-      "",
-      "GARMENTS REQUIRED",
-      "",
-      ...garmentLines,
-      "",
-      "BRANDING & CUSTOMISATION",
-      "",
-      `Branding: ${branding.length ? branding.join(", ") : "Not specified"}`,
-      `Details: ${g("brandingDetails") || "Not provided"}`,
-      "",
-      "",
-      "ADDITIONAL REQUIREMENTS",
-      "",
-      g("remarks") || "No additional requirements provided.",
-      "",
-      "",
-      "────────────────────────────────────────",
-      "QUOTE REQUEST SUMMARY",
-      "",
-      `Reference: ${quoteRef}`,
-      `Organisation: ${orgName}`,
-      "",
-      "Please prepare a quotation based on the requirements above.",
-      "",
-      "Submitted via the Weaverbird website quotation form.",
-    ];
-    const subject = `RFQ | ${quoteRef} | ${orgName}`;
-    const mailto =
-      `mailto:${BUSINESS_EMAIL}` +
-      `?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(lines.join("\n"))}`;
-
-    window.location.href = mailto;
-    setSubmitted({ mailto });
+      if (result.success) {
+        setSubmitted(true);
+        //clear form data
+        formRef.current?.reset();
+        setOrgType("");
+        setBranding([]);
+        setRows([{ id: crypto.randomUUID(), type: "", otherDesc: "", qty: "", notes: "" }]);
+        setOrgDone(false);
+        setRemarksDone(false);
+      }
+    } catch (error) {
+      console.error("Quote submission failed:", error);
+      // Display an error message to the user.
+    }
   };
 
   return (
@@ -581,22 +575,16 @@ function QuoteForm() {
                   </span>
                   <div className="flex-1">
                     <h2 className="text-xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
-                      Request ready to send
+                      Quote request submitted successfully!
                     </h2>
                     <p className="mt-1 font-mono text-xs uppercase tracking-widest text-muted-foreground">
                       {quoteRef}
                     </p>
                     <p className="mt-3 text-sm text-muted-foreground">
-                      Your quote summary has been prepared and is ready to send from your mail app.
-                      If it didn't open automatically, click the button below.
+                      Your quote request has been sent to our sales team. We'll review it and send
+                      you a detailed quotation, usually within one business day. Please check your
+                      email (including spam/junk folders) for our response.
                     </p>
-                    <a
-                      href={submitted.mailto}
-                      className="mt-5 inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg hover:brightness-110 active:scale-95"
-                      style={{ background: "var(--color-maroon)" }}
-                    >
-                      <Mail className="h-4 w-4" /> Open email to send
-                    </a>
                   </div>
                 </div>
               </div>
