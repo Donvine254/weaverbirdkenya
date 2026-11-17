@@ -14,6 +14,7 @@ import { NotFound } from "@/components/not-found";
 import { AccessibilityWidget } from "@/components/accessibility-widget";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { CallButton } from "@/components/call-button";
+import "@/lib/clarity";
 
 import appCss from "../styles.css?url";
 

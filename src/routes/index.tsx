@@ -27,7 +27,10 @@ export const Route = createFileRoute("/")({
         content:
           "uniforms Kenya, garment manufacturers Kenya, school uniforms Kenya, corporate wear Kenya, security uniforms, hospitality uniforms, sports uniforms, workwear Kenya, overalls, medical scrubs Kenya, t-shirts and polo shirts, sweaters and fleece, tracksuits, sportswear, Maasai shukas, uniform manufacturers Thika, custom uniforms Nairobi, branded apparel Kenya, embroidery Kenya, screen printing Kenya, uniform supplier Kenya, Weaverbird Kenya",
       },
-      { property: "og:title", content: "Weaverbird Garments — Uniform & Apparel Manufacturer in Kenya" },
+      {
+        property: "og:title",
+        content: "Weaverbird Garments — Uniform & Apparel Manufacturer in Kenya",
+      },
       {
         property: "og:description",
         content:
