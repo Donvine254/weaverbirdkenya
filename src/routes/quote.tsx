@@ -158,7 +158,7 @@ function PageHero() {
             "radial-gradient(circle at 50% 30%, oklch(0.78 0.18 145 / 0.25), transparent 60%)",
         }}
       />
-      <div className="relative mx-auto max-w-4xl px-6 py-16 text-center text-white lg:py-20 animate-fade-in-up ">
+      <div className="relative mx-auto max-w-4xl px-6 py-14 lg:py-16 text-center text-white animate-fade-in-up ">
         <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
           <ClipboardList className="h-4 w-4" style={{ color: "var(--accent-red)" }} />
           Custom Apparel Quote

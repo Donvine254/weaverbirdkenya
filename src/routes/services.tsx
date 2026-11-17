@@ -52,7 +52,7 @@ function ServicesPage() {
         <PageHero
           eyebrow="What We Do"
           icon={Layers2}
-          className="bg-left-top"
+          className="bg-left-bottom"
           image="https://res.cloudinary.com/dipkbpinx/image/upload/v1788328706/weaverbird/products/ub4oimqxtr0pab3h7rg7.jpg"
           title={
             <>

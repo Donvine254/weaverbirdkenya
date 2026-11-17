@@ -70,7 +70,7 @@ function ContactPage() {
         <PageHero
           eyebrow="Get in Touch"
           icon={Headset}
-          className="bg-left-top"
+          className="bg-left-bottom"
           image="https://res.cloudinary.com/dipkbpinx/image/upload/v1791978016/weaverbird/Client%20Logos/risllw1zhokbzdzoh7vt.jpg"
           title={
             <>
