@@ -176,9 +176,9 @@ export const branches: Branch[] = [
       sunday: "Closed",
     },
     address: "Along Lumumba Road, Horizon House, Nanyuki",
-    map: "https://maps.app.goo.gl/vCJkGENjwj7da8ek8",
+    map: "https://maps.app.goo.gl/T6gXzEjtgUpA9y1k9",
     mapEmbed:
-      "https://www.google.com/maps/embed?pb=!4v1791787654659!6m8!1m7!1sl2nTNdpyEswJXNbuOmPJ_A!2m2!1d0.01469844165546777!2d37.07654384720398!3f136.03!4f6.239999999999995!5f0.7820865974627469",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.272759403822!2d37.06631390650288!3d0.014653903847778572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1787f63618857beb%3A0x5308250336af2bf8!2sHorizon%20Hotel%20Nanyuki!5e0!3m2!1sen!2ske!4v1794908436590!5m2!1sen!2ske",
     coords: [0.01465507206258696, 37.07647772379612],
   },
   {
