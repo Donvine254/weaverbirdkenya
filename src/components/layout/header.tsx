@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/co
 
 /* ----------------- Product categories ----------------- */
 const productCategories = [
-  { label: "School Uniforms", hash: "school-uniforms" },
+  { label: "School Uniforms & Supplies", hash: "school-uniforms" },
   { label: "Corporate Wear", hash: "corporate-wear" },
   { label: "Workwear & Overalls", hash: "workwear-overalls" },
   { label: "Medical Wear", hash: "medical-wear" },

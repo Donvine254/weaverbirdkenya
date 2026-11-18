@@ -11,7 +11,7 @@ import {
   Ruler,
   PenTool,
   ReceiptText,
-  MessageCircle,
+  Headset,
   Sparkles,
   ArrowDownToLine,
 } from "lucide-react";
@@ -365,7 +365,7 @@ function CategoryPage() {
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-md bg-white px-7 py-3 text-sm font-semibold text-primary-deep shadow-md transition-all hover:shadow-lg active:scale-95"
               >
-                <MessageCircle className="h-4 w-4" />
+                <Headset className="h-4 w-4" />
                 Contact Our Team
               </Link>
             </div>

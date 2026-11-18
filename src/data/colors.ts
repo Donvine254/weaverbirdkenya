@@ -304,6 +304,7 @@ export const productColors: ProductColors = {
     "Pillows & Pillow Cases": {
       colors: [
         { name: "White", hex: "#E5E7EB" },
+        { name: "Red", hex: "#b10511" },
         { name: "Cream", hex: "#FFFDD0" },
         { name: "Sky Blue", hex: "#87CEEB" },
         { name: "Grey", hex: "#B0B0B0" },
@@ -312,10 +313,11 @@ export const productColors: ProductColors = {
     },
     Mattresses: {
       colors: [
-        { name: "Blue", hex: "#336699" },
+        { name: "Blue", hex: "#1f59d7" },
         { name: "Grey", hex: "#808080" },
         { name: "Cream", hex: "#E8DFC8" },
         { name: "Maroon", hex: "#800020" },
+        { name: "Dark Green", hex: "#006400" },
       ],
     },
     Bedcovers: {

@@ -23,14 +23,24 @@ import { sendQuoteRequest } from "@/lib/quote-email.functions";
 const GARMENT_TYPES = [
   "Dress",
   "Shirt",
+  "Polo Shirt",
+  "T-Shirt",
   "Shorts",
   "Trouser",
   "Skirt",
   "Blazer / Jacket",
+  "Waistcoat / Vest",
   "Tracksuit",
-  "T-Shirt",
-  "Overall / Dust Coat",
+  "Sportswear / Jersey",
   "Sweater",
+  "Tunic / Scrubs",
+  "Lab Coat",
+  "Overall / Dust Coat",
+  "Dungarees / Bib Overalls",
+  "Apron",
+  "PPE / Protective Wear",
+  "Cap / Hat",
+  "Gown / Robe",
   "Non-Woven Bag",
   "Other",
 ] as const;
@@ -39,13 +49,25 @@ const ORG_TYPES = [
   "School / College",
   "Corporate / Office",
   "Security firm",
-  "Hospitality",
+  "Hospitality / Club",
   "Healthcare",
   "Factory / Industrial",
+  "Retail / Shop",
+  "Government / Public",
   "Other",
 ] as const;
 
-const BRANDING_OPTS = ["Embroidery", "Screen printing", "Weaving", "No branding needed"] as const;
+const BRANDING_OPTS = [
+  "Embroidery",
+  "DTF Printing",
+  "Screen Printing",
+  "Heat Transfer",
+  "Sublimation",
+  "Woven Labels",
+  "Printed Labels",
+  "Badges / Patches",
+  "No Branding",
+] as const;
 
 type GarmentRow = {
   id: string;
@@ -572,7 +594,7 @@ function QuoteForm() {
                       boxShadow: "0 10px 25px -10px oklch(0.293 0.137 19.5 / 0.55)",
                     }}
                   >
-                    Send quote request
+                    Submit Quote
                     <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                   <button

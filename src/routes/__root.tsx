@@ -7,14 +7,14 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { type ReactNode } from "react";
+import { type ReactNode, useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 // import { CookieConsent } from "@/components/cookie-consent";
 import { NotFound } from "@/components/not-found";
 import { AccessibilityWidget } from "@/components/accessibility-widget";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { CallButton } from "@/components/call-button";
-import "@/lib/clarity";
+import { initClarity } from "@/lib/clarity";
 
 import appCss from "../styles.css?url";
 
@@ -160,6 +160,10 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    initClarity();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
