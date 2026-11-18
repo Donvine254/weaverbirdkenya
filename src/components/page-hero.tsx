@@ -12,6 +12,15 @@ interface PageHeroProps {
 const defaultImage =
   "https://res.cloudinary.com/dipkbpinx/image/upload/v1783869677/weaverbird/nmszxatomphtat2xspfs.jpg";
 
+function optimizeHeroImage(image: string) {
+  const uploadPath = "/image/upload/";
+  const uploadIndex = image.indexOf(uploadPath);
+  if (uploadIndex === -1) return image;
+
+  const transformIndex = uploadIndex + uploadPath.length;
+  return `${image.slice(0, transformIndex)}q_auto,f_auto,w_1600,c_limit/${image.slice(transformIndex)}`;
+}
+
 export function PageHero({
   eyebrow,
   icon: Icon,
@@ -21,12 +30,18 @@ export function PageHero({
   className = "",
 }: PageHeroProps) {
   return (
-    <section
-      className={`relative overflow-hidden bg-cover bg-center ${className}`}
-      style={{
-        backgroundImage: `url("${image}")`,
-      }}
-    >
+    <section className={`relative overflow-hidden ${className}`}>
+      <img
+        src={optimizeHeroImage(image)}
+        alt=""
+        aria-hidden
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        sizes="100vw"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+
       {/* Dark overlay */}
       <div
         className="absolute inset-0"
