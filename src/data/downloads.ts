@@ -35,6 +35,8 @@ export const RESOURCES: Resource[] = [
     description:
       "Learn more about Weaverbird Garments Manufacturers, our history, manufacturing capabilities, product range, branch network and institutional experience.",
     button: "Download Company Profile",
+    file: "/resources/weaver-bird-company-profile.pdf",
+    downloadName: "Weaverbird-Company-Profile.pdf",
     related: { label: "About Weaverbird", href: "/about" },
   },
   {
@@ -61,8 +63,8 @@ export const RESOURCES: Resource[] = [
     title: "Uniform Care Guide",
     description:
       "Learn how to wash, dry, iron and care for uniforms to maintain their appearance and durability.",
-    button: "Download Care Guide",
-    fallback: { label: "Read the online guide", href: "/blog/uniform-care" },
+    button: "View Care Guide",
+    href:"/blog/uniform-care" },
   },
   {
     id: "returns-policy",
