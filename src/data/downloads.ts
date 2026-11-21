@@ -64,7 +64,8 @@ export const RESOURCES: Resource[] = [
     description:
       "Learn how to wash, dry, iron and care for uniforms to maintain their appearance and durability.",
     button: "View Care Guide",
-    href:"/blog/uniform-care" },
+    href: "/blog/uniform-care",
+    related: { label: "Blog & Insights", href: "/blog" },
   },
   {
     id: "returns-policy",
@@ -73,6 +74,7 @@ export const RESOURCES: Resource[] = [
     button: "Download Policy",
     file: "/resources/return-and-exchange-policy.pdf",
     downloadName: "Weaverbird-Returns-and-Exchange-Policy.pdf",
+    related: { label: "All Policies", href: "/policies" },
   },
   {
     id: "environmental-policy",
@@ -81,5 +83,6 @@ export const RESOURCES: Resource[] = [
       "Learn about Weaverbird's approach to responsible manufacturing and environmental practices.",
     button: "View Policy",
     href: "/policies/environmental-policy",
+    related: { label: "All Policies", href: "/policies" },
   },
 ];
